@@ -96,7 +96,16 @@ const IntroPage: React.FC = () => {
   const outcomeItems = t("intro.outcome.items", { returnObjects: true }) as string[];
 
   return (
-    <div style={{ minHeight: "100vh", background: theme.background, display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: theme.background,
+        display: "flex",
+        flexDirection: "column",
+        fontFamily:
+          '"Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN W4", "Zen Maru Gothic", sans-serif',
+      }}
+    >
       <ScrollingBanner src={topBanner} direction="left" />
 
       <div
