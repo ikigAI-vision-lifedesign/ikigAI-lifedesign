@@ -9,7 +9,24 @@ import bottomBanner from "../assets/footer.png";
 import StepNavigation from "../components/StepNavigation";
 import { theme } from "../theme";
 
+import styleWatercolor from "../assets/styles/style-watercolor.webp";
+import styleGraphic from "../assets/styles/style-graphic.webp";
+import styleRealistic from "../assets/styles/style-realistic.webp";
+import styleArtistic from "../assets/styles/style-artistic.webp";
+import styleComic from "../assets/styles/style-comic.webp";
+import styleAnime from "../assets/styles/style-anime.webp";
+
 const STORAGE_KEY = "visionBoardFormData";
+
+// 選択された画風 → サンプル画像（保存値は日本語の固定キー）
+const STYLE_IMAGES: Record<string, string> = {
+  "水彩画風": styleWatercolor,
+  "グラレコ風": styleGraphic,
+  "リアル風": styleRealistic,
+  "アート風": styleArtistic,
+  "漫画風": styleComic,
+  "アニメ風": styleAnime,
+};
 
 /** ★ 実URL */
 const TERMS_URL = "https://ikigai96.studio.site/serAgreement";
@@ -191,10 +208,24 @@ const FormStep5Page: React.FC = () => {
           <SummaryItem label={t("form.step5.items.charmPoints")} value={formData.charmPoints} />
         </div>
 
-        {/* 画風（STEP1） */}
+        {/* 画風（STEP1）：テキスト＋サンプル画像 */}
         <div style={summaryCardStyle}>
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.style")}</h3>
           <SummaryItem label={t("form.step5.items.imageStyle")} value={formData.imageStyle} />
+          {formData.imageStyle && STYLE_IMAGES[formData.imageStyle] && (
+            <img
+              src={STYLE_IMAGES[formData.imageStyle]}
+              alt={formData.imageStyle}
+              style={{
+                width: "150px",
+                maxWidth: "48%",
+                borderRadius: "12px",
+                display: "block",
+                marginTop: "10px",
+                border: `1px solid ${theme.border}`,
+              }}
+            />
+          )}
         </div>
 
         {/* あなたらしさと未来（STEP3）：強み・幸せな瞬間・次の一歩もここ */}
