@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "STEP 1 / 4",
+      "stepLabel": "STEP 1 / 5",
       "title": "Your Favorite Mood",
       "description": "Set the overall mood of your vision board.\nChoosing a style you love brings it closer to your own world.",
       "imageStyle": "Choose a style",
@@ -41,7 +41,7 @@
       "choosePrompt": "Tap a style below"
     },
     "step2": {
-      "stepLabel": "STEP 2 / 4",
+      "stepLabel": "STEP 2 / 5",
       "title": "About You",
       "description": "Tell us a bit about yourself.\nWhat you enter will be reflected in your vision board.",
       "fullName": "Name",

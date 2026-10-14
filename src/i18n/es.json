@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "PASO 1 / 4",
+      "stepLabel": "PASO 1 / 5",
       "title": "Tu estilo favorito",
       "description": "Define el ambiente general de tu tablero de visión.\nElegir un estilo que te guste lo acerca a tu propio mundo.",
       "imageStyle": "Elige un estilo",
@@ -41,7 +41,7 @@
       "choosePrompt": "Elige un estilo abajo"
     },
     "step2": {
-      "stepLabel": "PASO 2 / 4",
+      "stepLabel": "PASO 2 / 5",
       "title": "Sobre ti",
       "description": "Cuéntanos un poco sobre ti.\nLo que ingreses se reflejará en tu tablero de visión.",
       "fullName": "Nombre",

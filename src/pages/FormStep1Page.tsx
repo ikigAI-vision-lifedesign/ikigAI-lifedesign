@@ -134,7 +134,7 @@ const FormStep1Page: React.FC = () => {
             marginBottom: "28px",
           }}
         >
-          <div style={{ width: "25%", height: "100%", background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)" }} />
+          <div style={{ width: "20%", height: "100%", background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)" }} />
         </div>
 
         <form onSubmit={handleNext}>

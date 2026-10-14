@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "SCHRITT 1 / 4",
+      "stepLabel": "SCHRITT 1 / 5",
       "title": "Deine Lieblingsstimmung",
       "description": "Bestimme die Gesamtstimmung deines Vision Boards.\nEin Stil, den du liebst, bringt es näher an deine eigene Welt.",
       "imageStyle": "Stil wählen",
@@ -41,7 +41,7 @@
       "choosePrompt": "Unten einen Stil wählen"
     },
     "step2": {
-      "stepLabel": "SCHRITT 2 / 4",
+      "stepLabel": "SCHRITT 2 / 5",
       "title": "Über dich",
       "description": "Erzähl uns etwas über dich.\nDeine Angaben fließen in dein Vision Board ein.",
       "fullName": "Name",

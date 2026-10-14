@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "STEP 1 / 4",
+      "stepLabel": "STEP 1 / 5",
       "title": "好きな雰囲気",
       "description": "ビジョンボードの仕上がりの雰囲気を決めましょう。\nあなた好みの画風を選択することで、よりあなたらしい世界観に近づきます。",
       "imageStyle": "画風を選択",
@@ -41,7 +41,7 @@
       "choosePrompt": "下から選んでください"
     },
     "step2": {
-      "stepLabel": "STEP 2 / 4",
+      "stepLabel": "STEP 2 / 5",
       "title": "あなたについて",
       "description": "あなたのことを教えてください。\n入力内容がビジョンボードに反映されます。",
       "fullName": "お名前",

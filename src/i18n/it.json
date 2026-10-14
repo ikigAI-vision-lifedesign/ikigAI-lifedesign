@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "PASSO 1 / 4",
+      "stepLabel": "PASSO 1 / 5",
       "title": "Il tuo stile preferito",
       "description": "Definisci l’atmosfera generale della tua vision board.\nScegliere uno stile che ami la avvicina al tuo mondo.",
       "imageStyle": "Scegli uno stile",
@@ -41,7 +41,7 @@
       "choosePrompt": "Scegli uno stile qui sotto"
     },
     "step2": {
-      "stepLabel": "PASSO 2 / 4",
+      "stepLabel": "PASSO 2 / 5",
       "title": "Su di te",
       "description": "Raccontaci qualcosa di te.\nCiò che inserisci si rifletterà nella tua vision board.",
       "fullName": "Nome",

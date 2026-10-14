@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "第1步 / 共4步",
+      "stepLabel": "第1步 / 共5步",
       "title": "喜歡的風格",
       "description": "先決定願景板的整體氛圍。\n選擇你喜歡的畫風，能讓它更貼近你的世界觀。",
       "imageStyle": "選擇畫風",
@@ -41,7 +41,7 @@
       "choosePrompt": "請從下方選擇"
     },
     "step2": {
-      "stepLabel": "第2步 / 共4步",
+      "stepLabel": "第2步 / 共5步",
       "title": "關於你",
       "description": "請告訴我們一些關於你的資訊。\n你填寫的內容會反映在願景板上。",
       "fullName": "姓名",

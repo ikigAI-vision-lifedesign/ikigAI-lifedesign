@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "LANGKAH 1 / 4",
+      "stepLabel": "LANGKAH 1 / 5",
       "title": "Gaya Favorit Anda",
       "description": "Tentukan suasana keseluruhan vision board-mu.\nMemilih gaya yang kamu suka membuatnya makin terasa seperti duniamu.",
       "imageStyle": "Pilih gaya",
@@ -41,7 +41,7 @@
       "choosePrompt": "Pilih gaya di bawah"
     },
     "step2": {
-      "stepLabel": "LANGKAH 2 / 4",
+      "stepLabel": "LANGKAH 2 / 5",
       "title": "Tentang Anda",
       "description": "Ceritakan sedikit tentang dirimu.\nApa yang kamu isi akan tercermin di vision board-mu.",
       "fullName": "Nama",
