@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "STEP 2 / 4",
       "title": "あなたについて",
-      "description": "あなたのことを教えてください。入力内容がビジョンボードに反映されます。",
+      "description": "あなたのことを教えてください。\n入力内容がビジョンボードに反映されます。",
       "fullName": "お名前",
       "fullNamePlaceholder": "例：山田 花子",
       "email": "メールアドレス",

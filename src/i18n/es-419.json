@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "PASO 2 / 4",
       "title": "Sobre ti",
-      "description": "Cuéntanos un poco sobre ti. Lo que ingreses se reflejará en tu tablero de visión.",
+      "description": "Cuéntanos un poco sobre ti.\nLo que ingreses se reflejará en tu tablero de visión.",
       "fullName": "Nombre",
       "fullNamePlaceholder": "ej: Hanako Yamada",
       "email": "Correo electrónico",

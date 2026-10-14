@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "STEP 2 / 4",
       "title": "당신에 대해",
-      "description": "당신에 대해 알려주세요. 입력한 내용이 비전 보드에 반영됩니다.",
+      "description": "당신에 대해 알려주세요.\n입력한 내용이 비전 보드에 반영됩니다.",
       "fullName": "이름",
       "fullNamePlaceholder": "예: Hanako Yamada",
       "email": "이메일",

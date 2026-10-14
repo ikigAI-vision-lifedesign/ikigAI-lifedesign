@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "STEP 2 / 4",
       "title": "About You",
-      "description": "Tell us a bit about yourself. What you enter will be reflected in your vision board.",
+      "description": "Tell us a bit about yourself.\nWhat you enter will be reflected in your vision board.",
       "fullName": "Name",
       "fullNamePlaceholder": "e.g. Hanako Yamada",
       "email": "Email Address",

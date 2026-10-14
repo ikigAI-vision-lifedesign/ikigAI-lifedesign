@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "الخطوة 2 / 4",
       "title": "عن نفسك",
-      "description": "أخبرنا قليلاً عن نفسك. سينعكس ما تُدخله في لوحة رؤيتك.",
+      "description": "أخبرنا قليلاً عن نفسك.\nسينعكس ما تُدخله في لوحة رؤيتك.",
       "fullName": "الاسم",
       "fullNamePlaceholder": "مثال: Hanako Yamada",
       "email": "البريد الإلكتروني",

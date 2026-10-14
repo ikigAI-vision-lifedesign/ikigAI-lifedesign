@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "第2步 / 共4步",
       "title": "關於你",
-      "description": "請告訴我們一些關於你的資訊。你填寫的內容會反映在願景板上。",
+      "description": "請告訴我們一些關於你的資訊。\n你填寫的內容會反映在願景板上。",
       "fullName": "姓名",
       "fullNamePlaceholder": "例如：山田花子",
       "email": "電子郵件",

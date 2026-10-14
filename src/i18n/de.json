@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "SCHRITT 2 / 4",
       "title": "Über dich",
-      "description": "Erzähl uns etwas über dich. Deine Angaben fließen in dein Vision Board ein.",
+      "description": "Erzähl uns etwas über dich.\nDeine Angaben fließen in dein Vision Board ein.",
       "fullName": "Name",
       "fullNamePlaceholder": "z. B. Hanako Yamada",
       "email": "E-Mail-Adresse",

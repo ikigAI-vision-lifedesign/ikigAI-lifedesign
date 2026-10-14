@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "ÉTAPE 2 / 4",
       "title": "À propos de vous",
-      "description": "Parlez-nous un peu de vous. Ce que vous saisissez sera reflété dans votre vision board.",
+      "description": "Parlez-nous un peu de vous.\nCe que vous saisissez sera reflété dans votre vision board.",
       "fullName": "Nom",
       "fullNamePlaceholder": "ex. Hanako Yamada",
       "email": "Adresse e-mail",
