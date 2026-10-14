@@ -83,7 +83,13 @@
       "identity": {
         "title": "自我",
         "happyMoment": "最近开心的事情",
-        "strengths": "优点"
+        "strengths": "你的优势",
+        "happyMomentPlaceholder": "例：和朋友去旅行、开始了新的事物",
+        "strengthsPlaceholder": "例：持续力、同理心、创意"
+      },
+      "nextAction": {
+        "action": "这个月内能做的一小步是什么？",
+        "actionPlaceholder": "例：规划新的路线、开始收集信息"
       }
     },
     "step5": {

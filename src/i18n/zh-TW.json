@@ -77,7 +77,18 @@
       "stepLabel": "第4步 / 共5步",
       "title": "進一步設定",
       "lifeDesignTitle": "人生設計",
-      "description": "可選。填寫你想更深入的部分。"
+      "description": "可選。填寫你想更深入的部分。",
+      "identity": {
+        "title": "自我",
+        "happyMoment": "最近感到幸福的時刻",
+        "happyMomentPlaceholder": "例：和朋友去旅行、開始了新的事物",
+        "strengths": "你的優勢",
+        "strengthsPlaceholder": "例：持續力、同理心、創意"
+      },
+      "nextAction": {
+        "action": "這個月內能做的一小步是什麼？",
+        "actionPlaceholder": "例：規劃新的路線、開始收集資訊"
+      }
     },
     "step5": {
       "stepLabel": "第5步 / 共5步",
