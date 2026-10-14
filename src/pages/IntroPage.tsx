@@ -8,7 +8,7 @@ import "../i18n/configs";
 import topBanner from "../assets/header.png";
 import bottomBanner from "../assets/footer.png";
 import ScrollingBanner from "../components/ScrollingBanner";
-import leafFrame from "../assets/leaf-frame.png";
+import leafBottom from "../assets/leaf-bottom.webp";
 import { theme } from "../theme";
 
 const BulbIcon = () => (
@@ -111,21 +111,24 @@ const IntroPage: React.FC = () => {
           overflow: "hidden",
         }}
       >
-        <div
+        <img
+          src={leafBottom}
+          alt=""
+          aria-hidden="true"
           style={{
-            width: "100%",
-            maxWidth: "470px",
-            textAlign: "center",
-            position: "relative",
-            zIndex: 1,
-            backgroundImage: `url(${leafFrame})`,
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            padding: "64px 34px 56px",
-            boxSizing: "border-box",
+            position: "absolute",
+            left: "50%",
+            bottom: 0,
+            transform: "translateX(-50%)",
+            width: "min(100%, 560px)",
+            height: "auto",
+            opacity: 0.92,
+            pointerEvents: "none",
+            zIndex: 0,
           }}
-        >
+        />
+
+        <div style={{ width: "100%", maxWidth: "420px", textAlign: "center", position: "relative", zIndex: 1 }}>
           <p style={{ color: theme.primaryDark, fontWeight: 700, letterSpacing: "0.14em", margin: "0 0 18px" }}>
             ikigAI
           </p>
