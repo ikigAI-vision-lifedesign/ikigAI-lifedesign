@@ -18,6 +18,14 @@ const TIP_VISUALS = [
   { emoji: "🤝", bg: "#FFF8EC", border: "#F0E3BF", color: "#CC9227" },
 ];
 
+const ExternalLinkIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
 const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
   const { t } = useTranslation();
   const [progress, setProgress] = useState(6);
@@ -149,7 +157,7 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
         href="https://ikigai96.studio.site/"
         target="_blank"
         rel="noreferrer"
-        aria-label={t("loadingPage.learnMore")}
+        aria-label={t("loadingPage.visitSite")}
         style={{ display: "block", textDecoration: "none", marginTop: "24px" }}
       >
         <div
@@ -166,9 +174,19 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
             boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
           }}
         >
-          <img src={ikigaiLogo} alt="ikigAI" style={{ height: "30px", width: "auto", display: "block" }} />
-          <span style={{ color: theme.primaryDark, fontWeight: 800, fontSize: "0.92rem" }}>
-            {t("loadingPage.learnMore")} <span aria-hidden="true">→</span>
+          <img src={ikigaiLogo} alt="ikigAI" style={{ height: "42px", width: "auto", display: "block" }} />
+          <span
+            style={{
+              color: theme.primaryDark,
+              fontWeight: 800,
+              fontSize: "0.92rem",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+            }}
+          >
+            {t("loadingPage.visitSite")}
+            <ExternalLinkIcon />
           </span>
         </div>
       </a>
