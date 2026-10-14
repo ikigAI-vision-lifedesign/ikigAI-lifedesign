@@ -7,7 +7,7 @@
     "bottomBannerAlt": "Bottom banner"
   },
   "login": {
-    "label": "PASSWORD",
+    "label": "PASSCODE",
     "title": "Enter Passcode",
     "description": "Enter the passcode to start your experience.",
     "passwordLabel": "Passcode",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "Passcode setting was not found. Please check REACT_APP_PASSCODE.",
       "wrongPasscode": "The passcode is incorrect."
-    }
+    },
+    "backToLanguage": "Back to language selection",
+    "showPasscode": "Show passcode",
+    "hidePasscode": "Hide passcode"
   },
   "form": {
     "step1": {

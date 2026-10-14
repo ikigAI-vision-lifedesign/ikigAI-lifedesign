@@ -7,7 +7,7 @@
     "bottomBannerAlt": "したのがぞう"
   },
   "login": {
-    "label": "ぱすこーど",
+    "label": "PASSCODE",
     "title": "ぱすこーどをいれてね",
     "description": "つづけるために、ぱすこーどをいれてください。",
     "passwordLabel": "ぱすこーど",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "ぱすこーどのせっていがありません。",
       "wrongPasscode": "ぱすこーどがちがいます。"
-    }
+    },
+    "backToLanguage": "げんごせんたくにもどる",
+    "showPasscode": "ぱすこーどをひょうじ",
+    "hidePasscode": "ぱすこーどをかくす"
   },
   "form": {
     "step1": {

@@ -7,7 +7,7 @@
     "bottomBannerAlt": "하단 배너"
   },
   "login": {
-    "label": "비밀번호",
+    "label": "PASSCODE",
     "title": "비밀번호를 입력하세요",
     "description": "시작하려면 비밀번호를 입력하세요.",
     "passwordLabel": "비밀번호",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "비밀번호 설정을 찾을 수 없습니다. REACT_APP_PASSCODE를 확인하세요.",
       "wrongPasscode": "비밀번호가 올바르지 않습니다."
-    }
+    },
+    "backToLanguage": "언어 선택으로 돌아가기",
+    "showPasscode": "비밀번호 표시",
+    "hidePasscode": "비밀번호 숨기기"
   },
   "form": {
     "step1": {

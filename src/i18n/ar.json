@@ -7,7 +7,7 @@
     "bottomBannerAlt": "الشريط السفلي"
   },
   "login": {
-    "label": "رمز الدخول",
+    "label": "PASSCODE",
     "title": "أدخل رمز الدخول",
     "description": "أدخل رمز الدخول لبدء التجربة.",
     "passwordLabel": "رمز الدخول",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "لم يتم العثور على إعداد رمز الدخول. يرجى التحقق من REACT_APP_PASSCODE.",
       "wrongPasscode": "رمز الدخول غير صحيح."
-    }
+    },
+    "backToLanguage": "العودة إلى اختيار اللغة",
+    "showPasscode": "إظهار رمز الدخول",
+    "hidePasscode": "إخفاء رمز الدخول"
   },
   "form": {
     "step1": {

@@ -7,7 +7,7 @@
     "bottomBannerAlt": "底部横幅"
   },
   "login": {
-    "label": "密码",
+    "label": "PASSCODE",
     "title": "输入密码",
     "description": "请输入密码以开始体验。",
     "passwordLabel": "密码",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "未找到密码配置，请检查 REACT_APP_PASSCODE。",
       "wrongPasscode": "密码错误。"
-    }
+    },
+    "backToLanguage": "返回语言选择",
+    "showPasscode": "显示密码",
+    "hidePasscode": "隐藏密码"
   },
   "form": {
     "step1": {

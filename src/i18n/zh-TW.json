@@ -7,7 +7,7 @@
     "bottomBannerAlt": "下方橫幅"
   },
   "login": {
-    "label": "密碼",
+    "label": "PASSCODE",
     "title": "輸入密碼",
     "description": "請輸入密碼開始體驗。",
     "passwordLabel": "密碼",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "找不到密碼設定，請確認 REACT_APP_PASSCODE。",
       "wrongPasscode": "密碼錯誤。"
-    }
+    },
+    "backToLanguage": "返回語言選擇",
+    "showPasscode": "顯示密碼",
+    "hidePasscode": "隱藏密碼"
   },
   "form": {
     "step1": {

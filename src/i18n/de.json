@@ -7,7 +7,7 @@
     "bottomBannerAlt": "Unteres Banner"
   },
   "login": {
-    "label": "PASSWORT",
+    "label": "PASSCODE",
     "title": "Passcode eingeben",
     "description": "Gib den Passcode ein, um die Erfahrung zu starten.",
     "passwordLabel": "Passcode",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "Die Passcode-Einstellung wurde nicht gefunden. Bitte überprüfe REACT_APP_PASSCODE.",
       "wrongPasscode": "Der Passcode ist falsch."
-    }
+    },
+    "backToLanguage": "Zurück zur Sprachauswahl",
+    "showPasscode": "Passcode anzeigen",
+    "hidePasscode": "Passcode verbergen"
   },
   "form": {
     "step1": {

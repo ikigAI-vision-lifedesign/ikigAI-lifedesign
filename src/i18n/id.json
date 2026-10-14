@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "Pengaturan passcode tidak ditemukan. Periksa REACT_APP_PASSCODE.",
       "wrongPasscode": "Passcode salah."
-    }
+    },
+    "backToLanguage": "Kembali ke pilihan bahasa",
+    "showPasscode": "Tampilkan passcode",
+    "hidePasscode": "Sembunyikan passcode"
   },
   "form": {
     "step1": {

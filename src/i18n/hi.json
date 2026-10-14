@@ -7,7 +7,7 @@
     "bottomBannerAlt": "निचला बैनर"
   },
   "login": {
-    "label": "पासकोड",
+    "label": "PASSCODE",
     "title": "पासकोड दर्ज करें",
     "description": "शुरू करने के लिए पासकोड दर्ज करें।",
     "passwordLabel": "पासकोड",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "पासकोड सेटिंग नहीं मिली। कृपया REACT_APP_PASSCODE जांचें।",
       "wrongPasscode": "पासकोड गलत है।"
-    }
+    },
+    "backToLanguage": "भाषा चयन पर वापस जाएं",
+    "showPasscode": "पासकोड दिखाएं",
+    "hidePasscode": "पासकोड छिपाएं"
   },
   "form": {
     "step1": {

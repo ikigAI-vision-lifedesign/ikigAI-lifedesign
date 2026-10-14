@@ -7,7 +7,7 @@
     "bottomBannerAlt": "Bannière inférieure"
   },
   "login": {
-    "label": "MOT DE PASSE",
+    "label": "PASSCODE",
     "title": "Entrez le mot de passe",
     "description": "Entrez le mot de passe pour commencer l’expérience.",
     "passwordLabel": "Mot de passe",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "Le mot de passe n’est pas configuré. Vérifiez REACT_APP_PASSCODE.",
       "wrongPasscode": "Le mot de passe est incorrect."
-    }
+    },
+    "backToLanguage": "Retour au choix de la langue",
+    "showPasscode": "Afficher le code",
+    "hidePasscode": "Masquer le code"
   },
   "form": {
     "step1": {

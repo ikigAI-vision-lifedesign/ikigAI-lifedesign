@@ -30,9 +30,18 @@ body,
 }
 
 body {
-  font-family: Arial, sans-serif;
+  /* 英語(ラテン文字)=Mulish、日本語=システムの既定（Arial→sans-serifにフォールバック） */
+  font-family: "Mulish", Arial, sans-serif;
   background: var(--theme-bg);
   color: var(--theme-text);
+}
+
+/* フォーム部品・ボタンにも本文フォント（Mulish）を継承させる */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 img {
@@ -408,6 +417,21 @@ button:disabled {
 @media (prefers-reduced-motion: reduce) {
   .intro-appear { animation: none; opacity: 1; }
   .intro-appear-plant { animation: none; opacity: 0.92; }
+}
+
+/* ===== パスコード誤入力時のシェイク ===== */
+@keyframes loginShake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8px); }
+  30% { transform: translateX(8px); }
+  45% { transform: translateX(-6px); }
+  60% { transform: translateX(6px); }
+  75% { transform: translateX(-3px); }
+  90% { transform: translateX(3px); }
+}
+.login-shake { animation: loginShake 0.45s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .login-shake { animation: none; }
 }
 
 /* ===== 全ボタン共通の操作フィードバック ===== */

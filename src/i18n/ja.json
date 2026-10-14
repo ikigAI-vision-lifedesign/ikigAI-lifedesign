@@ -7,7 +7,7 @@
     "bottomBannerAlt": "ボトムバナー"
   },
   "login": {
-    "label": "PASSWORD",
+    "label": "PASSCODE",
     "title": "パスコードを入力",
     "description": "体験を始めるには、パスコードを入力してください。",
     "passwordLabel": "パスコード",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "パスコード設定が見つかりません。REACT_APP_PASSCODEを確認してください。",
       "wrongPasscode": "パスコードが違います。"
-    }
+    },
+    "backToLanguage": "言語選択に戻る",
+    "showPasscode": "パスコードを表示",
+    "hidePasscode": "パスコードを隠す"
   },
   "form": {
     "step1": {

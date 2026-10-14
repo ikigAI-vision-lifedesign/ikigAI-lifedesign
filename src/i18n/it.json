@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "Impostazione del passcode non trovata. Controlla REACT_APP_PASSCODE.",
       "wrongPasscode": "Il passcode non è corretto."
-    }
+    },
+    "backToLanguage": "Torna alla selezione della lingua",
+    "showPasscode": "Mostra passcode",
+    "hidePasscode": "Nascondi passcode"
   },
   "form": {
     "step1": {

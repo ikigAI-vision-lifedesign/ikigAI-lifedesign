@@ -7,7 +7,7 @@
     "bottomBannerAlt": "Banner inferior"
   },
   "login": {
-    "label": "SENHA",
+    "label": "PASSCODE",
     "title": "Digite o código",
     "description": "Digite o código para começar.",
     "passwordLabel": "Código",
@@ -16,7 +16,10 @@
     "errors": {
       "missingPasscode": "Configuração do código não encontrada. Verifique REACT_APP_PASSCODE.",
       "wrongPasscode": "Código incorreto."
-    }
+    },
+    "backToLanguage": "Voltar à seleção de idioma",
+    "showPasscode": "Mostrar código",
+    "hidePasscode": "Ocultar código"
   },
   "form": {
     "step1": {

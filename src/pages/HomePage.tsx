@@ -42,10 +42,11 @@ const HomePage: React.FC = () => {
         <h1
           style={{
             color: theme.text,
-            fontSize: "1.9rem",
-            fontWeight: 800,
+            fontFamily: '"Playfair Display", serif',
+            fontSize: "2.2rem",
+            fontWeight: 700,
             margin: "0 0 18px",
-            letterSpacing: "0.02em",
+            letterSpacing: "0.01em",
           }}
         >
           Welcome to
