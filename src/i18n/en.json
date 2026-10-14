@@ -208,7 +208,25 @@
       "generationFailed": "Generation failed. Please try again.",
       "sessionExpired": "Your session has expired. Please enter the passcode again."
     },
-    "retry": "Try again"
+    "retry": "Try again",
+    "generatingTitle": "Generating your image",
+    "generatingWait": "This takes about 30 seconds",
+    "tipsHeader": "Think about your next step",
+    "tipsSubtitle": "We support you toward your future",
+    "tips": [
+      {
+        "title": "Build a 6-month roadmap",
+        "body": "Work backward from your ideal future to plan your actions."
+      },
+      {
+        "title": "Get AI feedback",
+        "body": "AI analyzes your strengths and potential."
+      },
+      {
+        "title": "Join the dream community",
+        "body": "Accelerate with people who share your goals."
+      }
+    ]
   },
   "result": {
     "label": "RESULT",

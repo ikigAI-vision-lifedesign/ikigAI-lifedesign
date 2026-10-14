@@ -204,7 +204,25 @@
     "errors": {
       "sessionExpired": "Tu sesión ha caducado. Vuelve a introducir el código de acceso."
     },
-    "retry": "Intentar de nuevo"
+    "retry": "Intentar de nuevo",
+    "generatingTitle": "Generando tu imagen",
+    "generatingWait": "Esto tarda unos 30 segundos",
+    "tipsHeader": "Piensa en tu próximo paso",
+    "tipsSubtitle": "Te acompañamos hacia tu futuro",
+    "tips": [
+      {
+        "title": "Crea una hoja de ruta de 6 meses",
+        "body": "Planifica tus acciones partiendo de tu futuro ideal."
+      },
+      {
+        "title": "Recibe feedback de la IA",
+        "body": "La IA analiza tus fortalezas y tu potencial."
+      },
+      {
+        "title": "Únete a la comunidad",
+        "body": "Avanza más rápido con quienes comparten tus metas."
+      }
+    ]
   },
   "result": {
     "label": "RESULTADO",

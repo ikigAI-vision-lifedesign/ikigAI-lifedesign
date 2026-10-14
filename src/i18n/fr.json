@@ -208,7 +208,25 @@
       "generationFailed": "La génération a échoué. Veuillez réessayer.",
       "sessionExpired": "Votre session a expiré. Veuillez saisir à nouveau le code d’accès."
     },
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "generatingTitle": "Génération de votre image",
+    "generatingWait": "Cela prend environ 30 secondes",
+    "tipsHeader": "Pensez à votre prochaine étape",
+    "tipsSubtitle": "Nous vous accompagnons vers votre avenir",
+    "tips": [
+      {
+        "title": "Créez une feuille de route sur 6 mois",
+        "body": "Planifiez vos actions à partir de votre avenir idéal."
+      },
+      {
+        "title": "Recevez un retour de l'IA",
+        "body": "L'IA analyse vos forces et votre potentiel."
+      },
+      {
+        "title": "Rejoignez la communauté",
+        "body": "Avancez plus vite avec des personnes qui partagent vos objectifs."
+      }
+    ]
   },
   "result": {
     "label": "RÉSULTAT",

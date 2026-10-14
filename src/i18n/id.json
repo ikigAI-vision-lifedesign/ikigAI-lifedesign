@@ -204,7 +204,25 @@
     "errors": {
       "sessionExpired": "Sesi Anda telah berakhir. Silakan masukkan kode akses lagi."
     },
-    "retry": "Coba lagi"
+    "retry": "Coba lagi",
+    "generatingTitle": "Membuat gambarmu",
+    "generatingWait": "Butuh sekitar 30 detik",
+    "tipsHeader": "Pikirkan langkah berikutnya",
+    "tipsSubtitle": "Kami mendukungmu menuju masa depanmu",
+    "tips": [
+      {
+        "title": "Buat peta jalan 6 bulan",
+        "body": "Rencanakan langkahmu dari masa depan idealmu."
+      },
+      {
+        "title": "Dapatkan masukan AI",
+        "body": "AI menganalisis kelebihan dan potensimu."
+      },
+      {
+        "title": "Gabung komunitas",
+        "body": "Melaju bersama orang dengan tujuan yang sama."
+      }
+    ]
   },
   "result": {
     "label": "HASIL",

@@ -208,7 +208,25 @@
       "generationFailed": "Generierung fehlgeschlagen. Bitte versuche es erneut.",
       "sessionExpired": "Ihre Sitzung ist abgelaufen. Bitte geben Sie den Zugangscode erneut ein."
     },
-    "retry": "Erneut versuchen"
+    "retry": "Erneut versuchen",
+    "generatingTitle": "Dein Bild wird erstellt",
+    "generatingWait": "Das dauert etwa 30 Sekunden",
+    "tipsHeader": "Denk an deinen nächsten Schritt",
+    "tipsSubtitle": "Wir unterstützen dich auf dem Weg in deine Zukunft",
+    "tips": [
+      {
+        "title": "Erstelle eine 6-Monats-Roadmap",
+        "body": "Plane deine Schritte rückwärts von deiner idealen Zukunft."
+      },
+      {
+        "title": "Hol dir KI-Feedback",
+        "body": "Die KI analysiert deine Stärken und dein Potenzial."
+      },
+      {
+        "title": "Tritt der Community bei",
+        "body": "Komm schneller voran mit Gleichgesinnten."
+      }
+    ]
   },
   "result": {
     "label": "ERGEBNIS",

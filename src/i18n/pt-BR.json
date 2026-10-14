@@ -204,7 +204,25 @@
     "errors": {
       "sessionExpired": "Sua sessão expirou. Insira o código de acesso novamente."
     },
-    "retry": "Tentar novamente"
+    "retry": "Tentar novamente",
+    "generatingTitle": "Gerando sua imagem",
+    "generatingWait": "Isso leva cerca de 30 segundos",
+    "tipsHeader": "Pense no seu próximo passo",
+    "tipsSubtitle": "Apoiamos você rumo ao seu futuro",
+    "tips": [
+      {
+        "title": "Crie um roteiro de 6 meses",
+        "body": "Planeje suas ações a partir do seu futuro ideal."
+      },
+      {
+        "title": "Receba feedback da IA",
+        "body": "A IA analisa seus pontos fortes e seu potencial."
+      },
+      {
+        "title": "Entre na comunidade",
+        "body": "Avance mais rápido com quem compartilha seus objetivos."
+      }
+    ]
   },
   "result": {
     "label": "RESULTADO",

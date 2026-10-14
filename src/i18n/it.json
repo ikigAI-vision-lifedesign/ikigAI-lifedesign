@@ -204,7 +204,25 @@
     "errors": {
       "sessionExpired": "La sessione è scaduta. Inserisci di nuovo il codice di accesso."
     },
-    "retry": "Riprova"
+    "retry": "Riprova",
+    "generatingTitle": "Generazione della tua immagine",
+    "generatingWait": "Ci vogliono circa 30 secondi",
+    "tipsHeader": "Pensa al tuo prossimo passo",
+    "tipsSubtitle": "Ti accompagniamo verso il tuo futuro",
+    "tips": [
+      {
+        "title": "Crea una roadmap di 6 mesi",
+        "body": "Pianifica le tue azioni partendo dal tuo futuro ideale."
+      },
+      {
+        "title": "Ricevi feedback dall'IA",
+        "body": "L'IA analizza i tuoi punti di forza e il tuo potenziale."
+      },
+      {
+        "title": "Unisciti alla community",
+        "body": "Avanza più in fretta con chi condivide i tuoi obiettivi."
+      }
+    ]
   },
   "result": {
     "label": "RISULTATO",

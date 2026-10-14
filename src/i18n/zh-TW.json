@@ -146,7 +146,25 @@
     "errors": {
       "sessionExpired": "登入已過期，請重新輸入通行碼。"
     },
-    "retry": "再試一次"
+    "retry": "再試一次",
+    "generatingTitle": "正在生成圖像",
+    "generatingWait": "大約需要 30 秒",
+    "tipsHeader": "想想你的下一步",
+    "tipsSubtitle": "陪你走向你的未來",
+    "tips": [
+      {
+        "title": "制定半年路線圖",
+        "body": "從理想的未來倒推，制定行動計畫。"
+      },
+      {
+        "title": "獲得 AI 回饋",
+        "body": "AI 分析你的優勢與潛力。"
+      },
+      {
+        "title": "加入夢想社群",
+        "body": "與志同道合的人一起加速行動。"
+      }
+    ]
   },
   "result": {
     "label": "結果",

@@ -6,7 +6,7 @@ import "../styles.css";
 import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
-import GrowingTreeLoading from "../components/GrowingTreeLoading";
+import LoadingExperience from "../components/LoadingExperience";
 import { postToGas, clearToken } from "../config";
 
 const STORAGE_KEY = "visionBoardFormData";
@@ -35,7 +35,6 @@ const LoadingPage: React.FC = () => {
   // 開発用：#/loading?preview=1 で生成処理を走らせずローディング画面だけ表示
   const [searchParams] = useSearchParams();
   const isPreview = searchParams.get("preview") === "1";
-  const [loadingTextIndex, setLoadingTextIndex] = useState(0);
   const [view, setView] = useState<ViewState>("loading");
   const [errorMessage, setErrorMessage] = useState("");
   const isRunningRef = useRef(false);
@@ -47,18 +46,6 @@ const LoadingPage: React.FC = () => {
     document.documentElement.lang = savedLanguage;
     document.documentElement.dir = savedLanguage === "ar" ? "rtl" : "ltr";
   }, [i18n]);
-
-  useEffect(() => {
-    const messages = t("loadingPage.messages", {
-      returnObjects: true,
-    }) as string[];
-
-    const interval = setInterval(() => {
-      setLoadingTextIndex((prev) => (prev + 1) % messages.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [t, i18n.language]);
 
   // 画像生成の本体。成功したら結果画面へ、失敗したらエラー表示（再試行ボタン）へ。
   // 入力は Step1〜4 のデータなので、失敗しても Step に戻さず、ここからやり直せる。
@@ -135,10 +122,6 @@ const LoadingPage: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const messages = t("loadingPage.messages", {
-    returnObjects: true,
-  }) as string[];
-
   return (
     <div
       style={{
@@ -163,11 +146,7 @@ const LoadingPage: React.FC = () => {
         }}
       >
       {view === "loading" ? (
-        <>
-          <h2>{t("loadingPage.title")}</h2>
-          <GrowingTreeLoading lang={i18n.language} />
-          <p>{messages[loadingTextIndex]}</p>
-        </>
+        <LoadingExperience preview={isPreview} />
       ) : (
         <div
           style={{
