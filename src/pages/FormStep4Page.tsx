@@ -120,18 +120,6 @@ const lifeDesignStyles: Record<string, SectionStyle> = {
   },
 };
 
-const optionalStyle: SectionStyle = {
-  bg: "#F2FBFA",
-  border: "#9EDFD5",
-  text: "#3C9E92",
-};
-
-const nextActionStyle: SectionStyle = {
-  bg: "#F4FAFF",
-  border: "#9CC9F1",
-  text: "#4C8FC4",
-};
-
 const optionalBadgeStyle: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
@@ -208,29 +196,11 @@ const OldAgeIcon = ({ color }: { color: string }) => (
   </span>
 );
 
-const SparkleIcon = ({ color }: { color: string }) => (
-  <span style={iconWrapStyle(color)}>
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-      <path d="m12 2 1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2Zm7 12 .9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14ZM6 15l1.1 2.9L10 19l-2.9 1.1L6 23l-1.1-2.9L2 19l2.9-1.1L6 15Z" />
-    </svg>
-  </span>
-);
-
-const RocketIcon = ({ color }: { color: string }) => (
-  <span style={iconWrapStyle(color)}>
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-      <path d="M14.5 3c2.8 0 4.9.9 6.5 2.5-1 4.2-3.3 7.6-7 10.2l-3.2-.6-.6-3.2c2.6-3.7 6-6 10.3-6.9ZM8.4 13.6l2 2-2.9 2.9c-.5.5-1.1.8-1.8.9l-2.7.4.4-2.7c.1-.7.4-1.3.9-1.8l4.1-4.1Zm7-6.1a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z" />
-    </svg>
-  </span>
-);
-
 const FormStep4Page: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
   const [formData, setFormData] = useState<VisionBoardFormData>(defaultFormData);
-  const [identityOpen, setIdentityOpen] = useState(false);
-  const [nextActionOpen, setNextActionOpen] = useState(false);
   const [lifeDesignOpen, setLifeDesignOpen] = useState({
     learn: false,
     work: false,
@@ -422,44 +392,6 @@ const FormStep4Page: React.FC = () => {
               </p>
 
               <span style={optionalBadgeStyle}>{t("common.optional")}</span>
-            </div>
-
-            <div style={cardStyle(optionalStyle)}>
-              <button
-                type="button"
-                onClick={() => setIdentityOpen((prev) => !prev)}
-                style={cardHeaderStyle(optionalStyle)}
-              >
-                <span style={{ display: "flex", alignItems: "center" }}>
-                  <SparkleIcon color={optionalStyle.text} />
-                  {t("form.step4.identity.title")}
-                </span>
-                <span>{identityOpen ? "▾" : "▸"}</span>
-              </button>
-
-              {identityOpen && (
-                <div style={cardBodyStyle}>
-                  <p style={helperTextStyle}>
-                    {t("form.step4.identity.helper")}
-                  </p>
-
-                  <label style={labelStyle}>{t("form.step4.identity.happyMoment")}</label>
-                  <textarea
-                    name="happyMoment"
-                    value={formData.happyMoment}
-                    onChange={handleChange}
-                    placeholder={t("form.step4.identity.happyMomentPlaceholder")}
-                  />
-
-                  <label style={labelStyle}>{t("form.step4.identity.strengths")}</label>
-                  <textarea
-                    name="strengths"
-                    value={formData.strengths}
-                    onChange={handleChange}
-                    placeholder={t("form.step4.identity.strengthsPlaceholder")}
-                  />
-                </div>
-              )}
             </div>
 
             <div style={cardStyle(lifeDesignStyles.learn)}>
@@ -694,33 +626,6 @@ const FormStep4Page: React.FC = () => {
               )}
             </div>
 
-            <div style={cardStyle(nextActionStyle)}>
-              <button
-                type="button"
-                onClick={() => setNextActionOpen((prev) => !prev)}
-                style={cardHeaderStyle(nextActionStyle)}
-              >
-                <span style={{ display: "flex", alignItems: "center" }}>
-                  <RocketIcon color={nextActionStyle.text} />
-                  {t("form.step4.nextAction.title")}
-                </span>
-                <span>{nextActionOpen ? "▾" : "▸"}</span>
-              </button>
-
-              {nextActionOpen && (
-                <div style={cardBodyStyle}>
-                  <p style={helperTextStyle}>{t("form.step4.nextAction.helper")}</p>
-
-                  <label style={labelStyle}>{t("form.step4.nextAction.action")}</label>
-                  <textarea
-                    name="nextAction"
-                    value={formData.nextAction}
-                    onChange={handleChange}
-                    placeholder={t("form.step4.nextAction.actionPlaceholder")}
-                  />
-                </div>
-              )}
-            </div>
           </div>
 
           <StepNavigation

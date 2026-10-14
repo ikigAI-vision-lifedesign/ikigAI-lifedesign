@@ -95,6 +95,24 @@ const helperTextStyle: React.CSSProperties = {
   textAlign: "left",
 };
 
+// 任意項目を示す小さなバッジ（必須バッジのニュートラル版）
+const optionalBadgeStyle: React.CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "22px",
+  padding: "0 9px",
+  marginLeft: "8px",
+  borderRadius: "999px",
+  background: "#e9eef0",
+  color: theme.subText,
+  fontSize: "0.68rem",
+  fontWeight: 700,
+  lineHeight: 1,
+  verticalAlign: "middle",
+  whiteSpace: "nowrap",
+};
+
 const FormStep3Page: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
@@ -246,6 +264,39 @@ const FormStep3Page: React.FC = () => {
             onChange={handleChange}
             placeholder={t("form.step3.idealVisionPlaceholder")}
             required
+          />
+
+          <label style={labelStyle}>
+            {t("form.step4.identity.happyMoment")}
+            <span style={optionalBadgeStyle}>{t("common.optional")}</span>
+          </label>
+          <textarea
+            name="happyMoment"
+            value={formData.happyMoment}
+            onChange={handleChange}
+            placeholder={t("form.step4.identity.happyMomentPlaceholder")}
+          />
+
+          <label style={labelStyle}>
+            {t("form.step4.identity.strengths")}
+            <span style={optionalBadgeStyle}>{t("common.optional")}</span>
+          </label>
+          <textarea
+            name="strengths"
+            value={formData.strengths}
+            onChange={handleChange}
+            placeholder={t("form.step4.identity.strengthsPlaceholder")}
+          />
+
+          <label style={labelStyle}>
+            {t("form.step4.nextAction.action")}
+            <span style={optionalBadgeStyle}>{t("common.optional")}</span>
+          </label>
+          <textarea
+            name="nextAction"
+            value={formData.nextAction}
+            onChange={handleChange}
+            placeholder={t("form.step4.nextAction.actionPlaceholder")}
           />
 
           <StepNavigation
