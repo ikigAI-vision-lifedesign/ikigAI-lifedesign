@@ -37,7 +37,8 @@
         "comic": "まんが",
         "anime": "あにめ"
       },
-      "referenceLabel": "しあがりイメージ（さんこう）"
+      "referenceLabel": "しあがりイメージ（さんこう）",
+      "choosePrompt": "したからえらんでください"
     },
     "step2": {
       "stepLabel": "すてっぷ 2",

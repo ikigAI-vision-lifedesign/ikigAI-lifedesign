@@ -37,7 +37,8 @@
         "comic": "कॉमिक",
         "anime": "एनीमे"
       },
-      "referenceLabel": "परिणाम के उदाहरण (संदर्भ)"
+      "referenceLabel": "परिणाम के उदाहरण (संदर्भ)",
+      "choosePrompt": "नीचे से एक स्टाइल चुनें"
     },
     "step2": {
       "stepLabel": "चरण 2 / 4",

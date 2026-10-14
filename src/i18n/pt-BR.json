@@ -37,7 +37,8 @@
         "comic": "Quadrinhos",
         "anime": "Anime"
       },
-      "referenceLabel": "Exemplos do resultado (referência)"
+      "referenceLabel": "Exemplos do resultado (referência)",
+      "choosePrompt": "Escolha um estilo abaixo"
     },
     "step2": {
       "stepLabel": "ETAPA 2 / 4",

@@ -37,7 +37,8 @@
         "comic": "漫画風",
         "anime": "アニメ風"
       },
-      "referenceLabel": "仕上がりイメージ（参考）"
+      "referenceLabel": "仕上がりイメージ（参考）",
+      "choosePrompt": "下から選んでください"
     },
     "step2": {
       "stepLabel": "STEP 2 / 4",

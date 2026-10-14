@@ -37,7 +37,8 @@
         "comic": "Komik",
         "anime": "Anime"
       },
-      "referenceLabel": "Contoh hasil (referensi)"
+      "referenceLabel": "Contoh hasil (referensi)",
+      "choosePrompt": "Pilih gaya di bawah"
     },
     "step2": {
       "stepLabel": "LANGKAH 2 / 4",

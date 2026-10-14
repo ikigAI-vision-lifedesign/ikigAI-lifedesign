@@ -37,7 +37,8 @@
         "comic": "Comic",
         "anime": "Anime"
       },
-      "referenceLabel": "Finished examples (reference)"
+      "referenceLabel": "Finished examples (reference)",
+      "choosePrompt": "Tap a style below"
     },
     "step2": {
       "stepLabel": "STEP 2 / 4",

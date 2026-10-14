@@ -37,7 +37,8 @@
         "comic": "Fumetto",
         "anime": "Anime"
       },
-      "referenceLabel": "Esempi del risultato (riferimento)"
+      "referenceLabel": "Esempi del risultato (riferimento)",
+      "choosePrompt": "Scegli uno stile qui sotto"
     },
     "step2": {
       "stepLabel": "PASSO 2 / 4",

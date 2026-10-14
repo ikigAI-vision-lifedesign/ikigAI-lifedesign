@@ -37,7 +37,8 @@
         "comic": "만화",
         "anime": "애니메이션"
       },
-      "referenceLabel": "완성 예시 (참고)"
+      "referenceLabel": "완성 예시 (참고)",
+      "choosePrompt": "아래에서 선택하세요"
     },
     "step2": {
       "stepLabel": "STEP 2 / 4",

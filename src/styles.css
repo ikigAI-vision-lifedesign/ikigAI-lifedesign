@@ -419,6 +419,154 @@ button:disabled {
   .intro-appear-plant { animation: none; opacity: 0.92; }
 }
 
+/* ===== 画像スタイル選択（PC=グリッド / スマホ=大プレビュー＋横スクロール） ===== */
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.style-mobile { display: none; }
+
+.style-card {
+  position: relative;
+  background: var(--theme-white);
+  border: 2px solid var(--theme-border);
+  border-radius: 14px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.style-card.selected {
+  border-color: var(--theme-primary);
+  background: var(--theme-primary-light);
+}
+.style-card img {
+  width: 100%;
+  border-radius: 9px;
+  display: block;
+  aspect-ratio: 170 / 319;
+  object-fit: cover;
+}
+.style-card .cap {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--theme-subtext);
+  padding-bottom: 3px;
+}
+.style-card.selected .cap { color: var(--theme-primary-dark); }
+.style-card .reco,
+.style-preview .reco {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: linear-gradient(135deg, #6eb6e8 0%, #47d3b1 100%);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+  line-height: 1;
+}
+.style-card .check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  background: var(--theme-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* スマホ：大プレビュー＋サムネ横スクロール */
+@media (max-width: 768px) {
+  .style-grid { display: none; }
+  .style-mobile { display: block; margin-bottom: 24px; }
+}
+.style-preview {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--theme-primary-light);
+  border: 1.5px solid var(--theme-border);
+  border-radius: 16px;
+  padding: 14px;
+}
+.style-preview img {
+  width: 60%;
+  max-width: 230px;
+  border-radius: 12px;
+  display: block;
+}
+.style-preview .reco { top: 12px; left: 12px; font-size: 0.78rem; padding: 4px 10px; }
+.style-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.style-cap-row {
+  text-align: center;
+  font-weight: 800;
+  color: var(--theme-text);
+  margin: 10px 0 2px;
+  font-size: 1.05rem;
+}
+.style-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 2px 6px;
+  -webkit-overflow-scrolling: touch;
+}
+.style-strip .sthumb {
+  position: relative;
+  flex: 0 0 72px;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 2px;
+  cursor: pointer;
+}
+.style-strip .sthumb.selected { border-color: var(--theme-primary); }
+.style-strip .sthumb img {
+  width: 72px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 7px;
+  display: block;
+}
+.style-strip .sthumb .check {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  background: var(--theme-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
 /* ===== パスコード誤入力時のシェイク ===== */
 @keyframes loginShake {
   0%, 100% { transform: translateX(0); }

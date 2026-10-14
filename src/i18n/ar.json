@@ -37,7 +37,8 @@
         "comic": "قصص مصورة",
         "anime": "أنمي"
       },
-      "referenceLabel": "أمثلة على النتيجة (للمرجع)"
+      "referenceLabel": "أمثلة على النتيجة (للمرجع)",
+      "choosePrompt": "اختر أسلوبًا من الأسفل"
     },
     "step2": {
       "stepLabel": "الخطوة 2 / 4",

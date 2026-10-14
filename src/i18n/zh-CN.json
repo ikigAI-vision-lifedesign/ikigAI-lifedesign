@@ -37,7 +37,8 @@
         "comic": "漫画",
         "anime": "动漫"
       },
-      "referenceLabel": "成品示例（参考）"
+      "referenceLabel": "成品示例（参考）",
+      "choosePrompt": "请从下方选择"
     },
     "step2": {
       "stepLabel": "第2步 / 共4步",

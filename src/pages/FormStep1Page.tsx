@@ -1,5 +1,5 @@
 // src/pages/FormStep1Page.tsx
-// STEP1：画像スタイル選択（参考画像つき）。STEP2「あなたについて」より前に選ぶ。
+// STEP1：画像スタイル選択。PC=画像カードのグリッド、スマホ=大プレビュー＋横スクロールのサムネ。
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -22,12 +22,12 @@ import styleAnime from "../assets/styles/style-anime.webp";
 const STORAGE_KEY = "visionBoardFormData";
 
 const imageStyleOptions = [
-  { value: "水彩画風", labelKey: "form.step1.imageStyleOptions.watercolor", img: styleWatercolor },
-  { value: "グラレコ風", labelKey: "form.step1.imageStyleOptions.graphicRecording", img: styleGraphic },
-  { value: "リアル風", labelKey: "form.step1.imageStyleOptions.realistic", img: styleRealistic },
-  { value: "アート風", labelKey: "form.step1.imageStyleOptions.artistic", img: styleArtistic },
-  { value: "漫画風", labelKey: "form.step1.imageStyleOptions.comic", img: styleComic },
-  { value: "アニメ風", labelKey: "form.step1.imageStyleOptions.anime", img: styleAnime },
+  { value: "水彩画風", labelKey: "form.step1.imageStyleOptions.watercolor", img: styleWatercolor, recommended: true },
+  { value: "グラレコ風", labelKey: "form.step1.imageStyleOptions.graphicRecording", img: styleGraphic, recommended: false },
+  { value: "リアル風", labelKey: "form.step1.imageStyleOptions.realistic", img: styleRealistic, recommended: false },
+  { value: "アート風", labelKey: "form.step1.imageStyleOptions.artistic", img: styleArtistic, recommended: false },
+  { value: "漫画風", labelKey: "form.step1.imageStyleOptions.comic", img: styleComic, recommended: false },
+  { value: "アニメ風", labelKey: "form.step1.imageStyleOptions.anime", img: styleAnime, recommended: false },
 ];
 
 const labelStyle: React.CSSProperties = {
@@ -79,11 +79,13 @@ const FormStep1Page: React.FC = () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...prev, imageStyle: value }));
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
+  const select = (value: string) => {
     setImageStyle(value);
     persist(value);
   };
+
+  const displayOption =
+    imageStyleOptions.find((o) => o.value === imageStyle) || imageStyleOptions[0];
 
   const handleNext = (e: React.FormEvent) => {
     e.preventDefault();
@@ -136,104 +138,53 @@ const FormStep1Page: React.FC = () => {
             <RequiredBadge />
           </label>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "20px" }}>
-            {imageStyleOptions.map((option) => (
-              <label
-                key={option.value}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: "12px",
-                  cursor: "pointer",
-                  border: `1.5px solid ${imageStyle === option.value ? theme.primary : theme.border}`,
-                  borderRadius: "14px",
-                  padding: "14px 16px",
-                  backgroundColor: imageStyle === option.value ? theme.primaryLight : theme.white,
-                  marginTop: 0,
-                  marginBottom: 0,
-                  fontWeight: 700,
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", minWidth: 0, flex: 1 }}>
-                  <input
-                    type="radio"
-                    name="imageStyle"
-                    value={option.value}
-                    checked={imageStyle === option.value}
-                    onChange={handleChange}
-                    required
-                    style={{ marginRight: "10px", width: "18px", height: "18px", minHeight: "18px", marginBottom: 0, flexShrink: 0 }}
-                  />
-                  <span>{t(option.labelKey)}</span>
-                </div>
-
-                {option.value === "水彩画風" && (
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      whiteSpace: "nowrap",
-                      padding: "7px 12px",
-                      borderRadius: "999px",
-                      background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)",
-                      color: "#fff",
-                      fontSize: "0.86rem",
-                      fontWeight: 800,
-                      lineHeight: 1,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {t("form.step1.recommended")}
-                  </span>
-                )}
-              </label>
-            ))}
-          </div>
-
-          {/* 参考画像（各スタイルの仕上がりイメージ） */}
-          <p style={{ textAlign: "left", color: theme.subText, fontWeight: 700, fontSize: "0.9rem", margin: "0 0 10px" }}>
-            {t("form.step1.referenceLabel")}
-          </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(96px, 1fr))",
-              gap: "10px",
-              marginBottom: "26px",
-            }}
-          >
+          {/* PC：画像カードのグリッド（全スタイルを一覧して比較） */}
+          <div className="style-grid">
             {imageStyleOptions.map((option) => {
               const selected = imageStyle === option.value;
               return (
                 <button
                   type="button"
                   key={option.value}
-                  onClick={() => handleChange({ target: { value: option.value } } as React.ChangeEvent<HTMLInputElement>)}
-                  style={{
-                    background: "none",
-                    border: `2px solid ${selected ? theme.primary : "transparent"}`,
-                    borderRadius: "12px",
-                    padding: "3px",
-                    cursor: "pointer",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "5px",
-                  }}
+                  className={selected ? "style-card selected" : "style-card"}
+                  onClick={() => select(option.value)}
                 >
-                  <img
-                    src={option.img}
-                    alt={t(option.labelKey)}
-                    style={{ width: "100%", borderRadius: "9px", display: "block", aspectRatio: "170 / 319", objectFit: "cover" }}
-                  />
-                  <span style={{ fontSize: "0.78rem", fontWeight: 700, color: selected ? theme.primaryDark : theme.subText }}>
-                    {t(option.labelKey)}
-                  </span>
+                  {option.recommended && <span className="reco">{t("form.step1.recommended")}</span>}
+                  {selected && <span className="check">✓</span>}
+                  <img src={option.img} alt={t(option.labelKey)} />
+                  <span className="cap">{t(option.labelKey)}</span>
                 </button>
               );
             })}
+          </div>
+
+          {/* スマホ：大プレビュー＋横スクロールのサムネ */}
+          <div className="style-mobile">
+            <div className="style-preview">
+              {displayOption.recommended && imageStyle === displayOption.value && (
+                <span className="reco">{t("form.step1.recommended")}</span>
+              )}
+              <img src={displayOption.img} alt={t(displayOption.labelKey)} />
+              {!imageStyle && <span className="style-hint">{t("form.step1.choosePrompt")}</span>}
+            </div>
+            <div className="style-cap-row">{t(displayOption.labelKey)}</div>
+            <div className="style-strip">
+              {imageStyleOptions.map((option) => {
+                const selected = imageStyle === option.value;
+                return (
+                  <button
+                    type="button"
+                    key={option.value}
+                    className={selected ? "sthumb selected" : "sthumb"}
+                    onClick={() => select(option.value)}
+                    aria-label={t(option.labelKey)}
+                  >
+                    {selected && <span className="check">✓</span>}
+                    <img src={option.img} alt={t(option.labelKey)} />
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <StepNavigation

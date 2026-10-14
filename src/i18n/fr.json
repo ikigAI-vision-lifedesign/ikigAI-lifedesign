@@ -37,7 +37,8 @@
         "comic": "Bande dessinée",
         "anime": "Anime"
       },
-      "referenceLabel": "Exemples de rendu (référence)"
+      "referenceLabel": "Exemples de rendu (référence)",
+      "choosePrompt": "Choisissez un style ci-dessous"
     },
     "step2": {
       "stepLabel": "ÉTAPE 2 / 4",
