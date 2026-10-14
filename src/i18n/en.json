@@ -251,5 +251,26 @@
       "ja": "日本語",
       "en": "English"
     }
+  },
+  "intro": {
+    "title": "What to think about today",
+    "subtitle": "Take the first step to design your life",
+    "what": {
+      "q": "(What to think about)",
+      "body": "Put your values, what you love, and your ideal future into words"
+    },
+    "why": {
+      "q": "(Why think about it)",
+      "body": "When you see what you love and value, life choices become easier"
+    },
+    "outcome": {
+      "q": "(What you will gain)",
+      "items": [
+        "See your own core",
+        "Organize what you want to do",
+        "Find hints for action"
+      ]
+    },
+    "button": "Get started"
   }
 }

@@ -253,5 +253,26 @@
       "hiragana": "ひらがな",
       "fr": "Français"
     }
+  },
+  "intro": {
+    "title": "À quoi penser aujourd'hui",
+    "subtitle": "Faites le premier pas pour concevoir votre vie",
+    "what": {
+      "q": "(À quoi penser ?)",
+      "body": "Mettez en mots vos valeurs, ce que vous aimez et votre futur idéal"
+    },
+    "why": {
+      "q": "(Pourquoi y penser ?)",
+      "body": "Quand vous voyez ce que vous aimez et ce qui compte, les choix de vie deviennent plus simples"
+    },
+    "outcome": {
+      "q": "(Ce que vous y gagnez)",
+      "items": [
+        "Voir votre axe",
+        "Clarifier ce que vous voulez faire",
+        "Trouver des pistes d'action"
+      ]
+    },
+    "button": "Commencer"
   }
 }

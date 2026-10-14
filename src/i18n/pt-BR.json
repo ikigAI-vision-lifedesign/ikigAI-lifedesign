@@ -196,5 +196,26 @@
       "ko": "한국어",
       "pt-BR": "Português (Brasil)"
     }
+  },
+  "intro": {
+    "title": "No que pensar hoje",
+    "subtitle": "Dê o primeiro passo para desenhar a sua vida",
+    "what": {
+      "q": "(No que pensar?)",
+      "body": "Coloque em palavras seus valores, o que você ama e seu futuro ideal"
+    },
+    "why": {
+      "q": "(Por que pensar?)",
+      "body": "Quando você vê o que ama e valoriza, as escolhas da vida ficam mais fáceis"
+    },
+    "outcome": {
+      "q": "(O que você ganha)",
+      "items": [
+        "Enxergar o seu eixo",
+        "Organizar o que quer fazer",
+        "Encontrar dicas para agir"
+      ]
+    },
+    "button": "Começar"
   }
 }

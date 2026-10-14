@@ -55,7 +55,7 @@ const LoginPage: React.FC = () => {
       })
     );
 
-    navigate("/form/step1");
+    navigate("/intro");
   };
 
   return (

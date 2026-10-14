@@ -254,5 +254,26 @@
       "fr": "Français",
       "de": "Deutsch"
     }
+  },
+  "intro": {
+    "title": "Worüber heute nachdenken",
+    "subtitle": "Mach den ersten Schritt, um dein Leben zu gestalten",
+    "what": {
+      "q": "(Worüber nachdenken?)",
+      "body": "Bring deine Werte, das, was du liebst, und deine ideale Zukunft in Worte"
+    },
+    "why": {
+      "q": "(Warum nachdenken?)",
+      "body": "Wenn du siehst, was du liebst und schätzt, fallen Entscheidungen im Leben leichter"
+    },
+    "outcome": {
+      "q": "(Was du gewinnst)",
+      "items": [
+        "Deinen Kern erkennen",
+        "Ordnen, was du tun willst",
+        "Hinweise zum Handeln finden"
+      ]
+    },
+    "button": "Loslegen"
   }
 }

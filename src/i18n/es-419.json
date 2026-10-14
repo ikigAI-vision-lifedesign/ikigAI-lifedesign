@@ -197,5 +197,26 @@
       "pt-BR": "Português (Brasil)",
       "es-419": "Español"
     }
+  },
+  "intro": {
+    "title": "En qué pensar hoy",
+    "subtitle": "Da el primer paso para diseñar tu vida",
+    "what": {
+      "q": "(¿En qué pensar?)",
+      "body": "Pon en palabras tus valores, lo que te gusta y tu futuro ideal"
+    },
+    "why": {
+      "q": "(¿Por qué pensarlo?)",
+      "body": "Cuando ves lo que amas y valoras, elegir en la vida se vuelve más fácil"
+    },
+    "outcome": {
+      "q": "(Qué obtienes)",
+      "items": [
+        "Descubres tu eje",
+        "Ordenas lo que quieres hacer",
+        "Encuentras pistas para actuar"
+      ]
+    },
+    "button": "Comenzar"
   }
 }

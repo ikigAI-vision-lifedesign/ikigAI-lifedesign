@@ -193,5 +193,26 @@
       "hi": "हिन्दी",
       "id": "Bahasa Indonesia"
     }
+  },
+  "intro": {
+    "title": "Apa yang dipikirkan hari ini",
+    "subtitle": "Ambil langkah pertama untuk merancang hidupmu",
+    "what": {
+      "q": "(Apa yang dipikirkan?)",
+      "body": "Ungkapkan nilai-nilaimu, hal yang kamu sukai, dan masa depan idealmu dalam kata-kata"
+    },
+    "why": {
+      "q": "(Mengapa memikirkannya?)",
+      "body": "Saat kamu melihat apa yang kamu sukai dan hargai, pilihan hidup jadi lebih mudah"
+    },
+    "outcome": {
+      "q": "(Yang kamu dapatkan)",
+      "items": [
+        "Melihat poros dirimu",
+        "Menata apa yang ingin kamu lakukan",
+        "Menemukan petunjuk untuk bertindak"
+      ]
+    },
+    "button": "Mulai"
   }
 }

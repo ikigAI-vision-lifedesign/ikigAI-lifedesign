@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LanguageSelectPage from "./pages/LanguageSelectPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import IntroPage from "./pages/IntroPage";
 import FormStep1Page from "./pages/FormStep1Page";
 import FormStep2Page from "./pages/FormStep2Page";
 import FormStep3Page from "./pages/FormStep3Page";
@@ -23,6 +24,9 @@ const App: React.FC = () => {
 
         {/* ログイン */}
         <Route path="/login" element={<LoginPage />} />
+
+        {/* 導入（What / Why / Outcome） */}
+        <Route path="/intro" element={<IntroPage />} />
 
         {/* フォーム */}
         <Route path="/form/step1" element={<FormStep1Page />} />

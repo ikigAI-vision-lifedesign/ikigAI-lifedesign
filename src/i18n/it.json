@@ -194,5 +194,26 @@
       "id": "Bahasa Indonesia",
       "it": "Italiano"
     }
+  },
+  "intro": {
+    "title": "A cosa pensare oggi",
+    "subtitle": "Fai il primo passo per progettare la tua vita",
+    "what": {
+      "q": "(A cosa pensare?)",
+      "body": "Metti in parole i tuoi valori, ciò che ami e il tuo futuro ideale"
+    },
+    "why": {
+      "q": "(Perché pensarci?)",
+      "body": "Quando vedi ciò che ami e che conta, le scelte di vita diventano più facili"
+    },
+    "outcome": {
+      "q": "(Cosa ottieni)",
+      "items": [
+        "Vedi il tuo centro",
+        "Metti ordine in ciò che vuoi fare",
+        "Trovi spunti per agire"
+      ]
+    },
+    "button": "Inizia"
   }
 }
