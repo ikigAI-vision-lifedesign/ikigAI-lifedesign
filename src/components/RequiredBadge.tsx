@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const RequiredBadge: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <span
       style={{
@@ -19,9 +21,10 @@ const RequiredBadge: React.FC = () => {
         lineHeight: 1,
         verticalAlign: "middle",
         boxSizing: "border-box",
+        whiteSpace: "nowrap",
       }}
     >
-      必須
+      {t("common.required")}
     </span>
   );
 };

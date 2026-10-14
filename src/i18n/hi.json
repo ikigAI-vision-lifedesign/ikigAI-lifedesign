@@ -4,7 +4,8 @@
     "next": "आगे",
     "optional": "वैकल्पिक",
     "topBannerAlt": "ऊपरी बैनर",
-    "bottomBannerAlt": "निचला बैनर"
+    "bottomBannerAlt": "निचला बैनर",
+    "required": "आवश्यक"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "चरण 1 / 4",
+      "title": "आपका पसंदीदा माहौल",
+      "description": "रंग और विज़ुअल स्टाइल चुनने से आपका विज़न बोर्ड और भी आपके जैसा बनेगा।",
+      "imageStyle": "इमेज स्टाइल",
+      "recommended": "सुझावित",
+      "imageStyleOptions": {
+        "watercolor": "वॉटरकलर",
+        "graphicRecording": "ग्राफिक रिकॉर्डिंग",
+        "realistic": "रियलिस्टिक",
+        "artistic": "आर्टिस्टिक",
+        "comic": "कॉमिक",
+        "anime": "एनीमे"
+      },
+      "referenceLabel": "परिणाम के उदाहरण (संदर्भ)"
+    },
+    "step2": {
+      "stepLabel": "चरण 2 / 4",
       "title": "आपके बारे में",
       "description": "कृपया वह बुनियादी जानकारी दर्ज करें जो आपके विज़न बोर्ड में दिखाई जाएगी।",
       "fullName": "नाम",
@@ -40,27 +57,12 @@
         "nonBinary": "नॉन-बाइनरी",
         "preferNotToSay": "नहीं बताना चाहता/चाहती"
       },
+      "favoriteColors": "पसंदीदा रंग (अधिकतम 3)",
+      "favoriteColorsPlaceholder": "उदाहरण: गुलाबी, हल्का नीला, सफेद",
       "hairAppearance": "बाल / रूप-रंग",
       "hairAppearancePlaceholder": "उदाहरण: लंबे काले बाल, घुंघराले बाल, लंबा कद",
       "charmPoints": "खास बातें / आकर्षण",
       "charmPointsPlaceholder": "उदाहरण: मुस्कान, डिंपल, चमकती आंखें"
-    },
-    "step2": {
-      "stepLabel": "चरण 2 / 4",
-      "title": "आपका पसंदीदा माहौल",
-      "description": "रंग और विज़ुअल स्टाइल चुनने से आपका विज़न बोर्ड और भी आपके जैसा बनेगा।",
-      "favoriteColors": "पसंदीदा रंग (अधिकतम 3)",
-      "favoriteColorsPlaceholder": "उदाहरण: गुलाबी, हल्का नीला, सफेद",
-      "imageStyle": "इमेज स्टाइल",
-      "recommended": "सुझावित",
-      "imageStyleOptions": {
-        "watercolor": "वॉटरकलर",
-        "graphicRecording": "ग्राफिक रिकॉर्डिंग",
-        "realistic": "रियलिस्टिक",
-        "artistic": "आर्टिस्टिक",
-        "comic": "कॉमिक",
-        "anime": "एनीमे"
-      }
     },
     "step3": {
       "stepLabel": "चरण 3 / 5",

@@ -4,7 +4,8 @@
     "next": "Lanjut",
     "optional": "Opsional",
     "topBannerAlt": "Banner atas",
-    "bottomBannerAlt": "Banner bawah"
+    "bottomBannerAlt": "Banner bawah",
+    "required": "Wajib"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "LANGKAH 1 / 4",
+      "title": "Gaya Favorit Anda",
+      "description": "Memilih warna dan gaya visual akan membuat vision board lebih sesuai dengan Anda.",
+      "imageStyle": "Gaya Gambar",
+      "recommended": "Direkomendasikan",
+      "imageStyleOptions": {
+        "watercolor": "Cat air",
+        "graphicRecording": "Graphic recording",
+        "realistic": "Realistis",
+        "artistic": "Artistik",
+        "comic": "Komik",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Contoh hasil (referensi)"
+    },
+    "step2": {
+      "stepLabel": "LANGKAH 2 / 4",
       "title": "Tentang Anda",
       "description": "Masukkan informasi dasar yang akan ditampilkan di vision board Anda.",
       "fullName": "Nama",
@@ -40,27 +57,12 @@
         "nonBinary": "Non-biner",
         "preferNotToSay": "Tidak ingin menjawab"
       },
+      "favoriteColors": "Warna favorit (maks. 3)",
+      "favoriteColorsPlaceholder": "contoh: pink, biru muda, putih",
       "hairAppearance": "Rambut / Penampilan",
       "hairAppearancePlaceholder": "contoh: rambut hitam panjang, rambut keriting, tinggi",
       "charmPoints": "Daya tarik / ciri khas",
       "charmPointsPlaceholder": "contoh: senyum, lesung pipi, mata besar"
-    },
-    "step2": {
-      "stepLabel": "LANGKAH 2 / 4",
-      "title": "Gaya Favorit Anda",
-      "description": "Memilih warna dan gaya visual akan membuat vision board lebih sesuai dengan Anda.",
-      "favoriteColors": "Warna favorit (maks. 3)",
-      "favoriteColorsPlaceholder": "contoh: pink, biru muda, putih",
-      "imageStyle": "Gaya Gambar",
-      "recommended": "Direkomendasikan",
-      "imageStyleOptions": {
-        "watercolor": "Cat air",
-        "graphicRecording": "Graphic recording",
-        "realistic": "Realistis",
-        "artistic": "Artistik",
-        "comic": "Komik",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "LANGKAH 3 / 5",

@@ -4,7 +4,8 @@
     "next": "つぎへ",
     "optional": "にんい",
     "topBannerAlt": "うえのがぞう",
-    "bottomBannerAlt": "したのがぞう"
+    "bottomBannerAlt": "したのがぞう",
+    "required": "ひっす"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "すてっぷ 1",
+      "title": "すきなかんじ",
+      "description": "すきないろやふんいきをえらんでね。",
+      "imageStyle": "えのかんじ",
+      "recommended": "おすすめ",
+      "imageStyleOptions": {
+        "watercolor": "すいさい",
+        "graphicRecording": "ぐらふぃっく",
+        "realistic": "ほんものっぽい",
+        "artistic": "あーと",
+        "comic": "まんが",
+        "anime": "あにめ"
+      },
+      "referenceLabel": "しあがりイメージ（さんこう）"
+    },
+    "step2": {
+      "stepLabel": "すてっぷ 2",
       "title": "あなたのこと",
       "description": "あなたのことをおしえてください。",
       "fullName": "なまえ",
@@ -40,27 +57,12 @@
         "nonBinary": "どちらでもない",
         "preferNotToSay": "こたえない"
       },
+      "favoriteColors": "すきないろ（3つまで）",
+      "favoriteColorsPlaceholder": "れい：ぴんく、あお、しろ",
       "hairAppearance": "みため",
       "hairAppearancePlaceholder": "れい：くろかみ、せがたかい",
       "charmPoints": "いいところ",
       "charmPointsPlaceholder": "れい：えがお、めがきれい"
-    },
-    "step2": {
-      "stepLabel": "すてっぷ 2",
-      "title": "すきなかんじ",
-      "description": "すきないろやふんいきをえらんでね。",
-      "favoriteColors": "すきないろ（3つまで）",
-      "favoriteColorsPlaceholder": "れい：ぴんく、あお、しろ",
-      "imageStyle": "えのかんじ",
-      "recommended": "おすすめ",
-      "imageStyleOptions": {
-        "watercolor": "すいさい",
-        "graphicRecording": "ぐらふぃっく",
-        "realistic": "ほんものっぽい",
-        "artistic": "あーと",
-        "comic": "まんが",
-        "anime": "あにめ"
-      }
     },
     "step3": {
       "stepLabel": "すてっぷ 3",

@@ -115,28 +115,6 @@ const LoginPage: React.FC = () => {
           boxSizing: "border-box",
         }}
       >
-        {/* 枠外・文字のみの「言語選択に戻る」リンク */}
-        <div style={{ textAlign: "left", marginBottom: "14px" }}>
-          <button
-            type="button"
-            onClick={() => navigate("/language")}
-            style={{
-              background: "none",
-              border: "none",
-              padding: "4px 2px",
-              color: theme.subText,
-              fontSize: "0.85rem",
-              fontWeight: 700,
-              cursor: "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "4px",
-            }}
-          >
-            <span aria-hidden="true">←</span> {t("login.backToLanguage")}
-          </button>
-        </div>
-
         <p
           style={{
             color: theme.primaryDark,
@@ -274,6 +252,28 @@ const LoginPage: React.FC = () => {
             }}
           >
             {t("login.continue")}
+          </button>
+        </div>
+
+        {/* 枠外・文字のみの「言語選択に戻る」リンク（カードの下） */}
+        <div style={{ textAlign: "center", marginTop: "18px" }}>
+          <button
+            type="button"
+            onClick={() => navigate("/language")}
+            style={{
+              background: "none",
+              border: "none",
+              padding: "4px 2px",
+              color: theme.subText,
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "4px",
+            }}
+          >
+            <span aria-hidden="true">←</span> {t("login.backToLanguage")}
           </button>
         </div>
       </div>

@@ -4,7 +4,8 @@
     "next": "Avanti",
     "optional": "Opzionale",
     "topBannerAlt": "Banner superiore",
-    "bottomBannerAlt": "Banner inferiore"
+    "bottomBannerAlt": "Banner inferiore",
+    "required": "Obbligatorio"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "PASSO 1 / 4",
+      "title": "Il tuo stile preferito",
+      "description": "Scegliere colori e stile visivo aiuta a creare un mondo che ti rappresenta.",
+      "imageStyle": "Stile immagine",
+      "recommended": "Consigliato",
+      "imageStyleOptions": {
+        "watercolor": "Acquerello",
+        "graphicRecording": "Graphic recording",
+        "realistic": "Realistico",
+        "artistic": "Artistico",
+        "comic": "Fumetto",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Esempi del risultato (riferimento)"
+    },
+    "step2": {
+      "stepLabel": "PASSO 2 / 4",
       "title": "Su di te",
       "description": "Inserisci le informazioni di base che verranno riflesse nel tuo vision board.",
       "fullName": "Nome",
@@ -40,27 +57,12 @@
         "nonBinary": "Non binario",
         "preferNotToSay": "Preferisco non rispondere"
       },
+      "favoriteColors": "Colori preferiti (max 3)",
+      "favoriteColorsPlaceholder": "es. rosa, azzurro, bianco",
       "hairAppearance": "Capelli / aspetto",
       "hairAppearancePlaceholder": "es. capelli lunghi neri, ricci, alto",
       "charmPoints": "Punti di forza / caratteristiche",
       "charmPointsPlaceholder": "es. sorriso, fossette, occhi grandi"
-    },
-    "step2": {
-      "stepLabel": "PASSO 2 / 4",
-      "title": "Il tuo stile preferito",
-      "description": "Scegliere colori e stile visivo aiuta a creare un mondo che ti rappresenta.",
-      "favoriteColors": "Colori preferiti (max 3)",
-      "favoriteColorsPlaceholder": "es. rosa, azzurro, bianco",
-      "imageStyle": "Stile immagine",
-      "recommended": "Consigliato",
-      "imageStyleOptions": {
-        "watercolor": "Acquerello",
-        "graphicRecording": "Graphic recording",
-        "realistic": "Realistico",
-        "artistic": "Artistico",
-        "comic": "Fumetto",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "PASSO 3 / 5",

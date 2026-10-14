@@ -4,7 +4,8 @@
     "next": "다음",
     "optional": "선택",
     "topBannerAlt": "상단 배너",
-    "bottomBannerAlt": "하단 배너"
+    "bottomBannerAlt": "하단 배너",
+    "required": "필수"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "STEP 1 / 4",
+      "title": "좋아하는 분위기",
+      "description": "색상과 스타일을 선택하면 당신만의 느낌을 더 잘 표현할 수 있습니다.",
+      "imageStyle": "이미지 스타일",
+      "recommended": "추천",
+      "imageStyleOptions": {
+        "watercolor": "수채화",
+        "graphicRecording": "그래픽 스타일",
+        "realistic": "리얼",
+        "artistic": "아트",
+        "comic": "만화",
+        "anime": "애니메이션"
+      },
+      "referenceLabel": "완성 예시 (참고)"
+    },
+    "step2": {
+      "stepLabel": "STEP 2 / 4",
       "title": "당신에 대해",
       "description": "비전 보드에 반영될 기본 정보를 입력하세요.",
       "fullName": "이름",
@@ -40,27 +57,12 @@
         "nonBinary": "논바이너리",
         "preferNotToSay": "답변하지 않음"
       },
+      "favoriteColors": "좋아하는 색 (최대 3개)",
+      "favoriteColorsPlaceholder": "예: 핑크, 하늘색, 흰색",
       "hairAppearance": "머리 / 외모",
       "hairAppearancePlaceholder": "예: 긴 검은 머리, 곱슬머리, 키가 큼",
       "charmPoints": "매력 포인트",
       "charmPointsPlaceholder": "예: 미소, 보조개, 큰 눈"
-    },
-    "step2": {
-      "stepLabel": "STEP 2 / 4",
-      "title": "좋아하는 분위기",
-      "description": "색상과 스타일을 선택하면 당신만의 느낌을 더 잘 표현할 수 있습니다.",
-      "favoriteColors": "좋아하는 색 (최대 3개)",
-      "favoriteColorsPlaceholder": "예: 핑크, 하늘색, 흰색",
-      "imageStyle": "이미지 스타일",
-      "recommended": "추천",
-      "imageStyleOptions": {
-        "watercolor": "수채화",
-        "graphicRecording": "그래픽 스타일",
-        "realistic": "리얼",
-        "artistic": "아트",
-        "comic": "만화",
-        "anime": "애니메이션"
-      }
     },
     "step3": {
       "stepLabel": "STEP 3 / 5",

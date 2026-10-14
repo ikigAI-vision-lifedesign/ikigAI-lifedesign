@@ -1,3 +1,5 @@
+// src/pages/FormStep1Page.tsx
+// STEP1：画像スタイル選択（参考画像つき）。STEP2「あなたについて」より前に選ぶ。
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,75 +12,23 @@ import RequiredBadge from "../components/RequiredBadge";
 import StepNavigation from "../components/StepNavigation";
 import { theme } from "../theme";
 
+import styleWatercolor from "../assets/styles/style-watercolor.webp";
+import styleGraphic from "../assets/styles/style-graphic.webp";
+import styleRealistic from "../assets/styles/style-realistic.webp";
+import styleArtistic from "../assets/styles/style-artistic.webp";
+import styleComic from "../assets/styles/style-comic.webp";
+import styleAnime from "../assets/styles/style-anime.webp";
+
 const STORAGE_KEY = "visionBoardFormData";
 
-const genderOptions = [
-  { value: "", labelKey: "form.step1.genderOptions.select" },
-  { value: "男性", labelKey: "form.step1.genderOptions.male" },
-  { value: "女性", labelKey: "form.step1.genderOptions.female" },
-  { value: "ノンバイナリー", labelKey: "form.step1.genderOptions.nonBinary" },
-  { value: "回答しない", labelKey: "form.step1.genderOptions.preferNotToSay" },
+const imageStyleOptions = [
+  { value: "水彩画風", labelKey: "form.step1.imageStyleOptions.watercolor", img: styleWatercolor },
+  { value: "グラレコ風", labelKey: "form.step1.imageStyleOptions.graphicRecording", img: styleGraphic },
+  { value: "リアル風", labelKey: "form.step1.imageStyleOptions.realistic", img: styleRealistic },
+  { value: "アート風", labelKey: "form.step1.imageStyleOptions.artistic", img: styleArtistic },
+  { value: "漫画風", labelKey: "form.step1.imageStyleOptions.comic", img: styleComic },
+  { value: "アニメ風", labelKey: "form.step1.imageStyleOptions.anime", img: styleAnime },
 ];
-
-type VisionBoardFormData = {
-  fullName: string;
-  email: string;
-  age: string;
-  gender: string;
-  hairAppearance: string;
-  charmPoints: string;
-  favoriteColors: string;
-  imageStyle: string;
-  selfExpression: string;
-  happyMoment: string;
-  strengths: string;
-  idealVision: string;
-  learnWant: string;
-  learnReason: string;
-  learnWhenWhere: string;
-  workStyle: string;
-  workValues: string;
-  workIdealIncomePlace: string;
-  residencePlace: string;
-  residenceEnvironment: string;
-  marriageIdealRelation: string;
-  marriageThoughts: string;
-  childThoughts: string;
-  childValues: string;
-  oldAgeIdeal: string;
-  oldAgePreparation: string;
-  nextAction: string;
-};
-
-const defaultFormData: VisionBoardFormData = {
-  fullName: "",
-  email: "",
-  age: "",
-  gender: "",
-  hairAppearance: "",
-  charmPoints: "",
-  favoriteColors: "",
-  imageStyle: "",
-  selfExpression: "",
-  happyMoment: "",
-  strengths: "",
-  idealVision: "",
-  learnWant: "",
-  learnReason: "",
-  learnWhenWhere: "",
-  workStyle: "",
-  workValues: "",
-  workIdealIncomePlace: "",
-  residencePlace: "",
-  residenceEnvironment: "",
-  marriageIdealRelation: "",
-  marriageThoughts: "",
-  childThoughts: "",
-  childValues: "",
-  oldAgeIdeal: "",
-  oldAgePreparation: "",
-  nextAction: "",
-};
 
 const labelStyle: React.CSSProperties = {
   display: "flex",
@@ -98,7 +48,7 @@ const FormStep1Page: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const [formData, setFormData] = useState<VisionBoardFormData>(defaultFormData);
+  const [imageStyle, setImageStyle] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
 
   useEffect(() => {
@@ -106,54 +56,39 @@ const FormStep1Page: React.FC = () => {
     i18n.changeLanguage(savedLanguage);
     document.documentElement.lang = savedLanguage;
     document.documentElement.dir = savedLanguage === "ar" ? "rtl" : "ltr";
-    i18n.changeLanguage(savedLanguage);
   }, [i18n]);
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (!saved) return;
-
     try {
       const parsed = JSON.parse(saved);
-      setFormData((prev) => ({ ...prev, ...parsed }));
+      if (typeof parsed.imageStyle === "string") setImageStyle(parsed.imageStyle);
     } catch (error) {
       console.error("Failed to parse saved form data:", error);
     }
   }, []);
 
   useEffect(() => {
-    const isComplete =
-      formData.fullName.trim() !== "" &&
-      formData.email.trim() !== "" &&
-      formData.age.trim() !== "" &&
-      formData.gender.trim() !== "" &&
-      formData.hairAppearance.trim() !== "" &&
-      formData.charmPoints.trim() !== "";
+    setIsDisabled(imageStyle.trim() === "");
+  }, [imageStyle]);
 
-    setIsDisabled(!isComplete);
-  }, [formData]);
-
-  const saveFormData = (data: VisionBoardFormData) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  const persist = (value: string) => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const prev = saved ? JSON.parse(saved) : {};
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...prev, imageStyle: value }));
   };
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => {
-      const next = { ...prev, [name]: value };
-      saveFormData(next);
-      return next;
-    });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setImageStyle(value);
+    persist(value);
   };
 
   const handleNext = (e: React.FormEvent) => {
     e.preventDefault();
     if (isDisabled) return;
-
-    saveFormData(formData);
+    persist(imageStyle);
     navigate("/form/step2");
   };
 
@@ -169,47 +104,15 @@ const FormStep1Page: React.FC = () => {
     >
       <ScrollingBanner src={topBanner} direction="left" />
 
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "720px",
-          padding: "24px 16px 48px",
-          boxSizing: "border-box",
-        }}
-      >
-        <div
-          style={{
-            marginBottom: "24px",
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              color: theme.primaryDark,
-              fontWeight: 700,
-              marginBottom: "8px",
-            }}
-          >
+      <div style={{ width: "100%", maxWidth: "720px", padding: "24px 16px 48px", boxSizing: "border-box" }}>
+        <div style={{ marginBottom: "24px", textAlign: "center" }}>
+          <p style={{ color: theme.primaryDark, fontWeight: 700, marginBottom: "8px" }}>
             {t("form.step1.stepLabel")}
           </p>
-
-          <h1
-            style={{
-              fontSize: "2rem",
-              color: theme.text,
-              marginBottom: "12px",
-            }}
-          >
+          <h1 style={{ fontSize: "2rem", color: theme.text, marginBottom: "12px" }}>
             {t("form.step1.title")}
           </h1>
-
-          <p
-            style={{
-              color: theme.subText,
-              lineHeight: 1.8,
-              margin: 0,
-            }}
-          >
+          <p style={{ color: theme.subText, lineHeight: 1.8, margin: 0 }}>
             {t("form.step1.description")}
           </p>
         </div>
@@ -224,97 +127,114 @@ const FormStep1Page: React.FC = () => {
             marginBottom: "28px",
           }}
         >
-          <div
-            style={{
-              width: "25%",
-              height: "100%",
-              background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)",
-            }}
-          />
+          <div style={{ width: "25%", height: "100%", background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)" }} />
         </div>
 
         <form onSubmit={handleNext}>
           <label style={labelStyle}>
-            {t("form.step1.fullName")}
+            {t("form.step1.imageStyle")}
             <RequiredBadge />
           </label>
-          <input
-            type="text"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleInputChange}
-            required
-            placeholder={t("form.step1.fullNamePlaceholder")}
-          />
 
-          <label style={labelStyle}>
-            {t("form.step1.email")}
-            <RequiredBadge />
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-            placeholder={t("form.step1.emailPlaceholder")}
-          />
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "20px" }}>
+            {imageStyleOptions.map((option) => (
+              <label
+                key={option.value}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "12px",
+                  cursor: "pointer",
+                  border: `1.5px solid ${imageStyle === option.value ? theme.primary : theme.border}`,
+                  borderRadius: "14px",
+                  padding: "14px 16px",
+                  backgroundColor: imageStyle === option.value ? theme.primaryLight : theme.white,
+                  marginTop: 0,
+                  marginBottom: 0,
+                  fontWeight: 700,
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", minWidth: 0, flex: 1 }}>
+                  <input
+                    type="radio"
+                    name="imageStyle"
+                    value={option.value}
+                    checked={imageStyle === option.value}
+                    onChange={handleChange}
+                    required
+                    style={{ marginRight: "10px", width: "18px", height: "18px", minHeight: "18px", marginBottom: 0, flexShrink: 0 }}
+                  />
+                  <span>{t(option.labelKey)}</span>
+                </div>
 
-          <label style={labelStyle}>
-            {t("form.step1.age")}
-            <RequiredBadge />
-          </label>
-          <input
-            type="text"
-            name="age"
-            value={formData.age}
-            onChange={handleInputChange}
-            required
-            placeholder={t("form.step1.agePlaceholder")}
-          />
-
-          <label style={labelStyle}>
-            {t("form.step1.gender")}
-            <RequiredBadge />
-          </label>
-          <select
-            name="gender"
-            value={formData.gender}
-            onChange={handleInputChange}
-            required
-          >
-            {genderOptions.map((option) => (
-              <option key={option.value || "empty"} value={option.value}>
-                {t(option.labelKey)}
-              </option>
+                {option.value === "水彩画風" && (
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      whiteSpace: "nowrap",
+                      padding: "7px 12px",
+                      borderRadius: "999px",
+                      background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)",
+                      color: "#fff",
+                      fontSize: "0.86rem",
+                      fontWeight: 800,
+                      lineHeight: 1,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {t("form.step1.recommended")}
+                  </span>
+                )}
+              </label>
             ))}
-          </select>
+          </div>
 
-          <label style={labelStyle}>
-            {t("form.step1.hairAppearance")}
-            <RequiredBadge />
-          </label>
-          <input
-            type="text"
-            name="hairAppearance"
-            value={formData.hairAppearance}
-            onChange={handleInputChange}
-            required
-            placeholder={t("form.step1.hairAppearancePlaceholder")}
-          />
-
-          <label style={labelStyle}>
-            {t("form.step1.charmPoints")}
-            <RequiredBadge />
-          </label>
-          <input
-            type="text"
-            name="charmPoints"
-            value={formData.charmPoints}
-            onChange={handleInputChange}
-            required
-            placeholder={t("form.step1.charmPointsPlaceholder")}
-          />
+          {/* 参考画像（各スタイルの仕上がりイメージ） */}
+          <p style={{ textAlign: "left", color: theme.subText, fontWeight: 700, fontSize: "0.9rem", margin: "0 0 10px" }}>
+            {t("form.step1.referenceLabel")}
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(96px, 1fr))",
+              gap: "10px",
+              marginBottom: "26px",
+            }}
+          >
+            {imageStyleOptions.map((option) => {
+              const selected = imageStyle === option.value;
+              return (
+                <button
+                  type="button"
+                  key={option.value}
+                  onClick={() => handleChange({ target: { value: option.value } } as React.ChangeEvent<HTMLInputElement>)}
+                  style={{
+                    background: "none",
+                    border: `2px solid ${selected ? theme.primary : "transparent"}`,
+                    borderRadius: "12px",
+                    padding: "3px",
+                    cursor: "pointer",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <img
+                    src={option.img}
+                    alt={t(option.labelKey)}
+                    style={{ width: "100%", borderRadius: "9px", display: "block", aspectRatio: "170 / 319", objectFit: "cover" }}
+                  />
+                  <span style={{ fontSize: "0.78rem", fontWeight: 700, color: selected ? theme.primaryDark : theme.subText }}>
+                    {t(option.labelKey)}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
 
           <StepNavigation
             backLabel={t("common.back")}

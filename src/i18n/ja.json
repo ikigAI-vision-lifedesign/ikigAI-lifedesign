@@ -4,7 +4,8 @@
     "next": "次へ",
     "optional": "任意",
     "topBannerAlt": "トップバナー",
-    "bottomBannerAlt": "ボトムバナー"
+    "bottomBannerAlt": "ボトムバナー",
+    "required": "必須"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "STEP 1 / 4",
+      "title": "好きな雰囲気",
+      "description": "色や表現スタイルを選ぶと、あなたらしい世界観に近づきます。",
+      "imageStyle": "画像スタイル",
+      "recommended": "おすすめ",
+      "imageStyleOptions": {
+        "watercolor": "水彩画風",
+        "graphicRecording": "グラレコ風",
+        "realistic": "リアル風",
+        "artistic": "アート風",
+        "comic": "漫画風",
+        "anime": "アニメ風"
+      },
+      "referenceLabel": "仕上がりイメージ（参考）"
+    },
+    "step2": {
+      "stepLabel": "STEP 2 / 4",
       "title": "あなたについて",
       "description": "ビジョンボードに反映するための基本情報を入力してください。",
       "fullName": "お名前",
@@ -40,27 +57,12 @@
         "nonBinary": "ノンバイナリー",
         "preferNotToSay": "回答しない"
       },
+      "favoriteColors": "好きな色（最大3色）",
+      "favoriteColorsPlaceholder": "例：ピンク、水色、白",
       "hairAppearance": "髪型・見た目の特徴",
       "hairAppearancePlaceholder": "例：黒髪ロング、くせ毛、背が高い",
       "charmPoints": "チャームポイント・印象的な特徴",
       "charmPointsPlaceholder": "例：笑顔、えくぼ、大きな目"
-    },
-    "step2": {
-      "stepLabel": "STEP 2 / 4",
-      "title": "好きな雰囲気",
-      "description": "色や表現スタイルを選ぶと、あなたらしい世界観に近づきます。",
-      "favoriteColors": "好きな色（最大3色）",
-      "favoriteColorsPlaceholder": "例：ピンク、水色、白",
-      "imageStyle": "画像スタイル",
-      "recommended": "おすすめ",
-      "imageStyleOptions": {
-        "watercolor": "水彩画風",
-        "graphicRecording": "グラレコ風",
-        "realistic": "リアル風",
-        "artistic": "アート風",
-        "comic": "漫画風",
-        "anime": "アニメ風"
-      }
     },
     "step3": {
       "stepLabel": "STEP 3 / 5",

@@ -4,7 +4,8 @@
     "next": "Next",
     "optional": "Optional",
     "topBannerAlt": "Top banner",
-    "bottomBannerAlt": "Bottom banner"
+    "bottomBannerAlt": "Bottom banner",
+    "required": "Required"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "STEP 1 / 4",
+      "title": "Your Favorite Mood",
+      "description": "Choosing colors and a visual style helps create a world that feels more like you.",
+      "imageStyle": "Image Style",
+      "recommended": "Recommended",
+      "imageStyleOptions": {
+        "watercolor": "Watercolor",
+        "graphicRecording": "Graphic Recording",
+        "realistic": "Realistic",
+        "artistic": "Artistic",
+        "comic": "Comic",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Finished examples (reference)"
+    },
+    "step2": {
+      "stepLabel": "STEP 2 / 4",
       "title": "About You",
       "description": "Please enter the basic information that will be reflected in your vision board.",
       "fullName": "Name",
@@ -40,27 +57,12 @@
         "nonBinary": "Non-binary",
         "preferNotToSay": "Prefer not to say"
       },
+      "favoriteColors": "Favorite Colors (up to 3)",
+      "favoriteColorsPlaceholder": "e.g. pink, light blue, white",
       "hairAppearance": "Hair / Appearance",
       "hairAppearancePlaceholder": "e.g. long black hair, curly hair, tall",
       "charmPoints": "Charm Points / Features",
       "charmPointsPlaceholder": "e.g. smile, dimples, bright eyes"
-    },
-    "step2": {
-      "stepLabel": "STEP 2 / 4",
-      "title": "Your Favorite Mood",
-      "description": "Choosing colors and a visual style helps create a world that feels more like you.",
-      "favoriteColors": "Favorite Colors (up to 3)",
-      "favoriteColorsPlaceholder": "e.g. pink, light blue, white",
-      "imageStyle": "Image Style",
-      "recommended": "Recommended",
-      "imageStyleOptions": {
-        "watercolor": "Watercolor",
-        "graphicRecording": "Graphic Recording",
-        "realistic": "Realistic",
-        "artistic": "Artistic",
-        "comic": "Comic",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "STEP 3 / 5",

@@ -4,7 +4,8 @@
     "next": "Continuar",
     "optional": "Opcional",
     "topBannerAlt": "Banner superior",
-    "bottomBannerAlt": "Banner inferior"
+    "bottomBannerAlt": "Banner inferior",
+    "required": "Obligatorio"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "PASO 1 / 4",
+      "title": "Tu estilo favorito",
+      "description": "Elegir colores y estilo visual ayuda a crear algo que encaje contigo.",
+      "imageStyle": "Estilo de imagen",
+      "recommended": "Recomendado",
+      "imageStyleOptions": {
+        "watercolor": "Acuarela",
+        "graphicRecording": "Estilo gráfico",
+        "realistic": "Realista",
+        "artistic": "Artístico",
+        "comic": "Cómic",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Ejemplos del resultado (referencia)"
+    },
+    "step2": {
+      "stepLabel": "PASO 2 / 4",
       "title": "Sobre ti",
       "description": "Introduce la información básica que aparecerá en tu vision board.",
       "fullName": "Nombre",
@@ -40,27 +57,12 @@
         "nonBinary": "No binario",
         "preferNotToSay": "Prefiero no decirlo"
       },
+      "favoriteColors": "Colores favoritos (máx. 3)",
+      "favoriteColorsPlaceholder": "ej: rosa, azul claro, blanco",
       "hairAppearance": "Cabello / aspecto",
       "hairAppearancePlaceholder": "ej: pelo largo negro, rizado, alto",
       "charmPoints": "Rasgos / puntos fuertes",
       "charmPointsPlaceholder": "ej: sonrisa, hoyuelos, ojos grandes"
-    },
-    "step2": {
-      "stepLabel": "PASO 2 / 4",
-      "title": "Tu estilo favorito",
-      "description": "Elegir colores y estilo visual ayuda a crear algo que encaje contigo.",
-      "favoriteColors": "Colores favoritos (máx. 3)",
-      "favoriteColorsPlaceholder": "ej: rosa, azul claro, blanco",
-      "imageStyle": "Estilo de imagen",
-      "recommended": "Recomendado",
-      "imageStyleOptions": {
-        "watercolor": "Acuarela",
-        "graphicRecording": "Estilo gráfico",
-        "realistic": "Realista",
-        "artistic": "Artístico",
-        "comic": "Cómic",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "PASO 3 / 5",

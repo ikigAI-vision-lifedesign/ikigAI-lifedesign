@@ -4,7 +4,8 @@
     "next": "Suivant",
     "optional": "Facultatif",
     "topBannerAlt": "Bannière supérieure",
-    "bottomBannerAlt": "Bannière inférieure"
+    "bottomBannerAlt": "Bannière inférieure",
+    "required": "Requis"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "ÉTAPE 1 / 4",
+      "title": "Votre ambiance préférée",
+      "description": "Choisir des couleurs et un style visuel aide à créer un univers qui vous ressemble.",
+      "imageStyle": "Style d’image",
+      "recommended": "Recommandé",
+      "imageStyleOptions": {
+        "watercolor": "Aquarelle",
+        "graphicRecording": "Facilitation graphique",
+        "realistic": "Réaliste",
+        "artistic": "Artistique",
+        "comic": "Bande dessinée",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Exemples de rendu (référence)"
+    },
+    "step2": {
+      "stepLabel": "ÉTAPE 2 / 4",
       "title": "À propos de vous",
       "description": "Entrez les informations de base qui seront reflétées dans votre vision board.",
       "fullName": "Nom",
@@ -40,27 +57,12 @@
         "nonBinary": "Non binaire",
         "preferNotToSay": "Je préfère ne pas répondre"
       },
+      "favoriteColors": "Couleurs préférées (jusqu’à 3)",
+      "favoriteColorsPlaceholder": "ex. rose, bleu clair, blanc",
       "hairAppearance": "Cheveux / apparence",
       "hairAppearancePlaceholder": "ex. cheveux longs noirs, cheveux bouclés, grande taille",
       "charmPoints": "Charme / traits distinctifs",
       "charmPointsPlaceholder": "ex. sourire, fossettes, grands yeux"
-    },
-    "step2": {
-      "stepLabel": "ÉTAPE 2 / 4",
-      "title": "Votre ambiance préférée",
-      "description": "Choisir des couleurs et un style visuel aide à créer un univers qui vous ressemble.",
-      "favoriteColors": "Couleurs préférées (jusqu’à 3)",
-      "favoriteColorsPlaceholder": "ex. rose, bleu clair, blanc",
-      "imageStyle": "Style d’image",
-      "recommended": "Recommandé",
-      "imageStyleOptions": {
-        "watercolor": "Aquarelle",
-        "graphicRecording": "Facilitation graphique",
-        "realistic": "Réaliste",
-        "artistic": "Artistique",
-        "comic": "Bande dessinée",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "ÉTAPE 3 / 5",

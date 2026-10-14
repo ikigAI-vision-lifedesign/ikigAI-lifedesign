@@ -4,7 +4,8 @@
     "next": "التالي",
     "optional": "اختياري",
     "topBannerAlt": "الشريط العلوي",
-    "bottomBannerAlt": "الشريط السفلي"
+    "bottomBannerAlt": "الشريط السفلي",
+    "required": "مطلوب"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "الخطوة 1 / 4",
+      "title": "أسلوبك المفضل",
+      "description": "اختيار الألوان والأسلوب البصري يساعد على إنشاء لوحة أقرب إليك.",
+      "imageStyle": "أسلوب الصورة",
+      "recommended": "موصى به",
+      "imageStyleOptions": {
+        "watercolor": "ألوان مائية",
+        "graphicRecording": "أسلوب رسومي",
+        "realistic": "واقعي",
+        "artistic": "فني",
+        "comic": "قصص مصورة",
+        "anime": "أنمي"
+      },
+      "referenceLabel": "أمثلة على النتيجة (للمرجع)"
+    },
+    "step2": {
+      "stepLabel": "الخطوة 2 / 4",
       "title": "عن نفسك",
       "description": "أدخل المعلومات الأساسية التي ستظهر في لوحة رؤيتك.",
       "fullName": "الاسم",
@@ -40,27 +57,12 @@
         "nonBinary": "غير ثنائي",
         "preferNotToSay": "أفضل عدم الإجابة"
       },
+      "favoriteColors": "الألوان المفضلة (حتى 3)",
+      "favoriteColorsPlaceholder": "مثال: وردي، أزرق فاتح، أبيض",
       "hairAppearance": "الشعر / المظهر",
       "hairAppearancePlaceholder": "مثال: شعر أسود طويل، شعر مجعد، طويل القامة",
       "charmPoints": "نقاط الجاذبية / المميزات",
       "charmPointsPlaceholder": "مثال: الابتسامة، الغمازات، العيون الكبيرة"
-    },
-    "step2": {
-      "stepLabel": "الخطوة 2 / 4",
-      "title": "أسلوبك المفضل",
-      "description": "اختيار الألوان والأسلوب البصري يساعد على إنشاء لوحة أقرب إليك.",
-      "favoriteColors": "الألوان المفضلة (حتى 3)",
-      "favoriteColorsPlaceholder": "مثال: وردي، أزرق فاتح، أبيض",
-      "imageStyle": "أسلوب الصورة",
-      "recommended": "موصى به",
-      "imageStyleOptions": {
-        "watercolor": "ألوان مائية",
-        "graphicRecording": "أسلوب رسومي",
-        "realistic": "واقعي",
-        "artistic": "فني",
-        "comic": "قصص مصورة",
-        "anime": "أنمي"
-      }
     },
     "step3": {
       "stepLabel": "الخطوة 3 / 5",

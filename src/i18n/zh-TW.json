@@ -4,7 +4,8 @@
     "next": "下一步",
     "optional": "可選",
     "topBannerAlt": "上方橫幅",
-    "bottomBannerAlt": "下方橫幅"
+    "bottomBannerAlt": "下方橫幅",
+    "required": "必填"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "第1步 / 共4步",
+      "title": "喜歡的風格",
+      "description": "選擇顏色與風格能讓願景更貼近你。",
+      "imageStyle": "圖像風格",
+      "recommended": "推薦",
+      "imageStyleOptions": {
+        "watercolor": "水彩",
+        "graphicRecording": "圖像風格",
+        "realistic": "寫實",
+        "artistic": "藝術風格",
+        "comic": "漫畫",
+        "anime": "動畫"
+      },
+      "referenceLabel": "成品範例（參考）"
+    },
+    "step2": {
+      "stepLabel": "第2步 / 共4步",
       "title": "關於你",
       "description": "請輸入將呈現在願景板中的基本資訊。",
       "fullName": "姓名",
@@ -40,27 +57,12 @@
         "nonBinary": "非二元",
         "preferNotToSay": "不想回答"
       },
+      "favoriteColors": "喜歡的顏色（最多3個）",
+      "favoriteColorsPlaceholder": "例如：粉紅、淺藍、白色",
       "hairAppearance": "髮型 / 外觀",
       "hairAppearancePlaceholder": "例如：黑色長髮、捲髮、身材高挑",
       "charmPoints": "魅力特點",
       "charmPointsPlaceholder": "例如：笑容、酒窩、大眼睛"
-    },
-    "step2": {
-      "stepLabel": "第2步 / 共4步",
-      "title": "喜歡的風格",
-      "description": "選擇顏色與風格能讓願景更貼近你。",
-      "favoriteColors": "喜歡的顏色（最多3個）",
-      "favoriteColorsPlaceholder": "例如：粉紅、淺藍、白色",
-      "imageStyle": "圖像風格",
-      "recommended": "推薦",
-      "imageStyleOptions": {
-        "watercolor": "水彩",
-        "graphicRecording": "圖像風格",
-        "realistic": "寫實",
-        "artistic": "藝術風格",
-        "comic": "漫畫",
-        "anime": "動畫"
-      }
     },
     "step3": {
       "stepLabel": "第3步 / 共5步",

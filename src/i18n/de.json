@@ -4,7 +4,8 @@
     "next": "Weiter",
     "optional": "Optional",
     "topBannerAlt": "Oberes Banner",
-    "bottomBannerAlt": "Unteres Banner"
+    "bottomBannerAlt": "Unteres Banner",
+    "required": "Pflicht"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "SCHRITT 1 / 4",
+      "title": "Deine Lieblingsstimmung",
+      "description": "Farben und Bildstil helfen dabei, eine Welt zu schaffen, die sich nach dir anfühlt.",
+      "imageStyle": "Bildstil",
+      "recommended": "Empfohlen",
+      "imageStyleOptions": {
+        "watercolor": "Aquarell",
+        "graphicRecording": "Graphic Recording",
+        "realistic": "Realistisch",
+        "artistic": "Künstlerisch",
+        "comic": "Comic",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Beispiele (Referenz)"
+    },
+    "step2": {
+      "stepLabel": "SCHRITT 2 / 4",
       "title": "Über dich",
       "description": "Gib die grundlegenden Informationen ein, die in deinem Vision Board berücksichtigt werden.",
       "fullName": "Name",
@@ -40,27 +57,12 @@
         "nonBinary": "Nicht-binär",
         "preferNotToSay": "Keine Angabe"
       },
+      "favoriteColors": "Lieblingsfarben (bis zu 3)",
+      "favoriteColorsPlaceholder": "z. B. Rosa, Hellblau, Weiß",
       "hairAppearance": "Haare / Aussehen",
       "hairAppearancePlaceholder": "z. B. lange schwarze Haare, lockige Haare, groß",
       "charmPoints": "Charme / besondere Merkmale",
       "charmPointsPlaceholder": "z. B. Lächeln, Grübchen, große Augen"
-    },
-    "step2": {
-      "stepLabel": "SCHRITT 2 / 4",
-      "title": "Deine Lieblingsstimmung",
-      "description": "Farben und Bildstil helfen dabei, eine Welt zu schaffen, die sich nach dir anfühlt.",
-      "favoriteColors": "Lieblingsfarben (bis zu 3)",
-      "favoriteColorsPlaceholder": "z. B. Rosa, Hellblau, Weiß",
-      "imageStyle": "Bildstil",
-      "recommended": "Empfohlen",
-      "imageStyleOptions": {
-        "watercolor": "Aquarell",
-        "graphicRecording": "Graphic Recording",
-        "realistic": "Realistisch",
-        "artistic": "Künstlerisch",
-        "comic": "Comic",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "SCHRITT 3 / 5",

@@ -4,7 +4,8 @@
     "next": "Avançar",
     "optional": "Opcional",
     "topBannerAlt": "Banner superior",
-    "bottomBannerAlt": "Banner inferior"
+    "bottomBannerAlt": "Banner inferior",
+    "required": "Obrigatório"
   },
   "login": {
     "label": "PASSCODE",
@@ -24,6 +25,22 @@
   "form": {
     "step1": {
       "stepLabel": "ETAPA 1 / 4",
+      "title": "Seu estilo favorito",
+      "description": "Escolher cores e estilo ajuda a criar um visual que combina com você.",
+      "imageStyle": "Estilo de imagem",
+      "recommended": "Recomendado",
+      "imageStyleOptions": {
+        "watercolor": "Aquarela",
+        "graphicRecording": "Estilo gráfico",
+        "realistic": "Realista",
+        "artistic": "Artístico",
+        "comic": "Quadrinhos",
+        "anime": "Anime"
+      },
+      "referenceLabel": "Exemplos do resultado (referência)"
+    },
+    "step2": {
+      "stepLabel": "ETAPA 2 / 4",
       "title": "Sobre você",
       "description": "Insira as informações básicas que serão usadas no seu vision board.",
       "fullName": "Nome",
@@ -40,27 +57,12 @@
         "nonBinary": "Não binário",
         "preferNotToSay": "Prefiro não responder"
       },
+      "favoriteColors": "Cores favoritas (até 3)",
+      "favoriteColorsPlaceholder": "ex: rosa, azul claro, branco",
       "hairAppearance": "Cabelo / aparência",
       "hairAppearancePlaceholder": "ex: cabelo preto longo, cacheado, alto",
       "charmPoints": "Pontos fortes / características",
       "charmPointsPlaceholder": "ex: sorriso, covinhas, olhos grandes"
-    },
-    "step2": {
-      "stepLabel": "ETAPA 2 / 4",
-      "title": "Seu estilo favorito",
-      "description": "Escolher cores e estilo ajuda a criar um visual que combina com você.",
-      "favoriteColors": "Cores favoritas (até 3)",
-      "favoriteColorsPlaceholder": "ex: rosa, azul claro, branco",
-      "imageStyle": "Estilo de imagem",
-      "recommended": "Recomendado",
-      "imageStyleOptions": {
-        "watercolor": "Aquarela",
-        "graphicRecording": "Estilo gráfico",
-        "realistic": "Realista",
-        "artistic": "Artístico",
-        "comic": "Quadrinhos",
-        "anime": "Anime"
-      }
     },
     "step3": {
       "stepLabel": "ETAPA 3 / 5",
