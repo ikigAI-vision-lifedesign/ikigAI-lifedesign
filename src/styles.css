@@ -405,3 +405,29 @@ button:disabled {
 @media (prefers-reduced-motion: reduce) {
   .intro-fade { animation: none; opacity: 1; transform: none; }
 }
+
+/* ===== 導入ページ「はじめる」ボタンの反応 ===== */
+.intro-cta {
+  box-shadow: 0 8px 20px rgba(31, 138, 122, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+/* PC（マウス）：ホバーで少し浮く＋明るく */
+.intro-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(31, 138, 122, 0.30);
+  filter: brightness(1.05);
+}
+/* タップ/クリック押下：少し沈む（スマホはこれが反応） */
+.intro-cta:active {
+  transform: scale(0.97);
+  box-shadow: 0 5px 14px rgba(31, 138, 122, 0.22);
+  filter: brightness(0.96);
+}
+/* タッチ端末ではホバーを無効化（タップ後にホバーが残らないように） */
+@media (hover: none) {
+  .intro-cta:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(31, 138, 122, 0.22);
+    filter: none;
+  }
+}

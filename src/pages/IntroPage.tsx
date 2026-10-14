@@ -195,32 +195,32 @@ const IntroPage: React.FC = () => {
             </Card>
           </div>
 
-          <button
-            type="button"
-            className="intro-fade"
-            onClick={() => navigate("/form/step1")}
-            style={{
-              animationDelay: "3.3s",
-              width: "100%",
-              padding: "16px 22px",
-              borderRadius: "999px",
-              border: "none",
-              background:
-                "linear-gradient(135deg, rgba(31,138,122,0.90) 0%, rgba(56,170,150,0.86) 55%, rgba(110,182,232,0.82) 100%)",
-              color: "#fff",
-              fontFamily: "inherit",
-              fontSize: "1.1rem",
-              fontWeight: 900,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "10px",
-              boxShadow: "0 8px 20px rgba(31, 138, 122, 0.22)",
-            }}
-          >
-            {t("intro.button")} <ArrowIcon />
-          </button>
+          <div className="intro-fade" style={{ animationDelay: "3.3s" }}>
+            <button
+              type="button"
+              className="intro-cta"
+              onClick={() => navigate("/form/step1")}
+              style={{
+                width: "100%",
+                padding: "16px 22px",
+                borderRadius: "999px",
+                border: "none",
+                background:
+                  "linear-gradient(135deg, rgba(31,138,122,0.90) 0%, rgba(56,170,150,0.86) 55%, rgba(110,182,232,0.82) 100%)",
+                color: "#fff",
+                fontFamily: "inherit",
+                fontSize: "1.1rem",
+                fontWeight: 900,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "10px",
+              }}
+            >
+              {t("intro.button")} <ArrowIcon />
+            </button>
+          </div>
         </div>
       </div>
 
