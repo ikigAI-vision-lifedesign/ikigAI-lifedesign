@@ -197,11 +197,21 @@ const OldAgeIcon = ({ color }: { color: string }) => (
   </span>
 );
 
+const ZoomIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    <line x1="11" y1="8" x2="11" y2="14" />
+    <line x1="8" y1="11" x2="14" y2="11" />
+  </svg>
+);
+
 const FormStep4Page: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
   const [formData, setFormData] = useState<VisionBoardFormData>(defaultFormData);
+  const [mapOpen, setMapOpen] = useState(false);
   const [lifeDesignOpen, setLifeDesignOpen] = useState({
     learn: false,
     work: false,
@@ -371,17 +381,41 @@ const FormStep4Page: React.FC = () => {
               {t("form.step4.lifeDesignTitle")}
             </h2>
 
-            <img
-              src={lifeDesignMap}
-              alt={t("form.step4.lifeDesignTitle")}
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "14px",
-                display: "block",
-                margin: "0 0 14px",
-              }}
-            />
+            <div
+              onClick={() => setMapOpen(true)}
+              role="button"
+              aria-label={t("form.step4.lifeDesignTitle")}
+              style={{ position: "relative", cursor: "zoom-in", margin: "0 0 14px" }}
+            >
+              <img
+                src={lifeDesignMap}
+                alt={t("form.step4.lifeDesignTitle")}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: "14px",
+                  display: "block",
+                }}
+              />
+              <span
+                style={{
+                  position: "absolute",
+                  right: "10px",
+                  bottom: "10px",
+                  width: "34px",
+                  height: "34px",
+                  borderRadius: "50%",
+                  background: "rgba(255,255,255,0.92)",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: theme.primaryDark,
+                }}
+              >
+                <ZoomIcon />
+              </span>
+            </div>
 
             <div
               style={{
@@ -650,6 +684,57 @@ const FormStep4Page: React.FC = () => {
       </div>
 
       <ScrollingBanner src={bottomBanner} direction="right" />
+
+      {mapOpen && (
+        <div
+          onClick={() => setMapOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.85)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+            padding: "20px",
+            cursor: "zoom-out",
+          }}
+        >
+          <img
+            src={lifeDesignMap}
+            alt={t("form.step4.lifeDesignTitle")}
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "96vw",
+              maxHeight: "92vh",
+              width: "auto",
+              height: "auto",
+              borderRadius: "10px",
+              boxShadow: "0 10px 40px rgba(0,0,0,0.5)",
+            }}
+          />
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={() => setMapOpen(false)}
+            style={{
+              position: "absolute",
+              top: "16px",
+              right: "16px",
+              width: "42px",
+              height: "42px",
+              borderRadius: "50%",
+              border: "none",
+              background: "rgba(255,255,255,0.92)",
+              fontSize: "22px",
+              lineHeight: 1,
+              cursor: "pointer",
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 };
