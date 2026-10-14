@@ -26,7 +26,7 @@
     "step1": {
       "stepLabel": "PASO 1 / 4",
       "title": "Tu estilo favorito",
-      "description": "Elige el estilo que define el ambiente de tu tablero de visión.",
+      "description": "Define el ambiente general de tu tablero de visión. Elegir un estilo que te guste lo acerca a tu propio mundo.",
       "imageStyle": "Elige un estilo",
       "recommended": "Recomendado",
       "imageStyleOptions": {
