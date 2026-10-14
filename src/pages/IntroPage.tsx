@@ -19,8 +19,14 @@ const BulbIcon = () => (
   </svg>
 );
 const HeartIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" stroke="none">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 21s-7.5-4.6-10-9.1C.2 8.3 2 4.8 5.3 4.8c2 0 3.3 1.2 4.1 2.4l.1.2.1-.2c.8-1.2 2.1-2.4 4.1-2.4 3.3 0 5.1 3.5 3.3 7.1C19.5 16.4 12 21 12 21z" />
+  </svg>
+);
+const ArrowIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <line x1="4" y1="12" x2="19" y2="12" />
+    <polyline points="13 6 19 12 13 18" />
   </svg>
 );
 const StarIcon = () => (
@@ -150,15 +156,15 @@ const IntroPage: React.FC = () => {
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
-            <Card icon={<BulbIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg={theme.white} border={theme.border}>
+            <Card icon={<BulbIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border}>
               {t("intro.what.body")}
             </Card>
 
-            <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="#fdeef2" border="#f6d4de">
+            <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="rgba(253,238,242,0.82)" border="#f6d4de">
               {t("intro.why.body")}
             </Card>
 
-            <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="#fcf6e4" border="#f0e3bf">
+            <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="rgba(252,246,228,0.82)" border="#f0e3bf">
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
                 {outcomeItems.map((item) => (
                   <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
@@ -178,8 +184,10 @@ const IntroPage: React.FC = () => {
               padding: "16px 22px",
               borderRadius: "999px",
               border: "none",
-              background: COL.teal,
+              background:
+                "linear-gradient(135deg, rgba(31,138,122,0.90) 0%, rgba(56,170,150,0.86) 55%, rgba(110,182,232,0.82) 100%)",
               color: "#fff",
+              fontFamily: "inherit",
               fontSize: "1.1rem",
               fontWeight: 900,
               cursor: "pointer",
@@ -187,10 +195,10 @@ const IntroPage: React.FC = () => {
               alignItems: "center",
               justifyContent: "center",
               gap: "10px",
-              boxShadow: "0 8px 20px rgba(31, 138, 122, 0.25)",
+              boxShadow: "0 8px 20px rgba(31, 138, 122, 0.22)",
             }}
           >
-            {t("intro.button")} <span aria-hidden="true">→</span>
+            {t("intro.button")} <ArrowIcon />
           </button>
         </div>
       </div>
