@@ -55,10 +55,7 @@ img {
   box-shadow: 0 6px 16px rgba(76, 190, 176, 0.2);
 }
 
-.start-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(76, 190, 176, 0.26);
-}
+/* ホバー時の浮き・押下は全ボタン共通ルールで統一（下部参照） */
 
 /* ===== タイトル・説明 ===== */
 h1 {
@@ -164,10 +161,7 @@ input[type="submit"] {
   box-shadow: 0 6px 16px rgba(76, 190, 176, 0.2);
 }
 
-input[type="submit"]:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(76, 190, 176, 0.26);
-}
+/* ホバー時の浮き・押下は全ボタン共通ルールで統一（下部参照） */
 
 #generateButton {
   padding: 0 14px;
@@ -406,28 +400,21 @@ button:disabled {
   .intro-fade { animation: none; opacity: 1; transform: none; }
 }
 
-/* ===== 導入ページ「はじめる」ボタンの反応 ===== */
-.intro-cta {
-  box-shadow: 0 8px 20px rgba(31, 138, 122, 0.22);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+/* ===== 全ボタン共通の操作フィードバック ===== */
+/* PC（マウス）：ホバーで少し浮く＋明るく ／ タップ・クリック：少し沈む */
+button,
+input[type="submit"] {
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
 }
-/* PC（マウス）：ホバーで少し浮く＋明るく */
-.intro-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(31, 138, 122, 0.30);
-  filter: brightness(1.05);
-}
-/* タップ/クリック押下：少し沈む（スマホはこれが反応） */
-.intro-cta:active {
-  transform: scale(0.97);
-  box-shadow: 0 5px 14px rgba(31, 138, 122, 0.22);
-  filter: brightness(0.96);
-}
-/* タッチ端末ではホバーを無効化（タップ後にホバーが残らないように） */
-@media (hover: none) {
-  .intro-cta:hover {
-    transform: none;
-    box-shadow: 0 8px 20px rgba(31, 138, 122, 0.22);
-    filter: none;
+@media (hover: hover) {
+  button:not(:disabled):hover,
+  input[type="submit"]:not(:disabled):hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
   }
+}
+button:not(:disabled):active,
+input[type="submit"]:not(:disabled):active {
+  transform: scale(0.97);
+  filter: brightness(0.96);
 }

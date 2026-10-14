@@ -198,7 +198,6 @@ const IntroPage: React.FC = () => {
           <div className="intro-fade" style={{ animationDelay: "3.3s" }}>
             <button
               type="button"
-              className="intro-cta"
               onClick={() => navigate("/form/step1")}
               style={{
                 width: "100%",
@@ -216,6 +215,7 @@ const IntroPage: React.FC = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "10px",
+                boxShadow: "0 8px 20px rgba(31, 138, 122, 0.22)",
               }}
             >
               {t("intro.button")} <ArrowIcon />
