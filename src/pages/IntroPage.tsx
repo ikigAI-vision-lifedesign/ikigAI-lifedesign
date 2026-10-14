@@ -12,16 +12,15 @@ import ScrollingBanner from "../components/ScrollingBanner";
 import leafBottom from "../assets/leaf-bottom.webp";
 import { theme } from "../theme";
 
-const BulbIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 18h6" />
-    <path d="M10 22h4" />
-    <path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z" />
-  </svg>
-);
 const HeartIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 21s-7.5-4.6-10-9.1C.2 8.3 2 4.8 5.3 4.8c2 0 3.3 1.2 4.1 2.4l.1.2.1-.2c.8-1.2 2.1-2.4 4.1-2.4 3.3 0 5.1 3.5 3.3 7.1C19.5 16.4 12 21 12 21z" />
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+  </svg>
+);
+// Whatアイコン候補（吹き出し＝考える/言葉にする）
+const SpeechIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
   </svg>
 );
 const ArrowIcon = () => (
@@ -175,7 +174,7 @@ const IntroPage: React.FC = () => {
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
-            <Card icon={<BulbIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
+            <Card icon={<SpeechIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
               {t("intro.what.body")}
             </Card>
 
