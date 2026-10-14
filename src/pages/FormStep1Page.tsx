@@ -119,7 +119,7 @@ const FormStep1Page: React.FC = () => {
           <h1 style={{ fontSize: "2rem", color: theme.text, marginBottom: "12px" }}>
             {t("form.step1.title")}
           </h1>
-          <p style={{ color: theme.subText, lineHeight: 1.8, margin: 0 }}>
+          <p style={{ color: theme.subText, lineHeight: 1.8, margin: 0, whiteSpace: "pre-line" }}>
             {t("form.step1.description")}
           </p>
         </div>

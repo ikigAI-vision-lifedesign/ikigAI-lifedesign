@@ -26,7 +26,7 @@
     "step1": {
       "stepLabel": "STEP 1 / 4",
       "title": "좋아하는 분위기",
-      "description": "비전 보드의 전체적인 분위기를 정해 보세요. 마음에 드는 화풍을 선택하면 더욱 당신다운 분위기에 가까워집니다.",
+      "description": "비전 보드의 전체적인 분위기를 정해 보세요.\n마음에 드는 화풍을 선택하면 더욱 당신다운 분위기에 가까워집니다.",
       "imageStyle": "화풍 선택",
       "recommended": "추천",
       "imageStyleOptions": {

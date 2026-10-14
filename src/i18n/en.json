@@ -26,7 +26,7 @@
     "step1": {
       "stepLabel": "STEP 1 / 4",
       "title": "Your Favorite Mood",
-      "description": "Set the overall mood of your vision board. Choosing a style you love brings it closer to your own world.",
+      "description": "Set the overall mood of your vision board.\nChoosing a style you love brings it closer to your own world.",
       "imageStyle": "Choose a style",
       "recommended": "Recommended",
       "imageStyleOptions": {
