@@ -142,6 +142,26 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
           />
         ))}
       </div>
+
+      {/* 公式サイトへのリンク（別タブ） */}
+      <div style={{ textAlign: "center", marginTop: "22px" }}>
+        <a
+          href="https://ikigai96.studio.site/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            color: theme.primaryDark,
+            fontWeight: 700,
+            fontSize: "0.92rem",
+            textDecoration: "underline",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "5px",
+          }}
+        >
+          {t("loadingPage.learnMore")} <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   );
 };
