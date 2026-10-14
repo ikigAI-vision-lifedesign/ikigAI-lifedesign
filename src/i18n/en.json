@@ -151,15 +151,15 @@
     "step5": {
       "stepLabel": "STEP 5 / 5",
       "title": "Review Your Answers",
-      "description": "Please review your answers, agree to the terms, and continue to generation.",
+      "description": "Review your entries and generate your vision board.",
       "generate": "Generate",
       "terms": "Terms of Use",
       "and": " and ",
       "privacy": "Privacy Policy",
       "agreeSuffix": "",
       "sections": {
-        "basic": "Basic Information",
-        "style": "Favorite Mood",
+        "basic": "About You",
+        "style": "Your Favorite Mood",
         "vision": "You and Your Future",
         "lifeDesign": "Life Design"
       },

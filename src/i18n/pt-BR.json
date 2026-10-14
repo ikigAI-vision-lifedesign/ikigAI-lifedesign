@@ -151,17 +151,17 @@
     "step5": {
       "stepLabel": "ETAPA 5 / 5",
       "title": "Revisar respostas",
-      "description": "Confira suas respostas antes de continuar.",
+      "description": "Revise o que você preencheu e gere seu vision board.",
       "generate": "Gerar",
       "terms": "Termos de uso",
       "and": " e ",
       "privacy": "Política de privacidade",
       "agreeSuffix": " concordo",
       "sections": {
-        "basic": "Informações básicas",
-        "style": "Estilo",
-        "vision": "Futuro",
-        "lifeDesign": "Design de vida"
+        "basic": "Sobre você",
+        "style": "Seu estilo favorito",
+        "vision": "Você e seu futuro",
+        "lifeDesign": "Design de Vida"
       }
     }
   },

@@ -179,32 +179,37 @@ const FormStep5Page: React.FC = () => {
           />
         </div>
 
+        {/* あなたについて（STEP2）：好きな色もここ（性別の下） */}
         <div style={summaryCardStyle}>
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.basic")}</h3>
           <SummaryItem label={t("form.step5.items.fullName")} value={formData.fullName} />
           <SummaryItem label={t("form.step5.items.email")} value={formData.email} />
           <SummaryItem label={t("form.step5.items.age")} value={formData.age} />
           <SummaryItem label={t("form.step5.items.gender")} value={formData.gender} />
+          <SummaryItem label={t("form.step5.items.favoriteColors")} value={formData.favoriteColors} />
           <SummaryItem label={t("form.step5.items.hairAppearance")} value={formData.hairAppearance} />
           <SummaryItem label={t("form.step5.items.charmPoints")} value={formData.charmPoints} />
         </div>
 
+        {/* 画風（STEP1） */}
         <div style={summaryCardStyle}>
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.style")}</h3>
-          <SummaryItem label={t("form.step5.items.favoriteColors")} value={formData.favoriteColors} />
           <SummaryItem label={t("form.step5.items.imageStyle")} value={formData.imageStyle} />
         </div>
 
+        {/* あなたらしさと未来（STEP3）：強み・幸せな瞬間・次の一歩もここ */}
         <div style={summaryCardStyle}>
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.vision")}</h3>
           <SummaryItem label={t("form.step5.items.selfExpression")} value={formData.selfExpression} />
+          <SummaryItem label={t("form.step5.items.strengths")} value={formData.strengths} />
+          <SummaryItem label={t("form.step5.items.happyMoment")} value={formData.happyMoment} />
           <SummaryItem label={t("form.step5.items.idealVision")} value={formData.idealVision} />
+          <SummaryItem label={t("form.step5.items.nextAction")} value={formData.nextAction} />
         </div>
 
+        {/* ライフデザイン（STEP4） */}
         <div style={summaryCardStyle}>
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.lifeDesign")}</h3>
-          <SummaryItem label={t("form.step5.items.happyMoment")} value={formData.happyMoment} />
-          <SummaryItem label={t("form.step5.items.strengths")} value={formData.strengths} />
           <SummaryItem label={t("form.step5.items.learnWant")} value={formData.learnWant} />
           <SummaryItem label={t("form.step5.items.learnReason")} value={formData.learnReason} />
           <SummaryItem label={t("form.step5.items.learnWhenWhere")} value={formData.learnWhenWhere} />
@@ -219,7 +224,6 @@ const FormStep5Page: React.FC = () => {
           <SummaryItem label={t("form.step5.items.childValues")} value={formData.childValues} />
           <SummaryItem label={t("form.step5.items.oldAgeIdeal")} value={formData.oldAgeIdeal} />
           <SummaryItem label={t("form.step5.items.oldAgePreparation")} value={formData.oldAgePreparation} />
-          <SummaryItem label={t("form.step5.items.nextAction")} value={formData.nextAction} />
         </div>
 
         <label

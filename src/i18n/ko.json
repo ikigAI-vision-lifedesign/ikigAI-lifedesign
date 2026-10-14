@@ -151,16 +151,16 @@
     "step5": {
       "stepLabel": "STEP 5 / 5",
       "title": "내용 확인",
-      "description": "입력한 내용을 확인하세요.",
+      "description": "입력 내용을 확인하고 비전 보드를 생성해 보세요.",
       "generate": "생성하기",
       "terms": "이용약관",
       "and": " 및 ",
       "privacy": "개인정보 처리방침",
       "agreeSuffix": "에 동의합니다",
       "sections": {
-        "basic": "기본 정보",
-        "style": "스타일",
-        "vision": "미래",
+        "basic": "당신에 대해",
+        "style": "좋아하는 분위기",
+        "vision": "당신과 미래",
         "lifeDesign": "라이프 디자인"
       }
     }

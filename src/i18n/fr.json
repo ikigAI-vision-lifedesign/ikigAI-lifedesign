@@ -151,15 +151,15 @@
     "step5": {
       "stepLabel": "ÉTAPE 5 / 5",
       "title": "Vérifiez vos réponses",
-      "description": "Vérifiez vos réponses, acceptez les conditions, puis lancez la génération.",
+      "description": "Vérifiez vos informations et générez votre vision board.",
       "generate": "Générer",
       "terms": "Conditions d’utilisation",
       "and": " et ",
       "privacy": "Politique de confidentialité",
       "agreeSuffix": "",
       "sections": {
-        "basic": "Informations de base",
-        "style": "Ambiance préférée",
+        "basic": "À propos de vous",
+        "style": "Votre ambiance préférée",
         "vision": "Vous et votre avenir",
         "lifeDesign": "Design de vie"
       },

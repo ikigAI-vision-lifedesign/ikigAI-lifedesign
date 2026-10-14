@@ -151,16 +151,16 @@
     "step5": {
       "stepLabel": "PASSO 5 / 5",
       "title": "Controlla le risposte",
-      "description": "Controlla le tue risposte prima di continuare.",
+      "description": "Controlla ciò che hai inserito e genera la tua vision board.",
       "generate": "Genera",
       "terms": "Termini di utilizzo",
       "and": " e ",
       "privacy": "Privacy policy",
       "agreeSuffix": " accetto",
       "sections": {
-        "basic": "Informazioni base",
-        "style": "Stile",
-        "vision": "Futuro",
+        "basic": "Su di te",
+        "style": "Il tuo stile preferito",
+        "vision": "Tu e il tuo futuro",
         "lifeDesign": "Life Design"
       }
     }

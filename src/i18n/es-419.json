@@ -151,16 +151,16 @@
     "step5": {
       "stepLabel": "PASO 5 / 5",
       "title": "Revisar respuestas",
-      "description": "Revisa tus respuestas antes de continuar.",
+      "description": "Revisa lo que ingresaste y genera tu tablero de visión.",
       "generate": "Generar",
       "terms": "Términos de uso",
       "and": " y ",
       "privacy": "Política de privacidad",
       "agreeSuffix": " acepto",
       "sections": {
-        "basic": "Información básica",
-        "style": "Estilo",
-        "vision": "Futuro",
+        "basic": "Sobre ti",
+        "style": "Tu estilo favorito",
+        "vision": "Tú y tu futuro",
         "lifeDesign": "Diseño de vida"
       }
     }

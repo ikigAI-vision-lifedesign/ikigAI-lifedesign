@@ -96,12 +96,18 @@
     "step5": {
       "stepLabel": "第5步 / 共5步",
       "title": "确认内容",
-      "description": "请确认内容后继续。",
+      "description": "确认填写的内容，生成你的愿景板。",
       "generate": "生成",
       "terms": "使用条款",
       "and": "和",
       "privacy": "隐私政策",
-      "agreeSuffix": "我同意"
+      "agreeSuffix": "我同意",
+      "sections": {
+        "basic": "关于你",
+        "style": "喜欢的风格",
+        "vision": "你与未来",
+        "lifeDesign": "人生设计"
+      }
     }
   },
   "loadingPage": {

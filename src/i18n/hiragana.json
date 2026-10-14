@@ -151,17 +151,17 @@
     "step5": {
       "stepLabel": "すてっぷ 5",
       "title": "かくにん",
-      "description": "ないようをみてね。",
+      "description": "にゅうりょくないようをかくにんして、ビジョンボードをせいせいしましょう。",
       "generate": "つくる",
       "terms": "りようきやく",
       "and": "と",
       "privacy": "ぷらいばしー",
       "agreeSuffix": "にどういします",
       "sections": {
-        "basic": "きほん",
-        "style": "すき",
-        "vision": "みらい",
-        "lifeDesign": "らいふ"
+        "basic": "あなたのこと",
+        "style": "すきなかんじ",
+        "vision": "あなたとみらい",
+        "lifeDesign": "らいふでざいん"
       },
       "items": {
         "fullName": "なまえ",

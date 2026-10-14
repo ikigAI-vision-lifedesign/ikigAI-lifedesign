@@ -97,7 +97,14 @@
       "generate": "生成",
       "terms": "使用條款",
       "privacy": "隱私政策",
-      "agreeSuffix": "我同意"
+      "agreeSuffix": "我同意",
+      "description": "確認填寫的內容，生成你的願景板。",
+      "sections": {
+        "basic": "關於你",
+        "style": "喜歡的風格",
+        "vision": "你與未來",
+        "lifeDesign": "人生設計"
+      }
     }
   },
   "loadingPage": {

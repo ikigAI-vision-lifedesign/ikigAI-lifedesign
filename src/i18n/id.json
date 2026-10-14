@@ -151,17 +151,17 @@
     "step5": {
       "stepLabel": "LANGKAH 5 / 5",
       "title": "Periksa Jawaban",
-      "description": "Periksa jawaban Anda sebelum melanjutkan.",
+      "description": "Periksa isianmu lalu buat vision board-mu.",
       "generate": "Buat",
       "terms": "Syarat Penggunaan",
       "and": " dan ",
       "privacy": "Kebijakan Privasi",
       "agreeSuffix": " saya setuju",
       "sections": {
-        "basic": "Informasi dasar",
-        "style": "Gaya",
-        "vision": "Masa depan",
-        "lifeDesign": "Desain hidup"
+        "basic": "Tentang Anda",
+        "style": "Gaya Favorit Anda",
+        "vision": "Anda & Masa Depan Anda",
+        "lifeDesign": "Desain Hidup"
       }
     }
   },

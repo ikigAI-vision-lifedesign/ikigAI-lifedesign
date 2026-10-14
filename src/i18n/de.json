@@ -151,15 +151,15 @@
     "step5": {
       "stepLabel": "SCHRITT 5 / 5",
       "title": "Antworten überprüfen",
-      "description": "Überprüfe deine Antworten, stimme den Bedingungen zu und starte die Generierung.",
+      "description": "Überprüfe deine Eingaben und erstelle dein Vision Board.",
       "generate": "Generieren",
       "terms": "Nutzungsbedingungen",
       "and": " und ",
       "privacy": "Datenschutzerklärung",
       "agreeSuffix": " zustimmen",
       "sections": {
-        "basic": "Grundinformationen",
-        "style": "Lieblingsstimmung",
+        "basic": "Über dich",
+        "style": "Deine Lieblingsstimmung",
         "vision": "Du und deine Zukunft",
         "lifeDesign": "Lebensdesign"
       },

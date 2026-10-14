@@ -151,14 +151,14 @@
     "step5": {
       "stepLabel": "STEP 5 / 5",
       "title": "入力内容の確認",
-      "description": "内容をご確認のうえ、同意して生成に進んでください。",
+      "description": "入力内容を確認して、ビジョンボードを生成しましょう。",
       "generate": "生成する",
       "terms": "利用規約",
       "and": "と",
       "privacy": "プライバシーポリシー",
       "agreeSuffix": "に同意します",
       "sections": {
-        "basic": "基本情報",
+        "basic": "あなたについて",
         "style": "好きな雰囲気",
         "vision": "あなたらしさと未来",
         "lifeDesign": "ライフデザイン"
