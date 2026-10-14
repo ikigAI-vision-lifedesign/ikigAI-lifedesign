@@ -36,16 +36,16 @@ const StarIcon = () => (
 );
 // ブランドロゴ「ikigAI」。serif＋広い字間、2つ目の i の点だけ赤（点なしの ı に赤丸を重ねる）。
 const Logo = () => (
-  <svg viewBox="0 0 176 42" height="34" role="img" aria-label="ikigAI" style={{ display: "block", margin: "0 auto" }}>
+  <svg viewBox="0 0 158 42" height="34" role="img" aria-label="ikigAI" style={{ display: "block", margin: "0 auto" }}>
     <g fontFamily='Georgia, "Times New Roman", "Noto Serif JP", serif' fontSize="31" fill="#2b2b2b" textAnchor="middle">
       <text x="14" y="31">i</text>
-      <text x="42" y="31">k</text>
-      <text x="71" y="31">&#x131;</text>
-      <text x="101" y="31">g</text>
-      <text x="133" y="31">A</text>
-      <text x="162" y="31">I</text>
+      <text x="39" y="31">k</text>
+      <text x="64" y="31">&#x131;</text>
+      <text x="91" y="31">g</text>
+      <text x="119" y="31">A</text>
+      <text x="145" y="31">I</text>
     </g>
-    <circle cx="71" cy="9" r="3.1" fill="#d9534f" />
+    <circle cx="64" cy="9" r="3.1" fill="#A52544" />
   </svg>
 );
 
