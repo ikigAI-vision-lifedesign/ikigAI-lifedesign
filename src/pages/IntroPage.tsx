@@ -127,8 +127,9 @@ const IntroPage: React.FC = () => {
         background: theme.background,
         display: "flex",
         flexDirection: "column",
+        // 英語(ラテン文字)=sans-serif、日本語=丸ゴシック（英語用フォントを先に並べて自動で出し分け）
         fontFamily:
-          '"Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN W4", "Zen Maru Gothic", sans-serif',
+          'Arial, "Helvetica Neue", Helvetica, "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN W4", "Zen Maru Gothic", sans-serif',
       }}
     >
       <ScrollingBanner src={topBanner} direction="left" />
