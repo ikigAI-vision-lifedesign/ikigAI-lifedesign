@@ -395,3 +395,13 @@ button:disabled {
 @keyframes banner-scroll-left { from { transform: translateX(0); } to { transform: translateX(-25%); } }
 @keyframes banner-scroll-right { from { transform: translateX(-25%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .scrolling-banner__track { animation: none; } }
+
+/* ===== 導入ページの順次フェードイン（0.5cm下からふわっと） ===== */
+@keyframes introFadeUp {
+  from { opacity: 0; transform: translateY(19px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.intro-fade { opacity: 0; animation: introFadeUp 0.6s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .intro-fade { animation: none; opacity: 1; transform: none; }
+}

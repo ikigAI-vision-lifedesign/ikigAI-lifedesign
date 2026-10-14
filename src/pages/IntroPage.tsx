@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../i18n/configs";
+import "../styles.css";
 import topBanner from "../assets/header.png";
 import bottomBanner from "../assets/footer.png";
 import ScrollingBanner from "../components/ScrollingBanner";
@@ -63,10 +64,12 @@ type CardProps = {
   titleColor: string;
   cardBg: string;
   border: string;
+  delay: number;
   children: React.ReactNode;
 };
-const Card: React.FC<CardProps> = ({ icon, iconBg, title, label, titleColor, cardBg, border, children }) => (
+const Card: React.FC<CardProps> = ({ icon, iconBg, title, label, titleColor, cardBg, border, delay, children }) => (
   <div
+    className="intro-fade"
     style={{
       display: "flex",
       gap: "14px",
@@ -76,6 +79,7 @@ const Card: React.FC<CardProps> = ({ icon, iconBg, title, label, titleColor, car
       borderRadius: "18px",
       padding: "16px 16px",
       textAlign: "left",
+      animationDelay: `${delay}s`,
     }}
   >
     <div
@@ -171,15 +175,15 @@ const IntroPage: React.FC = () => {
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
-            <Card icon={<BulbIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border}>
+            <Card icon={<BulbIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
               {t("intro.what.body")}
             </Card>
 
-            <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="rgba(253,238,242,0.82)" border="#f6d4de">
+            <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="rgba(253,238,242,0.82)" border="#f6d4de" delay={1.3}>
               {t("intro.why.body")}
             </Card>
 
-            <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="rgba(252,246,228,0.82)" border="#f0e3bf">
+            <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="rgba(252,246,228,0.82)" border="#f0e3bf" delay={2.3}>
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
                 {outcomeItems.map((item) => (
                   <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
@@ -193,8 +197,10 @@ const IntroPage: React.FC = () => {
 
           <button
             type="button"
+            className="intro-fade"
             onClick={() => navigate("/form/step1")}
             style={{
+              animationDelay: "3.3s",
               width: "100%",
               padding: "16px 22px",
               borderRadius: "999px",
