@@ -319,7 +319,7 @@ const FormStep1Page: React.FC = () => {
           <StepNavigation
             backLabel={t("common.back")}
             nextLabel={t("common.next")}
-            onBack={() => navigate("/language")}
+            onBack={() => navigate("/intro")}
             nextDisabled={isDisabled}
           />
         </form>
