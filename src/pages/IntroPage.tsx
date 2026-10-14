@@ -177,15 +177,15 @@ const IntroPage: React.FC = () => {
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
-            <Card icon={<CompassIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
+            <Card icon={<CompassIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={2.4}>
               {t("intro.what.body")}
             </Card>
 
-            <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="rgba(253,238,242,0.82)" border="#f6d4de" delay={1.3}>
+            <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="rgba(253,238,242,0.82)" border="#f6d4de" delay={3.4}>
               {t("intro.why.body")}
             </Card>
 
-            <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="rgba(252,246,228,0.82)" border="#f0e3bf" delay={2.3}>
+            <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="rgba(252,246,228,0.82)" border="#f0e3bf" delay={4.4}>
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
                 {outcomeItems.map((item) => (
                   <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
@@ -197,7 +197,7 @@ const IntroPage: React.FC = () => {
             </Card>
           </div>
 
-          <div className="intro-fade" style={{ animationDelay: "3.3s" }}>
+          <div className="intro-fade" style={{ animationDelay: "5.4s" }}>
             <button
               type="button"
               onClick={() => navigate("/form/step1")}
