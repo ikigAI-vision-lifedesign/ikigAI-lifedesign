@@ -8,6 +8,7 @@ import "../i18n/configs";
 import topBanner from "../assets/header.png";
 import bottomBanner from "../assets/footer.png";
 import ScrollingBanner from "../components/ScrollingBanner";
+import leafFrame from "../assets/leaf-frame.png";
 import { theme } from "../theme";
 
 const BulbIcon = () => (
@@ -30,28 +31,6 @@ const StarIcon = () => (
 const CheckIcon = ({ color }: { color: string }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flex: "none", marginTop: "2px" }}>
     <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-
-// 背景の葉っぱ装飾（左下）
-const LeafDecor = () => (
-  <svg
-    width="150" height="180" viewBox="0 0 150 180" aria-hidden="true"
-    style={{ position: "absolute", left: "-14px", bottom: "-10px", opacity: 0.5, pointerEvents: "none", zIndex: 0 }}
-  >
-    <path d="M28 180 C 42 140 58 112 70 78" fill="none" stroke="#86b394" strokeWidth="3" strokeLinecap="round" />
-    {[
-      { x: 40, y: 150, r: -40, s: 1.0 },
-      { x: 52, y: 126, r: 35, s: 0.95 },
-      { x: 58, y: 108, r: -45, s: 0.9 },
-      { x: 66, y: 92, r: 40, s: 0.85 },
-      { x: 70, y: 76, r: -30, s: 0.8 },
-    ].map((l, i) => (
-      <g key={i} transform={`translate(${l.x} ${l.y}) rotate(${l.r}) scale(${l.s})`}>
-        <path d="M0 0 C 11 -12 11 -34 0 -48 C -11 -34 -11 -12 0 0 Z" fill="#a7cdae" />
-        <path d="M0 -2 L 0 -44" stroke="#7fae8a" strokeWidth="1.4" />
-      </g>
-    ))}
   </svg>
 );
 
@@ -132,9 +111,21 @@ const IntroPage: React.FC = () => {
           overflow: "hidden",
         }}
       >
-        <LeafDecor />
-
-        <div style={{ width: "100%", maxWidth: "420px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "470px",
+            textAlign: "center",
+            position: "relative",
+            zIndex: 1,
+            backgroundImage: `url(${leafFrame})`,
+            backgroundSize: "100% 100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            padding: "64px 34px 56px",
+            boxSizing: "border-box",
+          }}
+        >
           <p style={{ color: theme.primaryDark, fontWeight: 700, letterSpacing: "0.14em", margin: "0 0 18px" }}>
             ikigAI
           </p>
