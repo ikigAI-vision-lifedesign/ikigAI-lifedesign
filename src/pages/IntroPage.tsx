@@ -34,6 +34,21 @@ const StarIcon = () => (
     <path d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.5 9.3l6.6-.9L12 2.5z" />
   </svg>
 );
+// ブランドロゴ「ikigAI」。serif＋広い字間、2つ目の i の点だけ赤（点なしの ı に赤丸を重ねる）。
+const Logo = () => (
+  <svg viewBox="0 0 176 42" height="34" role="img" aria-label="ikigAI" style={{ display: "block", margin: "0 auto" }}>
+    <g fontFamily='Georgia, "Times New Roman", "Noto Serif JP", serif' fontSize="31" fill="#2b2b2b" textAnchor="middle">
+      <text x="14" y="31">i</text>
+      <text x="42" y="31">k</text>
+      <text x="71" y="31">&#x131;</text>
+      <text x="101" y="31">g</text>
+      <text x="133" y="31">A</text>
+      <text x="162" y="31">I</text>
+    </g>
+    <circle cx="71" cy="9" r="3.1" fill="#d9534f" />
+  </svg>
+);
+
 const CheckIcon = ({ color }: { color: string }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flex: "none", marginTop: "2px" }}>
     <polyline points="20 6 9 17 4 12" />
@@ -144,9 +159,9 @@ const IntroPage: React.FC = () => {
         />
 
         <div style={{ width: "100%", maxWidth: "420px", textAlign: "center", position: "relative", zIndex: 1 }}>
-          <p style={{ color: theme.primaryDark, fontWeight: 700, letterSpacing: "0.14em", margin: "0 0 18px" }}>
-            ikigAI
-          </p>
+          <div style={{ margin: "0 0 18px" }}>
+            <Logo />
+          </div>
 
           <h1 style={{ color: theme.text, fontSize: "1.6rem", fontWeight: 800, margin: "0 0 10px" }}>
             {t("intro.title")}
