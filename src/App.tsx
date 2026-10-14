@@ -10,7 +10,6 @@ import FormStep4Page from "./pages/FormStep4Page";
 import FormStep5Page from "./pages/FormStep5Page";
 import LoadingPage from "./pages/LoadingPage";
 import ResultPage from "./pages/ResultPage";
-import ThanksPage from "./pages/ThanksPage";
 
 const App: React.FC = () => {
   return (
@@ -35,7 +34,6 @@ const App: React.FC = () => {
         {/* 処理 */}
         <Route path="/loading" element={<LoadingPage />} />
         <Route path="/result" element={<ResultPage />} />
-        <Route path="/thanks" element={<ThanksPage />} />
       </Routes>
     </Router>
   );
