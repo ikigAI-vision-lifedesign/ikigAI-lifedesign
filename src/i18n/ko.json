@@ -72,7 +72,7 @@
       "selfExpression": "당신의 특징",
       "selfExpressionHelper": "좋아하는 것, 성격, 가치관을 구체적으로 적어주세요.",
       "selfExpressionPlaceholder": "예: 자연을 좋아함, 호기심 많음, 만들기를 좋아함, 자유로운 삶을 원함",
-      "idealVision": "이루고 싶은 미래",
+      "idealVision": "이루고 싶은 미래・비전",
       "idealVisionPlaceholder": "예: 1년 후 도쿄에서 일하고 싶음, 10년 후 자연 속 스튜디오를 갖고 싶음",
       "descriptionSp": "당신의 매력과 앞으로 걸어가고 싶은 미래를 들려주세요.\n그 미래를 이루기 위해 지금 할 수 있는 한 걸음을 떠올려 보세요."
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "좋아하는 색",
         "imageStyle": "이미지 스타일",
         "selfExpression": "나다움",
-        "idealVision": "이루고 싶은 미래",
+        "idealVision": "이루고 싶은 미래・비전",
         "happyMoment": "최근 행복했던 순간",
         "strengths": "강점",
         "learnWant": "배우고 싶은 것",

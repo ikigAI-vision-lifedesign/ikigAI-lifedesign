@@ -72,7 +72,7 @@
       "selfExpression": "Was dich ausmacht",
       "selfExpressionHelper": "Beschreibe möglichst konkret, was du magst, wie deine Persönlichkeit ist und welche Werte dir wichtig sind.",
       "selfExpressionPlaceholder": "z. B. Ich liebe die Natur, bin neugierig, erschaffe gern Dinge und lege Wert auf freies Arbeiten",
-      "idealVision": "Die Zukunft, die du gestalten möchtest",
+      "idealVision": "Die Zukunft / Vision, die du erschaffen willst",
       "idealVisionPlaceholder": "z. B. In einem Jahr möchte ich in Tokio auf meine Art arbeiten. In zehn Jahren möchte ich ein Atelier in der Nähe der Natur haben.",
       "descriptionSp": "Erzähl uns von deinen Stärken und der Zukunft, auf die du zugehen möchtest.\nÜberlege dann einen Schritt, den du jetzt gehen kannst, um sie wahr werden zu lassen."
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "Lieblingsfarben",
         "imageStyle": "Bildstil",
         "selfExpression": "Was dich ausmacht",
-        "idealVision": "Die Zukunft, die du gestalten möchtest",
+        "idealVision": "Die Zukunft / Vision, die du erschaffen willst",
         "happyMoment": "Ein kürzlich glücklicher Moment",
         "strengths": "Stärken",
         "learnWant": "Was du lernen möchtest",

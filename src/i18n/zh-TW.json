@@ -71,7 +71,7 @@
       "description": "告訴我們你的魅力，以及你想走向的未來。\n再想想為了實現它，現在可以踏出的一步。",
       "selfExpression": "關於你",
       "selfExpressionHelper": "寫下你的興趣、個性與價值觀。",
-      "idealVision": "理想的未來",
+      "idealVision": "想實現的未來・願景",
       "descriptionSp": "告訴我們你的魅力，\n以及你想走向的未來。\n再想想為了實現它，\n現在可以踏出的一步。"
     },
     "step4": {
@@ -115,7 +115,7 @@
         "favoriteColors": "喜歡的顏色",
         "imageStyle": "圖像風格",
         "selfExpression": "你的獨特之處",
-        "idealVision": "想實現的未來",
+        "idealVision": "想實現的未來・願景",
         "happyMoment": "最近幸福的瞬間",
         "strengths": "優勢",
         "learnWant": "想學的東西",

@@ -72,7 +72,7 @@
       "selfExpression": "Chi sei",
       "selfExpressionHelper": "Scrivi in modo concreto cosa ti piace, la tua personalità e i tuoi valori.",
       "selfExpressionPlaceholder": "es. amo la natura, sono curioso, mi piace creare, voglio lavorare liberamente",
-      "idealVision": "Il futuro che desideri",
+      "idealVision": "Il futuro / la visione che vuoi creare",
       "idealVisionPlaceholder": "es. tra 1 anno voglio lavorare a Tokyo, tra 10 anni avere uno studio vicino alla natura",
       "descriptionSp": "Raccontaci i tuoi punti di forza e il futuro verso cui vuoi camminare.\nPoi pensa a un passo che puoi fare ora per realizzarlo."
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "Colori preferiti",
         "imageStyle": "Stile dell'immagine",
         "selfExpression": "Ciò che ti rende te",
-        "idealVision": "Il futuro che vuoi creare",
+        "idealVision": "Il futuro / la visione che vuoi creare",
         "happyMoment": "Un momento felice recente",
         "strengths": "Punti di forza",
         "learnWant": "Cosa vuoi imparare",

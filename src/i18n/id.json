@@ -72,7 +72,7 @@
       "selfExpression": "Tentang diri Anda",
       "selfExpressionHelper": "Tuliskan apa yang Anda sukai, kepribadian Anda, dan nilai yang penting bagi Anda.",
       "selfExpressionPlaceholder": "contoh: suka alam, rasa ingin tahu tinggi, suka membuat sesuatu, ingin bekerja bebas",
-      "idealVision": "Masa depan yang Anda inginkan",
+      "idealVision": "Masa depan / visi yang ingin kamu wujudkan",
       "idealVisionPlaceholder": "contoh: dalam 1 tahun ingin bekerja di Tokyo, dalam 10 tahun ingin punya studio dekat alam",
       "descriptionSp": "Ceritakan pesonamu dan masa depan yang ingin kamu tuju.\nLalu pikirkan satu langkah yang bisa kamu ambil sekarang untuk mewujudkannya."
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "Warna favorit",
         "imageStyle": "Gaya gambar",
         "selfExpression": "Hal yang membuatmu jadi dirimu",
-        "idealVision": "Masa depan yang ingin kamu wujudkan",
+        "idealVision": "Masa depan / visi yang ingin kamu wujudkan",
         "happyMoment": "Momen bahagia baru-baru ini",
         "strengths": "Kelebihan",
         "learnWant": "Yang ingin dipelajari",

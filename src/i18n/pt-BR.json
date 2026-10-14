@@ -72,7 +72,7 @@
       "selfExpression": "Sobre você",
       "selfExpressionHelper": "Escreva o que você gosta, sua personalidade e valores.",
       "selfExpressionPlaceholder": "ex: gosto de natureza, sou curioso, gosto de criar coisas",
-      "idealVision": "Seu futuro ideal",
+      "idealVision": "O futuro / a visão que você quer criar",
       "idealVisionPlaceholder": "ex: trabalhar em Tóquio, ter um estúdio na natureza",
       "descriptionSp": "Conte sobre seus encantos e o futuro para onde você quer caminhar.\nDepois pense em um passo que você pode dar agora para torná-lo real."
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "Cores favoritas",
         "imageStyle": "Estilo da imagem",
         "selfExpression": "O que faz você ser você",
-        "idealVision": "O futuro que você quer criar",
+        "idealVision": "O futuro / a visão que você quer criar",
         "happyMoment": "Um momento feliz recente",
         "strengths": "Pontos fortes",
         "learnWant": "O que você quer aprender",

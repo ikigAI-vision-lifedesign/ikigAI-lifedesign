@@ -72,7 +72,7 @@
       "selfExpression": "Ce qui vous rend unique",
       "selfExpressionHelper": "Décrivez aussi précisément que possible ce que vous aimez, votre personnalité et les valeurs importantes pour vous.",
       "selfExpressionPlaceholder": "ex. J’aime la nature, je suis curieux, j’aime créer des choses, je veux travailler librement",
-      "idealVision": "Le futur que vous voulez créer",
+      "idealVision": "L’avenir / la vision que vous voulez créer",
       "idealVisionPlaceholder": "ex. Dans un an, je veux travailler à Tokyo à ma façon. Dans dix ans, je veux avoir un atelier près de la nature.",
       "descriptionSp": "Parlez-nous de vos atouts et de l’avenir vers lequel vous voulez avancer.\nPuis imaginez un pas que vous pouvez faire dès maintenant pour le réaliser."
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "Couleurs préférées",
         "imageStyle": "Style d’image",
         "selfExpression": "Ce qui vous rend unique",
-        "idealVision": "Le futur que vous voulez créer",
+        "idealVision": "L’avenir / la vision que vous voulez créer",
         "happyMoment": "Un moment heureux récent",
         "strengths": "Forces",
         "learnWant": "Ce que vous voulez apprendre",

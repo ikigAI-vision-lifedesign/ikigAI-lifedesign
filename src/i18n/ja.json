@@ -72,7 +72,7 @@
       "selfExpression": "あなたらしさ",
       "selfExpressionHelper": "好きなこと、性格、大切にしている価値観などを、できるだけ具体的に書いてください。",
       "selfExpressionPlaceholder": "例：アウトドアが好き、好奇心旺盛、ものづくりが好き、自由な働き方を大切にしたい",
-      "idealVision": "これから叶えたい未来",
+      "idealVision": "これから叶えたい未来・ビジョン",
       "idealVisionPlaceholder": "例：1年後は東京で自分らしく働きたい。10年後は自然の近くにアトリエを作りたい。",
       "descriptionSp": "あなたの魅力と、\nこれから歩みたい未来を聞かせてください。\n理想の未来を叶えるために、\n今できる一歩を考えてみましょう。"
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "好きな色",
         "imageStyle": "画像スタイル",
         "selfExpression": "あなたらしさ",
-        "idealVision": "これから叶えたい未来",
+        "idealVision": "これから叶えたい未来・ビジョン",
         "happyMoment": "最近幸せだった瞬間",
         "strengths": "強み",
         "learnWant": "学びたいこと",

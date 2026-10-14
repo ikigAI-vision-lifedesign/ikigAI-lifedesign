@@ -72,7 +72,7 @@
       "selfExpression": "あなたらしさ",
       "selfExpressionHelper": "すきなことやせいかくをかいてください。",
       "selfExpressionPlaceholder": "れい：あそぶのがすき、やさしい",
-      "idealVision": "これからどうなりたい？",
+      "idealVision": "これからかなえたいみらい・ビジョン",
       "idealVisionPlaceholder": "れい：たのしくくらしたい",
       "descriptionSp": "あなたのみりょくと、\nこれからあゆみたいみらいをきかせてください。\nりそうのみらいをかなえるために、\nいまできるいっぽをかんがえてみましょう。"
     },
@@ -173,7 +173,7 @@
         "favoriteColors": "いろ",
         "imageStyle": "すたいる",
         "selfExpression": "あなたらしさ",
-        "idealVision": "みらい",
+        "idealVision": "これからかなえたいみらい・ビジョン",
         "happyMoment": "うれしい",
         "strengths": "とくい",
         "learnWant": "まなび",
