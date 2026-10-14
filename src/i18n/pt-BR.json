@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "ETAPA 2 / 4",
       "title": "Sobre você",
-      "description": "Insira as informações básicas que serão usadas no seu vision board.",
+      "description": "Conte um pouco sobre você. O que você inserir será refletido no seu vision board.",
       "fullName": "Nome",
       "fullNamePlaceholder": "ex: Hanako Yamada",
       "email": "Email",

@@ -43,7 +43,7 @@
     "step2": {
       "stepLabel": "LANGKAH 2 / 4",
       "title": "Tentang Anda",
-      "description": "Masukkan informasi dasar yang akan ditampilkan di vision board Anda.",
+      "description": "Ceritakan sedikit tentang dirimu. Apa yang kamu isi akan tercermin di vision board-mu.",
       "fullName": "Nama",
       "fullNamePlaceholder": "contoh: Hanako Yamada",
       "email": "Alamat Email",
