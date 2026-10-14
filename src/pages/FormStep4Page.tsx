@@ -7,6 +7,7 @@ import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import StepNavigation from "../components/StepNavigation";
+import lifeDesignMap from "../assets/lifedesign-map.webp";
 import { theme } from "../theme";
 
 const STORAGE_KEY = "visionBoardFormData";
@@ -369,6 +370,18 @@ const FormStep4Page: React.FC = () => {
             >
               {t("form.step4.lifeDesignTitle")}
             </h2>
+
+            <img
+              src={lifeDesignMap}
+              alt={t("form.step4.lifeDesignTitle")}
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "14px",
+                display: "block",
+                margin: "0 0 14px",
+              }}
+            />
 
             <div
               style={{
