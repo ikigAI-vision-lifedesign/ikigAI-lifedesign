@@ -419,6 +419,17 @@ button:disabled {
   .intro-appear-plant { animation: none; opacity: 0.92; }
 }
 
+/* ===== ローディングの公式サイトバナー ===== */
+.loading-banner {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+@media (hover: hover) {
+  .loading-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
 /* ===== 説明文のPC/スマホ出し分け（スマホは良い区切りで改行） ===== */
 .desc-sp { display: none; }
 @media (max-width: 768px) {

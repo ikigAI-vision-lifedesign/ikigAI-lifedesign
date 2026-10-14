@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { theme } from "../theme";
+import ikigaiLogo from "../assets/ikigai-logo.png";
 import "../styles.css";
 
 type Props = {
@@ -143,25 +144,34 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
         ))}
       </div>
 
-      {/* 公式サイトへのリンク（別タブ） */}
-      <div style={{ textAlign: "center", marginTop: "22px" }}>
-        <a
-          href="https://ikigai96.studio.site/"
-          target="_blank"
-          rel="noreferrer"
+      {/* 公式サイトへのバナー（別タブ） */}
+      <a
+        href="https://ikigai96.studio.site/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label={t("loadingPage.learnMore")}
+        style={{ display: "block", textDecoration: "none", marginTop: "24px" }}
+      >
+        <div
+          className="loading-banner"
           style={{
-            color: theme.primaryDark,
-            fontWeight: 700,
-            fontSize: "0.92rem",
-            textDecoration: "underline",
-            display: "inline-flex",
+            display: "flex",
             alignItems: "center",
-            gap: "5px",
+            justifyContent: "center",
+            gap: "12px",
+            background: "#ffffff",
+            border: `1.5px solid ${theme.border}`,
+            borderRadius: "14px",
+            padding: "12px 16px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
           }}
         >
-          {t("loadingPage.learnMore")} <span aria-hidden="true">→</span>
-        </a>
-      </div>
+          <img src={ikigaiLogo} alt="ikigAI" style={{ height: "30px", width: "auto", display: "block" }} />
+          <span style={{ color: theme.primaryDark, fontWeight: 800, fontSize: "0.92rem" }}>
+            {t("loadingPage.learnMore")} <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
     </div>
   );
 };
