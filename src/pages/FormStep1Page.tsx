@@ -1,6 +1,6 @@
 // src/pages/FormStep1Page.tsx
 // STEP1：画像スタイル選択。PC=画像カードのグリッド、スマホ=大プレビュー＋横スクロールのサムネ。
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../i18n/configs";
@@ -82,6 +82,11 @@ const FormStep1Page: React.FC = () => {
   const select = (value: string) => {
     setImageStyle(value);
     persist(value);
+  };
+
+  const stripRef = useRef<HTMLDivElement>(null);
+  const scrollStrip = (dir: number) => {
+    stripRef.current?.scrollBy({ left: dir * 196, behavior: "smooth" });
   };
 
   const displayOption =
@@ -168,22 +173,30 @@ const FormStep1Page: React.FC = () => {
               {!imageStyle && <span className="style-hint">{t("form.step1.choosePrompt")}</span>}
             </div>
             <div className="style-cap-row">{t(displayOption.labelKey)}</div>
-            <div className="style-strip">
-              {imageStyleOptions.map((option) => {
-                const selected = imageStyle === option.value;
-                return (
-                  <button
-                    type="button"
-                    key={option.value}
-                    className={selected ? "sthumb selected" : "sthumb"}
-                    onClick={() => select(option.value)}
-                    aria-label={t(option.labelKey)}
-                  >
-                    {selected && <span className="check">✓</span>}
-                    <img src={option.img} alt={t(option.labelKey)} />
-                  </button>
-                );
-              })}
+            <div className="style-strip-wrap">
+              <button type="button" className="style-strip-arrow left" aria-hidden="true" tabIndex={-1} onClick={() => scrollStrip(-1)}>
+                ‹
+              </button>
+              <div className="style-strip" ref={stripRef}>
+                {imageStyleOptions.map((option) => {
+                  const selected = imageStyle === option.value;
+                  return (
+                    <button
+                      type="button"
+                      key={option.value}
+                      className={selected ? "sthumb selected" : "sthumb"}
+                      onClick={() => select(option.value)}
+                      aria-label={t(option.labelKey)}
+                    >
+                      {selected && <span className="check">✓</span>}
+                      <img src={option.img} alt={t(option.labelKey)} />
+                    </button>
+                  );
+                })}
+              </div>
+              <button type="button" className="style-strip-arrow right" aria-hidden="true" tabIndex={-1} onClick={() => scrollStrip(1)}>
+                ›
+              </button>
             </div>
           </div>
 
