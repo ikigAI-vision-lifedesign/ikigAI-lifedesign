@@ -17,10 +17,11 @@ const HeartIcon = () => (
     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
   </svg>
 );
-// Whatアイコン候補（吹き出し＝考える/言葉にする）
-const SpeechIcon = () => (
+// Whatアイコン（コンパス＝自分の軸・方向を探す）
+const CompassIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    <circle cx="12" cy="12" r="10" />
+    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
   </svg>
 );
 const ArrowIcon = () => (
@@ -174,7 +175,7 @@ const IntroPage: React.FC = () => {
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
-            <Card icon={<SpeechIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
+            <Card icon={<CompassIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
               {t("intro.what.body")}
             </Card>
 
