@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
+import ikigaiLogo from "../assets/ikigai-logo.png";
 import { theme } from "../theme";
 
 const HomePage: React.FC = () => {
@@ -41,13 +42,21 @@ const HomePage: React.FC = () => {
         <h1
           style={{
             color: theme.text,
-            fontSize: "2rem",
+            fontSize: "1.9rem",
             fontWeight: 800,
-            marginBottom: "24px",
+            margin: "0 0 18px",
+            letterSpacing: "0.02em",
           }}
         >
-          Welcome to ikigAI
+          Welcome to
         </h1>
+
+        {/* Logo */}
+        <img
+          src={ikigaiLogo}
+          alt="ikigAI"
+          style={{ width: "100%", maxWidth: "340px", height: "auto", display: "block", margin: "0 auto" }}
+        />
 
         {/* CTA Button */}
         <button
