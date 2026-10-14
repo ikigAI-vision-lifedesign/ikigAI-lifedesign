@@ -149,6 +149,7 @@ const IntroPage: React.FC = () => {
           src={leafBottom}
           alt=""
           aria-hidden="true"
+          className="intro-appear-plant"
           style={{
             position: "absolute",
             left: "50%",
@@ -156,23 +157,24 @@ const IntroPage: React.FC = () => {
             transform: "translateX(-50%)",
             width: "min(100%, 560px)",
             height: "auto",
-            opacity: 0.92,
             pointerEvents: "none",
             zIndex: 0,
           }}
         />
 
         <div style={{ width: "100%", maxWidth: "420px", textAlign: "center", position: "relative", zIndex: 1 }}>
-          <div style={{ margin: "0 0 18px" }}>
-            <Logo />
-          </div>
+          <div className="intro-appear">
+            <div style={{ margin: "0 0 18px" }}>
+              <Logo />
+            </div>
 
-          <h1 style={{ color: theme.text, fontSize: "1.6rem", fontWeight: 800, margin: "0 0 10px" }}>
-            {t("intro.title")}
-          </h1>
-          <p style={{ color: theme.subText, fontWeight: 700, lineHeight: 1.7, margin: "0 0 22px" }}>
-            {t("intro.subtitle")}
-          </p>
+            <h1 style={{ color: theme.text, fontSize: "1.6rem", fontWeight: 800, margin: "0 0 10px" }}>
+              {t("intro.title")}
+            </h1>
+            <p style={{ color: theme.subText, fontWeight: 700, lineHeight: 1.7, margin: "0 0 22px" }}>
+              {t("intro.subtitle")}
+            </p>
+          </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
             <Card icon={<CompassIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={0.3}>
