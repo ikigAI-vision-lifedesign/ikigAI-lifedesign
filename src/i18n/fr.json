@@ -27,7 +27,7 @@
       "stepLabel": "ÉTAPE 1 / 4",
       "title": "Votre ambiance préférée",
       "description": "Choisissez le style qui définit l’ambiance de votre vision board.",
-      "imageStyle": "Style d’image",
+      "imageStyle": "Choisir un style",
       "recommended": "Recommandé",
       "imageStyleOptions": {
         "watercolor": "Aquarelle",

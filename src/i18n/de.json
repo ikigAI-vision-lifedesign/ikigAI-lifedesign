@@ -27,7 +27,7 @@
       "stepLabel": "SCHRITT 1 / 4",
       "title": "Deine Lieblingsstimmung",
       "description": "Wähle den Bildstil, der die Stimmung deines Vision Boards bestimmt.",
-      "imageStyle": "Bildstil",
+      "imageStyle": "Stil wählen",
       "recommended": "Empfohlen",
       "imageStyleOptions": {
         "watercolor": "Aquarell",

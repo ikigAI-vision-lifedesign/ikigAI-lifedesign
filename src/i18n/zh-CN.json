@@ -27,7 +27,7 @@
       "stepLabel": "第1步 / 共4步",
       "title": "喜欢的风格",
       "description": "选择决定愿景板氛围的画风。",
-      "imageStyle": "图像风格",
+      "imageStyle": "选择画风",
       "recommended": "推荐",
       "imageStyleOptions": {
         "watercolor": "水彩",

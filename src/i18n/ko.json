@@ -27,7 +27,7 @@
       "stepLabel": "STEP 1 / 4",
       "title": "좋아하는 분위기",
       "description": "비전 보드의 분위기를 결정하는 화풍을 선택하세요.",
-      "imageStyle": "이미지 스타일",
+      "imageStyle": "화풍 선택",
       "recommended": "추천",
       "imageStyleOptions": {
         "watercolor": "수채화",

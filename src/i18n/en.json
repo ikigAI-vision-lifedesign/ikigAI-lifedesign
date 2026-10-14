@@ -27,7 +27,7 @@
       "stepLabel": "STEP 1 / 4",
       "title": "Your Favorite Mood",
       "description": "Choose the art style that sets the mood of your vision board.",
-      "imageStyle": "Image Style",
+      "imageStyle": "Choose a style",
       "recommended": "Recommended",
       "imageStyleOptions": {
         "watercolor": "Watercolor",

@@ -27,7 +27,7 @@
       "stepLabel": "PASO 1 / 4",
       "title": "Tu estilo favorito",
       "description": "Elige el estilo que define el ambiente de tu tablero de visión.",
-      "imageStyle": "Estilo de imagen",
+      "imageStyle": "Elige un estilo",
       "recommended": "Recomendado",
       "imageStyleOptions": {
         "watercolor": "Acuarela",

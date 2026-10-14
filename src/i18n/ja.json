@@ -27,7 +27,7 @@
       "stepLabel": "STEP 1 / 4",
       "title": "好きな雰囲気",
       "description": "ビジョンボードの仕上がりの雰囲気を決める画風を選びましょう。",
-      "imageStyle": "画像スタイル",
+      "imageStyle": "画風を選択",
       "recommended": "おすすめ",
       "imageStyleOptions": {
         "watercolor": "水彩画風",
