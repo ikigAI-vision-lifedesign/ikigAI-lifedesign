@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../i18n/configs";
 import "../styles.css";
@@ -32,6 +32,9 @@ type ViewState = "loading" | "error";
 const LoadingPage: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  // 開発用：#/loading?preview=1 で生成処理を走らせずローディング画面だけ表示
+  const [searchParams] = useSearchParams();
+  const isPreview = searchParams.get("preview") === "1";
   const [loadingTextIndex, setLoadingTextIndex] = useState(0);
   const [view, setView] = useState<ViewState>("loading");
   const [errorMessage, setErrorMessage] = useState("");
@@ -126,6 +129,7 @@ const LoadingPage: React.FC = () => {
   };
 
   useEffect(() => {
+    if (isPreview) return; // 開発用プレビュー：生成を実行しない
     generate();
     // 初回のみ実行（generateは都度生成されるため依存に入れない）
     // eslint-disable-next-line react-hooks/exhaustive-deps
