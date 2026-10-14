@@ -73,7 +73,8 @@
       "selfExpressionHelper": "Write as specifically as possible about what you like, your personality, and the values you care about.",
       "selfExpressionPlaceholder": "e.g. I love the outdoors, I am curious, I enjoy making things, I value freedom in how I work",
       "idealVision": "The Future You Want to Create",
-      "idealVisionPlaceholder": "e.g. In one year, I want to work in Tokyo in my own way. In ten years, I want to have an atelier near nature."
+      "idealVisionPlaceholder": "e.g. In one year, I want to work in Tokyo in my own way. In ten years, I want to have an atelier near nature.",
+      "descriptionSp": "Tell us about your charms and the future you want to walk toward.\nThen think of a step you can take now to make that future real."
     },
     "step4": {
       "stepLabel": "STEP 4 / 5",

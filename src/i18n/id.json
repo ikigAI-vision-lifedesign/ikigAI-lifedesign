@@ -73,7 +73,8 @@
       "selfExpressionHelper": "Tuliskan apa yang Anda sukai, kepribadian Anda, dan nilai yang penting bagi Anda.",
       "selfExpressionPlaceholder": "contoh: suka alam, rasa ingin tahu tinggi, suka membuat sesuatu, ingin bekerja bebas",
       "idealVision": "Masa depan yang Anda inginkan",
-      "idealVisionPlaceholder": "contoh: dalam 1 tahun ingin bekerja di Tokyo, dalam 10 tahun ingin punya studio dekat alam"
+      "idealVisionPlaceholder": "contoh: dalam 1 tahun ingin bekerja di Tokyo, dalam 10 tahun ingin punya studio dekat alam",
+      "descriptionSp": "Ceritakan pesonamu dan masa depan yang ingin kamu tuju.\nLalu pikirkan satu langkah yang bisa kamu ambil sekarang untuk mewujudkannya."
     },
     "step4": {
       "stepLabel": "LANGKAH 4 / 5",

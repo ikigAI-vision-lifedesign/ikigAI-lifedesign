@@ -419,6 +419,13 @@ button:disabled {
   .intro-appear-plant { animation: none; opacity: 0.92; }
 }
 
+/* ===== 説明文のPC/スマホ出し分け（スマホは良い区切りで改行） ===== */
+.desc-sp { display: none; }
+@media (max-width: 768px) {
+  .desc-pc { display: none; }
+  .desc-sp { display: block; }
+}
+
 /* ===== 画像スタイル選択（PC=グリッド / スマホ=大プレビュー＋横スクロール） ===== */
 .style-grid {
   display: grid;

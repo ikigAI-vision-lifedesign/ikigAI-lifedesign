@@ -190,6 +190,7 @@ const FormStep3Page: React.FC = () => {
         </h1>
 
         <p
+          className="desc-pc"
           style={{
             color: theme.subText,
             lineHeight: 1.8,
@@ -199,6 +200,18 @@ const FormStep3Page: React.FC = () => {
           }}
         >
           {t("form.step3.description")}
+        </p>
+        <p
+          className="desc-sp"
+          style={{
+            color: theme.subText,
+            lineHeight: 1.8,
+            marginBottom: "18px",
+            textAlign: "center",
+            whiteSpace: "pre-line",
+          }}
+        >
+          {t("form.step3.descriptionSp")}
         </p>
 
         <div

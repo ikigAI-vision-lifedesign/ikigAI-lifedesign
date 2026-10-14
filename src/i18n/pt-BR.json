@@ -73,7 +73,8 @@
       "selfExpressionHelper": "Escreva o que você gosta, sua personalidade e valores.",
       "selfExpressionPlaceholder": "ex: gosto de natureza, sou curioso, gosto de criar coisas",
       "idealVision": "Seu futuro ideal",
-      "idealVisionPlaceholder": "ex: trabalhar em Tóquio, ter um estúdio na natureza"
+      "idealVisionPlaceholder": "ex: trabalhar em Tóquio, ter um estúdio na natureza",
+      "descriptionSp": "Conte sobre seus encantos e o futuro para onde você quer caminhar.\nDepois pense em um passo que você pode dar agora para torná-lo real."
     },
     "step4": {
       "stepLabel": "ETAPA 4 / 5",

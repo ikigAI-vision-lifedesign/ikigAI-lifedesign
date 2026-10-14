@@ -73,7 +73,8 @@
       "selfExpressionHelper": "すきなことやせいかくをかいてください。",
       "selfExpressionPlaceholder": "れい：あそぶのがすき、やさしい",
       "idealVision": "これからどうなりたい？",
-      "idealVisionPlaceholder": "れい：たのしくくらしたい"
+      "idealVisionPlaceholder": "れい：たのしくくらしたい",
+      "descriptionSp": "あなたのみりょくと、\nこれからあゆみたいみらいをきかせてください。\nりそうのみらいをかなえるために、\nいまできるいっぽをかんがえてみましょう。"
     },
     "step4": {
       "stepLabel": "すてっぷ 4",

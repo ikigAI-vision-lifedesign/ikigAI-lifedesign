@@ -73,7 +73,8 @@
       "selfExpressionHelper": "Beschreibe möglichst konkret, was du magst, wie deine Persönlichkeit ist und welche Werte dir wichtig sind.",
       "selfExpressionPlaceholder": "z. B. Ich liebe die Natur, bin neugierig, erschaffe gern Dinge und lege Wert auf freies Arbeiten",
       "idealVision": "Die Zukunft, die du gestalten möchtest",
-      "idealVisionPlaceholder": "z. B. In einem Jahr möchte ich in Tokio auf meine Art arbeiten. In zehn Jahren möchte ich ein Atelier in der Nähe der Natur haben."
+      "idealVisionPlaceholder": "z. B. In einem Jahr möchte ich in Tokio auf meine Art arbeiten. In zehn Jahren möchte ich ein Atelier in der Nähe der Natur haben.",
+      "descriptionSp": "Erzähl uns von deinen Stärken und der Zukunft, auf die du zugehen möchtest.\nÜberlege dann einen Schritt, den du jetzt gehen kannst, um sie wahr werden zu lassen."
     },
     "step4": {
       "stepLabel": "SCHRITT 4 / 5",

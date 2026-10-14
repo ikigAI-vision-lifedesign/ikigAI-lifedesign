@@ -73,7 +73,8 @@
       "selfExpressionHelper": "Scrivi in modo concreto cosa ti piace, la tua personalità e i tuoi valori.",
       "selfExpressionPlaceholder": "es. amo la natura, sono curioso, mi piace creare, voglio lavorare liberamente",
       "idealVision": "Il futuro che desideri",
-      "idealVisionPlaceholder": "es. tra 1 anno voglio lavorare a Tokyo, tra 10 anni avere uno studio vicino alla natura"
+      "idealVisionPlaceholder": "es. tra 1 anno voglio lavorare a Tokyo, tra 10 anni avere uno studio vicino alla natura",
+      "descriptionSp": "Raccontaci i tuoi punti di forza e il futuro verso cui vuoi camminare.\nPoi pensa a un passo che puoi fare ora per realizzarlo."
     },
     "step4": {
       "stepLabel": "PASSO 4 / 5",

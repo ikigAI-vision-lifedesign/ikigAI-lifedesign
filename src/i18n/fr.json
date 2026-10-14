@@ -73,7 +73,8 @@
       "selfExpressionHelper": "Décrivez aussi précisément que possible ce que vous aimez, votre personnalité et les valeurs importantes pour vous.",
       "selfExpressionPlaceholder": "ex. J’aime la nature, je suis curieux, j’aime créer des choses, je veux travailler librement",
       "idealVision": "Le futur que vous voulez créer",
-      "idealVisionPlaceholder": "ex. Dans un an, je veux travailler à Tokyo à ma façon. Dans dix ans, je veux avoir un atelier près de la nature."
+      "idealVisionPlaceholder": "ex. Dans un an, je veux travailler à Tokyo à ma façon. Dans dix ans, je veux avoir un atelier près de la nature.",
+      "descriptionSp": "Parlez-nous de vos atouts et de l’avenir vers lequel vous voulez avancer.\nPuis imaginez un pas que vous pouvez faire dès maintenant pour le réaliser."
     },
     "step4": {
       "stepLabel": "ÉTAPE 4 / 5",
