@@ -68,7 +68,7 @@
     "step3": {
       "stepLabel": "STEP 3 / 5",
       "title": "당신과 미래",
-      "description": "지금의 당신과 이루고 싶은 미래를 알려주세요.",
+      "description": "당신의 매력과 앞으로 걸어가고 싶은 미래를 들려주세요.\n그 미래를 이루기 위해 지금 할 수 있는 한 걸음을 떠올려 보세요.",
       "selfExpression": "당신의 특징",
       "selfExpressionHelper": "좋아하는 것, 성격, 가치관을 구체적으로 적어주세요.",
       "selfExpressionPlaceholder": "예: 자연을 좋아함, 호기심 많음, 만들기를 좋아함, 자유로운 삶을 원함",

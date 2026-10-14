@@ -95,24 +95,6 @@ const helperTextStyle: React.CSSProperties = {
   textAlign: "left",
 };
 
-// 任意項目を示す小さなバッジ（必須バッジのニュートラル版）
-const optionalBadgeStyle: React.CSSProperties = {
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "22px",
-  padding: "0 9px",
-  marginLeft: "8px",
-  borderRadius: "999px",
-  background: "#e9eef0",
-  color: theme.subText,
-  fontSize: "0.68rem",
-  fontWeight: 700,
-  lineHeight: 1,
-  verticalAlign: "middle",
-  whiteSpace: "nowrap",
-};
-
 const FormStep3Page: React.FC = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
@@ -140,7 +122,10 @@ const FormStep3Page: React.FC = () => {
   useEffect(() => {
     const complete =
       formData.selfExpression.trim() !== "" &&
-      formData.idealVision.trim() !== "";
+      formData.idealVision.trim() !== "" &&
+      formData.happyMoment.trim() !== "" &&
+      formData.strengths.trim() !== "" &&
+      formData.nextAction.trim() !== "";
 
     setIsDisabled(!complete);
   }, [formData]);
@@ -210,6 +195,7 @@ const FormStep3Page: React.FC = () => {
             lineHeight: 1.8,
             marginBottom: "18px",
             textAlign: "center",
+            whiteSpace: "pre-line",
           }}
         >
           {t("form.step3.description")}
@@ -236,6 +222,7 @@ const FormStep3Page: React.FC = () => {
         </div>
 
         <form onSubmit={handleNext}>
+          {/* 1. あなたらしさ */}
           <label style={labelStyle}>
             {t("form.step3.selfExpression")}
             <RequiredBadge />
@@ -253,11 +240,37 @@ const FormStep3Page: React.FC = () => {
             required
           />
 
+          {/* 2. あなたの強み */}
+          <label style={labelStyle}>
+            {t("form.step4.identity.strengths")}
+            <RequiredBadge />
+          </label>
+          <textarea
+            name="strengths"
+            value={formData.strengths}
+            onChange={handleChange}
+            placeholder={t("form.step4.identity.strengthsPlaceholder")}
+            required
+          />
+
+          {/* 3. 最近幸せだった瞬間 */}
+          <label style={labelStyle}>
+            {t("form.step4.identity.happyMoment")}
+            <RequiredBadge />
+          </label>
+          <textarea
+            name="happyMoment"
+            value={formData.happyMoment}
+            onChange={handleChange}
+            placeholder={t("form.step4.identity.happyMomentPlaceholder")}
+            required
+          />
+
+          {/* 4. これから叶えたい未来 */}
           <label style={labelStyle}>
             {t("form.step3.idealVision")}
             <RequiredBadge />
           </label>
-
           <textarea
             name="idealVision"
             value={formData.idealVision}
@@ -266,37 +279,17 @@ const FormStep3Page: React.FC = () => {
             required
           />
 
-          <label style={labelStyle}>
-            {t("form.step4.identity.happyMoment")}
-            <span style={optionalBadgeStyle}>{t("common.optional")}</span>
-          </label>
-          <textarea
-            name="happyMoment"
-            value={formData.happyMoment}
-            onChange={handleChange}
-            placeholder={t("form.step4.identity.happyMomentPlaceholder")}
-          />
-
-          <label style={labelStyle}>
-            {t("form.step4.identity.strengths")}
-            <span style={optionalBadgeStyle}>{t("common.optional")}</span>
-          </label>
-          <textarea
-            name="strengths"
-            value={formData.strengths}
-            onChange={handleChange}
-            placeholder={t("form.step4.identity.strengthsPlaceholder")}
-          />
-
+          {/* 5. 今月中にできる小さな一歩は？ */}
           <label style={labelStyle}>
             {t("form.step4.nextAction.action")}
-            <span style={optionalBadgeStyle}>{t("common.optional")}</span>
+            <RequiredBadge />
           </label>
           <textarea
             name="nextAction"
             value={formData.nextAction}
             onChange={handleChange}
             placeholder={t("form.step4.nextAction.actionPlaceholder")}
+            required
           />
 
           <StepNavigation
