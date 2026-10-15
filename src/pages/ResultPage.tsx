@@ -391,10 +391,10 @@ const ResultPage: React.FC = () => {
 
                     <div
                       style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: isMobile ? "10px" : "16px",
-                        flexWrap: "wrap",
+                        display: "grid",
+                        gridTemplateColumns: "repeat(5, 1fr)",
+                        gap: isMobile ? "4px" : "10px",
+                        justifyItems: "center",
                         marginBottom: "24px",
                       }}
                     >
@@ -410,7 +410,7 @@ const ResultPage: React.FC = () => {
                               display: "flex",
                               flexDirection: "column",
                               alignItems: "center",
-                              minWidth: isMobile ? "54px" : "70px",
+                              width: "100%",
                             }}
                           >
                             <button
@@ -419,15 +419,16 @@ const ResultPage: React.FC = () => {
                               onMouseEnter={() => setHoveredRating(option.value)}
                               onMouseLeave={() => setHoveredRating(null)}
                               style={{
-                                width: isMobile ? "54px" : "64px",
-                                height: isMobile ? "54px" : "64px",
+                                width: "100%",
+                                maxWidth: isMobile ? "56px" : "64px",
+                                aspectRatio: "1 / 1",
                                 borderRadius: "50%",
                                 border: `3px solid ${theme.primary}`,
                                 backgroundColor: isSelected
                                   ? theme.primary
                                   : "#ffffff",
                                 color: isSelected ? "#ffffff" : theme.primaryDark,
-                                fontSize: isMobile ? "1.35rem" : "1.85rem",
+                                fontSize: isMobile ? "1.25rem" : "1.85rem",
                                 cursor: "pointer",
                                 display: "flex",
                                 alignItems: "center",
@@ -446,12 +447,13 @@ const ResultPage: React.FC = () => {
                               style={{
                                 marginTop: "8px",
                                 minHeight: "34px",
-                                fontSize: isMobile ? "0.72rem" : "0.86rem",
+                                fontSize: isMobile ? "0.62rem" : "0.86rem",
                                 fontWeight: 800,
                                 color: theme.primaryDark,
                                 opacity: showLabel ? 1 : 0,
                                 transition: "opacity 0.2s ease",
-                                lineHeight: 1.35,
+                                lineHeight: 1.3,
+                                textAlign: "center",
                               }}
                             >
                               {t(option.labelKey)}
