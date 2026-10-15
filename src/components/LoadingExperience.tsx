@@ -111,7 +111,9 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
           borderRadius: "18px",
           padding: "18px 16px",
           textAlign: "left",
-          minHeight: "92px",
+          height: "118px",
+          overflow: "hidden",
+          boxSizing: "border-box",
         }}
       >
         <div
@@ -132,7 +134,20 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
         </div>
         <div style={{ flex: 1 }}>
           <p style={{ margin: "2px 0 6px", color: visual.color, fontWeight: 800, fontSize: "1.05rem" }}>{tip.title}</p>
-          <p style={{ margin: 0, color: theme.text, fontSize: "0.92rem", lineHeight: 1.7 }}>{tip.body}</p>
+          <p
+            style={{
+              margin: 0,
+              color: theme.text,
+              fontSize: "0.92rem",
+              lineHeight: 1.6,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            }}
+          >
+            {tip.body}
+          </p>
         </div>
       </div>
 
