@@ -9,13 +9,13 @@ type Props = {
   preview?: boolean;
 };
 
-type Tip = { title: string; body: string };
+type Tip = { title: string; body?: string };
 
 // 各Tipの見た目（アイコン・配色）。文言は i18n から取得。
 const TIP_VISUALS = [
-  { emoji: "📅", bg: "#EEF6FF", border: "#CFE4F7", color: "#3E8FD0" },
-  { emoji: "🧠", bg: "#FDF0F5", border: "#F6D4E0", color: "#D85E86" },
-  { emoji: "🤝", bg: "#FFF8EC", border: "#F0E3BF", color: "#CC9227" },
+  { emoji: "🔍", bg: "#EEF6FF", border: "#CFE4F7", color: "#3E8FD0" },
+  { emoji: "🌈", bg: "#FDF0F5", border: "#F6D4E0", color: "#D85E86" },
+  { emoji: "👣", bg: "#FFF8EC", border: "#F0E3BF", color: "#CC9227" },
 ];
 
 const ExternalLinkIcon = () => (
@@ -105,13 +105,13 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
         style={{
           display: "flex",
           gap: "14px",
-          alignItems: "flex-start",
+          alignItems: "center",
           background: visual.bg,
           border: `1.5px solid ${visual.border}`,
           borderRadius: "18px",
-          padding: "18px 16px",
+          padding: "16px",
           textAlign: "left",
-          height: "118px",
+          height: "104px",
           overflow: "hidden",
           boxSizing: "border-box",
         }}
@@ -133,21 +133,23 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
           {visual.emoji}
         </div>
         <div style={{ flex: 1 }}>
-          <p style={{ margin: "2px 0 6px", color: visual.color, fontWeight: 800, fontSize: "1.05rem" }}>{tip.title}</p>
-          <p
-            style={{
-              margin: 0,
-              color: theme.text,
-              fontSize: "0.92rem",
-              lineHeight: 1.6,
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-            }}
-          >
-            {tip.body}
-          </p>
+          <p style={{ margin: 0, color: visual.color, fontWeight: 800, fontSize: "1.08rem", lineHeight: 1.5 }}>{tip.title}</p>
+          {tip.body ? (
+            <p
+              style={{
+                margin: "6px 0 0",
+                color: theme.text,
+                fontSize: "0.92rem",
+                lineHeight: 1.6,
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+              }}
+            >
+              {tip.body}
+            </p>
+          ) : null}
         </div>
       </div>
 

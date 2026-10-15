@@ -149,20 +149,17 @@
     "retry": "再試一次",
     "generatingTitle": "正在生成圖像",
     "generatingWait": "大約需要 30 秒",
-    "tipsHeader": "想想你的下一步",
-    "tipsSubtitle": "陪你走向你的未來",
+    "tipsHeader": "一起來想一想吧！",
+    "tipsSubtitle": "在等待的同時，想像一下完成的樣子",
     "tips": [
       {
-        "title": "制定半年路線圖",
-        "body": "從理想的未來倒推，制定行動計畫。"
+        "title": "哪裡最像你？"
       },
       {
-        "title": "獲得 AI 回饋",
-        "body": "AI 分析你的優勢與潛力。"
+        "title": "你描繪了怎樣的未來？"
       },
       {
-        "title": "加入夢想社群",
-        "body": "與志同道合的人一起加速行動。"
+        "title": "第一步要從哪裡開始？"
       }
     ],
     "learnMore": "了解更多關於 ikigAI",
@@ -184,6 +181,24 @@
     },
     "review": {
       "title": "檢視你的回答"
+    },
+    "nextSteps": {
+      "header": "想想你的下一步",
+      "subtitle": "陪你走向你的未來",
+      "items": [
+        {
+          "title": "制定半年路線圖",
+          "body": "從理想的未來倒推，制定行動計畫。"
+        },
+        {
+          "title": "獲得 AI 回饋",
+          "body": "AI 分析你的優勢與潛力。"
+        },
+        {
+          "title": "加入夢想社群",
+          "body": "與志同道合的人一起加速行動。"
+        }
+      ]
     }
   },
   "language": {

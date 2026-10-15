@@ -211,20 +211,17 @@
     "retry": "Réessayer",
     "generatingTitle": "Génération de votre image",
     "generatingWait": "Cela prend environ 30 secondes",
-    "tipsHeader": "Pensez à votre prochaine étape",
-    "tipsSubtitle": "Nous vous accompagnons vers votre avenir",
+    "tipsHeader": "Prenez un moment pour réfléchir",
+    "tipsSubtitle": "En attendant, imaginez votre tableau terminé",
     "tips": [
       {
-        "title": "Créez une feuille de route sur 6 mois",
-        "body": "Planifiez vos actions à partir de votre avenir idéal."
+        "title": "Qu'est-ce qui vous ressemble ?"
       },
       {
-        "title": "Recevez un retour de l'IA",
-        "body": "L'IA analyse vos forces et votre potentiel."
+        "title": "Quel avenir avez-vous imaginé ?"
       },
       {
-        "title": "Rejoignez la communauté",
-        "body": "Avancez plus vite avec des personnes qui partagent vos objectifs."
+        "title": "Par quel premier pas commencer ?"
       }
     ],
     "learnMore": "En savoir plus sur ikigAI",
@@ -279,6 +276,24 @@
     },
     "review": {
       "title": "Revoir vos réponses"
+    },
+    "nextSteps": {
+      "header": "Pensez à votre prochaine étape",
+      "subtitle": "Nous vous accompagnons vers votre avenir",
+      "items": [
+        {
+          "title": "Créez une feuille de route sur 6 mois",
+          "body": "Planifiez vos actions à partir de votre avenir idéal."
+        },
+        {
+          "title": "Recevez un retour de l'IA",
+          "body": "L'IA analyse vos forces et votre potentiel."
+        },
+        {
+          "title": "Rejoignez la communauté",
+          "body": "Avancez plus vite avec des personnes qui partagent vos objectifs."
+        }
+      ]
     }
   },
   "language": {

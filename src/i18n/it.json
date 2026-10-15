@@ -207,20 +207,17 @@
     "retry": "Riprova",
     "generatingTitle": "Generazione della tua immagine",
     "generatingWait": "Ci vogliono circa 30 secondi",
-    "tipsHeader": "Pensa al tuo prossimo passo",
-    "tipsSubtitle": "Ti accompagniamo verso il tuo futuro",
+    "tipsHeader": "Fermati un momento a riflettere",
+    "tipsSubtitle": "Mentre aspetti, immagina la tua board finita",
     "tips": [
       {
-        "title": "Crea una roadmap di 6 mesi",
-        "body": "Pianifica le tue azioni partendo dal tuo futuro ideale."
+        "title": "Cosa ti somiglia di più?"
       },
       {
-        "title": "Ricevi feedback dall'IA",
-        "body": "L'IA analizza i tuoi punti di forza e il tuo potenziale."
+        "title": "Che futuro hai immaginato?"
       },
       {
-        "title": "Unisciti alla community",
-        "body": "Avanza più in fretta con chi condivide i tuoi obiettivi."
+        "title": "Qual è il tuo primo passo?"
       }
     ],
     "learnMore": "Scopri di più su ikigAI",
@@ -245,6 +242,24 @@
     },
     "review": {
       "title": "Rivedi le tue risposte"
+    },
+    "nextSteps": {
+      "header": "Pensa al tuo prossimo passo",
+      "subtitle": "Ti accompagniamo verso il tuo futuro",
+      "items": [
+        {
+          "title": "Crea una roadmap di 6 mesi",
+          "body": "Pianifica le tue azioni partendo dal tuo futuro ideale."
+        },
+        {
+          "title": "Ricevi feedback dall'IA",
+          "body": "L'IA analizza i tuoi punti di forza e il tuo potenziale."
+        },
+        {
+          "title": "Unisciti alla community",
+          "body": "Avanza più in fretta con chi condivide i tuoi obiettivi."
+        }
+      ]
     }
   },
   "language": {

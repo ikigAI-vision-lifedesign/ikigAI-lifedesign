@@ -207,20 +207,17 @@
     "retry": "Coba lagi",
     "generatingTitle": "Membuat gambarmu",
     "generatingWait": "Butuh sekitar 30 detik",
-    "tipsHeader": "Pikirkan langkah berikutnya",
-    "tipsSubtitle": "Kami mendukungmu menuju masa depanmu",
+    "tipsHeader": "Luangkan waktu untuk merenung",
+    "tipsSubtitle": "Sambil menunggu, bayangkan papan yang sudah jadi",
     "tips": [
       {
-        "title": "Buat peta jalan 6 bulan",
-        "body": "Rencanakan langkahmu dari masa depan idealmu."
+        "title": "Bagian mana yang terasa seperti kamu?"
       },
       {
-        "title": "Dapatkan masukan AI",
-        "body": "AI menganalisis kelebihan dan potensimu."
+        "title": "Masa depan seperti apa yang kamu bayangkan?"
       },
       {
-        "title": "Gabung komunitas",
-        "body": "Melaju bersama orang dengan tujuan yang sama."
+        "title": "Langkah pertama apa yang akan kamu ambil?"
       }
     ],
     "learnMore": "Pelajari lebih lanjut tentang ikigAI",
@@ -245,6 +242,24 @@
     },
     "review": {
       "title": "Tinjau jawabanmu"
+    },
+    "nextSteps": {
+      "header": "Pikirkan langkah berikutnya",
+      "subtitle": "Kami mendukungmu menuju masa depanmu",
+      "items": [
+        {
+          "title": "Buat peta jalan 6 bulan",
+          "body": "Rencanakan langkahmu dari masa depan idealmu."
+        },
+        {
+          "title": "Dapatkan masukan AI",
+          "body": "AI menganalisis kelebihan dan potensimu."
+        },
+        {
+          "title": "Gabung komunitas",
+          "body": "Melaju bersama orang dengan tujuan yang sama."
+        }
+      ]
     }
   },
   "language": {

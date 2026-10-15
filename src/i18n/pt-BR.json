@@ -207,20 +207,17 @@
     "retry": "Tentar novamente",
     "generatingTitle": "Gerando sua imagem",
     "generatingWait": "Isso leva cerca de 30 segundos",
-    "tipsHeader": "Pense no seu próximo passo",
-    "tipsSubtitle": "Apoiamos você rumo ao seu futuro",
+    "tipsHeader": "Reserve um momento para refletir",
+    "tipsSubtitle": "Enquanto espera, imagine o seu quadro pronto",
     "tips": [
       {
-        "title": "Crie um roteiro de 6 meses",
-        "body": "Planeje suas ações a partir do seu futuro ideal."
+        "title": "O que tem mais a sua cara?"
       },
       {
-        "title": "Receba feedback da IA",
-        "body": "A IA analisa seus pontos fortes e seu potencial."
+        "title": "Que futuro você imaginou?"
       },
       {
-        "title": "Entre na comunidade",
-        "body": "Avance mais rápido com quem compartilha seus objetivos."
+        "title": "Qual será o seu primeiro passo?"
       }
     ],
     "learnMore": "Saiba mais sobre o ikigAI",
@@ -245,6 +242,24 @@
     },
     "review": {
       "title": "Revise suas respostas"
+    },
+    "nextSteps": {
+      "header": "Pense no seu próximo passo",
+      "subtitle": "Apoiamos você rumo ao seu futuro",
+      "items": [
+        {
+          "title": "Crie um roteiro de 6 meses",
+          "body": "Planeje suas ações a partir do seu futuro ideal."
+        },
+        {
+          "title": "Receba feedback da IA",
+          "body": "A IA analisa seus pontos fortes e seu potencial."
+        },
+        {
+          "title": "Entre na comunidade",
+          "body": "Avance mais rápido com quem compartilha seus objetivos."
+        }
+      ]
     }
   },
   "language": {

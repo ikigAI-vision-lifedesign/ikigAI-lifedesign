@@ -211,20 +211,17 @@
     "retry": "Erneut versuchen",
     "generatingTitle": "Dein Bild wird erstellt",
     "generatingWait": "Das dauert etwa 30 Sekunden",
-    "tipsHeader": "Denk an deinen nächsten Schritt",
-    "tipsSubtitle": "Wir unterstützen dich auf dem Weg in deine Zukunft",
+    "tipsHeader": "Nimm dir einen Moment zum Nachdenken",
+    "tipsSubtitle": "Stell dir dein fertiges Board vor, während du wartest",
     "tips": [
       {
-        "title": "Erstelle eine 6-Monats-Roadmap",
-        "body": "Plane deine Schritte rückwärts von deiner idealen Zukunft."
+        "title": "Was passt zu dir?"
       },
       {
-        "title": "Hol dir KI-Feedback",
-        "body": "Die KI analysiert deine Stärken und dein Potenzial."
+        "title": "Welche Zukunft hast du dir ausgemalt?"
       },
       {
-        "title": "Tritt der Community bei",
-        "body": "Komm schneller voran mit Gleichgesinnten."
+        "title": "Mit welchem ersten Schritt fängst du an?"
       }
     ],
     "learnMore": "Mehr über ikigAI erfahren",
@@ -279,6 +276,24 @@
     },
     "review": {
       "title": "Deine Antworten ansehen"
+    },
+    "nextSteps": {
+      "header": "Denk an deinen nächsten Schritt",
+      "subtitle": "Wir unterstützen dich auf dem Weg in deine Zukunft",
+      "items": [
+        {
+          "title": "Erstelle eine 6-Monats-Roadmap",
+          "body": "Plane deine Schritte rückwärts von deiner idealen Zukunft."
+        },
+        {
+          "title": "Hol dir KI-Feedback",
+          "body": "Die KI analysiert deine Stärken und dein Potenzial."
+        },
+        {
+          "title": "Tritt der Community bei",
+          "body": "Komm schneller voran mit Gleichgesinnten."
+        }
+      ]
     }
   },
   "language": {

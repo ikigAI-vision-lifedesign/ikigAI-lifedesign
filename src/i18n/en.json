@@ -211,20 +211,17 @@
     "retry": "Try again",
     "generatingTitle": "Generating your image",
     "generatingWait": "This takes about 30 seconds",
-    "tipsHeader": "Think about your next step",
-    "tipsSubtitle": "We support you toward your future",
+    "tipsHeader": "Take a moment to reflect",
+    "tipsSubtitle": "While you wait, imagine your finished board",
     "tips": [
       {
-        "title": "Build a 6-month roadmap",
-        "body": "Work backward from your ideal future to plan your actions."
+        "title": "Which parts feel like you?"
       },
       {
-        "title": "Get AI feedback",
-        "body": "AI analyzes your strengths and potential."
+        "title": "What future did you picture?"
       },
       {
-        "title": "Join the dream community",
-        "body": "Accelerate with people who share your goals."
+        "title": "What first step will you take?"
       }
     ],
     "learnMore": "Learn more about ikigAI",
@@ -279,6 +276,24 @@
     },
     "review": {
       "title": "Review your answers"
+    },
+    "nextSteps": {
+      "header": "Think about your next step",
+      "subtitle": "We support you toward your future",
+      "items": [
+        {
+          "title": "Build a 6-month roadmap",
+          "body": "Work backward from your ideal future to plan your actions."
+        },
+        {
+          "title": "Get AI feedback",
+          "body": "AI analyzes your strengths and potential."
+        },
+        {
+          "title": "Join the dream community",
+          "body": "Accelerate with people who share your goals."
+        }
+      ]
     }
   },
   "language": {

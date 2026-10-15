@@ -20,6 +20,13 @@ const surveyOptions = [
   { value: 1, face: "😔", labelKey: "result.feedback.options.veryUnsatisfied" },
 ];
 
+// アンケート送信後に出す「次の1歩」カードの見た目
+const nextStepVisuals = [
+  { emoji: "📅", bg: "#EEF6FF", border: "#CFE4F7", color: "#3E8FD0" },
+  { emoji: "🧠", bg: "#FDF0F5", border: "#F6D4E0", color: "#D85E86" },
+  { emoji: "🤝", bg: "#FFF8EC", border: "#F0E3BF", color: "#CC9227" },
+];
+
 type StoredFormData = {
   fullName?: string;
   email?: string;
@@ -375,6 +382,58 @@ const ResultPage: React.FC = () => {
                     >
                       {t("result.feedback.saved")}
                     </p>
+
+                    {/* 次の1歩カード（ローディングから移設） */}
+                    <div style={{ marginTop: "28px", textAlign: "center" }}>
+                      <p style={{ margin: "0 0 2px", color: theme.text, fontWeight: 800, fontSize: "1.1rem" }}>
+                        {t("result.nextSteps.header")} 🌱
+                      </p>
+                      <p style={{ margin: "0 0 14px", color: theme.subText, fontSize: "0.9rem" }}>
+                        {t("result.nextSteps.subtitle")}
+                      </p>
+
+                      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                        {(t("result.nextSteps.items", { returnObjects: true }) as { title: string; body: string }[]).map((item, i) => {
+                          const v = nextStepVisuals[i % nextStepVisuals.length];
+                          return (
+                            <div
+                              key={i}
+                              style={{
+                                display: "flex",
+                                gap: "14px",
+                                alignItems: "center",
+                                background: v.bg,
+                                border: `1.5px solid ${v.border}`,
+                                borderRadius: "18px",
+                                padding: "16px",
+                                textAlign: "left",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  flex: "none",
+                                  width: "48px",
+                                  height: "48px",
+                                  borderRadius: "50%",
+                                  background: "#fff",
+                                  border: `1.5px solid ${v.border}`,
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  fontSize: "24px",
+                                }}
+                              >
+                                {v.emoji}
+                              </div>
+                              <div style={{ flex: 1 }}>
+                                <p style={{ margin: "0 0 5px", color: v.color, fontWeight: 800, fontSize: "1.02rem" }}>{item.title}</p>
+                                <p style={{ margin: 0, color: theme.text, fontSize: "0.9rem", lineHeight: 1.6 }}>{item.body}</p>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </>
                 ) : (
                   <>
