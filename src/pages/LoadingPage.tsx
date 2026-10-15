@@ -7,11 +7,12 @@ import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import LoadingExperience from "../components/LoadingExperience";
-import { postToGas, clearToken } from "../config";
+import { postToGas, clearToken, getGenId } from "../config";
 
 const STORAGE_KEY = "visionBoardFormData";
 const RESULT_IMAGE_KEY = "visionBoardGeneratedImageUrl";
 const RESULT_DRIVE_URL_KEY = "visionBoardDrivePageUrl";
+const RESULT_GEN_ID_KEY = "visionBoardResultGenId";
 
 type AnyObject = Record<string, any>;
 
@@ -72,6 +73,7 @@ const LoadingPage: React.FC = () => {
       const payload = removeEmptyFields({
         ...formData,
         lang: selectedLanguage,
+        genId: getGenId(), // 同じIDの再試行はサーバーが作成済み画像を返す（二重生成防止）
       });
 
       const data = await postToGas(payload);
@@ -96,6 +98,8 @@ const LoadingPage: React.FC = () => {
       try {
         localStorage.setItem(RESULT_IMAGE_KEY, imageUrl);
         localStorage.setItem(RESULT_DRIVE_URL_KEY, driveUrl);
+        // この生成IDの結果が完了したことを記録（戻る対策）
+        localStorage.setItem(RESULT_GEN_ID_KEY, getGenId());
       } catch (e) {
         console.warn("localStorage save skipped:", e);
       }
@@ -117,10 +121,39 @@ const LoadingPage: React.FC = () => {
 
   useEffect(() => {
     if (isPreview) return; // 開発用プレビュー：生成を実行しない
+
+    // ブラウザバック等で戻ってきたとき：この生成IDの結果が既に完成していれば
+    // 再生成せずに結果画面へ。
+    try {
+      const gid = getGenId();
+      const doneGid = localStorage.getItem(RESULT_GEN_ID_KEY);
+      const hasResult = !!localStorage.getItem(RESULT_IMAGE_KEY);
+      if (gid && hasResult && doneGid === gid) {
+        navigate("/result");
+        return;
+      }
+    } catch (e) {
+      /* noop */
+    }
+
     generate();
     // 初回のみ実行（generateは都度生成されるため依存に入れない）
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // スマホでリンク等により一時停止→復帰したとき、失敗状態なら自動で再試行する。
+  // サーバーは同じ genId なら作成済み画像を返すので、二重生成にはならない。
+  useEffect(() => {
+    if (isPreview) return;
+    const onVisible = () => {
+      if (document.visibilityState === "visible" && view === "error") {
+        handleRetry();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => document.removeEventListener("visibilitychange", onVisible);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [view, isPreview]);
 
   return (
     <div

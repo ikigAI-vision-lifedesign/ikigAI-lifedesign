@@ -42,6 +42,37 @@ export function clearToken(): void {
   }
 }
 
+// ============================================================
+// 生成ID（genId）＝1回の生成を一意に識別する合言葉
+// ------------------------------------------------------------
+// Step5の「生成する」で新しいIDを発行し、ローディング中はこのIDで生成を依頼する。
+// 通信が途中で切れて再試行しても、同じIDならサーバーは「すでに作った画像」を返す
+// （＝再生成・再メールしない）。ブラウザバックでの二重生成も防ぐ。
+// ============================================================
+const GEN_ID_KEY = "vb_gen_id";
+
+export function newGenId(): string {
+  let id = "";
+  try {
+    id =
+      typeof crypto !== "undefined" && (crypto as any).randomUUID
+        ? (crypto as any).randomUUID()
+        : "gid-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+    localStorage.setItem(GEN_ID_KEY, id);
+  } catch (e) {
+    /* noop */
+  }
+  return id;
+}
+
+export function getGenId(): string {
+  try {
+    return localStorage.getItem(GEN_ID_KEY) || "";
+  } catch (e) {
+    return "";
+  }
+}
+
 // GAS へ POST する。CORSのプリフライトを避けるため Content-Type は text/plain。
 // 保管しているトークンがあれば自動で添える（payload側で明示指定があればそちらを優先）。
 export async function postToGas(payload: Record<string, any>): Promise<any> {

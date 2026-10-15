@@ -8,6 +8,7 @@ import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import StepNavigation from "../components/StepNavigation";
 import { theme } from "../theme";
+import { newGenId } from "../config";
 
 import styleWatercolor from "../assets/styles/style-watercolor.webp";
 import styleGraphic from "../assets/styles/style-graphic.webp";
@@ -88,6 +89,15 @@ const FormStep5Page: React.FC = () => {
 
   const handleGenerate = () => {
     if (!privacyAccepted) return;
+    // 新しい生成ID（1回の生成を識別）。前回の結果はクリアしておく。
+    newGenId();
+    try {
+      localStorage.removeItem("visionBoardGeneratedImageUrl");
+      localStorage.removeItem("visionBoardDrivePageUrl");
+      localStorage.removeItem("visionBoardResultGenId");
+    } catch (e) {
+      /* noop */
+    }
     navigate("/loading");
   };
 
