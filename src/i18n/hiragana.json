@@ -238,10 +238,12 @@
     "closeModal": "とじる",
     "noImage": "がぞうがありません。",
     "actions": {
-      "save": "ほぞん",
+      "save": "がぞうをほぞん",
       "link": "りんく",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "そのほか",
+      "line": "LINE"
     },
     "share": {
       "text": "びじょんぼーどをつくったよ！",
@@ -268,6 +270,15 @@
         "unsatisfied": "あまりよくない",
         "veryUnsatisfied": "よくない"
       }
+    },
+    "post": {
+      "header": "おすすめのとうこうぶん（コピーしてつかえます）",
+      "text": "AIビジョンボードをつくってみた！\n@こうしきアカウント\n#AIビジョンボード\n#ikigAI\n#【イベントめい】",
+      "copy": "コピーする",
+      "copied": "とうこうぶんをコピーしました！"
+    },
+    "review": {
+      "title": "こんかいのかいとうをみなおす"
     }
   },
   "language": {

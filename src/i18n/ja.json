@@ -238,10 +238,12 @@
     "closeModal": "画像を閉じる",
     "noImage": "生成画像が見つかりませんでした。",
     "actions": {
-      "save": "保存",
+      "save": "画像を保存",
       "link": "リンク",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "その他",
+      "line": "LINE"
     },
     "share": {
       "text": "AIビジョンボードを作成しました！",
@@ -268,6 +270,15 @@
         "unsatisfied": "やや不満",
         "veryUnsatisfied": "不満"
       }
+    },
+    "post": {
+      "header": "おすすめの投稿文（コピーして使えます）",
+      "text": "AIビジョンボードを作ってみた！\n@公式アカウント\n#AIビジョンボード\n#ikigAI\n#【イベント名】",
+      "copy": "コピーする",
+      "copied": "投稿文をコピーしました！"
+    },
+    "review": {
+      "title": "今回の回答を見直す"
     }
   },
   "intro": {

@@ -238,10 +238,12 @@
     "closeModal": "Bild schließen",
     "noImage": "Es wurde kein generiertes Bild gefunden.",
     "actions": {
-      "save": "Speichern",
+      "save": "Bild speichern",
       "link": "Link",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "Mehr",
+      "line": "LINE"
     },
     "share": {
       "text": "Ich habe mein AI Vision Board erstellt!",
@@ -268,6 +270,15 @@
         "unsatisfied": "Eher unzufrieden",
         "veryUnsatisfied": "Sehr unzufrieden"
       }
+    },
+    "post": {
+      "header": "Vorschlag für einen Beitrag (kopieren & nutzen)",
+      "text": "Ich habe ein KI-Vision-Board erstellt!\n@OffiziellerAccount\n#AIVisionBoard\n#ikigAI\n#[Eventname]",
+      "copy": "Kopieren",
+      "copied": "Beitragstext kopiert!"
+    },
+    "review": {
+      "title": "Deine Antworten ansehen"
     }
   },
   "language": {

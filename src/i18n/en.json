@@ -238,10 +238,12 @@
     "closeModal": "Close image",
     "noImage": "No generated image was found.",
     "actions": {
-      "save": "Save",
+      "save": "Save image",
       "link": "Link",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "More",
+      "line": "LINE"
     },
     "share": {
       "text": "I created my AI Vision Board!",
@@ -268,6 +270,15 @@
         "unsatisfied": "Unsatisfied",
         "veryUnsatisfied": "Very unsatisfied"
       }
+    },
+    "post": {
+      "header": "Suggested post (copy & use)",
+      "text": "I made an AI vision board!\n@OfficialAccount\n#AIVisionBoard\n#ikigAI\n#[EventName]",
+      "copy": "Copy",
+      "copied": "Post text copied!"
+    },
+    "review": {
+      "title": "Review your answers"
     }
   },
   "language": {

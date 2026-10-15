@@ -230,10 +230,21 @@
     "label": "RESULTADO",
     "title": "Seu Vision Board está pronto",
     "actions": {
-      "save": "Salvar",
+      "save": "Salvar imagem",
       "link": "Link",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "Mais",
+      "line": "LINE"
+    },
+    "post": {
+      "header": "Post sugerido (copiar e usar)",
+      "text": "Criei um vision board com IA!\n@ContaOficial\n#AIVisionBoard\n#ikigAI\n#[NomeDoEvento]",
+      "copy": "Copiar",
+      "copied": "Texto copiado!"
+    },
+    "review": {
+      "title": "Revise suas respostas"
     }
   },
   "language": {

@@ -170,7 +170,21 @@
   },
   "result": {
     "label": "結果",
-    "title": "你的願景板已完成"
+    "title": "你的願景板已完成",
+    "actions": {
+      "save": "儲存圖片",
+      "other": "更多",
+      "line": "LINE"
+    },
+    "post": {
+      "header": "推薦貼文（複製即用）",
+      "text": "我用 AI 做了一張願景板！\n@官方帳號\n#AI願景板\n#ikigAI\n#【活動名稱】",
+      "copy": "複製",
+      "copied": "文案已複製！"
+    },
+    "review": {
+      "title": "檢視你的回答"
+    }
   },
   "language": {
     "title": "選擇語言",

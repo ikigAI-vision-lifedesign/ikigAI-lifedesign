@@ -230,10 +230,21 @@
     "label": "النتيجة",
     "title": "لوحة رؤيتك جاهزة",
     "actions": {
-      "save": "حفظ",
+      "save": "حفظ الصورة",
       "link": "رابط",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "المزيد",
+      "line": "LINE"
+    },
+    "post": {
+      "header": "منشور مقترح (انسخه واستخدمه)",
+      "text": "صنعت لوحة رؤية بالذكاء الاصطناعي!\n@الحساب_الرسمي\n#AIVisionBoard\n#ikigAI\n#[اسم_الفعالية]",
+      "copy": "نسخ",
+      "copied": "تم نسخ المنشور!"
+    },
+    "review": {
+      "title": "مراجعة إجاباتك"
     }
   },
   "language": {

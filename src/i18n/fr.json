@@ -238,10 +238,12 @@
     "closeModal": "Fermer l’image",
     "noImage": "Aucune image générée n’a été trouvée.",
     "actions": {
-      "save": "Enregistrer",
+      "save": "Enregistrer l'image",
       "link": "Lien",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "Plus",
+      "line": "LINE"
     },
     "share": {
       "text": "J’ai créé mon AI Vision Board !",
@@ -268,6 +270,15 @@
         "unsatisfied": "Peu satisfait",
         "veryUnsatisfied": "Pas satisfait"
       }
+    },
+    "post": {
+      "header": "Publication suggérée (à copier)",
+      "text": "J'ai créé un vision board avec l'IA !\n@CompteOfficiel\n#AIVisionBoard\n#ikigAI\n#[NomDeLEvenement]",
+      "copy": "Copier",
+      "copied": "Texte copié !"
+    },
+    "review": {
+      "title": "Revoir vos réponses"
     }
   },
   "language": {

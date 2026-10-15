@@ -230,10 +230,21 @@
     "label": "HASIL",
     "title": "Vision Board Anda Siap",
     "actions": {
-      "save": "Simpan",
+      "save": "Simpan gambar",
       "link": "Link",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "Lainnya",
+      "line": "LINE"
+    },
+    "post": {
+      "header": "Contoh unggahan (salin & gunakan)",
+      "text": "Aku membuat vision board dengan AI!\n@AkunResmi\n#AIVisionBoard\n#ikigAI\n#[NamaAcara]",
+      "copy": "Salin",
+      "copied": "Teks unggahan disalin!"
+    },
+    "review": {
+      "title": "Tinjau jawabanmu"
     }
   },
   "language": {

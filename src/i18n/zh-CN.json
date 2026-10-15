@@ -173,7 +173,21 @@
   },
   "result": {
     "label": "结果",
-    "title": "你的愿景板已完成"
+    "title": "你的愿景板已完成",
+    "actions": {
+      "save": "保存图片",
+      "other": "更多",
+      "line": "LINE"
+    },
+    "post": {
+      "header": "推荐文案（复制即用）",
+      "text": "我用 AI 做了一张愿景板！\n@官方账号\n#AI愿景板\n#ikigAI\n#【活动名称】",
+      "copy": "复制",
+      "copied": "文案已复制！"
+    },
+    "review": {
+      "title": "查看你的回答"
+    }
   },
   "language": {
     "title": "选择语言",

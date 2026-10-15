@@ -230,10 +230,21 @@
     "label": "결과",
     "title": "비전 보드가 완성되었습니다",
     "actions": {
-      "save": "저장",
+      "save": "이미지 저장",
       "link": "링크",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "더보기",
+      "line": "LINE"
+    },
+    "post": {
+      "header": "추천 게시글 (복사해서 사용)",
+      "text": "AI 비전 보드를 만들었어요!\n@공식계정\n#AIVisionBoard\n#ikigAI\n#[이벤트명]",
+      "copy": "복사",
+      "copied": "게시글이 복사되었습니다!"
+    },
+    "review": {
+      "title": "내 답변 다시 보기"
     }
   },
   "language": {

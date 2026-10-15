@@ -238,10 +238,12 @@
     "closeModal": "चित्र बंद करें",
     "noImage": "कोई जनरेट की गई इमेज नहीं मिली।",
     "actions": {
-      "save": "सेव",
+      "save": "छवि सहेजें",
       "link": "लिंक",
       "x": "X",
-      "instagram": "Instagram"
+      "instagram": "Instagram",
+      "other": "और",
+      "line": "LINE"
     },
     "share": {
       "text": "मैंने अपना AI Vision Board बनाया!",
@@ -268,6 +270,15 @@
         "unsatisfied": "थोड़ा असंतुष्ट",
         "veryUnsatisfied": "बहुत असंतुष्ट"
       }
+    },
+    "post": {
+      "header": "सुझाया गया पोस्ट (कॉपी करके उपयोग करें)",
+      "text": "मैंने AI विज़न बोर्ड बनाया!\n@OfficialAccount\n#AIVisionBoard\n#ikigAI\n#[EventName]",
+      "copy": "कॉपी करें",
+      "copied": "पोस्ट टेक्स्ट कॉपी हो गया!"
+    },
+    "review": {
+      "title": "अपने उत्तर देखें"
     }
   },
   "language": {

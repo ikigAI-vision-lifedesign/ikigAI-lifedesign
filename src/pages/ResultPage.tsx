@@ -6,7 +6,7 @@ import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import { theme } from "../theme";
-import { postToGas, buildShareUrl } from "../config";
+import { postToGas } from "../config";
 
 const RESULT_IMAGE_KEY = "visionBoardGeneratedImageUrl";
 const RESULT_DRIVE_URL_KEY = "visionBoardDrivePageUrl";
@@ -31,23 +31,34 @@ const XIcon = () => (
   </svg>
 );
 
-const InstagramIcon = () => (
-  <svg viewBox="0 0 24 24" width="27" height="27" fill="none">
-    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
-    <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
-    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+const InstagramColorIcon = () => (
+  <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+    <defs>
+      <linearGradient id="iggrad" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stopColor="#feda75" />
+        <stop offset="0.35" stopColor="#fa7e1e" />
+        <stop offset="0.6" stopColor="#d62976" />
+        <stop offset="1" stopColor="#4f5bd5" />
+      </linearGradient>
+    </defs>
+    <rect x="5" y="5" width="38" height="38" rx="11" fill="none" stroke="url(#iggrad)" strokeWidth="3.4" />
+    <circle cx="24" cy="24" r="8.2" fill="none" stroke="url(#iggrad)" strokeWidth="3.4" />
+    <circle cx="33.5" cy="14.5" r="2.3" fill="url(#iggrad)" />
   </svg>
 );
 
-const LinkIcon = () => (
-  <svg viewBox="0 0 24 24" width="27" height="27" fill="none">
-    <path
-      d="M10.5 13.5 13.5 10.5M9 8.5l1.2-1.2a4 4 0 0 1 5.7 5.7l-1.2 1.2M15 15.5l-1.2 1.2a4 4 0 0 1-5.7-5.7l1.2-1.2"
-      stroke="currentColor"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+const LineIcon = () => (
+  <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+    <rect width="48" height="48" rx="12" fill="#06C755" />
+    <text x="24" y="30" textAnchor="middle" fontSize="14.5" fontWeight="700" fill="#fff" fontFamily="Arial, sans-serif">LINE</text>
+  </svg>
+);
+
+const DownloadIcon = () => (
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
   </svg>
 );
 
@@ -64,6 +75,8 @@ const ResultPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const [reviewData, setReviewData] = useState<Record<string, string>>({});
 
   useEffect(() => {
   const savedLanguage = localStorage.getItem("selectedLanguage") || "ja";
@@ -80,7 +93,9 @@ const ResultPage: React.FC = () => {
     const savedFormData = localStorage.getItem(FORM_DATA_KEY);
     if (savedFormData) {
       try {
-        setFormData(JSON.parse(savedFormData));
+        const parsed = JSON.parse(savedFormData);
+        setFormData(parsed);
+        setReviewData(parsed);
       } catch (error) {
         console.error("Form data parse error:", error);
       }
@@ -119,44 +134,42 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  const handleCopyLink = async () => {
-    const shareUrl = drivePageUrl || window.location.href;
+  // SNSは「自分のアカウントを開くだけ」。投稿文は別途コピーして使ってもらう。
+  const openSns = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
+  const handleCopyPost = async () => {
     try {
-      await navigator.clipboard.writeText(shareUrl);
-      alert(t("result.share.linkCopied"));
+      await navigator.clipboard.writeText(t("result.post.text"));
+      alert(t("result.post.copied"));
     } catch (error) {
-      console.error("Copy link error:", error);
+      console.error("Copy post error:", error);
       alert(t("result.share.copyFailed"));
     }
   };
 
-  const handleShareX = () => {
-    // Worker設定時はOGP付きシェアページ、未設定時は従来どおりDriveリンク
-    const shareUrl = buildShareUrl(drivePageUrl) || window.location.href;
-    const text = t("result.share.text");
-    const hashtags = t("result.share.hashtags");
-
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      text
-    )}&url=${encodeURIComponent(shareUrl)}&hashtags=${encodeURIComponent(
-      hashtags
-    )}`;
-
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
-  const handleInstagram = async () => {
-    if (drivePageUrl) {
+  // 「その他」：OS標準の共有シート（なければリンクをコピー）
+  const handleShareOther = async () => {
+    const shareUrl = drivePageUrl || window.location.href;
+    const nav = navigator as Navigator & {
+      share?: (data: { text?: string; url?: string }) => Promise<void>;
+    };
+    if (nav.share) {
       try {
-        await navigator.clipboard.writeText(drivePageUrl);
-        alert(t("result.share.linkCopiedForInstagram"));
+        await nav.share({ text: t("result.post.text"), url: shareUrl });
+        return;
       } catch (error) {
-        console.error("Instagram copy error:", error);
+        // キャンセル時などは何もしない
+        return;
       }
     }
-
-    window.open("https://www.instagram.com/", "_blank", "noopener,noreferrer");
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert(t("result.share.linkCopied"));
+    } catch (error) {
+      alert(t("result.share.copyFailed"));
+    }
   };
 
   const handleSubmitFeedback = async () => {
@@ -196,76 +209,31 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  const getActionCircleStyle = (
-    type: "theme" | "x" | "instagram"
-  ): React.CSSProperties => {
-    const base: React.CSSProperties = {
-      width: isMobile ? "60px" : "70px",
-      height: isMobile ? "60px" : "70px",
-      borderRadius: "50%",
-      color: "#fff",
-      border: "none",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      cursor: "pointer",
-      fontSize: "1.5rem",
-      transition: "transform 0.2s ease, box-shadow 0.2s ease",
-    };
-
-    if (type === "x") {
-      return {
-        ...base,
-        background: "#000000",
-        boxShadow: "0 8px 22px rgba(0,0,0,0.28)",
-      };
-    }
-
-    if (type === "instagram") {
-      return {
-        ...base,
-        background:
-          "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 42%, #d6249f 60%, #285AEB 90%)",
-        boxShadow: "0 8px 22px rgba(214,36,159,0.32)",
-      };
-    }
-
-    return {
-      ...base,
-      background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
-      boxShadow: "0 8px 20px rgba(52, 150, 135, 0.28)",
-    };
+  // 共有カードの共通スタイル
+  const shareCardStyle: React.CSSProperties = {
+    background: "#ffffff",
+    border: `1px solid ${theme.border}`,
+    borderRadius: "16px",
+    boxShadow: "0 4px 14px rgba(0,0,0,0.06)",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
   };
 
-  const actionItems = [
-    {
-      key: "save",
-      label: t("result.actions.save"),
-      icon: "⬇",
-      onClick: handleDownloadImage,
-      type: "theme" as const,
-    },
-    {
-      key: "link",
-      label: t("result.actions.link"),
-      icon: <LinkIcon />,
-      onClick: handleCopyLink,
-      type: "theme" as const,
-    },
-    {
-      key: "x",
-      label: t("result.actions.x"),
-      icon: <XIcon />,
-      onClick: handleShareX,
-      type: "x" as const,
-    },
-    {
-      key: "instagram",
-      label: t("result.actions.instagram"),
-      icon: <InstagramIcon />,
-      onClick: handleInstagram,
-      type: "instagram" as const,
-    },
+  const snsItems = [
+    { key: "instagram", icon: <InstagramColorIcon />, onClick: () => openSns("https://www.instagram.com/") },
+    { key: "x", icon: <span style={{ color: "#000" }}><XIcon /></span>, onClick: () => openSns("https://x.com/") },
+    { key: "line", icon: <LineIcon />, onClick: () => openSns("https://line.me/") },
+  ];
+
+  // 回答見直し（STEP5の構成に合わせる）
+  const reviewSections: { title: string; items: string[] }[] = [
+    { title: t("form.step5.sections.basic"), items: ["fullName", "email", "age", "gender", "favoriteColors", "hairAppearance", "charmPoints"] },
+    { title: t("form.step5.sections.style"), items: ["imageStyle"] },
+    { title: t("form.step5.sections.vision"), items: ["selfExpression", "strengths", "happyMoment", "idealVision", "nextAction"] },
+    { title: t("form.step5.sections.lifeDesign"), items: ["learnWant", "learnReason", "learnWhenWhere", "workStyle", "workValues", "workIdealIncomePlace", "residencePlace", "residenceEnvironment", "marriageIdealRelation", "marriageThoughts", "childThoughts", "childValues", "oldAgeIdeal", "oldAgePreparation"] },
   ];
 
   return (
@@ -324,53 +292,78 @@ const ResultPage: React.FC = () => {
                 }}
               />
 
-              <div
-                style={{
-                  marginTop: "28px",
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: isMobile ? "16px" : "24px",
-                  flexWrap: "wrap",
-                }}
-              >
-                {actionItems.map((item) => (
-                  <div
-                    key={item.key}
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      minWidth: isMobile ? "68px" : "86px",
-                    }}
+              {/* 共有セクション */}
+              <div style={{ marginTop: "28px", textAlign: "left" }}>
+                {/* SNS（アイコンのみ。押すと自分のアカウントを開く） */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
+                  {snsItems.map((s) => (
+                    <button
+                      key={s.key}
+                      type="button"
+                      onClick={s.onClick}
+                      aria-label={t(`result.actions.${s.key}`)}
+                      style={{ ...shareCardStyle, padding: "16px 0" }}
+                    >
+                      {s.icon}
+                    </button>
+                  ))}
+                </div>
+
+                {/* 画像を保存・その他 */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginTop: "12px" }}>
+                  <button
+                    type="button"
+                    onClick={handleDownloadImage}
+                    style={{ ...shareCardStyle, padding: "16px 12px", color: theme.primaryDark }}
                   >
+                    <DownloadIcon />
+                    <span style={{ color: theme.text, fontWeight: 800 }}>{t("result.actions.save")}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleShareOther}
+                    style={{ ...shareCardStyle, padding: "16px 12px", color: theme.text, fontWeight: 800 }}
+                  >
+                    {t("result.actions.other")}
+                  </button>
+                </div>
+
+                {/* おすすめの投稿文 */}
+                <div
+                  style={{
+                    marginTop: "16px",
+                    background: "#ffffff",
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: "16px",
+                    boxShadow: "0 4px 14px rgba(0,0,0,0.06)",
+                    padding: "18px 16px",
+                  }}
+                >
+                  <p style={{ margin: "0 0 12px", fontWeight: 800, color: theme.text, fontSize: "0.98rem" }}>
+                    {t("result.post.header")}
+                  </p>
+                  <div style={{ whiteSpace: "pre-line", color: theme.text, lineHeight: 1.9, fontSize: "0.95rem" }}>
+                    {t("result.post.text")}
+                  </div>
+                  <div style={{ textAlign: "right", marginTop: "12px" }}>
                     <button
                       type="button"
-                      onClick={item.onClick}
-                      style={getActionCircleStyle(item.type)}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform =
-                          "translateY(-2px) scale(1.04)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform =
-                          "translateY(0) scale(1)";
-                      }}
-                    >
-                      {item.icon}
-                    </button>
-
-                    <div
+                      onClick={handleCopyPost}
                       style={{
-                        marginTop: "9px",
-                        fontSize: isMobile ? "0.82rem" : "0.92rem",
-                        color: theme.text,
+                        border: "none",
+                        borderRadius: "999px",
+                        padding: "10px 22px",
+                        background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
+                        color: "#fff",
                         fontWeight: 800,
+                        cursor: "pointer",
+                        boxShadow: "0 6px 16px rgba(52,150,135,0.25)",
                       }}
                     >
-                      {item.label}
-                    </div>
+                      {t("result.post.copy")}
+                    </button>
                   </div>
-                ))}
+                </div>
               </div>
 
               <div
@@ -546,6 +539,58 @@ const ResultPage: React.FC = () => {
                         : t("result.feedback.submit")}
                     </button>
                   </>
+                )}
+              </div>
+
+              {/* 回答の見直し（プルダウン） */}
+              <div
+                style={{
+                  marginTop: "18px",
+                  background: "#ffffff",
+                  border: `1.5px solid ${theme.border}`,
+                  borderRadius: "22px",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+                  overflow: "hidden",
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={() => setReviewOpen((v) => !v)}
+                  style={{
+                    width: "100%",
+                    background: "transparent",
+                    border: "none",
+                    padding: "18px 20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    cursor: "pointer",
+                    color: theme.text,
+                    fontWeight: 800,
+                    fontSize: "1.05rem",
+                    textAlign: "left",
+                  }}
+                >
+                  <span>{t("result.review.title")}</span>
+                  <span style={{ color: theme.primaryDark }}>{reviewOpen ? "▾" : "▸"}</span>
+                </button>
+
+                {reviewOpen && (
+                  <div style={{ padding: "0 20px 20px", textAlign: "left", borderTop: `1px solid ${theme.border}` }}>
+                    {reviewSections.map((sec) => (
+                      <div key={sec.title} style={{ marginTop: "16px" }}>
+                        <p style={{ margin: "0 0 8px", color: theme.primaryDark, fontWeight: 900, fontSize: "1rem" }}>
+                          {sec.title}
+                        </p>
+                        {sec.items.map((k) => (
+                          <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
+                            <strong>{t(`form.step5.items.${k}`)}：</strong>
+                            {reviewData[k] && String(reviewData[k]).trim() !== "" ? reviewData[k] : "—"}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
                 )}
               </div>
             </>
