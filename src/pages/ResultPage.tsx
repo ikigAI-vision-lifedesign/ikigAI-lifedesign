@@ -126,11 +126,6 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  // SNSは「自分のアカウントを開くだけ」。投稿文は別途コピーして使ってもらう。
-  const openSns = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
   const handleCopyPost = async () => {
     try {
       await navigator.clipboard.writeText(t("result.post.text"));
@@ -194,11 +189,20 @@ const ResultPage: React.FC = () => {
     boxShadow: "0 8px 20px rgba(0,0,0,0.18)",
   });
 
-  const circleItems = [
+  // save はアクション（ダウンロード）、SNSは実リンク（<a>）。
+  // スマホで window.open だと空白タブが残るため、SNSは本物のリンクで開く。
+  const circleItems: {
+    key: string;
+    label: string;
+    icon: React.ReactNode;
+    bg: string;
+    href?: string;
+    onClick?: () => void;
+  }[] = [
     { key: "save", label: t("result.actions.save"), icon: <DownloadIcon />, bg: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`, onClick: handleDownloadImage },
-    { key: "instagram", label: "Instagram", icon: <InstagramWhiteIcon />, bg: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 42%, #d6249f 60%, #285AEB 90%)", onClick: () => openSns("https://www.instagram.com/") },
-    { key: "x", label: "X", icon: <XIcon />, bg: "#000000", onClick: () => openSns("https://x.com/") },
-    { key: "line", label: "LINE", icon: <LineBubbleIcon />, bg: "#06C755", onClick: () => openSns("https://lin.ee/YdPbIrO") },
+    { key: "instagram", label: "Instagram", icon: <InstagramWhiteIcon />, bg: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 42%, #d6249f 60%, #285AEB 90%)", href: "https://www.instagram.com/" },
+    { key: "x", label: "X", icon: <XIcon />, bg: "#000000", href: "https://x.com/" },
+    { key: "line", label: "LINE", icon: <LineBubbleIcon />, bg: "#06C755", href: "https://lin.ee/YdPbIrO" },
   ];
 
   // 回答見直し（STEP5の構成に合わせる）
@@ -274,14 +278,26 @@ const ResultPage: React.FC = () => {
                       key={item.key}
                       style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: isMobile ? "62px" : "76px" }}
                     >
-                      <button
-                        type="button"
-                        onClick={item.onClick}
-                        aria-label={item.label}
-                        style={circleButtonStyle(item.bg)}
-                      >
-                        {item.icon}
-                      </button>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={item.label}
+                          style={{ ...circleButtonStyle(item.bg), textDecoration: "none" }}
+                        >
+                          {item.icon}
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={item.onClick}
+                          aria-label={item.label}
+                          style={circleButtonStyle(item.bg)}
+                        >
+                          {item.icon}
+                        </button>
+                      )}
                       <div style={{ marginTop: "9px", fontSize: isMobile ? "0.78rem" : "0.88rem", color: theme.text, fontWeight: 800 }}>
                         {item.label}
                       </div>
@@ -533,26 +549,45 @@ const ResultPage: React.FC = () => {
                   }}
                 >
                   <span>{t("result.review.title")}</span>
-                  <span style={{ color: theme.primaryDark }}>{reviewOpen ? "▾" : "▸"}</span>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      color: theme.primaryDark,
+                      display: "inline-block",
+                      transition: "transform 0.3s ease",
+                      transform: reviewOpen ? "rotate(90deg)" : "rotate(0deg)",
+                    }}
+                  >
+                    ▸
+                  </span>
                 </button>
 
-                {reviewOpen && (
-                  <div style={{ padding: "0 20px 20px", textAlign: "left", borderTop: `1px solid ${theme.border}` }}>
-                    {reviewSections.map((sec) => (
-                      <div key={sec.title} style={{ marginTop: "16px" }}>
-                        <p style={{ margin: "0 0 8px", color: theme.primaryDark, fontWeight: 900, fontSize: "1rem" }}>
-                          {sec.title}
-                        </p>
-                        {sec.items.map((k) => (
-                          <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
-                            <strong>{t(`form.step5.items.${k}`)}：</strong>
-                            {reviewData[k] && String(reviewData[k]).trim() !== "" ? reviewData[k] : "—"}
+                {/* ぴろーんと下に伸びる開閉アニメ */}
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateRows: reviewOpen ? "1fr" : "0fr",
+                    transition: "grid-template-rows 0.38s ease",
+                  }}
+                >
+                  <div style={{ overflow: "hidden", minHeight: 0 }}>
+                    <div style={{ padding: "0 20px 20px", textAlign: "left", borderTop: `1px solid ${theme.border}` }}>
+                      {reviewSections.map((sec) => (
+                        <div key={sec.title} style={{ marginTop: "16px" }}>
+                          <p style={{ margin: "0 0 8px", color: theme.primaryDark, fontWeight: 900, fontSize: "1rem" }}>
+                            {sec.title}
                           </p>
-                        ))}
-                      </div>
-                    ))}
+                          {sec.items.map((k) => (
+                            <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
+                              <strong>{t(`form.step5.items.${k}`)}：</strong>
+                              {reviewData[k] && String(reviewData[k]).trim() !== "" ? reviewData[k] : "—"}
+                            </p>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             </>
           ) : (
