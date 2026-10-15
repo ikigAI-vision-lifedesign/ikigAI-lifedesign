@@ -101,7 +101,7 @@ const LoadingExperience: React.FC<Props> = ({ preview = false }) => {
       {/* 入れ替わる Tip カード */}
       <div
         key={tipIndex}
-        className="intro-fade"
+        className="loading-tip-slide"
         style={{
           display: "flex",
           gap: "14px",
