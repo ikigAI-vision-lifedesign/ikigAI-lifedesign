@@ -31,26 +31,18 @@ const XIcon = () => (
   </svg>
 );
 
-const InstagramColorIcon = () => (
-  <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
-    <defs>
-      <linearGradient id="iggrad" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0" stopColor="#feda75" />
-        <stop offset="0.35" stopColor="#fa7e1e" />
-        <stop offset="0.6" stopColor="#d62976" />
-        <stop offset="1" stopColor="#4f5bd5" />
-      </linearGradient>
-    </defs>
-    <rect x="5" y="5" width="38" height="38" rx="11" fill="none" stroke="url(#iggrad)" strokeWidth="3.4" />
-    <circle cx="24" cy="24" r="8.2" fill="none" stroke="url(#iggrad)" strokeWidth="3.4" />
-    <circle cx="33.5" cy="14.5" r="2.3" fill="url(#iggrad)" />
+// 丸ボタン内で使う白アイコン
+const InstagramWhiteIcon = () => (
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" strokeWidth="2" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.3" cy="6.7" r="1.3" fill="#fff" stroke="none" />
   </svg>
 );
 
-const LineIcon = () => (
-  <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
-    <rect width="48" height="48" rx="12" fill="#06C755" />
-    <text x="24" y="30" textAnchor="middle" fontSize="14.5" fontWeight="700" fill="#fff" fontFamily="Arial, sans-serif">LINE</text>
+const LineBubbleIcon = () => (
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true">
+    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.52 1.44 4.76 3.69 6.22-.12 .9-.5 2.08-1.06 2.98-.18 .29 .06 .66 .4 .58 1.86-.42 3.22-1.2 4.02-1.77 .94 .17 1.93 .26 2.95 .26 5.52 0 10-3.58 10-8S17.52 3 12 3Z" />
   </svg>
 );
 
@@ -149,28 +141,6 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  // 「その他」：OS標準の共有シート（なければリンクをコピー）
-  const handleShareOther = async () => {
-    const shareUrl = drivePageUrl || window.location.href;
-    const nav = navigator as Navigator & {
-      share?: (data: { text?: string; url?: string }) => Promise<void>;
-    };
-    if (nav.share) {
-      try {
-        await nav.share({ text: t("result.post.text"), url: shareUrl });
-        return;
-      } catch (error) {
-        // キャンセル時などは何もしない
-        return;
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      alert(t("result.share.linkCopied"));
-    } catch (error) {
-      alert(t("result.share.copyFailed"));
-    }
-  };
 
   const handleSubmitFeedback = async () => {
     if (isSubmitting || isFeedbackSubmitted) return;
@@ -209,23 +179,26 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  // 共有カードの共通スタイル
-  const shareCardStyle: React.CSSProperties = {
-    background: "#ffffff",
-    border: `1px solid ${theme.border}`,
-    borderRadius: "16px",
-    boxShadow: "0 4px 14px rgba(0,0,0,0.06)",
-    cursor: "pointer",
+  // 丸いアイコンボタン（画像を保存＋SNSアカウントリンク）
+  const circleButtonStyle = (bg: string): React.CSSProperties => ({
+    width: isMobile ? "62px" : "70px",
+    height: isMobile ? "62px" : "70px",
+    borderRadius: "50%",
+    border: "none",
+    background: bg,
+    color: "#fff",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: "10px",
-  };
+    cursor: "pointer",
+    boxShadow: "0 8px 20px rgba(0,0,0,0.18)",
+  });
 
-  const snsItems = [
-    { key: "instagram", icon: <InstagramColorIcon />, onClick: () => openSns("https://www.instagram.com/") },
-    { key: "x", icon: <span style={{ color: "#000" }}><XIcon /></span>, onClick: () => openSns("https://x.com/") },
-    { key: "line", icon: <LineIcon />, onClick: () => openSns("https://line.me/") },
+  const circleItems = [
+    { key: "save", label: t("result.actions.save"), icon: <DownloadIcon />, bg: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`, onClick: handleDownloadImage },
+    { key: "instagram", label: "Instagram", icon: <InstagramWhiteIcon />, bg: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 42%, #d6249f 60%, #285AEB 90%)", onClick: () => openSns("https://www.instagram.com/") },
+    { key: "x", label: "X", icon: <XIcon />, bg: "#000000", onClick: () => openSns("https://x.com/") },
+    { key: "line", label: "LINE", icon: <LineBubbleIcon />, bg: "#06C755", onClick: () => openSns("https://lin.ee/YdPbIrO") },
   ];
 
   // 回答見直し（STEP5の構成に合わせる）
@@ -294,38 +267,26 @@ const ResultPage: React.FC = () => {
 
               {/* 共有セクション */}
               <div style={{ marginTop: "28px", textAlign: "left" }}>
-                {/* SNS（アイコンのみ。押すと自分のアカウントを開く） */}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
-                  {snsItems.map((s) => (
-                    <button
-                      key={s.key}
-                      type="button"
-                      onClick={s.onClick}
-                      aria-label={t(`result.actions.${s.key}`)}
-                      style={{ ...shareCardStyle, padding: "16px 0" }}
+                {/* 画像を保存＋SNSアカウント（丸アイコン） */}
+                <div style={{ display: "flex", justifyContent: "center", gap: isMobile ? "14px" : "22px", flexWrap: "wrap" }}>
+                  {circleItems.map((item) => (
+                    <div
+                      key={item.key}
+                      style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: isMobile ? "62px" : "76px" }}
                     >
-                      {s.icon}
-                    </button>
+                      <button
+                        type="button"
+                        onClick={item.onClick}
+                        aria-label={item.label}
+                        style={circleButtonStyle(item.bg)}
+                      >
+                        {item.icon}
+                      </button>
+                      <div style={{ marginTop: "9px", fontSize: isMobile ? "0.78rem" : "0.88rem", color: theme.text, fontWeight: 800 }}>
+                        {item.label}
+                      </div>
+                    </div>
                   ))}
-                </div>
-
-                {/* 画像を保存・その他 */}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginTop: "12px" }}>
-                  <button
-                    type="button"
-                    onClick={handleDownloadImage}
-                    style={{ ...shareCardStyle, padding: "16px 12px", color: theme.primaryDark }}
-                  >
-                    <DownloadIcon />
-                    <span style={{ color: theme.text, fontWeight: 800 }}>{t("result.actions.save")}</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleShareOther}
-                    style={{ ...shareCardStyle, padding: "16px 12px", color: theme.text, fontWeight: 800 }}
-                  >
-                    {t("result.actions.other")}
-                  </button>
                 </div>
 
                 {/* おすすめの投稿文 */}
