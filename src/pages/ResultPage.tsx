@@ -6,7 +6,7 @@ import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import { theme } from "../theme";
-import { postToGas } from "../config";
+import { postToGas, extractDriveFileId } from "../config";
 
 const RESULT_IMAGE_KEY = "visionBoardGeneratedImageUrl";
 const RESULT_DRIVE_URL_KEY = "visionBoardDrivePageUrl";
@@ -114,8 +114,10 @@ const ResultPage: React.FC = () => {
   const handleDownloadImage = async () => {
     if (!generatedImageUrl) return;
 
+    // まず通常のダウンロードを試す（同一オリジン or CORS可の場合）
     try {
       const response = await fetch(generatedImageUrl);
+      if (!response.ok) throw new Error("fetch not ok");
       const blob = await response.blob();
       const objectUrl = window.URL.createObjectURL(blob);
 
@@ -127,9 +129,14 @@ const ResultPage: React.FC = () => {
       document.body.removeChild(link);
 
       window.URL.revokeObjectURL(objectUrl);
+      return;
     } catch (error) {
-      console.error("Download error:", error);
-      alert(t("result.share.downloadFailed"));
+      // Drive画像URLはCORSでfetchできないため、Driveのダウンロードを開く
+      const id = extractDriveFileId(drivePageUrl);
+      const dl = id
+        ? `https://drive.google.com/uc?export=download&id=${id}`
+        : generatedImageUrl;
+      window.open(dl, "_blank", "noopener,noreferrer");
     }
   };
 
