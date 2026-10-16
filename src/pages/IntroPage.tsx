@@ -163,7 +163,7 @@ const IntroPage: React.FC = () => {
           }}
         />
 
-        <div style={{ width: "100%", maxWidth: "420px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div className="intro-content" style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
           <div className="intro-appear">
             <div style={{ margin: "0 0 18px" }}>
               <Logo />
@@ -177,7 +177,7 @@ const IntroPage: React.FC = () => {
             </p>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "26px" }}>
+          <div className="intro-cards" style={{ marginBottom: "26px" }}>
             <Card icon={<CompassIcon />} iconBg={COL.teal} title="What" label={t("intro.what.q")} titleColor={COL.teal} cardBg="rgba(255,255,255,0.82)" border={theme.border} delay={2.4}>
               {t("intro.what.body")}
             </Card>
@@ -198,7 +198,7 @@ const IntroPage: React.FC = () => {
             </Card>
           </div>
 
-          <div className="intro-fade" style={{ animationDelay: "5.4s" }}>
+          <div className="intro-fade intro-cta" style={{ animationDelay: "5.4s" }}>
             <button
               type="button"
               onClick={() => navigate("/form/step1")}

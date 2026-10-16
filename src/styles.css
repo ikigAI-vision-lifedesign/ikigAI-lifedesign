@@ -399,6 +399,22 @@ button:disabled {
 @keyframes banner-scroll-right { from { transform: translateX(-25%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .scrolling-banner__track { animation: none; } }
 
+/* ===== 導入ページのレスポンシブ（スマホ=1カラム / PC=カード横3列） ===== */
+.intro-content { width: 100%; max-width: 420px; }
+.intro-cards { display: flex; flex-direction: column; gap: 14px; }
+.intro-cta { max-width: 420px; margin: 0 auto; }
+@media (min-width: 768px) {
+  .intro-content { max-width: 940px; }
+  .intro-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+  /* カード内は縦積み（アイコン上・テキスト下）にして3列でも収まりよく */
+  .intro-cards > .intro-fade { height: 100%; }
+}
+
 /* ===== 導入ページの順次フェードイン（0.5cm下からふわっと） ===== */
 @keyframes introFadeUp {
   from { opacity: 0; transform: translateY(19px); }
