@@ -264,12 +264,13 @@ const ResultPage: React.FC = () => {
           <h1 style={{ color: theme.text }}>{t("result.title")}</h1>
 
           {hasImage ? (
-            <>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               <img
                 src={generatedImageUrl}
                 alt={t("result.generatedImageAlt")}
                 onClick={() => setIsImageModalOpen(true)}
                 style={{
+                  order: 1,
                   width: "100%",
                   maxWidth: "280px",
                   maxHeight: "500px",
@@ -283,8 +284,8 @@ const ResultPage: React.FC = () => {
                 }}
               />
 
-              {/* 共有セクション */}
-              <div style={{ marginTop: "28px", textAlign: "left" }}>
+              {/* ③ 共有セクション */}
+              <div style={{ order: 4, marginTop: "28px", textAlign: "left" }}>
                 {/* 画像を保存＋SNSアカウント（丸アイコン） */}
                 <div style={{ display: "flex", justifyContent: "center", gap: isMobile ? "14px" : "22px", flexWrap: "wrap" }}>
                   {circleItems.map((item) => (
@@ -357,9 +358,11 @@ const ResultPage: React.FC = () => {
                 </div>
               </div>
 
+              {/* ① アンケート（最優先・画像の次） */}
               <div
                 style={{
-                  marginTop: "42px",
+                  order: 2,
+                  marginTop: "32px",
                   padding: "28px 18px",
                   backgroundColor: "#ffffff",
                   borderRadius: "22px",
@@ -587,9 +590,36 @@ const ResultPage: React.FC = () => {
                 )}
               </div>
 
+              {/* ② 公式LINE登録（アンケートの次） */}
+              <a
+                href="https://lin.ee/YdPbIrO"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  order: 3,
+                  marginTop: "18px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                  background: "#06C755",
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  fontWeight: 800,
+                  fontSize: "1.05rem",
+                  padding: "15px 18px",
+                  borderRadius: "999px",
+                  boxShadow: "0 8px 20px rgba(6,199,85,0.28)",
+                }}
+              >
+                <LineBubbleIcon />
+                {t("result.lineCta")}
+              </a>
+
               {/* 回答の見直し（プルダウン） */}
               <div
                 style={{
+                  order: 5,
                   marginTop: "18px",
                   background: "#ffffff",
                   border: `1.5px solid ${theme.border}`,
@@ -657,7 +687,7 @@ const ResultPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           ) : (
             <p style={{ color: theme.subText, marginTop: "24px" }}>
               {t("result.noImage")}
