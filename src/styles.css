@@ -440,11 +440,16 @@ button:disabled {
 .result-grid { display: flex; flex-direction: column; gap: 24px; }
 .result-left { width: 100%; }
 .result-right { width: 100%; display: flex; flex-direction: column; }
+/* 保存ボタンの出し分け：スマホ=共有セクション内 / PC=画像の下 */
+.save-desktop-wrap { display: none; }
+.save-mobile-wrap { display: block; }
 @media (min-width: 900px) {
   .result-content { max-width: 1000px; }
   .result-grid { flex-direction: row; align-items: flex-start; gap: 32px; }
   .result-left { flex: 0 0 420px; position: sticky; top: 24px; }
   .result-right { flex: 1; min-width: 0; }
+  .save-desktop-wrap { display: block; }
+  .save-mobile-wrap { display: none; }
 }
 
 /* 共有のSNSタブ */

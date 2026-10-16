@@ -229,6 +229,33 @@ const ResultPage: React.FC = () => {
   ];
   const activeSns = snsTabs.find((s) => s.key === activeSnsTab) || snsTabs[0];
 
+  // 画像を保存ボタン（PCでは画像の下、スマホでは共有セクション内に表示）
+  const saveButton = (
+    <button
+      type="button"
+      onClick={handleDownloadImage}
+      style={{
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",
+        border: "none",
+        borderRadius: "999px",
+        padding: "16px 18px",
+        background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
+        color: "#fff",
+        fontWeight: 900,
+        fontSize: "1.1rem",
+        cursor: "pointer",
+        boxShadow: "0 8px 20px rgba(52,150,135,0.25)",
+      }}
+    >
+      <DownloadIcon />
+      {t("result.actions.save")}
+    </button>
+  );
+
   // 回答見直し（STEP5の構成に合わせる）
   const reviewSections: { title: string; items: string[] }[] = [
     { title: t("form.step5.sections.basic"), items: ["fullName", "email", "age", "gender", "favoriteColors", "hairAppearance", "charmPoints"] },
@@ -292,36 +319,20 @@ const ResultPage: React.FC = () => {
                     backgroundColor: "#fff",
                   }}
                 />
+                {/* PCのみ：画像の下に保存ボタン */}
+                <div className="save-desktop-wrap" style={{ marginTop: "16px" }}>
+                  {saveButton}
+                </div>
               </div>
 
               {/* 右：アンケート → 共有 → 見直し */}
               <div className="result-right">
               {/* ③ 共有セクション */}
               <div style={{ order: 4, marginTop: "28px", textAlign: "left" }}>
-                {/* 画像を保存（大きく独立） */}
-                <button
-                  type="button"
-                  onClick={handleDownloadImage}
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "10px",
-                    border: "none",
-                    borderRadius: "999px",
-                    padding: "16px 18px",
-                    background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
-                    color: "#fff",
-                    fontWeight: 900,
-                    fontSize: "1.1rem",
-                    cursor: "pointer",
-                    boxShadow: "0 8px 20px rgba(52,150,135,0.25)",
-                  }}
-                >
-                  <DownloadIcon />
-                  {t("result.actions.save")}
-                </button>
+                {/* 画像を保存（スマホのみ：共有セクション内。PCでは画像の下に表示） */}
+                <div className="save-mobile-wrap">
+                  {saveButton}
+                </div>
 
                 {/* SNSシェア（タブ：LINE / Instagram / X） */}
                 <div
