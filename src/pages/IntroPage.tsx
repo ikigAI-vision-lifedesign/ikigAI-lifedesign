@@ -10,6 +10,7 @@ import topBanner from "../assets/header.png";
 import bottomBanner from "../assets/footer.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import leafBottom from "../assets/leaf-bottom.webp";
+import ikigaiLogo from "../assets/ikigai-logo.png";
 import { theme } from "../theme";
 
 const HeartIcon = () => (
@@ -35,21 +36,6 @@ const StarIcon = () => (
     <path d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.5 9.3l6.6-.9L12 2.5z" />
   </svg>
 );
-// ブランドロゴ「ikigAI」。serif＋広い字間、2つ目の i の点だけ赤（点なしの ı に赤丸を重ねる）。
-const Logo = () => (
-  <svg viewBox="0 0 142 42" height="34" role="img" aria-label="ikigAI" style={{ display: "block", margin: "0 auto" }}>
-    <g fontFamily='Georgia, "Times New Roman", "Noto Serif JP", serif' fontSize="31" fill="#2b2b2b" textAnchor="middle">
-      <text x="13" y="31">i</text>
-      <text x="35" y="31">k</text>
-      <text x="57" y="31">&#x131;</text>
-      <text x="81" y="31">g</text>
-      <text x="107" y="31">A</text>
-      <text x="131" y="31">I</text>
-    </g>
-    <circle cx="57" cy="9" r="3.1" fill="#A52544" />
-  </svg>
-);
-
 const CheckIcon = ({ color }: { color: string }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flex: "none", marginTop: "2px" }}>
     <polyline points="20 6 9 17 4 12" />
@@ -166,7 +152,11 @@ const IntroPage: React.FC = () => {
         <div className="intro-content" style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
           <div className="intro-appear">
             <div style={{ margin: "0 0 18px" }}>
-              <Logo />
+              <img
+                src={ikigaiLogo}
+                alt="ikigAI"
+                style={{ width: "min(210px, 80%)", height: "auto", display: "block", margin: "0 auto" }}
+              />
             </div>
 
             <h1 style={{ color: theme.text, fontSize: "1.6rem", fontWeight: 800, margin: "0 0 10px" }}>

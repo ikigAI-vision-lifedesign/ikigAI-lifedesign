@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "つぎにすること",
         "helper": "ちいさな1ぽ",
-        "action": "なにする？",
+        "action": "つぎにすること・なにする？",
         "actionPlaceholder": "れい：しらべる"
       }
     },
@@ -270,9 +270,10 @@
     },
     "post": {
       "header": "おすすめのとうこうぶん（コピーしてつかえます）",
-      "text": "AIビジョンボードをつくってみた！\n@こうしきアカウント\n#AIビジョンボード\n#ikigAI\n#【イベントめい】",
+      "text": "AIビジョンボードをつくってみた！\n{{HANDLE}}\n#AIビジョンボード\n#ikigAI\n#【イベントめい】",
       "copy": "コピーする",
-      "copied": "とうこうぶんをコピーしました！"
+      "copied": "とうこうぶんをコピーしました！",
+      "textLine": "AIビジョンボードをつくったよ！あなたも ikigAI でみらいをえがいてみよう✨"
     },
     "review": {
       "title": "こんかいのかいとうをみなおす"
@@ -295,7 +296,9 @@
         }
       ]
     },
-    "lineCta": "こうしきLINEにとうろくする"
+    "lineCta": "こうしきLINEにとうろくする",
+    "instaCta": "こうしきInstagramをフォロー",
+    "xCta": "こうしきXをフォロー"
   },
   "language": {
     "title": "ことばをえらんでね",

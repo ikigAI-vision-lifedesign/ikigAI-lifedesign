@@ -87,7 +87,7 @@
         "strengthsPlaceholder": "例：持續力、同理心、創意"
       },
       "nextAction": {
-        "action": "這個月內能做的一小步是什麼？",
+        "action": "下一步行動・這個月內能做的一小步是什麼？",
         "actionPlaceholder": "例：規劃新的路線、開始收集資訊"
       }
     },
@@ -175,9 +175,10 @@
     },
     "post": {
       "header": "推薦貼文（複製即用）",
-      "text": "我用 AI 做了一張願景板！\n@官方帳號\n#AI願景板\n#ikigAI\n#【活動名稱】",
+      "text": "我用 AI 做了一張願景板！\n{{HANDLE}}\n#AI願景板\n#ikigAI\n#【活動名稱】",
       "copy": "複製",
-      "copied": "文案已複製！"
+      "copied": "文案已複製！",
+      "textLine": "我用 AI 做了一張願景板！快來 ikigAI 描繪你的未來吧 ✨"
     },
     "review": {
       "title": "檢視你的回答"
@@ -200,7 +201,9 @@
         }
       ]
     },
-    "lineCta": "加入官方 LINE"
+    "lineCta": "加入官方 LINE",
+    "instaCta": "追蹤官方 Instagram",
+    "xCta": "追蹤官方 X"
   },
   "language": {
     "title": "選擇語言",

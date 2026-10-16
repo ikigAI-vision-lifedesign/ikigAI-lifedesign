@@ -76,6 +76,7 @@ const ResultPage: React.FC = () => {
   const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState(false);
   const [reviewOpen, setReviewOpen] = useState(false);
   const [reviewData, setReviewData] = useState<Record<string, string>>({});
+  const [activeSnsTab, setActiveSnsTab] = useState<"line" | "instagram" | "x">("line");
 
   useEffect(() => {
   const savedLanguage = localStorage.getItem("selectedLanguage") || "ja";
@@ -140,12 +141,12 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  const handleCopyPost = async () => {
+  const copyText = async (text: string) => {
     try {
-      await navigator.clipboard.writeText(t("result.post.text"));
+      await navigator.clipboard.writeText(text);
       alert(t("result.post.copied"));
     } catch (error) {
-      console.error("Copy post error:", error);
+      console.error("Copy error:", error);
       alert(t("result.share.copyFailed"));
     }
   };
@@ -188,36 +189,45 @@ const ResultPage: React.FC = () => {
     }
   };
 
-  // 丸いアイコンボタン（画像を保存＋SNSアカウントリンク）
-  const circleButtonStyle = (bg: string): React.CSSProperties => ({
-    width: isMobile ? "62px" : "70px",
-    height: isMobile ? "62px" : "70px",
-    borderRadius: "50%",
-    border: "none",
-    background: bg,
-    color: "#fff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: "pointer",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.18)",
-  });
-
-  // save はアクション（ダウンロード）、SNSは実リンク（<a>）。
-  // スマホで window.open だと空白タブが残るため、SNSは本物のリンクで開く。
-  const circleItems: {
-    key: string;
+  // SNSタブ（LINE / Instagram / X）。各タブ：公式アカウントへのリンク＋投稿文コピペ。
+  const snsTabs: {
+    key: "line" | "instagram" | "x";
     label: string;
+    url: string;
+    ctaKey: string;
     icon: React.ReactNode;
-    bg: string;
-    href?: string;
-    onClick?: () => void;
+    btnBg: string;
+    postText: string;
   }[] = [
-    { key: "save", label: t("result.actions.save"), icon: <DownloadIcon />, bg: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`, onClick: handleDownloadImage },
-    { key: "instagram", label: "Instagram", icon: <InstagramWhiteIcon />, bg: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 42%, #d6249f 60%, #285AEB 90%)", href: "https://www.instagram.com/" },
-    { key: "x", label: "X", icon: <XIcon />, bg: "#000000", href: "https://x.com/" },
-    { key: "line", label: "LINE", icon: <LineBubbleIcon />, bg: "#06C755", href: "https://lin.ee/YdPbIrO" },
+    {
+      key: "line",
+      label: "LINE",
+      url: "https://lin.ee/YdPbIrO",
+      ctaKey: "result.lineCta",
+      icon: <LineBubbleIcon />,
+      btnBg: "#06C755",
+      postText: t("result.post.textLine"),
+    },
+    {
+      key: "instagram",
+      label: "Instagram",
+      url: "https://www.instagram.com/ikig_ai_official",
+      ctaKey: "result.instaCta",
+      icon: <InstagramWhiteIcon />,
+      btnBg: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 42%, #d6249f 60%, #285AEB 90%)",
+      postText: t("result.post.text").replace("{{HANDLE}}", "@ikig_ai_official"),
+    },
+    {
+      key: "x",
+      label: "X",
+      url: "https://x.com/ikig_ai_vb",
+      ctaKey: "result.xCta",
+      icon: <XIcon />,
+      btnBg: "#000000",
+      postText: t("result.post.text").replace("{{HANDLE}}", "@ikig_ai_vb"),
+    },
   ];
+  const activeSns = snsTabs.find((s) => s.key === activeSnsTab) || snsTabs[0];
 
   // 回答見直し（STEP5の構成に合わせる）
   const reviewSections: { title: string; items: string[] }[] = [
@@ -242,9 +252,8 @@ const ResultPage: React.FC = () => {
         <ScrollingBanner src={topBanner} direction="left" />
 
         <div
+          className="result-content"
           style={{
-            width: "100%",
-            maxWidth: "720px",
             padding: "24px 16px 48px",
             boxSizing: "border-box",
             textAlign: "center",
@@ -264,96 +273,150 @@ const ResultPage: React.FC = () => {
           <h1 style={{ color: theme.text }}>{t("result.title")}</h1>
 
           {hasImage ? (
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <img
-                src={generatedImageUrl}
-                alt={t("result.generatedImageAlt")}
-                onClick={() => setIsImageModalOpen(true)}
-                style={{
-                  order: 1,
-                  width: "100%",
-                  maxWidth: "280px",
-                  maxHeight: "500px",
-                  objectFit: "contain",
-                  display: "block",
-                  margin: "20px auto 0",
-                  cursor: "zoom-in",
-                  borderRadius: "18px",
-                  boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
-                  backgroundColor: "#fff",
-                }}
-              />
+            <div className="result-grid">
+              {/* 左：生成画像（PCでは大きめ・固定表示） */}
+              <div className="result-left">
+                <img
+                  src={generatedImageUrl}
+                  alt={t("result.generatedImageAlt")}
+                  onClick={() => setIsImageModalOpen(true)}
+                  style={{
+                    width: "100%",
+                    maxWidth: "420px",
+                    objectFit: "contain",
+                    display: "block",
+                    margin: "16px auto 0",
+                    cursor: "zoom-in",
+                    borderRadius: "18px",
+                    boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
+                    backgroundColor: "#fff",
+                  }}
+                />
+              </div>
 
+              {/* 右：アンケート → 共有 → 見直し */}
+              <div className="result-right">
               {/* ③ 共有セクション */}
               <div style={{ order: 4, marginTop: "28px", textAlign: "left" }}>
-                {/* 画像を保存＋SNSアカウント（丸アイコン） */}
-                <div style={{ display: "flex", justifyContent: "center", gap: isMobile ? "14px" : "22px", flexWrap: "wrap" }}>
-                  {circleItems.map((item) => (
-                    <div
-                      key={item.key}
-                      style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: isMobile ? "62px" : "76px" }}
-                    >
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={item.label}
-                          style={{ ...circleButtonStyle(item.bg), textDecoration: "none" }}
-                        >
-                          {item.icon}
-                        </a>
-                      ) : (
-                        <button
-                          type="button"
-                          onClick={item.onClick}
-                          aria-label={item.label}
-                          style={circleButtonStyle(item.bg)}
-                        >
-                          {item.icon}
-                        </button>
-                      )}
-                      <div style={{ marginTop: "9px", fontSize: isMobile ? "0.78rem" : "0.88rem", color: theme.text, fontWeight: 800 }}>
-                        {item.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* おすすめの投稿文 */}
-                <div
+                {/* 画像を保存（大きく独立） */}
+                <button
+                  type="button"
+                  onClick={handleDownloadImage}
                   style={{
-                    marginTop: "16px",
-                    background: "#ffffff",
-                    border: `1px solid ${theme.border}`,
-                    borderRadius: "16px",
-                    boxShadow: "0 4px 14px rgba(0,0,0,0.06)",
-                    padding: "18px 16px",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "10px",
+                    border: "none",
+                    borderRadius: "999px",
+                    padding: "16px 18px",
+                    background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
+                    color: "#fff",
+                    fontWeight: 900,
+                    fontSize: "1.1rem",
+                    cursor: "pointer",
+                    boxShadow: "0 8px 20px rgba(52,150,135,0.25)",
                   }}
                 >
-                  <p style={{ margin: "0 0 12px", fontWeight: 800, color: theme.text, fontSize: "0.98rem" }}>
-                    {t("result.post.header")}
-                  </p>
-                  <div style={{ whiteSpace: "pre-line", color: theme.text, lineHeight: 1.9, fontSize: "0.95rem" }}>
-                    {t("result.post.text")}
+                  <DownloadIcon />
+                  {t("result.actions.save")}
+                </button>
+
+                {/* SNSシェア（タブ：LINE / Instagram / X） */}
+                <div
+                  style={{
+                    marginTop: "20px",
+                    background: "#ffffff",
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: "18px",
+                    boxShadow: "0 4px 14px rgba(0,0,0,0.06)",
+                    overflow: "hidden",
+                  }}
+                >
+                  {/* タブヘッダー */}
+                  <div style={{ display: "flex", borderBottom: `1px solid ${theme.border}` }}>
+                    {snsTabs.map((tab) => (
+                      <button
+                        key={tab.key}
+                        type="button"
+                        onClick={() => setActiveSnsTab(tab.key)}
+                        className={`sns-tab${activeSnsTab === tab.key ? " active" : ""}`}
+                        style={{
+                          background: "transparent",
+                          cursor: "pointer",
+                          padding: "14px 6px",
+                          fontWeight: 800,
+                          fontSize: "0.95rem",
+                        }}
+                      >
+                        {tab.label}
+                      </button>
+                    ))}
                   </div>
-                  <div style={{ textAlign: "right", marginTop: "12px" }}>
-                    <button
-                      type="button"
-                      onClick={handleCopyPost}
+
+                  {/* タブ内容 */}
+                  <div style={{ padding: "18px 16px" }}>
+                    {/* 公式アカウントに飛ぶボタン */}
+                    <a
+                      href={activeSns.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{
-                        border: "none",
-                        borderRadius: "999px",
-                        padding: "10px 22px",
-                        background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
-                        color: "#fff",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "10px",
+                        background: activeSns.btnBg,
+                        color: "#ffffff",
+                        textDecoration: "none",
                         fontWeight: 800,
-                        cursor: "pointer",
-                        boxShadow: "0 6px 16px rgba(52,150,135,0.25)",
+                        fontSize: "1.02rem",
+                        padding: "14px 18px",
+                        borderRadius: "999px",
+                        boxShadow: "0 6px 16px rgba(0,0,0,0.14)",
                       }}
                     >
-                      {t("result.post.copy")}
-                    </button>
+                      {activeSns.icon}
+                      {t(activeSns.ctaKey)}
+                    </a>
+
+                    {/* コピペボード */}
+                    <p style={{ margin: "18px 0 10px", fontWeight: 800, color: theme.text, fontSize: "0.95rem" }}>
+                      {t("result.post.header")}
+                    </p>
+                    <div
+                      style={{
+                        whiteSpace: "pre-line",
+                        color: theme.text,
+                        lineHeight: 1.9,
+                        fontSize: "0.95rem",
+                        background: "#f7faf9",
+                        border: `1px solid ${theme.border}`,
+                        borderRadius: "14px",
+                        padding: "14px 16px",
+                      }}
+                    >
+                      {activeSns.postText}
+                    </div>
+                    <div style={{ textAlign: "right", marginTop: "12px" }}>
+                      <button
+                        type="button"
+                        onClick={() => copyText(activeSns.postText)}
+                        style={{
+                          border: "none",
+                          borderRadius: "999px",
+                          padding: "10px 22px",
+                          background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
+                          color: "#fff",
+                          fontWeight: 800,
+                          cursor: "pointer",
+                          boxShadow: "0 6px 16px rgba(52,150,135,0.25)",
+                        }}
+                      >
+                        {t("result.post.copy")}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -590,32 +653,6 @@ const ResultPage: React.FC = () => {
                 )}
               </div>
 
-              {/* ② 公式LINE登録（アンケートの次） */}
-              <a
-                href="https://lin.ee/YdPbIrO"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  order: 3,
-                  marginTop: "18px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  background: "#06C755",
-                  color: "#ffffff",
-                  textDecoration: "none",
-                  fontWeight: 800,
-                  fontSize: "1.05rem",
-                  padding: "15px 18px",
-                  borderRadius: "999px",
-                  boxShadow: "0 8px 20px rgba(6,199,85,0.28)",
-                }}
-              >
-                <LineBubbleIcon />
-                {t("result.lineCta")}
-              </a>
-
               {/* 回答の見直し（プルダウン） */}
               <div
                 style={{
@@ -686,6 +723,7 @@ const ResultPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           ) : (

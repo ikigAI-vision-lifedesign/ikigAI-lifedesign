@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "Langkah Berikutnya",
         "helper": "Langkah kecil yang bisa dilakukan bulan ini.",
-        "action": "Apa yang akan Anda lakukan?",
+        "action": "Langkah Berikutnya・Apa yang akan Anda lakukan?",
         "actionPlaceholder": "contoh: mulai riset"
       }
     },
@@ -236,9 +236,10 @@
     },
     "post": {
       "header": "Contoh unggahan (salin & gunakan)",
-      "text": "Aku membuat vision board dengan AI!\n@AkunResmi\n#AIVisionBoard\n#ikigAI\n#[NamaAcara]",
+      "text": "Aku membuat vision board dengan AI!\n{{HANDLE}}\n#AIVisionBoard\n#ikigAI\n#[NamaAcara]",
       "copy": "Salin",
-      "copied": "Teks unggahan disalin!"
+      "copied": "Teks unggahan disalin!",
+      "textLine": "Aku membuat vision board AI! Rancang masa depanmu dengan ikigAI ✨"
     },
     "review": {
       "title": "Tinjau jawabanmu"
@@ -261,7 +262,9 @@
         }
       ]
     },
-    "lineCta": "Tambahkan kami di LINE"
+    "lineCta": "Tambahkan kami di LINE",
+    "instaCta": "Ikuti kami di Instagram",
+    "xCta": "Ikuti kami di X"
   },
   "language": {
     "title": "Pilih Bahasa",

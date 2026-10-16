@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "Nächste Aktion",
         "helper": "Ein kleiner Schritt, den du diesen Monat tun kannst, macht Handeln leichter.",
-        "action": "Welchen kleinen Schritt kannst du diesen Monat tun?",
+        "action": "Nächste Aktion・Welchen kleinen Schritt kannst du diesen Monat tun?",
         "actionPlaceholder": "z. B. eine neue Route planen, Informationen sammeln"
       }
     },
@@ -270,9 +270,10 @@
     },
     "post": {
       "header": "Vorschlag für einen Beitrag (kopieren & nutzen)",
-      "text": "Ich habe ein KI-Vision-Board erstellt!\n@OffiziellerAccount\n#AIVisionBoard\n#ikigAI\n#[Eventname]",
+      "text": "Ich habe ein KI-Vision-Board erstellt!\n{{HANDLE}}\n#AIVisionBoard\n#ikigAI\n#[Eventname]",
       "copy": "Kopieren",
-      "copied": "Beitragstext kopiert!"
+      "copied": "Beitragstext kopiert!",
+      "textLine": "Ich habe ein KI-Vision-Board erstellt! Gestalte deine Zukunft mit ikigAI ✨"
     },
     "review": {
       "title": "Deine Antworten ansehen"
@@ -295,7 +296,9 @@
         }
       ]
     },
-    "lineCta": "Füge uns auf LINE hinzu"
+    "lineCta": "Füge uns auf LINE hinzu",
+    "instaCta": "Folge uns auf Instagram",
+    "xCta": "Folge uns auf X"
   },
   "language": {
     "title": "Sprache auswählen",

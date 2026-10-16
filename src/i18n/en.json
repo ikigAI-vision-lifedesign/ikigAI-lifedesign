@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "Next Action",
         "helper": "Writing one small step you can take this month makes it easier to take action.",
-        "action": "What is one small step you can take this month?",
+        "action": "Next Action・What is one small step you can take this month?",
         "actionPlaceholder": "e.g. plan a new route, start gathering information"
       }
     },
@@ -270,9 +270,10 @@
     },
     "post": {
       "header": "Suggested post (copy & use)",
-      "text": "I made an AI vision board!\n@OfficialAccount\n#AIVisionBoard\n#ikigAI\n#[EventName]",
+      "text": "I made an AI vision board!\n{{HANDLE}}\n#AIVisionBoard\n#ikigAI\n#[EventName]",
       "copy": "Copy",
-      "copied": "Post text copied!"
+      "copied": "Post text copied!",
+      "textLine": "I made an AI vision board! Design your future with ikigAI ✨"
     },
     "review": {
       "title": "Review your answers"
@@ -295,7 +296,9 @@
         }
       ]
     },
-    "lineCta": "Add us on LINE"
+    "lineCta": "Add us on LINE",
+    "instaCta": "Follow us on Instagram",
+    "xCta": "Follow us on X"
   },
   "language": {
     "title": "Select Your Language",

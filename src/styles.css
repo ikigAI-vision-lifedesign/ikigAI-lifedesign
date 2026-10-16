@@ -435,6 +435,32 @@ button:disabled {
   .intro-appear-plant { animation: none; opacity: 0.92; }
 }
 
+/* ===== 結果画面のレスポンシブ（スマホ=1列 / PC=画像左・内容右の2カラム） ===== */
+.result-content { width: 100%; max-width: 720px; }
+.result-grid { display: flex; flex-direction: column; gap: 24px; }
+.result-left { width: 100%; }
+.result-right { width: 100%; display: flex; flex-direction: column; }
+@media (min-width: 900px) {
+  .result-content { max-width: 1000px; }
+  .result-grid { flex-direction: row; align-items: flex-start; gap: 32px; }
+  .result-left { flex: 0 0 420px; position: sticky; top: 24px; }
+  .result-right { flex: 1; min-width: 0; }
+}
+
+/* 共有のSNSタブ */
+.sns-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 12px 6px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--theme-subtext);
+}
+.sns-tab.active { color: var(--theme-primary-dark); border-bottom-color: var(--theme-primary); }
+
 /* ===== ローディングTipsカードの左スライドイン ===== */
 @keyframes tipSlideIn {
   from { opacity: 0; transform: translateX(-28px); }

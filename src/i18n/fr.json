@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "Prochaine action",
         "helper": "Écrire un petit pas réalisable ce mois-ci facilite le passage à l’action.",
-        "action": "Quel petit pas pouvez-vous faire ce mois-ci ?",
+        "action": "Prochaine action・Quel petit pas pouvez-vous faire ce mois-ci ?",
         "actionPlaceholder": "ex. planifier un nouvel itinéraire, commencer à chercher des informations"
       }
     },
@@ -270,9 +270,10 @@
     },
     "post": {
       "header": "Publication suggérée (à copier)",
-      "text": "J'ai créé un vision board avec l'IA !\n@CompteOfficiel\n#AIVisionBoard\n#ikigAI\n#[NomDeLEvenement]",
+      "text": "J'ai créé un vision board avec l'IA !\n{{HANDLE}}\n#AIVisionBoard\n#ikigAI\n#[NomDeLEvenement]",
       "copy": "Copier",
-      "copied": "Texte copié !"
+      "copied": "Texte copié !",
+      "textLine": "J’ai créé un vision board IA ! Dessine ton avenir avec ikigAI ✨"
     },
     "review": {
       "title": "Revoir vos réponses"
@@ -295,7 +296,9 @@
         }
       ]
     },
-    "lineCta": "Ajoutez-nous sur LINE"
+    "lineCta": "Ajoutez-nous sur LINE",
+    "instaCta": "Suivez-nous sur Instagram",
+    "xCta": "Suivez-nous sur X"
   },
   "language": {
     "title": "Choisissez votre langue",

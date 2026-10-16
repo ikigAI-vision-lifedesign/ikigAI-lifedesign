@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "Siguiente paso",
         "helper": "Pequeña acción del mes.",
-        "action": "¿Qué harás?",
+        "action": "Siguiente paso・¿Qué harás?",
         "actionPlaceholder": "ej: empezar a investigar"
       }
     },
@@ -236,9 +236,10 @@
     },
     "post": {
       "header": "Publicación sugerida (copiar y usar)",
-      "text": "¡Hice un vision board con IA!\n@CuentaOficial\n#AIVisionBoard\n#ikigAI\n#[NombreDelEvento]",
+      "text": "¡Hice un vision board con IA!\n{{HANDLE}}\n#AIVisionBoard\n#ikigAI\n#[NombreDelEvento]",
       "copy": "Copiar",
-      "copied": "¡Texto copiado!"
+      "copied": "¡Texto copiado!",
+      "textLine": "¡Hice un vision board con IA! Diseña tu futuro con ikigAI ✨"
     },
     "review": {
       "title": "Revisa tus respuestas"
@@ -261,7 +262,9 @@
         }
       ]
     },
-    "lineCta": "Síguenos en LINE"
+    "lineCta": "Síguenos en LINE",
+    "instaCta": "Síguenos en Instagram",
+    "xCta": "Síguenos en X"
   },
   "language": {
     "title": "Seleccionar idioma",

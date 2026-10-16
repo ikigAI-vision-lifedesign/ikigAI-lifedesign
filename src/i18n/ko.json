@@ -144,7 +144,7 @@
       "nextAction": {
         "title": "다음 행동",
         "helper": "이번 달 작은 한 걸음",
-        "action": "무엇을 할 건가요?",
+        "action": "다음 행동・무엇을 할 건가요?",
         "actionPlaceholder": "예: 조사 시작"
       }
     },
@@ -236,9 +236,10 @@
     },
     "post": {
       "header": "추천 게시글 (복사해서 사용)",
-      "text": "AI 비전 보드를 만들었어요!\n@공식계정\n#AIVisionBoard\n#ikigAI\n#[이벤트명]",
+      "text": "AI 비전 보드를 만들었어요!\n{{HANDLE}}\n#AIVisionBoard\n#ikigAI\n#[이벤트명]",
       "copy": "복사",
-      "copied": "게시글이 복사되었습니다!"
+      "copied": "게시글이 복사되었습니다!",
+      "textLine": "AI 비전 보드를 만들었어! 너도 ikigAI로 미래를 그려봐 ✨"
     },
     "review": {
       "title": "내 답변 다시 보기"
@@ -261,7 +262,9 @@
         }
       ]
     },
-    "lineCta": "공식 LINE 추가하기"
+    "lineCta": "공식 LINE 추가하기",
+    "instaCta": "공식 Instagram 팔로우",
+    "xCta": "공식 X 팔로우"
   },
   "language": {
     "title": "언어 선택",
