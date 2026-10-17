@@ -457,6 +457,47 @@ button:disabled {
   .save-mobile-wrap { display: none; }
 }
 
+/* ===== 結果画像のリビール演出（フェードイン＋✨＋縦軸360°回転） ===== */
+.vision-img-wrap { perspective: 1000px; }
+.vision-reveal {
+  animation: visionReveal 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+@keyframes visionReveal {
+  0%   { opacity: 0; transform: rotateY(0deg) scale(0.8); }
+  55%  { opacity: 1; }
+  100% { opacity: 1; transform: rotateY(360deg) scale(1); }
+}
+.vr-sparkle {
+  position: absolute;
+  font-size: 1.5rem;
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  animation: vrSparkle 1.6s ease-in-out both;
+}
+@keyframes vrSparkle {
+  0%   { opacity: 0; transform: scale(0) rotate(0deg); }
+  35%  { opacity: 1; transform: scale(1.25) rotate(120deg); }
+  70%  { opacity: 0.9; transform: scale(0.9) rotate(220deg); }
+  100% { opacity: 0; transform: scale(0.2) rotate(360deg); }
+}
+.vr-s1 { top: 5%;  left: 5%;  animation-delay: 0.15s; }
+.vr-s2 { top: 3%;  right: 8%; animation-delay: 0.45s; font-size: 1.1rem; }
+.vr-s3 { top: 45%; left: 2%;  animation-delay: 0.65s; }
+.vr-s4 { bottom: 12%; right: 3%; animation-delay: 0.30s; }
+.vr-s5 { bottom: 6%; left: 14%; animation-delay: 0.80s; font-size: 1.2rem; }
+.vr-s6 { top: 28%; right: 6%; animation-delay: 0.95s; font-size: 1.3rem; }
+@media (prefers-reduced-motion: reduce) {
+  .vision-reveal { animation: visionRevealReduced 0.6s ease both; }
+  .vr-sparkle { display: none; }
+}
+@keyframes visionRevealReduced {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
 /* 共有のSNSタブ */
 .sns-tab {
   flex: 1;

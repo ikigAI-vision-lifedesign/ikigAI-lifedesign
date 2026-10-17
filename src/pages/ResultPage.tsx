@@ -304,24 +304,33 @@ const ResultPage: React.FC = () => {
             <div className="result-grid">
               {/* 左：生成画像（PCでは大きめ・固定表示） */}
               <div className="result-left">
-                <img
-                  src={generatedImageUrl}
-                  alt={t("result.generatedImageAlt")}
-                  onClick={() => setIsImageModalOpen(true)}
-                  className="result-img"
-                  style={{
-                    width: "100%",
-                    maxWidth: "420px",
-                    objectFit: "contain",
-                    display: "block",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    cursor: "zoom-in",
-                    borderRadius: "18px",
-                    boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
-                    backgroundColor: "#fff",
-                  }}
-                />
+                {/* 画像リビール演出：フェードイン＋✨＋縦軸360°回転 */}
+                <div
+                  className="result-img vision-img-wrap"
+                  style={{ position: "relative", width: "100%", maxWidth: "420px", marginLeft: "auto", marginRight: "auto" }}
+                >
+                  <img
+                    src={generatedImageUrl}
+                    alt={t("result.generatedImageAlt")}
+                    onClick={() => setIsImageModalOpen(true)}
+                    className="vision-reveal"
+                    style={{
+                      width: "100%",
+                      objectFit: "contain",
+                      display: "block",
+                      cursor: "zoom-in",
+                      borderRadius: "18px",
+                      boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
+                      backgroundColor: "#fff",
+                    }}
+                  />
+                  <span className="vr-sparkle vr-s1" aria-hidden="true">✨</span>
+                  <span className="vr-sparkle vr-s2" aria-hidden="true">✨</span>
+                  <span className="vr-sparkle vr-s3" aria-hidden="true">✨</span>
+                  <span className="vr-sparkle vr-s4" aria-hidden="true">✨</span>
+                  <span className="vr-sparkle vr-s5" aria-hidden="true">✨</span>
+                  <span className="vr-sparkle vr-s6" aria-hidden="true">✨</span>
+                </div>
                 {/* PCのみ：画像の下に保存ボタン */}
                 <div className="save-desktop-wrap" style={{ marginTop: "16px" }}>
                   {saveButton}
