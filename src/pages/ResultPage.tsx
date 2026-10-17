@@ -300,6 +300,7 @@ const ResultPage: React.FC = () => {
           <h1 style={{ color: theme.text }}>{t("result.title")}</h1>
 
           {hasImage ? (
+            <>
             <div className="result-grid">
               {/* 左：生成画像（PCでは大きめ・固定表示） */}
               <div className="result-left">
@@ -307,12 +308,14 @@ const ResultPage: React.FC = () => {
                   src={generatedImageUrl}
                   alt={t("result.generatedImageAlt")}
                   onClick={() => setIsImageModalOpen(true)}
+                  className="result-img"
                   style={{
                     width: "100%",
                     maxWidth: "420px",
                     objectFit: "contain",
                     display: "block",
-                    margin: "16px auto 0",
+                    marginLeft: "auto",
+                    marginRight: "auto",
                     cursor: "zoom-in",
                     borderRadius: "18px",
                     boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
@@ -434,9 +437,9 @@ const ResultPage: React.FC = () => {
 
               {/* ① アンケート（最優先・画像の次） */}
               <div
+                className="survey-card"
                 style={{
                   order: 2,
-                  marginTop: "32px",
                   padding: "28px 18px",
                   backgroundColor: "#ffffff",
                   borderRadius: "22px",
@@ -663,80 +666,80 @@ const ResultPage: React.FC = () => {
                   </>
                 )}
               </div>
+              </div>
+            </div>
 
-              {/* 回答の見直し（プルダウン） */}
-              <div
+            {/* 回答の見直し（プルダウン・PCでは2カラム全幅） */}
+            <div
+              style={{
+                marginTop: "24px",
+                background: "#ffffff",
+                border: `1.5px solid ${theme.border}`,
+                borderRadius: "22px",
+                boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+                overflow: "hidden",
+              }}
+            >
+              <button
+                type="button"
+                onClick={() => setReviewOpen((v) => !v)}
                 style={{
-                  order: 5,
-                  marginTop: "18px",
-                  background: "#ffffff",
-                  border: `1.5px solid ${theme.border}`,
-                  borderRadius: "22px",
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-                  overflow: "hidden",
+                  width: "100%",
+                  background: "transparent",
+                  border: "none",
+                  padding: "18px 20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  cursor: "pointer",
+                  color: theme.text,
+                  fontWeight: 800,
+                  fontSize: "1.05rem",
+                  textAlign: "left",
                 }}
               >
-                <button
-                  type="button"
-                  onClick={() => setReviewOpen((v) => !v)}
+                <span>{t("result.review.title")}</span>
+                <span
+                  aria-hidden="true"
                   style={{
-                    width: "100%",
-                    background: "transparent",
-                    border: "none",
-                    padding: "18px 20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    cursor: "pointer",
-                    color: theme.text,
-                    fontWeight: 800,
-                    fontSize: "1.05rem",
-                    textAlign: "left",
+                    color: theme.primaryDark,
+                    display: "inline-block",
+                    transition: "transform 0.3s ease",
+                    transform: reviewOpen ? "rotate(90deg)" : "rotate(0deg)",
                   }}
                 >
-                  <span>{t("result.review.title")}</span>
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      color: theme.primaryDark,
-                      display: "inline-block",
-                      transition: "transform 0.3s ease",
-                      transform: reviewOpen ? "rotate(90deg)" : "rotate(0deg)",
-                    }}
-                  >
-                    ▸
-                  </span>
-                </button>
+                  ▸
+                </span>
+              </button>
 
-                {/* ぴろーんと下に伸びる開閉アニメ */}
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateRows: reviewOpen ? "1fr" : "0fr",
-                    transition: "grid-template-rows 0.38s ease",
-                  }}
-                >
-                  <div style={{ overflow: "hidden", minHeight: 0 }}>
-                    <div style={{ padding: "0 20px 20px", textAlign: "left", borderTop: `1px solid ${theme.border}` }}>
-                      {reviewSections.map((sec) => (
-                        <div key={sec.title} style={{ marginTop: "16px" }}>
-                          <p style={{ margin: "0 0 8px", color: theme.primaryDark, fontWeight: 900, fontSize: "1rem" }}>
-                            {sec.title}
+              {/* ぴろーんと下に伸びる開閉アニメ */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateRows: reviewOpen ? "1fr" : "0fr",
+                  transition: "grid-template-rows 0.38s ease",
+                }}
+              >
+                <div style={{ overflow: "hidden", minHeight: 0 }}>
+                  <div style={{ padding: "0 20px 20px", textAlign: "left", borderTop: `1px solid ${theme.border}` }}>
+                    {reviewSections.map((sec) => (
+                      <div key={sec.title} style={{ marginTop: "16px" }}>
+                        <p style={{ margin: "0 0 8px", color: theme.primaryDark, fontWeight: 900, fontSize: "1rem" }}>
+                          {sec.title}
+                        </p>
+                        {sec.items.map((k) => (
+                          <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
+                            <strong>{t(`form.step5.items.${k}`)}：</strong>
+                            {reviewData[k] && String(reviewData[k]).trim() !== "" ? reviewData[k] : "—"}
                           </p>
-                          {sec.items.map((k) => (
-                            <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
-                              <strong>{t(`form.step5.items.${k}`)}：</strong>
-                              {reviewData[k] && String(reviewData[k]).trim() !== "" ? reviewData[k] : "—"}
-                            </p>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-              </div>
             </div>
+            </>
           ) : (
             <p style={{ color: theme.subText, marginTop: "24px" }}>
               {t("result.noImage")}

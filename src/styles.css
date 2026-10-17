@@ -440,6 +440,9 @@ button:disabled {
 .result-grid { display: flex; flex-direction: column; gap: 24px; }
 .result-left { width: 100%; }
 .result-right { width: 100%; display: flex; flex-direction: column; }
+/* スマホの上マージン（PCでは画像とアンケートの上端を揃えるため0に） */
+.result-img { margin-top: 16px; }
+.survey-card { margin-top: 32px; }
 /* 保存ボタンの出し分け：スマホ=共有セクション内 / PC=画像の下 */
 .save-desktop-wrap { display: none; }
 .save-mobile-wrap { display: block; }
@@ -448,6 +451,8 @@ button:disabled {
   .result-grid { flex-direction: row; align-items: flex-start; gap: 32px; }
   .result-left { flex: 0 0 420px; position: sticky; top: 24px; }
   .result-right { flex: 1; min-width: 0; }
+  .result-img { margin-top: 0; }
+  .survey-card { margin-top: 0; }
   .save-desktop-wrap { display: block; }
   .save-mobile-wrap { display: none; }
 }
