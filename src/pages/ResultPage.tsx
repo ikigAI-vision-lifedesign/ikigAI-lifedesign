@@ -769,8 +769,8 @@ const ResultPage: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
             style={{
               position: "relative",
-              width: "100%",
-              maxWidth: "520px",
+              width: "fit-content",
+              maxWidth: "min(520px, 100%)",
             }}
           >
             <button
@@ -798,11 +798,13 @@ const ResultPage: React.FC = () => {
               src={generatedImageUrl}
               alt={t("result.expandedImageAlt")}
               style={{
-                width: "100%",
+                display: "block",
+                width: "auto",
+                height: "auto",
+                maxWidth: "100%",
                 maxHeight: "85vh",
                 objectFit: "contain",
                 borderRadius: "14px",
-                backgroundColor: "#fff",
               }}
             />
           </div>
