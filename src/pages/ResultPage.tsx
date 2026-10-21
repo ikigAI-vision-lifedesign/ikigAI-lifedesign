@@ -351,6 +351,18 @@ const ResultPage: React.FC = () => {
 
           <h1 style={{ color: theme.text }}>{t("result.title")}</h1>
 
+          <p
+            style={{
+              color: theme.subText,
+              fontWeight: 700,
+              lineHeight: 1.7,
+              margin: "0 auto 22px",
+              maxWidth: "620px",
+            }}
+          >
+            {t("result.subtitle", "ビジョンボードをもとにあなたのいまとこれからを考えてみましょう！")}
+          </p>
+
           {hasImage ? (
             <>
             <div className="result-grid">

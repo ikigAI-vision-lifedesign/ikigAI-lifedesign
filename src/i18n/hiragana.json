@@ -229,7 +229,8 @@
   },
   "result": {
     "label": "けっか",
-    "title": "できました！",
+    "title": "あなただけの ビジョンボードが とどきました！",
+    "subtitle": "ビジョンボードをもとに あなたの いまと これからを かんがえてみましょう！",
     "generatedImageAlt": "がぞう",
     "expandedImageAlt": "がぞう",
     "closeModal": "とじる",

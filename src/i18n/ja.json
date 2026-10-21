@@ -229,7 +229,8 @@
   },
   "result": {
     "label": "RESULT",
-    "title": "あなたのビジョンボードが完成しました",
+    "title": "あなただけのビジョンボードが届きました！",
+    "subtitle": "ビジョンボードをもとにあなたのいまとこれからを考えてみましょう！",
     "generatedImageAlt": "生成されたビジョンボード画像",
     "expandedImageAlt": "拡大されたビジョンボード画像",
     "closeModal": "画像を閉じる",
