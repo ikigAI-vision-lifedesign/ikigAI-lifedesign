@@ -1,12 +1,63 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../i18n/configs";
 import "../styles.css";
 import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
+import ikigaiLogo from "../assets/ikigai-logo.png";
 import { theme } from "../theme";
 import { postToGas, extractDriveFileId } from "../config";
+
+// 画像を読み込む（CORS許可時は crossOrigin anonymous で canvas 汚染を防ぐ）
+const loadImage = (src: string, crossOrigin = false) =>
+  new Promise<HTMLImageElement>((resolve, reject) => {
+    const img = new Image();
+    if (crossOrigin) img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
+
+// 画像の右下に会社ロゴ（ウォーターマーク）を合成した Blob を返す。
+// CORSで読めない/汚染される場合は例外（呼び出し側でロゴ無し保存にフォールバック）。
+const buildWatermarkedBlob = async (imageUrl: string): Promise<Blob> => {
+  const baseImg = await loadImage(imageUrl, true);
+  const canvas = document.createElement("canvas");
+  canvas.width = baseImg.naturalWidth || baseImg.width;
+  canvas.height = baseImg.naturalHeight || baseImg.height;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("no 2d context");
+  ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
+
+  // ロゴを右下に小さく（アプリ表示には出さず、保存画像のみ）
+  const logo = await loadImage(ikigaiLogo, false);
+  const logoW = Math.round(canvas.width * 0.22);
+  const logoH = Math.round(logoW * (logo.naturalHeight / logo.naturalWidth));
+  const margin = Math.round(canvas.width * 0.035);
+  ctx.save();
+  ctx.globalAlpha = 0.9;
+  ctx.shadowColor = "rgba(255,255,255,0.85)";
+  ctx.shadowBlur = Math.max(2, Math.round(canvas.width * 0.005));
+  ctx.drawImage(logo, canvas.width - logoW - margin, canvas.height - logoH - margin, logoW, logoH);
+  ctx.restore();
+
+  const blob: Blob | null = await new Promise((res) => canvas.toBlob(res, "image/png"));
+  if (!blob) throw new Error("toBlob failed");
+  return blob;
+};
+
+const triggerBlobDownload = (blob: Blob, filename: string) => {
+  const url = window.URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(url);
+};
 
 const RESULT_IMAGE_KEY = "visionBoardGeneratedImageUrl";
 const RESULT_DRIVE_URL_KEY = "visionBoardDrivePageUrl";
@@ -63,6 +114,7 @@ const DownloadIcon = () => (
 
 const ResultPage: React.FC = () => {
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [hoveredRating, setHoveredRating] = useState<number | null>(null);
@@ -115,24 +167,24 @@ const ResultPage: React.FC = () => {
   const handleDownloadImage = async () => {
     if (!generatedImageUrl) return;
 
-    // まず通常のダウンロードを試す（同一オリジン or CORS可の場合）
+    // ① 右下に会社ロゴを合成して保存（CORSで画像を読める場合）
+    try {
+      const blob = await buildWatermarkedBlob(generatedImageUrl);
+      triggerBlobDownload(blob, "AI_VisionBoard.png");
+      return;
+    } catch (e) {
+      console.warn("watermark download failed, falling back:", e);
+    }
+
+    // ② 合成できない場合：元画像をそのまま保存（ロゴ無し）
     try {
       const response = await fetch(generatedImageUrl);
       if (!response.ok) throw new Error("fetch not ok");
       const blob = await response.blob();
-      const objectUrl = window.URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = objectUrl;
-      link.download = "AI_VisionBoard.png";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      window.URL.revokeObjectURL(objectUrl);
+      triggerBlobDownload(blob, "AI_VisionBoard.png");
       return;
     } catch (error) {
-      // Drive画像URLはCORSでfetchできないため、Driveのダウンロードを開く
+      // ③ それも不可：Driveのダウンロードを開く（ロゴ無し）
       const id = extractDriveFileId(drivePageUrl);
       const dl = id
         ? `https://drive.google.com/uc?export=download&id=${id}`
@@ -739,6 +791,35 @@ const ResultPage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* もう一度ビジョンボードを作成する（最初の質問へ。言語選択・導入はスキップ） */}
+            <button
+              type="button"
+              onClick={() => navigate("/form/step1")}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                width: "100%",
+                marginTop: "18px",
+                padding: "14px 18px",
+                borderRadius: "999px",
+                border: `2px solid ${theme.primary}`,
+                background: "#ffffff",
+                color: theme.primaryDark,
+                fontWeight: 800,
+                fontSize: "1rem",
+                cursor: "pointer",
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="23 4 23 10 17 10" />
+                <polyline points="1 20 1 14 7 14" />
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+              </svg>
+              {t("result.createAgain", "もう一度ビジョンボードを作成する")}
+            </button>
             </>
           ) : (
             <p style={{ color: theme.subText, marginTop: "24px" }}>
