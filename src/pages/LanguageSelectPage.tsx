@@ -5,20 +5,20 @@ import { theme } from "../theme";
 import { useTranslation } from "react-i18next";
 
 const languages = [
-  { code: "ja", label: "日本語（日本）", flag: "https://flagcdn.com/w40/jp.png" },
-  { code: "ja-hira", label: "ひらがな", flag: "https://flagcdn.com/w40/jp.png" },
-  { code: "en", label: "English (United States)", flag: "https://flagcdn.com/w40/us.png" },
-  { code: "fr", label: "Français (France)", flag: "https://flagcdn.com/w40/fr.png" },
-  { code: "de", label: "Deutsch (Deutschland)", flag: "https://flagcdn.com/w40/de.png" },
-  { code: "hi", label: "हिंदी (भारत)", flag: "https://flagcdn.com/w40/in.png" },
+  { code: "ja", label: "日本語", flag: "https://flagcdn.com/w40/jp.png" },
+  { code: "ja-hira", label: "日本語（ひらがな）", flag: "https://flagcdn.com/w40/jp.png" },
+  { code: "en", label: "English", flag: "https://flagcdn.com/w40/us.png" },
+  { code: "fr", label: "Français", flag: "https://flagcdn.com/w40/fr.png" },
+  { code: "de", label: "Deutsch", flag: "https://flagcdn.com/w40/de.png" },
+  { code: "hi", label: "हिंदी", flag: "https://flagcdn.com/w40/in.png" },
   { code: "id", label: "Bahasa Indonesia", flag: "https://flagcdn.com/w40/id.png" },
-  { code: "it", label: "Italiano (Italia)", flag: "https://flagcdn.com/w40/it.png" },
-  { code: "ko", label: "한국어 (대한민국)", flag: "https://flagcdn.com/w40/kr.png" },
-  { code: "pt-BR", label: "Português (Brasil)", flag: "https://flagcdn.com/w40/br.png" },
+  { code: "it", label: "Italiano", flag: "https://flagcdn.com/w40/it.png" },
+  { code: "ko", label: "한국어", flag: "https://flagcdn.com/w40/kr.png" },
+  { code: "pt-BR", label: "Português", flag: "https://flagcdn.com/w40/br.png" },
   { code: "es-419", label: "Español (Latinoamérica)", flag: "https://flagcdn.com/w40/mx.png" },
   { code: "es", label: "Español (España)", flag: "https://flagcdn.com/w40/es.png" },
-  { code: "zh-CN", label: "简体中文（中国）", flag: "https://flagcdn.com/w40/cn.png" },
-  { code: "zh-TW", label: "繁體中文（台灣）", flag: "https://flagcdn.com/w40/tw.png" },
+  { code: "zh-CN", label: "简体中文", flag: "https://flagcdn.com/w40/cn.png" },
+  { code: "zh-TW", label: "繁體中文", flag: "https://flagcdn.com/w40/tw.png" },
   { code: "ar", label: "العربية", flag: "https://flagcdn.com/w40/sa.png" },
 ];
 

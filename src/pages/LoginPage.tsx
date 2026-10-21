@@ -136,16 +136,6 @@ const LoginPage: React.FC = () => {
           {t("login.title")}
         </h1>
 
-        <p
-          style={{
-            color: theme.subText,
-            lineHeight: 1.8,
-            marginBottom: "28px",
-          }}
-        >
-          {t("login.description")}
-        </p>
-
         <div
           className={shake ? "login-shake" : undefined}
           onAnimationEnd={() => setShake(false)}

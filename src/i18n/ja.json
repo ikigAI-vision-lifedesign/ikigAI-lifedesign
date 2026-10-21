@@ -25,9 +25,9 @@
   "form": {
     "step1": {
       "stepLabel": "STEP 1 / 5",
-      "title": "好きな雰囲気",
-      "description": "ビジョンボードの仕上がりの雰囲気を決めましょう。\nあなた好みの画風を選択することで、よりあなたらしい世界観に近づきます。",
-      "imageStyle": "画風を選択",
+      "title": "すきな雰囲気",
+      "description": "ビジョンボードの仕上がりの雰囲気を決めましょう。\nあなた好みの雰囲気を選択することで、よりあなたらしい世界観に近づきます。",
+      "imageStyle": "雰囲気を選択",
       "recommended": "おすすめ",
       "imageStyleOptions": {
         "watercolor": "水彩画風",
@@ -44,7 +44,7 @@
       "stepLabel": "STEP 2 / 5",
       "title": "あなたについて",
       "description": "あなたのことを教えてください。\n入力内容がビジョンボードに反映されます。",
-      "fullName": "お名前",
+      "fullName": "名前",
       "fullNamePlaceholder": "例：山田 花子",
       "email": "メールアドレス",
       "emailPlaceholder": "ikigai@gmail.com",
@@ -58,7 +58,7 @@
         "nonBinary": "ノンバイナリー",
         "preferNotToSay": "回答しない"
       },
-      "favoriteColors": "好きな色（最大3色）",
+      "favoriteColors": "好きな色",
       "favoriteColorsPlaceholder": "例：ピンク、水色、白",
       "hairAppearance": "髪型・見た目の特徴",
       "hairAppearancePlaceholder": "例：黒髪ロング、くせ毛、背が高い",
@@ -67,7 +67,7 @@
     },
     "step3": {
       "stepLabel": "STEP 3 / 5",
-      "title": "あなたらしさと未来",
+      "title": "あなたらしさとビジョン",
       "description": "あなたの魅力と、これから歩みたい未来を聞かせてください。\n理想の未来を叶えるために、今できる一歩を考えてみましょう。",
       "selfExpression": "あなたらしさ",
       "selfExpressionHelper": "好きなこと、性格、大切にしている価値観などを、できるだけ具体的に書いてください。",
@@ -160,11 +160,11 @@
       "sections": {
         "basic": "あなたについて",
         "style": "好きな雰囲気",
-        "vision": "あなたらしさと未来",
+        "vision": "あなたらしさとビジョン",
         "lifeDesign": "ライフデザイン"
       },
       "items": {
-        "fullName": "お名前",
+        "fullName": "名前",
         "email": "メールアドレス",
         "age": "年齢",
         "gender": "性別",
@@ -254,7 +254,7 @@
       "thankYou": "回答ありがとうございました",
       "saved": "アンケートの回答を保存しました。",
       "satisfaction": "今回のビジョンボードはいかがでしたか？",
-      "reasonLabel": "感想があれば教えてください（任意）",
+      "reasonLabel": "ビジョンボードアプリの良かった点・改善点を教えてください（任意）",
       "reasonPlaceholder": "よかった点、もう少し変えたい点などがあればご記入ください。",
       "submit": "送信する",
       "submitting": "送信中...",
@@ -301,22 +301,27 @@
     "xCta": "公式Xをフォロー"
   },
   "intro": {
-    "title": "今日、考えること",
+    "title": "きょう、考えること",
     "subtitle": "あなたの人生を描く一歩を踏み出しましょう",
     "what": {
       "q": "（何を考える？）",
-      "body": "あなたらしい価値観・好きなこと・理想の未来を言語化する"
+      "body": "あなたらしい価値観・好きなこと・理想の未来を言語化する",
+      "items": [
+        "あなたらしい価値観",
+        "好きなこと",
+        "理想の未来"
+      ]
     },
     "why": {
       "q": "（なぜ考える？）",
-      "body": "自分の好きや大切なものが見えると、人生の選択がしやすくなります"
+      "body": "自分にとって納得できる生き方を見つけ、人生の選択をしやすくしましょう"
     },
     "outcome": {
       "q": "（得られるもの）",
       "items": [
-        "自分の軸が見える",
-        "やりたいことが整理される",
-        "行動のヒントが見つかる"
+        "自分の軸とやりたいことが整理される",
+        "なりたい自分の姿がイメージできる",
+        "次の一歩のヒントが見つかる"
       ]
     },
     "button": "はじめる"
