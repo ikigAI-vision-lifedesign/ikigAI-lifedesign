@@ -13,7 +13,7 @@ import StepNavigation from "../components/StepNavigation";
 import { theme } from "../theme";
 
 import styleWatercolor from "../assets/styles/style-watercolor.webp";
-import styleGraphic from "../assets/styles/style-graphic.webp";
+import styleGraphic from "../assets/styles/style-graphic.jpg";
 import styleRealistic from "../assets/styles/style-realistic.webp";
 import styleArtistic from "../assets/styles/style-artistic.webp";
 import styleComic from "../assets/styles/style-comic.webp";
