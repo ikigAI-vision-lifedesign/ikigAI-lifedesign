@@ -82,7 +82,7 @@ const LoadingPage: React.FC = () => {
       if (data && data.code === "auth") {
         clearToken();
         alert(t("loadingPage.errors.sessionExpired", "認証の有効期限が切れました。もう一度パスコードを入力してください。"));
-        navigate("/");
+        navigate("/login");
         return;
       }
 
