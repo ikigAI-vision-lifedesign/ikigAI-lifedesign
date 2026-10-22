@@ -38,9 +38,13 @@ type FormDataType = {
   email?: string;
   age?: string;
   gender?: string;
-  hairAppearance?: string;
   charmPoints?: string;
   favoriteColors?: string;
+  personality?: string;
+  praisedFor?: string;
+  photo?: string;
+  favoriteFood?: string;
+  mostWanted?: string;
   imageStyle?: string;
   selfExpression?: string;
   happyMoment?: string;
@@ -214,8 +218,17 @@ const FormStep5Page: React.FC = () => {
           <SummaryItem label={t("form.step5.items.age")} value={formData.age} />
           <SummaryItem label={t("form.step5.items.gender")} value={formData.gender} />
           <SummaryItem label={t("form.step5.items.favoriteColors")} value={formData.favoriteColors} />
-          <SummaryItem label={t("form.step5.items.hairAppearance")} value={formData.hairAppearance} />
           <SummaryItem label={t("form.step5.items.charmPoints")} value={formData.charmPoints} />
+          <SummaryItem label={t("form.step5.items.personality")} value={formData.personality} />
+          <SummaryItem label={t("form.step5.items.praisedFor")} value={formData.praisedFor} />
+          {formData.photo && formData.photo.startsWith("data:") && (
+            <p style={itemStyle}>
+              <strong>{t("form.step5.items.photo")}：</strong>
+              <img src={formData.photo} alt="" style={{ height: "48px", width: "48px", objectFit: "cover", borderRadius: "8px", verticalAlign: "middle" }} />
+            </p>
+          )}
+          <SummaryItem label={t("form.step5.items.favoriteFood")} value={formData.favoriteFood} />
+          <SummaryItem label={t("form.step5.items.mostWanted")} value={formData.mostWanted} />
         </div>
 
         {/* 画風（STEP1）：テキスト＋サンプル画像 */}

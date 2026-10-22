@@ -310,7 +310,7 @@ const ResultPage: React.FC = () => {
 
   // 回答見直し（STEP5の構成に合わせる）
   const reviewSections: { title: string; items: string[] }[] = [
-    { title: t("form.step5.sections.basic"), items: ["fullName", "email", "age", "gender", "favoriteColors", "hairAppearance", "charmPoints"] },
+    { title: t("form.step5.sections.basic"), items: ["fullName", "email", "age", "gender", "favoriteColors", "charmPoints", "personality", "praisedFor", "photo", "favoriteFood", "mostWanted"] },
     { title: t("form.step5.sections.style"), items: ["imageStyle"] },
     { title: t("form.step5.sections.vision"), items: ["selfExpression", "strengths", "happyMoment", "idealVision", "nextAction"] },
     { title: t("form.step5.sections.lifeDesign"), items: ["learnWant", "learnReason", "learnWhenWhere", "workStyle", "workValues", "workIdealIncomePlace", "residencePlace", "residenceEnvironment", "marriageIdealRelation", "marriageThoughts", "childThoughts", "childValues", "oldAgeIdeal", "oldAgePreparation"] },
@@ -791,12 +791,22 @@ const ResultPage: React.FC = () => {
                         <p style={{ margin: "0 0 8px", color: theme.primaryDark, fontWeight: 900, fontSize: "1rem" }}>
                           {sec.title}
                         </p>
-                        {sec.items.map((k) => (
-                          <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
-                            <strong>{t(`form.step5.items.${k}`)}：</strong>
-                            {reviewData[k] && String(reviewData[k]).trim() !== "" ? reviewData[k] : "—"}
-                          </p>
-                        ))}
+                        {sec.items.map((k) => {
+                          const val = reviewData[k];
+                          const has = !!val && String(val).trim() !== "";
+                          return (
+                            <p key={k} style={{ margin: "6px 0", color: theme.text, lineHeight: 1.8, wordBreak: "break-word", fontSize: "0.95rem" }}>
+                              <strong>{t(`form.step5.items.${k}`)}：</strong>
+                              {k === "photo"
+                                ? has && String(val).startsWith("data:")
+                                  ? <img src={String(val)} alt="" style={{ height: "56px", width: "56px", objectFit: "cover", borderRadius: "8px", verticalAlign: "middle" }} />
+                                  : "—"
+                                : has
+                                  ? val
+                                  : "—"}
+                            </p>
+                          );
+                        })}
                       </div>
                     ))}
                   </div>
