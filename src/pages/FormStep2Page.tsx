@@ -34,7 +34,28 @@ type PersonalData = {
   photo: string; // 画像データURL（任意）
   favoriteFood: string;
   mostWanted: string;
+  mbti: string; // 任意
 };
+
+// MBTI 16タイプ（コード＋16personalitiesの日本語名称）
+const MBTI_OPTIONS: { value: string; label: string }[] = [
+  { value: "INTJ", label: "INTJ（建築家）" },
+  { value: "INTP", label: "INTP（論理学者）" },
+  { value: "ENTJ", label: "ENTJ（指揮官）" },
+  { value: "ENTP", label: "ENTP（討論者）" },
+  { value: "INFJ", label: "INFJ（提唱者）" },
+  { value: "INFP", label: "INFP（仲介者）" },
+  { value: "ENFJ", label: "ENFJ（主人公）" },
+  { value: "ENFP", label: "ENFP（運動家）" },
+  { value: "ISTJ", label: "ISTJ（管理者）" },
+  { value: "ISFJ", label: "ISFJ（擁護者）" },
+  { value: "ESTJ", label: "ESTJ（幹部）" },
+  { value: "ESFJ", label: "ESFJ（領事官）" },
+  { value: "ISTP", label: "ISTP（巨匠）" },
+  { value: "ISFP", label: "ISFP（冒険家）" },
+  { value: "ESTP", label: "ESTP（起業家）" },
+  { value: "ESFP", label: "ESFP（エンターテイナー）" },
+];
 
 const defaultData: PersonalData = {
   fullName: "",
@@ -48,6 +69,7 @@ const defaultData: PersonalData = {
   photo: "",
   favoriteFood: "",
   mostWanted: "",
+  mbti: "",
 };
 
 const labelStyle: React.CSSProperties = {
@@ -362,6 +384,23 @@ const FormStep2Page: React.FC = () => {
               <RequiredBadge />
             </label>
             <input type="text" name="mostWanted" value={formData.mostWanted} onChange={handleInputChange} required placeholder={t("form.step2.mostWantedPlaceholder")} />
+
+            {/* MBTI（任意・プルダウン） */}
+            <label style={labelStyle}>
+              {t("form.step2.mbti")}
+              <span style={{ marginLeft: "8px", fontSize: "0.78rem", fontWeight: 800, color: theme.subText, background: "#eef4f1", borderRadius: "6px", padding: "2px 8px" }}>
+                {t("common.optional")}
+              </span>
+            </label>
+            <select name="mbti" value={formData.mbti} onChange={handleInputChange}>
+              <option value="">{t("form.step2.mbtiSelect")}</option>
+              {MBTI_OPTIONS.map((o) => (
+                <option key={o.value} value={o.value}>
+                  {o.label}
+                </option>
+              ))}
+              <option value="不明">{t("form.step2.mbtiUnknown")}</option>
+            </select>
           </div>
 
           <StepNavigation

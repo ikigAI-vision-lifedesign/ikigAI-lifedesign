@@ -77,7 +77,10 @@
       "favoriteFood": "すきな たべもの",
       "favoriteFoodPlaceholder": "れい：ラーメン、いちご、チョコ",
       "mostWanted": "いま いちばん ほしいもの",
-      "mostWantedPlaceholder": "れい：じゆうな じかん、あたらしいPC、ゆうき"
+      "mostWantedPlaceholder": "れい：じゆうな じかん、あたらしいPC、ゆうき",
+      "mbti": "MBTI",
+      "mbtiSelect": "えらんでください",
+      "mbtiUnknown": "わからない"
     },
     "step3": {
       "stepLabel": "すてっぷ 3",
@@ -189,6 +192,7 @@
         "photo": "おきにいりの しゃしん",
         "favoriteFood": "すきな たべもの",
         "mostWanted": "いま いちばん ほしいもの",
+        "mbti": "MBTI",
         "imageStyle": "すたいる",
         "selfExpression": "あなたらしさ",
         "idealVision": "これからかなえたいみらい・ビジョン",

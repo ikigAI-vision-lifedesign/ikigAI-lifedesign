@@ -45,6 +45,7 @@ type FormDataType = {
   photo?: string;
   favoriteFood?: string;
   mostWanted?: string;
+  mbti?: string;
   imageStyle?: string;
   selfExpression?: string;
   happyMoment?: string;
@@ -229,6 +230,7 @@ const FormStep5Page: React.FC = () => {
           )}
           <SummaryItem label={t("form.step5.items.favoriteFood")} value={formData.favoriteFood} />
           <SummaryItem label={t("form.step5.items.mostWanted")} value={formData.mostWanted} />
+          <SummaryItem label={t("form.step5.items.mbti")} value={formData.mbti} />
         </div>
 
         {/* 画風（STEP1）：テキスト＋サンプル画像 */}

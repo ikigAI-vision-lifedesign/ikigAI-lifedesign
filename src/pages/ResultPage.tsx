@@ -310,7 +310,7 @@ const ResultPage: React.FC = () => {
 
   // 回答見直し（STEP5の構成に合わせる）
   const reviewSections: { title: string; items: string[] }[] = [
-    { title: t("form.step5.sections.basic"), items: ["fullName", "email", "age", "gender", "favoriteColors", "charmPoints", "personality", "praisedFor", "photo", "favoriteFood", "mostWanted"] },
+    { title: t("form.step5.sections.basic"), items: ["fullName", "email", "age", "gender", "favoriteColors", "charmPoints", "personality", "praisedFor", "photo", "favoriteFood", "mostWanted", "mbti"] },
     { title: t("form.step5.sections.style"), items: ["imageStyle"] },
     { title: t("form.step5.sections.vision"), items: ["selfExpression", "strengths", "happyMoment", "idealVision", "nextAction"] },
     { title: t("form.step5.sections.lifeDesign"), items: ["learnWant", "learnReason", "learnWhenWhere", "workStyle", "workValues", "workIdealIncomePlace", "residencePlace", "residenceEnvironment", "marriageIdealRelation", "marriageThoughts", "childThoughts", "childValues", "oldAgeIdeal", "oldAgePreparation"] },
