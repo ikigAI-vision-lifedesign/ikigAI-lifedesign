@@ -12,7 +12,7 @@
     "title": "ぱすこーどをいれてね",
     "description": "つづけるために、ぱすこーどをいれてください。",
     "passwordLabel": "ぱすこーど",
-    "passwordPlaceholder": "ここにいれる",
+    "passwordPlaceholder": "パスコードをいれてください",
     "continue": "つぎへ",
     "errors": {
       "missingPasscode": "ぱすこーどのせっていがありません。",

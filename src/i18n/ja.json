@@ -12,7 +12,7 @@
     "title": "パスコードを入力",
     "description": "体験を始めるには、パスコードを入力してください。",
     "passwordLabel": "パスコード",
-    "passwordPlaceholder": "パスコードを入力",
+    "passwordPlaceholder": "パスコードを入力してください",
     "continue": "次へ",
     "errors": {
       "missingPasscode": "パスコード設定が見つかりません。REACT_APP_PASSCODEを確認してください。",
