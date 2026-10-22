@@ -399,7 +399,6 @@ const FormStep2Page: React.FC = () => {
                   {o.label}
                 </option>
               ))}
-              <option value="不明">{t("form.step2.mbtiUnknown")}</option>
             </select>
           </div>
 

@@ -79,8 +79,7 @@
       "mostWanted": "今一番ほしいもの",
       "mostWantedPlaceholder": "例：自由な時間、新しいPC、勇気",
       "mbti": "MBTI",
-      "mbtiSelect": "選択してください",
-      "mbtiUnknown": "わからない"
+      "mbtiSelect": "選択してください"
     },
     "step3": {
       "stepLabel": "STEP 3 / 5",
