@@ -106,6 +106,7 @@ const IntroPage: React.FC = () => {
   const COL = { teal: "#1f8a7a", pink: "#e85d78", amber: "#d98f1f" };
   const outcomeItems = t("intro.outcome.items", { returnObjects: true }) as string[];
   const whatItems = t("intro.what.items", { returnObjects: true }) as unknown;
+  const whyItems = t("intro.why.items", { returnObjects: true }) as unknown;
 
   return (
     <div
@@ -185,7 +186,18 @@ const IntroPage: React.FC = () => {
             </Card>
 
             <Card icon={<HeartIcon />} iconBg={COL.pink} title="Why" label={t("intro.why.q")} titleColor={COL.pink} cardBg="rgba(253,238,242,0.82)" border="#f6d4de" delay={3.4}>
-              {t("intro.why.body")}
+              {Array.isArray(whyItems) ? (
+                <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
+                  {(whyItems as string[]).map((item) => (
+                    <li key={item} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                      <CheckIcon color={COL.pink} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                t("intro.why.body")
+              )}
             </Card>
 
             <Card icon={<StarIcon />} iconBg={COL.amber} title="Outcome" label={t("intro.outcome.q")} titleColor={COL.amber} cardBg="rgba(252,246,228,0.82)" border="#f0e3bf" delay={4.4}>
