@@ -108,10 +108,10 @@
       "learn": {
         "title": "まなび",
         "helper": "まなびたいこと",
-        "want": "なにをまなびたい？",
-        "wantPlaceholder": "れい：えいご",
-        "reason": "なんでまなびたい？",
-        "reasonPlaceholder": "れい：たのしいから",
+        "want": "なにを まなぶ？",
+        "wantPlaceholder": "れい：えいご、プログラミング、デザイン",
+        "reason": "ずっと つづけたいことは？",
+        "reasonPlaceholder": "れい：すきなこと、しゅみ、スポーツ",
         "whenWhere": "いつどこで？",
         "whenWherePlaceholder": "れい：おうち"
       },
@@ -134,12 +134,20 @@
         "environmentPlaceholder": "れい：ひろい"
       },
       "marriage": {
-        "title": "ぱーとなー",
-        "helper": "どんなかんけい？",
-        "idealRelation": "りそう",
-        "idealRelationPlaceholder": "れい：なかよし",
-        "thoughts": "けっこんについて",
-        "thoughtsPlaceholder": "れい：したい"
+        "title": "けっこん",
+        "helper": "りそうの パートナーシップと、ふたりで きずきたい じんせいを かんがえられます。",
+        "idealRelation": "どんな パートナーと じんせいを あゆみたい？",
+        "idealRelationPlaceholder": "れい：かちかん、せいかく、そんけいできるところ、あんしんかん",
+        "thoughts": "どんな かんけいせいを きずきたい？",
+        "thoughtsPlaceholder": "れい：しんゆうのような かんけい、おたがいを そんちょう、なんでも はなせる",
+        "daily": "パートナーと どんな にちじょうを すごしたい？",
+        "dailyPlaceholder": "れい：いっしょに ごはん、りょこう、しゅみを きょうゆう、それぞれの じかんも たいせつに",
+        "values": "けっこんせいかつで たいせつにしたい かちかんは？",
+        "valuesPlaceholder": "れい：しんらい、あいじょう、じゆう、たいとうさ、かぞく、ちょうせん",
+        "roles": "おかね・しごと・かじ・こそだてを どう ぶんたんしたい？",
+        "rolesPlaceholder": "れい：ともばたらき、かけいの かんり、かじの ぶんたん、キャリアの おうえん",
+        "future": "ふたりで どんな みらいを じつげんしたい？",
+        "futurePlaceholder": "れい：すみたい ばしょ、りそうの くらし、ちょうせんしたいこと、10ねんごの ふたり"
       },
       "child": {
         "title": "こども",
@@ -162,6 +170,16 @@
         "helper": "ちいさな1ぽ",
         "action": "つぎにすること・なにする？",
         "actionPlaceholder": "れい：しらべる"
+      },
+      "care": {
+        "title": "かいご",
+        "helper": "かいごについての かんがえや、これからの そなえを せいりできます。",
+        "style": "どんな かいごを したい？",
+        "stylePlaceholder": "れい：じたくでの かいご、しせつでの かいご、かぞくの サポート",
+        "values": "かいごで たいせつにしたいことは？",
+        "valuesPlaceholder": "れい：ほんにんの いし、そんげん、じぶんらしい くらし、かぞくとの じかん",
+        "environment": "りそうの かいごかんきょう・サポートたいせいは？",
+        "environmentPlaceholder": "れい：かぞくと きょうりょく、せんもんかの しえん、けいざいてきな よゆう、しごととの りょうりつ"
       }
     },
     "step5": {
@@ -198,20 +216,27 @@
         "happyMoment": "うれしい",
         "strengths": "とくい",
         "learnWant": "まなび",
-        "learnReason": "りゆう",
+        "learnReason": "ずっと つづけたいこと",
         "learnWhenWhere": "ばしょ",
         "workStyle": "しごと",
         "workValues": "たいせつ",
         "workIdealIncomePlace": "おかね",
         "residencePlace": "ばしょ",
         "residenceEnvironment": "おうち",
-        "marriageIdealRelation": "かんけい",
-        "marriageThoughts": "けっこん",
+        "marriageIdealRelation": "どんな パートナーと あゆみたいか",
+        "marriageThoughts": "きずきたい かんけいせい",
         "childThoughts": "こども",
         "childValues": "たいせつ",
         "oldAgeIdeal": "みらい",
         "oldAgePreparation": "じゅんび",
-        "nextAction": "つぎ"
+        "nextAction": "つぎ",
+        "marriageDaily": "すごしたい にちじょう",
+        "marriageValues": "たいせつにしたい かちかん",
+        "marriageRoles": "おかね・しごと・かじ・こそだての ぶんたん",
+        "marriageFuture": "ふたりで じつげんしたい みらい",
+        "careStyle": "したい かいご",
+        "careValues": "かいごで たいせつにしたいこと",
+        "careEnvironment": "りそうの かいごかんきょう"
       }
     },
     "nextActionStep": {

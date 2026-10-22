@@ -35,8 +35,15 @@ type VisionBoardFormData = {
   residenceEnvironment: string;
   marriageIdealRelation: string;
   marriageThoughts: string;
+  marriageDaily: string;
+  marriageValues: string;
+  marriageRoles: string;
+  marriageFuture: string;
   childThoughts: string;
   childValues: string;
+  careStyle: string;
+  careValues: string;
+  careEnvironment: string;
   oldAgeIdeal: string;
   oldAgePreparation: string;
   nextAction: string;
@@ -65,8 +72,15 @@ const defaultFormData: VisionBoardFormData = {
   residenceEnvironment: "",
   marriageIdealRelation: "",
   marriageThoughts: "",
+  marriageDaily: "",
+  marriageValues: "",
+  marriageRoles: "",
+  marriageFuture: "",
   childThoughts: "",
   childValues: "",
+  careStyle: "",
+  careValues: "",
+  careEnvironment: "",
   oldAgeIdeal: "",
   oldAgePreparation: "",
   nextAction: "",
@@ -113,6 +127,11 @@ const lifeDesignStyles: Record<string, SectionStyle> = {
     bg: "#F2FFF1",
     border: "#96D890",
     text: "#4E9F46",
+  },
+  care: {
+    bg: "#EAF7F3",
+    border: "#8FD6C4",
+    text: "#2F9C84",
   },
   oldAge: {
     bg: "#FFF7E8",
@@ -197,6 +216,15 @@ const OldAgeIcon = ({ color }: { color: string }) => (
   </span>
 );
 
+const CareIcon = ({ color }: { color: string }) => (
+  <span style={iconWrapStyle(color)}>
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+      <path d="M12 6.2c-1.1-1.6-3.7-1.4-4.4.6-.5 1.3.3 2.6 1.5 3.6L12 13l2.9-2.6c1.2-1 2-2.3 1.5-3.6-.7-2-3.3-2.2-4.4-.6Z" />
+      <path d="M2.8 14.1c1.7-.9 3.1-.3 4.5.6 1 .6 1.8.9 2.9.9h2.6a1 1 0 0 0 0-2H10a.5.5 0 0 1 0-1h3.6c1.1 0 2.2-.4 3-1.2l2.2-2a1.05 1.05 0 0 1 1.45 1.5l-2.6 2.7c-1.4 1.4-3.3 2.3-5.3 2.3-1.7 0-2.9-.5-4-1.1-.9-.5-1.5-.7-2.6-.3v3.1H2.8v-3.2Z" />
+    </svg>
+  </span>
+);
+
 const ZoomIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <circle cx="11" cy="11" r="7" />
@@ -218,6 +246,7 @@ const FormStep4Page: React.FC = () => {
     residence: false,
     marriage: false,
     child: false,
+    care: false,
     oldAge: false,
   });
 
@@ -473,14 +502,6 @@ const FormStep4Page: React.FC = () => {
                     onChange={handleChange}
                     placeholder={t("form.step4.learn.reasonPlaceholder")}
                   />
-
-                  <label style={labelStyle}>{t("form.step4.learn.whenWhere")}</label>
-                  <textarea
-                    name="learnWhenWhere"
-                    value={formData.learnWhenWhere}
-                    onChange={handleChange}
-                    placeholder={t("form.step4.learn.whenWherePlaceholder")}
-                  />
                 </div>
               )}
             </div>
@@ -597,6 +618,38 @@ const FormStep4Page: React.FC = () => {
                     onChange={handleChange}
                     placeholder={t("form.step4.marriage.thoughtsPlaceholder")}
                   />
+
+                  <label style={labelStyle}>{t("form.step4.marriage.daily")}</label>
+                  <textarea
+                    name="marriageDaily"
+                    value={formData.marriageDaily}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.marriage.dailyPlaceholder")}
+                  />
+
+                  <label style={labelStyle}>{t("form.step4.marriage.values")}</label>
+                  <textarea
+                    name="marriageValues"
+                    value={formData.marriageValues}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.marriage.valuesPlaceholder")}
+                  />
+
+                  <label style={labelStyle}>{t("form.step4.marriage.roles")}</label>
+                  <textarea
+                    name="marriageRoles"
+                    value={formData.marriageRoles}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.marriage.rolesPlaceholder")}
+                  />
+
+                  <label style={labelStyle}>{t("form.step4.marriage.future")}</label>
+                  <textarea
+                    name="marriageFuture"
+                    value={formData.marriageFuture}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.marriage.futurePlaceholder")}
+                  />
                 </div>
               )}
             </div>
@@ -632,6 +685,50 @@ const FormStep4Page: React.FC = () => {
                     value={formData.childValues}
                     onChange={handleChange}
                     placeholder={t("form.step4.child.valuesPlaceholder")}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div style={cardStyle(lifeDesignStyles.care)}>
+              <button
+                type="button"
+                onClick={() => toggleLifeDesign("care")}
+                style={cardHeaderStyle(lifeDesignStyles.care)}
+              >
+                <span style={{ display: "flex", alignItems: "center" }}>
+                  <CareIcon color={lifeDesignStyles.care.text} />
+                  {t("form.step4.care.title")}
+                </span>
+                <span>{lifeDesignOpen.care ? "▾" : "▸"}</span>
+              </button>
+
+              {lifeDesignOpen.care && (
+                <div style={cardBodyStyle}>
+                  <p style={helperTextStyle}>{t("form.step4.care.helper")}</p>
+
+                  <label style={labelStyle}>{t("form.step4.care.style")}</label>
+                  <textarea
+                    name="careStyle"
+                    value={formData.careStyle}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.care.stylePlaceholder")}
+                  />
+
+                  <label style={labelStyle}>{t("form.step4.care.values")}</label>
+                  <textarea
+                    name="careValues"
+                    value={formData.careValues}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.care.valuesPlaceholder")}
+                  />
+
+                  <label style={labelStyle}>{t("form.step4.care.environment")}</label>
+                  <textarea
+                    name="careEnvironment"
+                    value={formData.careEnvironment}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.care.environmentPlaceholder")}
                   />
                 </div>
               )}

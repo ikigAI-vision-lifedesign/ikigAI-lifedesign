@@ -108,10 +108,10 @@
       "learn": {
         "title": "学び",
         "helper": "これから学びたいことや、学ぶ理由を整理できます。",
-        "want": "どんなことを学びたいですか？",
-        "wantPlaceholder": "例：英語、デザイン、料理",
-        "reason": "学ぶ目的・理由は？",
-        "reasonPlaceholder": "例：キャリアアップ、趣味、自己成長",
+        "want": "何を学ぶ？",
+        "wantPlaceholder": "例：英語、プログラミング、デザイン、心理学",
+        "reason": "ずっと続けたいことは？",
+        "reasonPlaceholder": "例：好きなこと、趣味、スポーツ、ものづくり",
         "whenWhere": "いつ・どこで学びたいですか？",
         "whenWherePlaceholder": "例：オンライン、週末、留学"
       },
@@ -134,12 +134,20 @@
         "environmentPlaceholder": "例：広い家、自然が近い、便利な立地"
       },
       "marriage": {
-        "title": "パートナーシップ",
-        "helper": "パートナーシップや結婚観を整理できます。",
-        "idealRelation": "パートナーとの関係について理想は？",
-        "idealRelationPlaceholder": "例：支え合える、尊重し合える、楽しい関係",
-        "thoughts": "結婚・同居についてどう考えていますか？",
-        "thoughtsPlaceholder": "例：結婚したい、まずは同居から考えたい"
+        "title": "結婚",
+        "helper": "理想のパートナーシップと、二人で築きたい人生を具体化できます。",
+        "idealRelation": "どんなパートナーと人生を歩みたいですか？",
+        "idealRelationPlaceholder": "例：価値観、性格、尊敬できるところ、一緒にいて感じる安心感",
+        "thoughts": "どんな関係性を築きたいですか？",
+        "thoughtsPlaceholder": "例：親友のような関係、お互いを尊重する、何でも話せる、共に成長する",
+        "daily": "パートナーとどんな日常を過ごしたいですか？",
+        "dailyPlaceholder": "例：一緒に食事をする、旅行を楽しむ、趣味を共有する、それぞれの時間も大切にする",
+        "values": "結婚生活で大切にしたい価値観は？",
+        "valuesPlaceholder": "例：信頼、愛情、自由、対等さ、家族、挑戦",
+        "roles": "お金・仕事・家事・子育てをどう分担したいですか？",
+        "rolesPlaceholder": "例：共働き、家計の管理方法、家事の分担、子どもを持つかどうか、キャリアの応援",
+        "future": "二人でどんな未来を実現したいですか？",
+        "futurePlaceholder": "例：住みたい場所、理想の暮らし、挑戦したいこと、家族のあり方、10年後の二人"
       },
       "child": {
         "title": "子育て・出産",
@@ -162,6 +170,16 @@
         "helper": "今月中にできる小さな一歩を書いておくと、行動につながりやすくなります。",
         "action": "ネクストアクション・今月中にできる小さな一歩は？",
         "actionPlaceholder": "例：新しいルートを計画する、情報収集を始める"
+      },
+      "care": {
+        "title": "介護",
+        "helper": "介護についての考えや、これからの備えを整理できます。",
+        "style": "どんな介護をしたいですか？",
+        "stylePlaceholder": "例：自宅での介護、施設での介護、家族のサポート",
+        "values": "介護で大切にしたいことは？",
+        "valuesPlaceholder": "例：本人の意思、尊厳、自分らしい暮らし、家族との時間",
+        "environment": "理想の介護環境・サポート体制は？",
+        "environmentPlaceholder": "例：家族と協力、専門家の支援、経済的な余裕、仕事との両立"
       }
     },
     "step5": {
@@ -198,20 +216,27 @@
         "happyMoment": "最近幸せだった瞬間",
         "strengths": "強み",
         "learnWant": "学びたいこと",
-        "learnReason": "学ぶ目的・理由",
+        "learnReason": "ずっと続けたいこと",
         "learnWhenWhere": "いつ・どこで学びたいか",
         "workStyle": "仕事・働き方",
         "workValues": "仕事で大切にしていること",
         "workIdealIncomePlace": "理想の年収・働く場所",
         "residencePlace": "住みたい場所",
         "residenceEnvironment": "理想の家・環境",
-        "marriageIdealRelation": "パートナーとの理想の関係",
-        "marriageThoughts": "結婚・同居について",
+        "marriageIdealRelation": "どんなパートナーと歩みたいか",
+        "marriageThoughts": "築きたい関係性",
         "childThoughts": "子どもについて",
         "childValues": "子育てで大切にしたいこと",
         "oldAgeIdeal": "理想の老後・シニアライフ",
         "oldAgePreparation": "老後に向けて準備したいこと",
-        "nextAction": "ネクストアクション"
+        "nextAction": "ネクストアクション",
+        "marriageDaily": "過ごしたい日常",
+        "marriageValues": "大切にしたい価値観",
+        "marriageRoles": "お金・仕事・家事・子育ての分担",
+        "marriageFuture": "二人で実現したい未来",
+        "careStyle": "したい介護",
+        "careValues": "介護で大切にしたいこと",
+        "careEnvironment": "理想の介護環境"
       }
     },
     "nextActionStep": {

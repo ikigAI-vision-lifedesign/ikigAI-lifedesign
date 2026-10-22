@@ -63,8 +63,15 @@ type FormDataType = {
   residenceEnvironment?: string;
   marriageIdealRelation?: string;
   marriageThoughts?: string;
+  marriageDaily?: string;
+  marriageValues?: string;
+  marriageRoles?: string;
+  marriageFuture?: string;
   childThoughts?: string;
   childValues?: string;
+  careStyle?: string;
+  careValues?: string;
+  careEnvironment?: string;
   oldAgeIdeal?: string;
   oldAgePreparation?: string;
   nextAction?: string;
@@ -268,7 +275,6 @@ const FormStep6Page: React.FC = () => {
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.lifeDesign")}</h3>
           <SummaryItem label={t("form.step5.items.learnWant")} value={formData.learnWant} />
           <SummaryItem label={t("form.step5.items.learnReason")} value={formData.learnReason} />
-          <SummaryItem label={t("form.step5.items.learnWhenWhere")} value={formData.learnWhenWhere} />
           <SummaryItem label={t("form.step5.items.workStyle")} value={formData.workStyle} />
           <SummaryItem label={t("form.step5.items.workValues")} value={formData.workValues} />
           <SummaryItem label={t("form.step5.items.workIdealIncomePlace")} value={formData.workIdealIncomePlace} />
@@ -276,8 +282,15 @@ const FormStep6Page: React.FC = () => {
           <SummaryItem label={t("form.step5.items.residenceEnvironment")} value={formData.residenceEnvironment} />
           <SummaryItem label={t("form.step5.items.marriageIdealRelation")} value={formData.marriageIdealRelation} />
           <SummaryItem label={t("form.step5.items.marriageThoughts")} value={formData.marriageThoughts} />
+          <SummaryItem label={t("form.step5.items.marriageDaily")} value={formData.marriageDaily} />
+          <SummaryItem label={t("form.step5.items.marriageValues")} value={formData.marriageValues} />
+          <SummaryItem label={t("form.step5.items.marriageRoles")} value={formData.marriageRoles} />
+          <SummaryItem label={t("form.step5.items.marriageFuture")} value={formData.marriageFuture} />
           <SummaryItem label={t("form.step5.items.childThoughts")} value={formData.childThoughts} />
           <SummaryItem label={t("form.step5.items.childValues")} value={formData.childValues} />
+          <SummaryItem label={t("form.step5.items.careStyle")} value={formData.careStyle} />
+          <SummaryItem label={t("form.step5.items.careValues")} value={formData.careValues} />
+          <SummaryItem label={t("form.step5.items.careEnvironment")} value={formData.careEnvironment} />
           <SummaryItem label={t("form.step5.items.oldAgeIdeal")} value={formData.oldAgeIdeal} />
           <SummaryItem label={t("form.step5.items.oldAgePreparation")} value={formData.oldAgePreparation} />
         </div>
