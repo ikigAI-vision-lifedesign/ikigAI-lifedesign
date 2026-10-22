@@ -9,6 +9,7 @@ import FormStep2Page from "./pages/FormStep2Page";
 import FormStep3Page from "./pages/FormStep3Page";
 import FormStep4Page from "./pages/FormStep4Page";
 import FormStep5Page from "./pages/FormStep5Page";
+import FormStep6Page from "./pages/FormStep6Page";
 import LoadingPage from "./pages/LoadingPage";
 import ResultPage from "./pages/ResultPage";
 
@@ -44,6 +45,7 @@ const App: React.FC = () => {
         <Route path="/form/step3" element={<FormStep3Page />} />
         <Route path="/form/step4" element={<FormStep4Page />} />
         <Route path="/form/step5" element={<FormStep5Page />} />
+        <Route path="/form/step6" element={<FormStep6Page />} />
 
         {/* 処理 */}
         <Route path="/loading" element={<LoadingPage />} />

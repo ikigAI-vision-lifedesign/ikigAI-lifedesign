@@ -359,7 +359,7 @@ const FormStep4Page: React.FC = () => {
         >
           <div
             style={{
-              width: "80%",
+              width: "67%",
               height: "100%",
               background:
                 "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)",

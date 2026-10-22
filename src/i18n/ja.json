@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "STEP 1 / 5",
+      "stepLabel": "STEP 1 / 6",
       "title": "すきな雰囲気",
       "description": "ビジョンボードの仕上がりの雰囲気を決めましょう。\nあなた好みの雰囲気を選択することで、よりあなたらしい世界観に近づきます。",
       "imageStyle": "雰囲気を選択",
@@ -41,7 +41,7 @@
       "choosePrompt": "下から選んでください"
     },
     "step2": {
-      "stepLabel": "STEP 2 / 5",
+      "stepLabel": "STEP 2 / 6",
       "title": "あなたについて",
       "description": "あなたのことを教えてください。\n入力内容がビジョンボードに反映されます。",
       "fullName": "名前",
@@ -82,7 +82,7 @@
       "mbtiSelect": "選択してください"
     },
     "step3": {
-      "stepLabel": "STEP 3 / 5",
+      "stepLabel": "STEP 3 / 6",
       "title": "あなたらしさとビジョン",
       "description": "あなたの魅力と、これから歩みたい未来を聞かせてください。\n理想の未来を叶えるために、今できる一歩を考えてみましょう。",
       "selfExpression": "あなたらしさ",
@@ -93,7 +93,7 @@
       "descriptionSp": "あなたの魅力と、\nこれから歩みたい未来を聞かせてください。\n理想の未来を叶えるために、\n今できる一歩を考えてみましょう。"
     },
     "step4": {
-      "stepLabel": "STEP 4 / 5",
+      "stepLabel": "STEP 4 / 6",
       "title": "さらに深く描く",
       "lifeDesignTitle": "ライフデザイン",
       "description": "気になるテーマを開いて、理想を自由に描いてみましょう。",
@@ -165,7 +165,7 @@
       }
     },
     "step5": {
-      "stepLabel": "STEP 5 / 5",
+      "stepLabel": "STEP 6 / 6",
       "title": "入力内容の確認",
       "description": "入力内容を確認して、ビジョンボードを生成しましょう。",
       "generate": "生成する",
@@ -213,6 +213,13 @@
         "oldAgePreparation": "老後に向けて準備したいこと",
         "nextAction": "ネクストアクション"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "ネクストアクション",
+      "description": "理想の未来を叶えるために、今できる小さな一歩を考えてみましょう。",
+      "question": "今月中にできる小さな一歩は？",
+      "placeholder": "例：新しいルートを計画する、情報収集を始める"
     }
   },
   "loadingPage": {

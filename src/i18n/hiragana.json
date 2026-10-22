@@ -213,6 +213,13 @@
         "oldAgePreparation": "じゅんび",
         "nextAction": "つぎ"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "ネクストアクション",
+      "description": "りそうの みらいを かなえるために、いま できる ちいさな いっぽを かんがえてみよう。",
+      "question": "こんげつちゅうに できる ちいさな いっぽは？",
+      "placeholder": "れい：あたらしい ルートを かんがえる、しらべはじめる"
     }
   },
   "loadingPage": {

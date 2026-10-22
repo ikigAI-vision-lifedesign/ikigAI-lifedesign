@@ -124,8 +124,7 @@ const FormStep3Page: React.FC = () => {
       formData.selfExpression.trim() !== "" &&
       formData.idealVision.trim() !== "" &&
       formData.happyMoment.trim() !== "" &&
-      formData.strengths.trim() !== "" &&
-      formData.nextAction.trim() !== "";
+      formData.strengths.trim() !== "";
 
     setIsDisabled(!complete);
   }, [formData]);
@@ -226,7 +225,7 @@ const FormStep3Page: React.FC = () => {
         >
           <div
             style={{
-              width: "60%",
+              width: "50%",
               height: "100%",
               background:
                 "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)",
@@ -289,19 +288,6 @@ const FormStep3Page: React.FC = () => {
             value={formData.idealVision}
             onChange={handleChange}
             placeholder={t("form.step3.idealVisionPlaceholder")}
-            required
-          />
-
-          {/* 5. 今月中にできる小さな一歩は？ */}
-          <label style={labelStyle}>
-            {t("form.step4.nextAction.action")}
-            <RequiredBadge />
-          </label>
-          <textarea
-            name="nextAction"
-            value={formData.nextAction}
-            onChange={handleChange}
-            placeholder={t("form.step4.nextAction.actionPlaceholder")}
             required
           />
 

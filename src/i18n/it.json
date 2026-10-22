@@ -24,7 +24,7 @@
   },
   "form": {
     "step1": {
-      "stepLabel": "PASSO 1 / 5",
+      "stepLabel": "PASSO 1 / 6",
       "title": "Il tuo stile preferito",
       "description": "Definisci l’atmosfera generale della tua vision board.\nScegliere uno stile che ami la avvicina al tuo mondo.",
       "imageStyle": "Scegli uno stile",
@@ -41,7 +41,7 @@
       "choosePrompt": "Scegli uno stile qui sotto"
     },
     "step2": {
-      "stepLabel": "PASSO 2 / 5",
+      "stepLabel": "PASSO 2 / 6",
       "title": "Su di te",
       "description": "Raccontaci qualcosa di te.\nCiò che inserisci si rifletterà nella tua vision board.",
       "fullName": "Nome",
@@ -66,7 +66,7 @@
       "charmPointsPlaceholder": "es. sorriso, fossette, occhi grandi"
     },
     "step3": {
-      "stepLabel": "PASSO 3 / 5",
+      "stepLabel": "PASSO 3 / 6",
       "title": "Tu e il tuo futuro",
       "description": "Raccontaci i tuoi punti di forza e il futuro verso cui vuoi camminare.\nPoi pensa a un passo che puoi fare ora per realizzarlo.",
       "selfExpression": "Chi sei",
@@ -77,7 +77,7 @@
       "descriptionSp": "Raccontaci i tuoi punti di forza e il futuro verso cui vuoi camminare.\nPoi pensa a un passo che puoi fare ora per realizzarlo."
     },
     "step4": {
-      "stepLabel": "PASSO 4 / 5",
+      "stepLabel": "PASSO 4 / 6",
       "title": "Aggiungi più profondità",
       "lifeDesignTitle": "Life Design",
       "description": "Apri un tema che ti interessa e immagina liberamente il tuo ideale.",
@@ -149,7 +149,7 @@
       }
     },
     "step5": {
-      "stepLabel": "PASSO 5 / 5",
+      "stepLabel": "PASSO 6 / 6",
       "title": "Controlla le risposte",
       "description": "Controlla ciò che hai inserito e genera la tua vision board.",
       "generate": "Genera",
