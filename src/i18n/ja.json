@@ -107,13 +107,13 @@
       },
       "learn": {
         "title": "学び",
-        "helper": "これから学びたいことや、学ぶ理由を整理できます。",
+        "helper": "これから学びたいことや、学びの活かし方を整理できます。",
         "want": "何を学ぶ？",
         "wantPlaceholder": "例：英語、プログラミング、デザイン、心理学",
         "reason": "ずっと続けたいことは？",
         "reasonPlaceholder": "例：好きなこと、趣味、スポーツ、ものづくり",
-        "whenWhere": "いつ・どこで学びたいですか？",
-        "whenWherePlaceholder": "例：オンライン、週末、留学"
+        "whenWhere": "学んだことをどう活かしたい？",
+        "whenWherePlaceholder": "例：仕事に活かす、人に教える、作品をつくる、夢を叶える"
       },
       "work": {
         "title": "仕事",
@@ -217,7 +217,7 @@
         "strengths": "強み",
         "learnWant": "学びたいこと",
         "learnReason": "ずっと続けたいこと",
-        "learnWhenWhere": "いつ・どこで学びたいか",
+        "learnWhenWhere": "学びの活かし方",
         "workStyle": "仕事・働き方",
         "workValues": "仕事で大切にしていること",
         "workIdealIncomePlace": "理想の年収・働く場所",
@@ -243,7 +243,7 @@
       "stepLabel": "STEP 5 / 6",
       "title": "ネクストアクション",
       "description": "理想の未来を叶えるために、今できる小さな一歩を考えてみましょう。",
-      "question": "今月中にできる小さな一歩は？",
+      "question": "今週中にできる小さな一歩は？",
       "placeholder": "例：新しいルートを計画する、情報収集を始める"
     }
   },

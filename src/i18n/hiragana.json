@@ -107,13 +107,13 @@
       },
       "learn": {
         "title": "まなび",
-        "helper": "まなびたいこと",
+        "helper": "これから まなびたいことや、まなびの いかしかたを せいりできます。",
         "want": "なにを まなぶ？",
         "wantPlaceholder": "れい：えいご、プログラミング、デザイン",
         "reason": "ずっと つづけたいことは？",
         "reasonPlaceholder": "れい：すきなこと、しゅみ、スポーツ",
-        "whenWhere": "いつどこで？",
-        "whenWherePlaceholder": "れい：おうち"
+        "whenWhere": "まなんだことを どう いかしたい？",
+        "whenWherePlaceholder": "れい：しごとに いかす、ひとに おしえる、さくひんを つくる、ゆめを かなえる"
       },
       "work": {
         "title": "しごと",
@@ -217,7 +217,7 @@
         "strengths": "とくい",
         "learnWant": "まなび",
         "learnReason": "ずっと つづけたいこと",
-        "learnWhenWhere": "ばしょ",
+        "learnWhenWhere": "まなびの いかしかた",
         "workStyle": "しごと",
         "workValues": "たいせつ",
         "workIdealIncomePlace": "おかね",
@@ -243,7 +243,7 @@
       "stepLabel": "STEP 5 / 6",
       "title": "ネクストアクション",
       "description": "りそうの みらいを かなえるために、いま できる ちいさな いっぽを かんがえてみよう。",
-      "question": "こんげつちゅうに できる ちいさな いっぽは？",
+      "question": "こんしゅうちゅうに できる ちいさな いっぽは？",
       "placeholder": "れい：あたらしい ルートを かんがえる、しらべはじめる"
     }
   },

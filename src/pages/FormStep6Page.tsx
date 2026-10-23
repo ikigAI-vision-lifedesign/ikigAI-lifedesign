@@ -275,6 +275,7 @@ const FormStep6Page: React.FC = () => {
           <h3 style={sectionTitleStyle}>{t("form.step5.sections.lifeDesign")}</h3>
           <SummaryItem label={t("form.step5.items.learnWant")} value={formData.learnWant} />
           <SummaryItem label={t("form.step5.items.learnReason")} value={formData.learnReason} />
+          <SummaryItem label={t("form.step5.items.learnWhenWhere")} value={formData.learnWhenWhere} />
           <SummaryItem label={t("form.step5.items.workStyle")} value={formData.workStyle} />
           <SummaryItem label={t("form.step5.items.workValues")} value={formData.workValues} />
           <SummaryItem label={t("form.step5.items.workIdealIncomePlace")} value={formData.workIdealIncomePlace} />

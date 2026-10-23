@@ -502,6 +502,14 @@ const FormStep4Page: React.FC = () => {
                     onChange={handleChange}
                     placeholder={t("form.step4.learn.reasonPlaceholder")}
                   />
+
+                  <label style={labelStyle}>{t("form.step4.learn.whenWhere")}</label>
+                  <textarea
+                    name="learnWhenWhere"
+                    value={formData.learnWhenWhere}
+                    onChange={handleChange}
+                    placeholder={t("form.step4.learn.whenWherePlaceholder")}
+                  />
                 </div>
               )}
             </div>
