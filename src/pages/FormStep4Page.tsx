@@ -7,6 +7,7 @@ import topBanner from "../assets/header.png";
 import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import StepNavigation from "../components/StepNavigation";
+import StepHint from "../components/StepHint";
 import lifeDesignMap from "../assets/lifedesign-map.webp";
 import { theme } from "../theme";
 
@@ -395,6 +396,8 @@ const FormStep4Page: React.FC = () => {
             }}
           />
         </div>
+
+        <StepHint text={t("hints.steps.step4")} />
 
         <form onSubmit={handleNext}>
           <div style={groupCardStyle}>

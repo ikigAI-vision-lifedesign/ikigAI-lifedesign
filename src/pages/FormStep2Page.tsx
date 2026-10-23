@@ -10,6 +10,8 @@ import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import RequiredBadge from "../components/RequiredBadge";
 import StepNavigation from "../components/StepNavigation";
+import StepHint from "../components/StepHint";
+import FieldHint from "../components/FieldHint";
 import { theme } from "../theme";
 
 const STORAGE_KEY = "visionBoardFormData";
@@ -266,6 +268,8 @@ const FormStep2Page: React.FC = () => {
           <div style={{ width: "33%", height: "100%", background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)" }} />
         </div>
 
+        <StepHint text={t("hints.steps.step2")} />
+
         <form onSubmit={handleNext}>
           {/* 基本情報 */}
           <label style={labelStyle}>
@@ -319,24 +323,28 @@ const FormStep2Page: React.FC = () => {
             <label style={labelStyle}>
               {t("form.step2.favoriteColors")}
               <RequiredBadge />
+              <FieldHint text={t("hints.fields.favoriteColors")} />
             </label>
             <input type="text" name="favoriteColors" value={formData.favoriteColors} onChange={handleInputChange} required placeholder={t("form.step2.favoriteColorsPlaceholder")} />
 
             <label style={labelStyle}>
               {t("form.step2.charmPoints")}
               <RequiredBadge />
+              <FieldHint text={t("hints.fields.charmPoints")} />
             </label>
             <input type="text" name="charmPoints" value={formData.charmPoints} onChange={handleInputChange} required placeholder={t("form.step2.charmPointsPlaceholder")} />
 
             <label style={labelStyle}>
               {t("form.step2.personality")}
               <RequiredBadge />
+              <FieldHint text={t("hints.fields.personality")} />
             </label>
             <input type="text" name="personality" value={formData.personality} onChange={handleInputChange} required placeholder={t("form.step2.personalityPlaceholder")} />
 
             <label style={labelStyle}>
               {t("form.step2.praisedFor")}
               <RequiredBadge />
+              <FieldHint text={t("hints.fields.praisedFor")} />
             </label>
             <input type="text" name="praisedFor" value={formData.praisedFor} onChange={handleInputChange} required placeholder={t("form.step2.praisedForPlaceholder")} />
 
@@ -376,12 +384,14 @@ const FormStep2Page: React.FC = () => {
             <label style={labelStyle}>
               {t("form.step2.favoriteFood")}
               <RequiredBadge />
+              <FieldHint text={t("hints.fields.favoriteFood")} />
             </label>
             <input type="text" name="favoriteFood" value={formData.favoriteFood} onChange={handleInputChange} required placeholder={t("form.step2.favoriteFoodPlaceholder")} />
 
             <label style={labelStyle}>
               {t("form.step2.mostWanted")}
               <RequiredBadge />
+              <FieldHint text={t("hints.fields.mostWanted")} />
             </label>
             <input type="text" name="mostWanted" value={formData.mostWanted} onChange={handleInputChange} required placeholder={t("form.step2.mostWantedPlaceholder")} />
 

@@ -10,6 +10,7 @@ import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import RequiredBadge from "../components/RequiredBadge";
 import StepNavigation from "../components/StepNavigation";
+import StepHint from "../components/StepHint";
 import { theme } from "../theme";
 
 import styleWatercolor from "../assets/styles/style-watercolor.webp";
@@ -136,6 +137,8 @@ const FormStep1Page: React.FC = () => {
         >
           <div style={{ width: "17%", height: "100%", background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)" }} />
         </div>
+
+        <StepHint text={t("hints.steps.step1")} />
 
         <form onSubmit={handleNext}>
           <label style={labelStyle}>
