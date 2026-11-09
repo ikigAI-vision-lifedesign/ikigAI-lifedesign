@@ -63,7 +63,25 @@
       "hairAppearance": "Cabello / apariencia",
       "hairAppearancePlaceholder": "ej: cabello largo negro, rizado, alto",
       "charmPoints": "Atributos / rasgos",
-      "charmPointsPlaceholder": "ej: sonrisa, hoyuelos, ojos grandes"
+      "charmPointsPlaceholder": "ej: sonrisa, hoyuelos, ojos grandes",
+      "profileTitle": "Tu perfil",
+      "profileNote": "Complétalo libremente, a tu manera.",
+      "personality": "Personalidad",
+      "personalityPlaceholder": "p. ej. alegre, tranquilo, competitivo",
+      "praisedFor": "Aquello por lo que te elogian",
+      "praisedForPlaceholder": "p. ej. atención a los demás, concentración, tu voz",
+      "photo": "Una foto favorita",
+      "photoNote": "Elige una foto en la que salgas solo/a, de frente y con la cara bien visible. La usaremos para crear tu vision board.",
+      "photoSelect": "Elegir foto",
+      "photoChange": "Cambiar foto",
+      "photoRemove": "Quitar",
+      "photoError": "No se pudo cargar la foto. Prueba con otra imagen.",
+      "favoriteFood": "Comida favorita",
+      "favoriteFoodPlaceholder": "p. ej. ramen, fresas, chocolate",
+      "mostWanted": "Lo que más deseas ahora mismo",
+      "mostWantedPlaceholder": "p. ej. tiempo libre, una computadora nueva, valor",
+      "mbti": "MBTI",
+      "mbtiSelect": "Selecciona"
     },
     "step3": {
       "stepLabel": "PASO 3 / 6",
@@ -123,7 +141,15 @@
         "idealRelation": "Relación ideal",
         "idealRelationPlaceholder": "ej: apoyo mutuo",
         "thoughts": "Sobre matrimonio",
-        "thoughtsPlaceholder": "ej: quiero casarme"
+        "thoughtsPlaceholder": "ej: quiero casarme",
+        "daily": "¿Qué día a día quieres compartir con tu pareja?",
+        "dailyPlaceholder": "p. ej. comer juntos, disfrutar de viajes, compartir aficiones, cuidar también el tiempo propio",
+        "values": "¿Qué valores quieres cuidar en la vida en pareja?",
+        "valuesPlaceholder": "p. ej. confianza, cariño, libertad, igualdad, familia, reto",
+        "roles": "¿Cómo quieres repartir el dinero, el trabajo, las tareas y la crianza?",
+        "rolesPlaceholder": "p. ej. ambos trabajando, gestión del dinero, reparto de tareas, tener hijos o no, apoyar la carrera",
+        "future": "¿Qué futuro quieren lograr juntos?",
+        "futurePlaceholder": "p. ej. dónde vivir, la vida ideal, retos, el sentido de familia, ustedes dentro de 10 años"
       },
       "child": {
         "title": "Hijos",
@@ -146,6 +172,16 @@
         "helper": "Pequeña acción del mes.",
         "action": "Próximo paso・¿Qué harás?",
         "actionPlaceholder": "ej: empezar a investigar"
+      },
+      "care": {
+        "title": "Cuidados",
+        "helper": "Ordena tus ideas sobre los cuidados y la preparación para el futuro.",
+        "style": "¿Qué tipo de cuidados quieres?",
+        "stylePlaceholder": "p. ej. cuidado en casa, en un centro, con apoyo de la familia",
+        "values": "¿Qué quieres valorar en los cuidados?",
+        "valuesPlaceholder": "p. ej. la voluntad de la persona, la dignidad, una vida propia, el tiempo en familia",
+        "environment": "¿Tu entorno y apoyo ideales para los cuidados?",
+        "environmentPlaceholder": "p. ej. colaboración familiar, apoyo profesional, holgura económica, conciliación con el trabajo"
       }
     },
     "step5": {
@@ -190,8 +226,28 @@
         "childValues": "Valores en la crianza",
         "oldAgeIdeal": "Vida ideal en la vejez",
         "oldAgePreparation": "Preparación para la vejez",
-        "nextAction": "Próximo paso"
+        "nextAction": "Próximo paso",
+        "personality": "Personalidad",
+        "praisedFor": "Aquello por lo que te elogian",
+        "photo": "Una foto favorita",
+        "favoriteFood": "Comida favorita",
+        "mostWanted": "Lo que más deseas ahora",
+        "mbti": "MBTI",
+        "marriageDaily": "El día a día deseado",
+        "marriageValues": "Los valores que cuidas",
+        "marriageRoles": "Reparto de dinero, trabajo, tareas e hijos",
+        "marriageFuture": "El futuro a lograr juntos",
+        "careStyle": "Los cuidados deseados",
+        "careValues": "Lo que importa en los cuidados",
+        "careEnvironment": "Entorno de cuidados ideal"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "Próxima acción",
+      "description": "Para lograr tu futuro ideal, piensa en un pequeño paso que puedas dar ahora.",
+      "question": "¿Qué pequeño paso puedes dar esta semana?",
+      "placeholder": "p. ej. planear una nueva ruta, empezar a buscar información"
     }
   },
   "loadingPage": {
@@ -202,7 +258,11 @@
       "Casi listo..."
     ],
     "errors": {
-      "sessionExpired": "Tu sesión expiró. Vuelve a ingresar el código de acceso."
+      "sessionExpired": "Tu sesión expiró. Vuelve a ingresar el código de acceso.",
+      "missingData": "No se encontraron datos introducidos.",
+      "imageGenerationFailed": "Falló la generación de la imagen.",
+      "dbSaveFailed": "Error al guardar en la base de datos: {{message}}",
+      "generationFailed": "La generación falló. Inténtalo de nuevo."
     },
     "retry": "Intentar de nuevo",
     "generatingTitle": "Generando tu imagen",
@@ -264,7 +324,39 @@
     },
     "lineCta": "Síguenos en LINE",
     "instaCta": "Síguenos en Instagram",
-    "xCta": "Síguenos en X"
+    "xCta": "Síguenos en X",
+    "subtitle": "¡Usa tu vision board para reflexionar sobre tu presente y tu futuro!",
+    "generatedImageAlt": "Imagen del vision board generada",
+    "expandedImageAlt": "Imagen del vision board ampliada",
+    "closeModal": "Cerrar imagen",
+    "noImage": "No se encontró ninguna imagen generada.",
+    "share": {
+      "text": "¡He creado un vision board con IA!",
+      "hashtags": "VisionBoardIA,ikigAI",
+      "linkCopied": "¡Enlace copiado!",
+      "linkCopiedForInstagram": "Enlace copiado. Abriendo Instagram.",
+      "copyFailed": "No se pudo copiar.",
+      "downloadFailed": "No se pudo guardar la imagen."
+    },
+    "feedback": {
+      "thankYou": "Gracias por tu opinión",
+      "saved": "Tu respuesta se ha guardado.",
+      "satisfaction": "¿Qué te ha parecido tu vision board esta vez?",
+      "reasonLabel": "Cuéntanos qué te ha gustado y qué podría mejorar de la app de vision board (opcional)",
+      "reasonPlaceholder": "Escribe libremente lo que te gustó o lo que cambiarías.",
+      "submit": "Enviar",
+      "submitting": "Enviando...",
+      "selectRatingAlert": "Selecciona un nivel de satisfacción.",
+      "submitFailed": "No se pudo enviar tu respuesta.\nMotivo: {{message}}",
+      "options": {
+        "verySatisfied": "Muy satisfecho/a",
+        "satisfied": "Satisfecho/a",
+        "neutral": "Normal",
+        "unsatisfied": "Algo insatisfecho/a",
+        "veryUnsatisfied": "Insatisfecho/a"
+      }
+    },
+    "createAgain": "Crear otro vision board"
   },
   "language": {
     "title": "Seleccionar idioma",
@@ -289,11 +381,21 @@
     "subtitle": "Da el primer paso para diseñar tu vida",
     "what": {
       "q": "(¿En qué pensar?)",
-      "body": "Pon en palabras tus valores, lo que te gusta y tu futuro ideal"
+      "body": "Pon en palabras tus valores, lo que te gusta y tu futuro ideal",
+      "items": [
+        "Valores que son fieles a ti",
+        "Lo que te gusta",
+        "Tu futuro ideal"
+      ]
     },
     "why": {
       "q": "(¿Por qué pensarlo?)",
-      "body": "Cuando ves lo que amas y valoras, elegir en la vida se vuelve más fácil"
+      "body": "Cuando ves lo que amas y valoras, elegir en la vida se vuelve más fácil",
+      "items": [
+        "Descubrir una forma de vivir con la que estés en paz",
+        "Tomar las decisiones de la vida con más facilidad",
+        "Mirar tu propia vida con otros ojos"
+      ]
     },
     "outcome": {
       "q": "(Qué obtienes)",

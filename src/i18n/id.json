@@ -63,7 +63,25 @@
       "hairAppearance": "Rambut / Penampilan",
       "hairAppearancePlaceholder": "contoh: rambut hitam panjang, rambut keriting, tinggi",
       "charmPoints": "Daya tarik / ciri khas",
-      "charmPointsPlaceholder": "contoh: senyum, lesung pipi, mata besar"
+      "charmPointsPlaceholder": "contoh: senyum, lesung pipi, mata besar",
+      "profileTitle": "Profilmu",
+      "profileNote": "Isi dengan bebas, sesuai dirimu.",
+      "personality": "Kepribadian",
+      "personalityPlaceholder": "mis. ceria, santai, pantang kalah",
+      "praisedFor": "Hal yang sering dipuji orang",
+      "praisedForPlaceholder": "mis. perhatian, fokus, suaramu",
+      "photo": "Foto favorit",
+      "photoNote": "Pilih foto yang hanya menampilkan dirimu, menghadap ke depan dengan wajah terlihat jelas. Akan kami gunakan untuk membuat vision board-mu.",
+      "photoSelect": "Pilih foto",
+      "photoChange": "Ganti foto",
+      "photoRemove": "Hapus",
+      "photoError": "Gagal memuat foto. Coba gambar lain.",
+      "favoriteFood": "Makanan favorit",
+      "favoriteFoodPlaceholder": "mis. ramen, stroberi, cokelat",
+      "mostWanted": "Yang paling kamu inginkan sekarang",
+      "mostWantedPlaceholder": "mis. waktu luang, PC baru, keberanian",
+      "mbti": "MBTI",
+      "mbtiSelect": "Silakan pilih"
     },
     "step3": {
       "stepLabel": "LANGKAH 3 / 6",
@@ -123,7 +141,15 @@
         "idealRelation": "Hubungan ideal",
         "idealRelationPlaceholder": "contoh: saling mendukung",
         "thoughts": "Pendapat tentang pernikahan",
-        "thoughtsPlaceholder": "contoh: ingin menikah"
+        "thoughtsPlaceholder": "contoh: ingin menikah",
+        "daily": "Keseharian seperti apa yang ingin kamu jalani dengan pasangan?",
+        "dailyPlaceholder": "mis. makan bersama, menikmati perjalanan, berbagi hobi, tetap menghargai waktu masing-masing",
+        "values": "Nilai apa yang ingin kamu jaga dalam kehidupan pernikahan?",
+        "valuesPlaceholder": "mis. kepercayaan, kasih sayang, kebebasan, kesetaraan, keluarga, tantangan",
+        "roles": "Bagaimana kamu ingin membagi uang, pekerjaan, urusan rumah, dan pengasuhan?",
+        "rolesPlaceholder": "mis. sama-sama bekerja, pengelolaan keuangan, pembagian tugas rumah, punya anak atau tidak, mendukung karier",
+        "future": "Masa depan seperti apa yang ingin kalian wujudkan bersama?",
+        "futurePlaceholder": "mis. tempat tinggal, kehidupan ideal, hal yang ingin dicoba, bentuk keluarga, kalian berdua 10 tahun lagi"
       },
       "child": {
         "title": "Anak",
@@ -146,6 +172,16 @@
         "helper": "Langkah kecil yang bisa dilakukan bulan ini.",
         "action": "Langkah Berikutnya・Apa yang akan Anda lakukan?",
         "actionPlaceholder": "contoh: mulai riset"
+      },
+      "care": {
+        "title": "Perawatan",
+        "helper": "Tata pandanganmu tentang perawatan dan persiapan ke depan.",
+        "style": "Perawatan seperti apa yang kamu inginkan?",
+        "stylePlaceholder": "mis. perawatan di rumah, di fasilitas, dukungan keluarga",
+        "values": "Apa yang ingin kamu utamakan dalam perawatan?",
+        "valuesPlaceholder": "mis. keinginan orang tersebut, martabat, hidup sesuai jati diri, waktu bersama keluarga",
+        "environment": "Lingkungan dan dukungan perawatan idealmu?",
+        "environmentPlaceholder": "mis. kerja sama keluarga, dukungan profesional, keleluasaan finansial, seimbang dengan pekerjaan"
       }
     },
     "step5": {
@@ -190,8 +226,28 @@
         "childValues": "Nilai dalam mengasuh anak",
         "oldAgeIdeal": "Masa tua ideal",
         "oldAgePreparation": "Persiapan masa tua",
-        "nextAction": "Langkah berikutnya"
+        "nextAction": "Langkah berikutnya",
+        "personality": "Kepribadian",
+        "praisedFor": "Hal yang sering dipuji orang",
+        "photo": "Foto favorit",
+        "favoriteFood": "Makanan favorit",
+        "mostWanted": "Yang paling diinginkan sekarang",
+        "mbti": "MBTI",
+        "marriageDaily": "Keseharian yang diinginkan",
+        "marriageValues": "Nilai yang dijaga",
+        "marriageRoles": "Pembagian uang, kerja, rumah & anak",
+        "marriageFuture": "Masa depan yang diwujudkan bersama",
+        "careStyle": "Perawatan yang diinginkan",
+        "careValues": "Hal penting dalam perawatan",
+        "careEnvironment": "Lingkungan perawatan ideal"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "Langkah berikutnya",
+      "description": "Untuk mewujudkan masa depan idealmu, pikirkan satu langkah kecil yang bisa kamu lakukan sekarang.",
+      "question": "Langkah kecil apa yang bisa kamu lakukan minggu ini?",
+      "placeholder": "mis. merencanakan rute baru, mulai mengumpulkan informasi"
     }
   },
   "loadingPage": {
@@ -202,7 +258,11 @@
       "Hampir selesai..."
     ],
     "errors": {
-      "sessionExpired": "Sesi Anda telah berakhir. Silakan masukkan kode akses lagi."
+      "sessionExpired": "Sesi Anda telah berakhir. Silakan masukkan kode akses lagi.",
+      "missingData": "Data masukan tidak ditemukan.",
+      "imageGenerationFailed": "Pembuatan gambar gagal.",
+      "dbSaveFailed": "Gagal menyimpan ke basis data: {{message}}",
+      "generationFailed": "Pembuatan gagal. Silakan coba lagi."
     },
     "retry": "Coba lagi",
     "generatingTitle": "Membuat gambarmu",
@@ -264,7 +324,39 @@
     },
     "lineCta": "Tambahkan kami di LINE",
     "instaCta": "Ikuti kami di Instagram",
-    "xCta": "Ikuti kami di X"
+    "xCta": "Ikuti kami di X",
+    "subtitle": "Gunakan vision board-mu untuk merenungkan masa kini dan masa depanmu!",
+    "generatedImageAlt": "Gambar vision board yang dibuat",
+    "expandedImageAlt": "Gambar vision board diperbesar",
+    "closeModal": "Tutup gambar",
+    "noImage": "Gambar yang dibuat tidak ditemukan.",
+    "share": {
+      "text": "Aku membuat vision board dengan AI!",
+      "hashtags": "AIVisionBoard,ikigAI",
+      "linkCopied": "Tautan disalin!",
+      "linkCopiedForInstagram": "Tautan disalin. Membuka Instagram.",
+      "copyFailed": "Gagal menyalin.",
+      "downloadFailed": "Gagal menyimpan gambar."
+    },
+    "feedback": {
+      "thankYou": "Terima kasih atas masukanmu",
+      "saved": "Jawabanmu telah disimpan.",
+      "satisfaction": "Bagaimana vision board-mu kali ini?",
+      "reasonLabel": "Beri tahu kami apa yang kamu suka dan apa yang bisa diperbaiki dari aplikasi vision board (opsional)",
+      "reasonPlaceholder": "Silakan tulis hal yang kamu suka atau ingin diubah.",
+      "submit": "Kirim",
+      "submitting": "Mengirim...",
+      "selectRatingAlert": "Silakan pilih tingkat kepuasan.",
+      "submitFailed": "Gagal mengirim jawabanmu.\nAlasan: {{message}}",
+      "options": {
+        "verySatisfied": "Sangat puas",
+        "satisfied": "Puas",
+        "neutral": "Biasa saja",
+        "unsatisfied": "Agak tidak puas",
+        "veryUnsatisfied": "Tidak puas"
+      }
+    },
+    "createAgain": "Buat vision board lagi"
   },
   "language": {
     "title": "Pilih Bahasa",
@@ -285,11 +377,21 @@
     "subtitle": "Ambil langkah pertama untuk merancang hidupmu",
     "what": {
       "q": "(Apa yang dipikirkan?)",
-      "body": "Ungkapkan nilai-nilaimu, hal yang kamu sukai, dan masa depan idealmu dalam kata-kata"
+      "body": "Ungkapkan nilai-nilaimu, hal yang kamu sukai, dan masa depan idealmu dalam kata-kata",
+      "items": [
+        "Nilai yang sesuai dirimu",
+        "Hal yang kamu sukai",
+        "Masa depan idealmu"
+      ]
     },
     "why": {
       "q": "(Mengapa memikirkannya?)",
-      "body": "Saat kamu melihat apa yang kamu sukai dan hargai, pilihan hidup jadi lebih mudah"
+      "body": "Saat kamu melihat apa yang kamu sukai dan hargai, pilihan hidup jadi lebih mudah",
+      "items": [
+        "Menemukan cara hidup yang membuatmu tenang",
+        "Membuat pilihan hidup jadi lebih mudah",
+        "Melihat kembali hidupmu dengan cara baru"
+      ]
     },
     "outcome": {
       "q": "(Yang kamu dapatkan)",

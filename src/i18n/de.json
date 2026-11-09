@@ -63,7 +63,25 @@
       "hairAppearance": "Haare / Aussehen",
       "hairAppearancePlaceholder": "z. B. lange schwarze Haare, lockige Haare, groß",
       "charmPoints": "Charme / besondere Merkmale",
-      "charmPointsPlaceholder": "z. B. Lächeln, Grübchen, große Augen"
+      "charmPointsPlaceholder": "z. B. Lächeln, Grübchen, große Augen",
+      "profileTitle": "Dein Profil",
+      "profileNote": "Fülle es frei aus, so wie es zu dir passt.",
+      "personality": "Persönlichkeit",
+      "personalityPlaceholder": "z. B. fröhlich, gelassen, ehrgeizig",
+      "praisedFor": "Wofür dich andere loben",
+      "praisedForPlaceholder": "z. B. Aufmerksamkeit, Konzentration, deine Stimme",
+      "photo": "Ein Lieblingsfoto",
+      "photoNote": "Bitte wähle ein Foto, auf dem nur du zu sehen bist, nach vorn gewandt und mit gut erkennbarem Gesicht. Wir nutzen es zum Erstellen deines Vision Boards.",
+      "photoSelect": "Foto auswählen",
+      "photoChange": "Foto ändern",
+      "photoRemove": "Entfernen",
+      "photoError": "Das Foto konnte nicht geladen werden. Bitte versuche ein anderes Bild.",
+      "favoriteFood": "Lieblingsessen",
+      "favoriteFoodPlaceholder": "z. B. Ramen, Erdbeeren, Schokolade",
+      "mostWanted": "Was du dir gerade am meisten wünschst",
+      "mostWantedPlaceholder": "z. B. freie Zeit, ein neuer PC, Mut",
+      "mbti": "MBTI",
+      "mbtiSelect": "Bitte auswählen"
     },
     "step3": {
       "stepLabel": "SCHRITT 3 / 6",
@@ -123,7 +141,15 @@
         "idealRelation": "Wie sieht deine ideale Beziehung mit einem Partner aus?",
         "idealRelationPlaceholder": "z. B. unterstützend, respektvoll, fröhlich",
         "thoughts": "Was denkst du über Ehe oder Zusammenleben?",
-        "thoughtsPlaceholder": "z. B. Ich möchte heiraten, ich möchte zuerst Zusammenleben überlegen"
+        "thoughtsPlaceholder": "z. B. Ich möchte heiraten, ich möchte zuerst Zusammenleben überlegen",
+        "daily": "Welchen Alltag möchtest du mit deinem Partner teilen?",
+        "dailyPlaceholder": "z. B. gemeinsam essen, Reisen genießen, Hobbys teilen, auch eigene Zeit schätzen",
+        "values": "Welche Werte sind dir im Eheleben wichtig?",
+        "valuesPlaceholder": "z. B. Vertrauen, Zuneigung, Freiheit, Gleichwertigkeit, Familie, Mut",
+        "roles": "Wie möchtest du Geld, Arbeit, Haushalt und Kindererziehung aufteilen?",
+        "rolesPlaceholder": "z. B. beide berufstätig, Umgang mit Finanzen, Haushalt teilen, ob Kinder, Karriere fördern",
+        "future": "Welche Zukunft möchtet ihr gemeinsam verwirklichen?",
+        "futurePlaceholder": "z. B. Wohnort, ideales Leben, Vorhaben, Familienbild, ihr beide in 10 Jahren"
       },
       "child": {
         "title": "Kinder / Erziehung",
@@ -146,6 +172,16 @@
         "helper": "Ein kleiner Schritt, den du diesen Monat tun kannst, macht Handeln leichter.",
         "action": "Nächste Aktion・Welchen kleinen Schritt kannst du diesen Monat tun?",
         "actionPlaceholder": "z. B. eine neue Route planen, Informationen sammeln"
+      },
+      "care": {
+        "title": "Pflege",
+        "helper": "Ordne deine Gedanken zur Pflege und zur Vorsorge für die Zukunft.",
+        "style": "Welche Art von Pflege möchtest du?",
+        "stylePlaceholder": "z. B. Pflege zu Hause, Pflege in einer Einrichtung, Unterstützung durch die Familie",
+        "values": "Was ist dir bei der Pflege wichtig?",
+        "valuesPlaceholder": "z. B. der Wille der Person, Würde, ein selbstbestimmtes Leben, Zeit mit der Familie",
+        "environment": "Dein ideales Pflegeumfeld und deine Unterstützung?",
+        "environmentPlaceholder": "z. B. Zusammenarbeit mit der Familie, professionelle Hilfe, finanzieller Spielraum, Vereinbarkeit mit der Arbeit"
       }
     },
     "step5": {
@@ -190,8 +226,28 @@
         "childValues": "Werte in der Erziehung",
         "oldAgeIdeal": "Ideales späteres Leben",
         "oldAgePreparation": "Vorbereitung für später",
-        "nextAction": "Nächste Aktion"
+        "nextAction": "Nächste Aktion",
+        "personality": "Persönlichkeit",
+        "praisedFor": "Wofür dich andere loben",
+        "photo": "Ein Lieblingsfoto",
+        "favoriteFood": "Lieblingsessen",
+        "mostWanted": "Was du dir gerade am meisten wünschst",
+        "mbti": "MBTI",
+        "marriageDaily": "Gewünschter Alltag",
+        "marriageValues": "Werte, die dir wichtig sind",
+        "marriageRoles": "Aufteilung von Geld, Arbeit, Haushalt & Kindern",
+        "marriageFuture": "Gemeinsam zu verwirklichende Zukunft",
+        "careStyle": "Gewünschte Pflege",
+        "careValues": "Was bei der Pflege zählt",
+        "careEnvironment": "Ideales Pflegeumfeld"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "Nächster Schritt",
+      "description": "Überlege dir einen kleinen Schritt, den du jetzt gehen kannst, um deine ideale Zukunft wahr werden zu lassen.",
+      "question": "Welcher kleine Schritt gelingt dir noch diese Woche?",
+      "placeholder": "z. B. eine neue Route planen, mit dem Sammeln von Infos beginnen"
     }
   },
   "loadingPage": {
@@ -298,7 +354,9 @@
     },
     "lineCta": "Füge uns auf LINE hinzu",
     "instaCta": "Folge uns auf Instagram",
-    "xCta": "Folge uns auf X"
+    "xCta": "Folge uns auf X",
+    "subtitle": "Nutze dein Vision Board, um über dein Jetzt und deine Zukunft nachzudenken!",
+    "createAgain": "Noch ein Vision Board erstellen"
   },
   "language": {
     "title": "Sprache auswählen",
@@ -317,11 +375,21 @@
     "subtitle": "Mach den ersten Schritt, um dein Leben zu gestalten",
     "what": {
       "q": "(Worüber nachdenken?)",
-      "body": "Bring deine Werte, das, was du liebst, und deine ideale Zukunft in Worte"
+      "body": "Bring deine Werte, das, was du liebst, und deine ideale Zukunft in Worte",
+      "items": [
+        "Werte, die zu dir passen",
+        "Dinge, die du liebst",
+        "Deine ideale Zukunft"
+      ]
     },
     "why": {
       "q": "(Warum nachdenken?)",
-      "body": "Wenn du siehst, was du liebst und schätzt, fallen Entscheidungen im Leben leichter"
+      "body": "Wenn du siehst, was du liebst und schätzt, fallen Entscheidungen im Leben leichter",
+      "items": [
+        "Eine Lebensweise entdecken, mit der du im Reinen bist",
+        "Entscheidungen im Leben leichter treffen",
+        "Dein eigenes Leben neu betrachten"
+      ]
     },
     "outcome": {
       "q": "(Was du gewinnst)",

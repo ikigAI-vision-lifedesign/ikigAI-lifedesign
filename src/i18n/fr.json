@@ -63,7 +63,25 @@
       "hairAppearance": "Cheveux / apparence",
       "hairAppearancePlaceholder": "ex. cheveux longs noirs, cheveux bouclés, grande taille",
       "charmPoints": "Charme / traits distinctifs",
-      "charmPointsPlaceholder": "ex. sourire, fossettes, grands yeux"
+      "charmPointsPlaceholder": "ex. sourire, fossettes, grands yeux",
+      "profileTitle": "Ton profil",
+      "profileNote": "Remplis-le librement, à ton image.",
+      "personality": "Personnalité",
+      "personalityPlaceholder": "p. ex. joyeux, décontracté, compétitif",
+      "praisedFor": "Ce pour quoi on te complimente",
+      "praisedForPlaceholder": "p. ex. attention aux autres, concentration, ta voix",
+      "photo": "Une photo préférée",
+      "photoNote": "Choisis une photo où tu es seul(e), de face et le visage bien visible. Nous l'utiliserons pour créer ton vision board.",
+      "photoSelect": "Choisir une photo",
+      "photoChange": "Changer la photo",
+      "photoRemove": "Supprimer",
+      "photoError": "Échec du chargement de la photo. Essaie une autre image.",
+      "favoriteFood": "Plat préféré",
+      "favoriteFoodPlaceholder": "p. ex. ramen, fraises, chocolat",
+      "mostWanted": "Ce que tu désires le plus en ce moment",
+      "mostWantedPlaceholder": "p. ex. du temps libre, un nouvel ordinateur, du courage",
+      "mbti": "MBTI",
+      "mbtiSelect": "Sélectionne"
     },
     "step3": {
       "stepLabel": "ÉTAPE 3 / 6",
@@ -123,7 +141,15 @@
         "idealRelation": "Quelle est votre relation idéale avec un partenaire ?",
         "idealRelationPlaceholder": "ex. relation de soutien, respectueuse, joyeuse",
         "thoughts": "Que pensez-vous du mariage ou de la vie commune ?",
-        "thoughtsPlaceholder": "ex. je veux me marier, je veux d’abord envisager la vie commune"
+        "thoughtsPlaceholder": "ex. je veux me marier, je veux d’abord envisager la vie commune",
+        "daily": "Quel quotidien veux-tu partager avec ton partenaire ?",
+        "dailyPlaceholder": "p. ex. manger ensemble, voyager, partager des loisirs, préserver aussi son propre temps",
+        "values": "Quelles valeurs comptent dans la vie de couple ?",
+        "valuesPlaceholder": "p. ex. confiance, affection, liberté, égalité, famille, défi",
+        "roles": "Comment veux-tu répartir l'argent, le travail, les tâches et les enfants ?",
+        "rolesPlaceholder": "p. ex. deux salaires, gestion du budget, partage des tâches, avoir ou non des enfants, soutenir les carrières",
+        "future": "Quel avenir voulez-vous réaliser ensemble ?",
+        "futurePlaceholder": "p. ex. où vivre, le mode de vie idéal, des défis, la place de la famille, vous deux dans 10 ans"
       },
       "child": {
         "title": "Enfants / parentalité",
@@ -146,6 +172,16 @@
         "helper": "Écrire un petit pas réalisable ce mois-ci facilite le passage à l’action.",
         "action": "Prochaine action・Quel petit pas pouvez-vous faire ce mois-ci ?",
         "actionPlaceholder": "ex. planifier un nouvel itinéraire, commencer à chercher des informations"
+      },
+      "care": {
+        "title": "Aide aux proches",
+        "helper": "Clarifie tes réflexions sur l'aide aux proches et la préparation de l'avenir.",
+        "style": "Quel type d'accompagnement souhaites-tu ?",
+        "stylePlaceholder": "p. ex. à domicile, en établissement, avec le soutien de la famille",
+        "values": "Qu'est-ce qui compte pour toi dans l'accompagnement ?",
+        "valuesPlaceholder": "p. ex. la volonté de la personne, la dignité, une vie à son image, le temps en famille",
+        "environment": "Ton environnement et ton soutien idéaux pour l'accompagnement ?",
+        "environmentPlaceholder": "p. ex. coopération familiale, soutien professionnel, marge financière, équilibre avec le travail"
       }
     },
     "step5": {
@@ -190,8 +226,28 @@
         "childValues": "Valeurs dans l’éducation",
         "oldAgeIdeal": "Vie idéale plus tard",
         "oldAgePreparation": "Préparation pour plus tard",
-        "nextAction": "Prochaine action"
+        "nextAction": "Prochaine action",
+        "personality": "Personnalité",
+        "praisedFor": "Ce pour quoi on te complimente",
+        "photo": "Une photo préférée",
+        "favoriteFood": "Plat préféré",
+        "mostWanted": "Ce que tu désires le plus",
+        "mbti": "MBTI",
+        "marriageDaily": "Le quotidien souhaité",
+        "marriageValues": "Les valeurs qui comptent",
+        "marriageRoles": "Répartition argent, travail, tâches & enfants",
+        "marriageFuture": "L'avenir à réaliser à deux",
+        "careStyle": "L'accompagnement souhaité",
+        "careValues": "Ce qui compte dans l'accompagnement",
+        "careEnvironment": "Environnement d'accompagnement idéal"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "Prochaine action",
+      "description": "Pour réaliser ton avenir idéal, imagine un petit pas que tu peux faire dès maintenant.",
+      "question": "Quel petit pas peux-tu faire cette semaine ?",
+      "placeholder": "p. ex. planifier un nouvel itinéraire, commencer à te renseigner"
     }
   },
   "loadingPage": {
@@ -298,7 +354,9 @@
     },
     "lineCta": "Ajoutez-nous sur LINE",
     "instaCta": "Suivez-nous sur Instagram",
-    "xCta": "Suivez-nous sur X"
+    "xCta": "Suivez-nous sur X",
+    "subtitle": "Sers-toi de ton vision board pour réfléchir à ton présent et à ton avenir !",
+    "createAgain": "Créer un autre vision board"
   },
   "language": {
     "title": "Choisissez votre langue",
@@ -316,11 +374,21 @@
     "subtitle": "Faites le premier pas pour concevoir votre vie",
     "what": {
       "q": "(À quoi penser ?)",
-      "body": "Mettez en mots vos valeurs, ce que vous aimez et votre futur idéal"
+      "body": "Mettez en mots vos valeurs, ce que vous aimez et votre futur idéal",
+      "items": [
+        "Des valeurs qui te ressemblent",
+        "Ce que tu aimes",
+        "Ton avenir idéal"
+      ]
     },
     "why": {
       "q": "(Pourquoi y penser ?)",
-      "body": "Quand vous voyez ce que vous aimez et ce qui compte, les choix de vie deviennent plus simples"
+      "body": "Quand vous voyez ce que vous aimez et ce qui compte, les choix de vie deviennent plus simples",
+      "items": [
+        "Découvrir une façon de vivre qui te convient vraiment",
+        "Faire plus facilement les choix de la vie",
+        "Porter un regard neuf sur ta propre vie"
+      ]
     },
     "outcome": {
       "q": "(Ce que vous y gagnez)",

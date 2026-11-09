@@ -63,7 +63,25 @@
       "hairAppearance": "Hair / Appearance",
       "hairAppearancePlaceholder": "e.g. long black hair, curly hair, tall",
       "charmPoints": "Charm Points / Features",
-      "charmPointsPlaceholder": "e.g. smile, dimples, bright eyes"
+      "charmPointsPlaceholder": "e.g. smile, dimples, bright eyes",
+      "profileTitle": "Your profile",
+      "profileNote": "Feel free to fill it in however feels true to you.",
+      "personality": "Personality",
+      "personalityPlaceholder": "e.g. cheerful, easygoing, competitive",
+      "praisedFor": "What people praise you for",
+      "praisedForPlaceholder": "e.g. thoughtfulness, focus, your voice",
+      "photo": "A favorite photo",
+      "photoNote": "Please choose a photo of just you, facing forward with your face clearly visible. We'll use it to create your vision board.",
+      "photoSelect": "Choose a photo",
+      "photoChange": "Change photo",
+      "photoRemove": "Remove",
+      "photoError": "Failed to load the photo. Please try another image.",
+      "favoriteFood": "Favorite food",
+      "favoriteFoodPlaceholder": "e.g. ramen, strawberries, chocolate",
+      "mostWanted": "What you want most right now",
+      "mostWantedPlaceholder": "e.g. free time, a new PC, courage",
+      "mbti": "MBTI",
+      "mbtiSelect": "Please select"
     },
     "step3": {
       "stepLabel": "STEP 3 / 6",
@@ -123,7 +141,15 @@
         "idealRelation": "What is your ideal relationship with a partner?",
         "idealRelationPlaceholder": "e.g. supportive, respectful, fun relationship",
         "thoughts": "How do you feel about marriage or living together?",
-        "thoughtsPlaceholder": "e.g. I want to get married, I want to consider living together first"
+        "thoughtsPlaceholder": "e.g. I want to get married, I want to consider living together first",
+        "daily": "What kind of everyday life do you want with your partner?",
+        "dailyPlaceholder": "e.g. eating together, enjoying trips, sharing hobbies, valuing each other's own time too",
+        "values": "What values matter most in married life?",
+        "valuesPlaceholder": "e.g. trust, affection, freedom, equality, family, challenge",
+        "roles": "How do you want to share money, work, housework, and childcare?",
+        "rolesPlaceholder": "e.g. both working, how to manage finances, sharing housework, whether to have children, supporting each other's careers",
+        "future": "What future do you want to realize together?",
+        "futurePlaceholder": "e.g. where to live, your ideal lifestyle, things to take on, what family means to you, the two of you in 10 years"
       },
       "child": {
         "title": "Children / Parenting",
@@ -146,6 +172,16 @@
         "helper": "Writing one small step you can take this month makes it easier to take action.",
         "action": "Next Action・What is one small step you can take this month?",
         "actionPlaceholder": "e.g. plan a new route, start gathering information"
+      },
+      "care": {
+        "title": "Caregiving",
+        "helper": "Organize your thoughts on caregiving and how to prepare for the future.",
+        "style": "What kind of caregiving do you want?",
+        "stylePlaceholder": "e.g. care at home, care in a facility, support from family",
+        "values": "What do you want to value in caregiving?",
+        "valuesPlaceholder": "e.g. the person's own wishes, dignity, living true to oneself, time with family",
+        "environment": "Your ideal caregiving environment and support?",
+        "environmentPlaceholder": "e.g. cooperating with family, professional support, financial room, balancing with work"
       }
     },
     "step5": {
@@ -190,8 +226,28 @@
         "childValues": "Values in parenting",
         "oldAgeIdeal": "Ideal later life",
         "oldAgePreparation": "Preparation for later life",
-        "nextAction": "Next Action"
+        "nextAction": "Next Action",
+        "personality": "Personality",
+        "praisedFor": "What people praise you for",
+        "photo": "A favorite photo",
+        "favoriteFood": "Favorite food",
+        "mostWanted": "What you want most right now",
+        "mbti": "MBTI",
+        "marriageDaily": "Everyday life you want",
+        "marriageValues": "Values you cherish",
+        "marriageRoles": "Sharing money, work, housework & childcare",
+        "marriageFuture": "The future to realize together",
+        "careStyle": "Caregiving you want",
+        "careValues": "What matters in caregiving",
+        "careEnvironment": "Ideal caregiving environment"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "Next action",
+      "description": "To make your ideal future happen, let's think of a small step you can take now.",
+      "question": "What's a small step you can take this week?",
+      "placeholder": "e.g. plan a new route, start gathering information"
     }
   },
   "loadingPage": {
@@ -298,7 +354,9 @@
     },
     "lineCta": "Add us on LINE",
     "instaCta": "Follow us on Instagram",
-    "xCta": "Follow us on X"
+    "xCta": "Follow us on X",
+    "subtitle": "Use your vision board to reflect on your present and your future!",
+    "createAgain": "Create another vision board"
   },
   "language": {
     "title": "Select Your Language",
@@ -314,11 +372,21 @@
     "subtitle": "Take the first step to design your life",
     "what": {
       "q": "(What to think about)",
-      "body": "Put your values, what you love, and your ideal future into words"
+      "body": "Put your values, what you love, and your ideal future into words",
+      "items": [
+        "Values that are true to you",
+        "Things you love",
+        "Your ideal future"
+      ]
     },
     "why": {
       "q": "(Why think about it)",
-      "body": "When you see what you love and value, life choices become easier"
+      "body": "When you see what you love and value, life choices become easier",
+      "items": [
+        "Discover a way of living you can feel at peace with",
+        "Make life's choices more easily",
+        "Take a fresh look at your own life"
+      ]
     },
     "outcome": {
       "q": "(What you will gain)",

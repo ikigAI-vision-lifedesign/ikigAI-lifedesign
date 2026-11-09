@@ -63,7 +63,25 @@
       "hairAppearance": "髮型 / 外觀",
       "hairAppearancePlaceholder": "例如：黑色長髮、捲髮、身材高挑",
       "charmPoints": "魅力特點",
-      "charmPointsPlaceholder": "例如：笑容、酒窩、大眼睛"
+      "charmPointsPlaceholder": "例如：笑容、酒窩、大眼睛",
+      "profileTitle": "你的個人檔案",
+      "profileNote": "自由填寫，展現真實的你。",
+      "personality": "個性",
+      "personalityPlaceholder": "例：開朗、隨性、不服輸",
+      "praisedFor": "常被人稱讚的地方",
+      "praisedForPlaceholder": "例：體貼、專注力、嗓音",
+      "photo": "喜歡的照片",
+      "photoNote": "請選擇只有你一人、面向正前方且臉部清晰的照片。我們會用它來製作你的願景板。",
+      "photoSelect": "選擇照片",
+      "photoChange": "更換照片",
+      "photoRemove": "刪除",
+      "photoError": "照片載入失敗，請嘗試其他圖片。",
+      "favoriteFood": "喜歡的食物",
+      "favoriteFoodPlaceholder": "例：拉麵、草莓、巧克力",
+      "mostWanted": "現在最想要的東西",
+      "mostWantedPlaceholder": "例：自由的時間、新電腦、勇氣",
+      "mbti": "MBTI",
+      "mbtiSelect": "請選擇"
     },
     "step3": {
       "stepLabel": "第3步 / 共5步",
@@ -72,7 +90,9 @@
       "selfExpression": "關於你",
       "selfExpressionHelper": "寫下你的興趣、個性與價值觀。",
       "idealVision": "想實現的未來・願景",
-      "descriptionSp": "告訴我們你的魅力，\n以及你想走向的未來。\n再想想為了實現它，\n現在可以踏出的一步。"
+      "descriptionSp": "告訴我們你的魅力，\n以及你想走向的未來。\n再想想為了實現它，\n現在可以踏出的一步。",
+      "selfExpressionPlaceholder": "例：喜歡戶外、好奇心強、喜歡動手創作、重視自由的工作方式",
+      "idealVisionPlaceholder": "例：一年後想在東京做真實的自己去工作。十年後想在自然附近蓋一間工作室。"
     },
     "step4": {
       "stepLabel": "第4步 / 共5步",
@@ -84,11 +104,84 @@
         "happyMoment": "最近感到幸福的時刻",
         "happyMomentPlaceholder": "例：和朋友去旅行、開始了新的事物",
         "strengths": "你的優勢",
-        "strengthsPlaceholder": "例：持續力、同理心、創意"
+        "strengthsPlaceholder": "例：持續力、同理心、創意",
+        "helper": "只有當你想讓它更有你的風格時再填寫。"
       },
       "nextAction": {
         "action": "下一步行動・這個月內能做的一小步是什麼？",
-        "actionPlaceholder": "例：規劃新的路線、開始收集資訊"
+        "actionPlaceholder": "例：規劃新的路線、開始收集資訊",
+        "title": "下一步行動",
+        "helper": "寫下這個月能踏出的一小步，更容易付諸行動。"
+      },
+      "learn": {
+        "title": "學習",
+        "helper": "可以梳理你想學的事物以及如何運用。",
+        "want": "想學什麼？",
+        "wantPlaceholder": "例：英文、程式設計、設計、心理學",
+        "reason": "想一直堅持下去的是什麼？",
+        "reasonPlaceholder": "例：喜歡的事、興趣、運動、動手創作",
+        "whenWhere": "想如何運用學到的東西？",
+        "whenWherePlaceholder": "例：用在工作上、教別人、創作作品、實現夢想"
+      },
+      "work": {
+        "title": "工作",
+        "helper": "可以具體描繪理想的工作與工作方式。",
+        "style": "想做什麼樣的工作、什麼樣的工作方式？",
+        "stylePlaceholder": "例：創業、自由工作者、公司職員",
+        "values": "工作中你最重視什麼？",
+        "valuesPlaceholder": "例：成就感、收入、自由",
+        "incomePlace": "理想的年收入與工作地點？",
+        "incomePlacePlaceholder": "例：年收入1000萬日圓、遠端、海外"
+      },
+      "residence": {
+        "title": "生活",
+        "helper": "可以梳理想在哪裡、在什麼樣的環境中生活。",
+        "place": "想住在哪裡？",
+        "placePlaceholder": "例：城市、鄉村、海外",
+        "environment": "想在什麼樣的房子和環境中生活？",
+        "environmentPlaceholder": "例：寬敞的家、靠近自然、交通便利"
+      },
+      "marriage": {
+        "title": "婚姻",
+        "helper": "可以具體描繪理想的伴侶關係以及兩人想共同經營的人生。",
+        "idealRelation": "想和什麼樣的伴侶共度人生？",
+        "idealRelationPlaceholder": "例：價值觀、個性、值得尊敬之處、在一起時的安心感",
+        "thoughts": "想建立什麼樣的關係？",
+        "thoughtsPlaceholder": "例：像摯友一樣、彼此尊重、無話不談、共同成長",
+        "daily": "想和伴侶過怎樣的日常？",
+        "dailyPlaceholder": "例：一起吃飯、享受旅行、分享興趣、也珍惜各自的時間",
+        "values": "婚姻生活中想珍視的價值觀？",
+        "valuesPlaceholder": "例：信任、愛、自由、平等、家庭、挑戰",
+        "roles": "想如何分擔金錢、工作、家務與育兒？",
+        "rolesPlaceholder": "例：雙薪、理財方式、家務分擔、是否要孩子、支持彼此的事業",
+        "future": "兩人想共同實現怎樣的未來？",
+        "futurePlaceholder": "例：想住的地方、理想的生活、想挑戰的事、家庭的樣貌、十年後的兩人"
+      },
+      "child": {
+        "title": "育兒·生產",
+        "helper": "可以梳理你對孩子與育兒的想法。",
+        "thoughts": "你怎麼看待生孩子這件事？",
+        "thoughtsPlaceholder": "例：想要孩子、還未決定、順其自然",
+        "values": "育兒中想珍視的是什麼？",
+        "valuesPlaceholder": "例：個性、善良、自由"
+      },
+      "oldAge": {
+        "title": "晚年",
+        "helper": "可以思考理想的晚年以及從現在開始的準備。",
+        "ideal": "理想的晚年·老年生活是？",
+        "idealPlaceholder": "例：平靜的生活、旅行、與家人共度的時光",
+        "preparation": "為晚年想從現在開始準備什麼？",
+        "preparationPlaceholder": "例：儲蓄、健康習慣、人與人的連結"
+      },
+      "care": {
+        "title": "照護",
+        "helper": "可以梳理你對照護的想法以及今後的準備。",
+        "style": "想要什麼樣的照護？",
+        "stylePlaceholder": "例：居家照護、機構照護、家人支持",
+        "values": "照護中想珍視的是什麼？",
+        "valuesPlaceholder": "例：本人意願、尊嚴、有自我的生活、與家人的時光",
+        "environment": "理想的照護環境與支持體系？",
+        "environmentPlaceholder": "例：家人協作、專業支持、經濟寬裕、與工作兼顧"
       }
     },
     "step5": {
@@ -132,8 +225,29 @@
         "childValues": "育兒中重視的事",
         "oldAgeIdeal": "理想的晚年生活",
         "oldAgePreparation": "為晚年做的準備",
-        "nextAction": "下一步行動"
-      }
+        "nextAction": "下一步行動",
+        "personality": "個性",
+        "praisedFor": "常被人稱讚的地方",
+        "photo": "喜歡的照片",
+        "favoriteFood": "喜歡的食物",
+        "mostWanted": "現在最想要的東西",
+        "mbti": "MBTI",
+        "marriageDaily": "想過的日常",
+        "marriageValues": "想珍視的價值觀",
+        "marriageRoles": "金錢·工作·家務·育兒的分擔",
+        "marriageFuture": "兩人想實現的未來",
+        "careStyle": "想要的照護",
+        "careValues": "照護中重視的事",
+        "careEnvironment": "理想的照護環境"
+      },
+      "and": "和"
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "下一步行動",
+      "description": "為了實現理想的未來，想一想現在能踏出的一小步吧。",
+      "question": "這週能踏出的一小步是什麼？",
+      "placeholder": "例：規劃一條新路線、開始蒐集資訊"
     }
   },
   "loadingPage": {
@@ -144,7 +258,11 @@
       "即將完成..."
     ],
     "errors": {
-      "sessionExpired": "登入已過期，請重新輸入通行碼。"
+      "sessionExpired": "登入已過期，請重新輸入通行碼。",
+      "missingData": "找不到輸入的資料。",
+      "imageGenerationFailed": "圖像生成失敗。",
+      "dbSaveFailed": "儲存至資料庫失敗：{{message}}",
+      "generationFailed": "生成失敗，請再試一次。"
     },
     "retry": "再試一次",
     "generatingTitle": "正在生成圖像",
@@ -171,7 +289,10 @@
     "actions": {
       "save": "儲存圖片",
       "other": "更多",
-      "line": "LINE"
+      "line": "LINE",
+      "link": "連結",
+      "x": "X",
+      "instagram": "Instagram"
     },
     "post": {
       "header": "推薦貼文（複製即用）",
@@ -203,7 +324,39 @@
     },
     "lineCta": "加入官方 LINE",
     "instaCta": "追蹤官方 Instagram",
-    "xCta": "追蹤官方 X"
+    "xCta": "追蹤官方 X",
+    "subtitle": "以願景板為起點，想一想你的當下與未來吧！",
+    "generatedImageAlt": "生成的願景板圖像",
+    "expandedImageAlt": "放大的願景板圖像",
+    "closeModal": "關閉圖像",
+    "noImage": "找不到生成的圖像。",
+    "share": {
+      "text": "我用 AI 製作了一張願景板！",
+      "hashtags": "AI願景板,ikigAI",
+      "linkCopied": "連結已複製！",
+      "linkCopiedForInstagram": "連結已複製。正在開啟 Instagram。",
+      "copyFailed": "複製失敗。",
+      "downloadFailed": "圖像儲存失敗。"
+    },
+    "feedback": {
+      "thankYou": "感謝你的回饋",
+      "saved": "已儲存你的問卷回覆。",
+      "satisfaction": "這次的願景板如何？",
+      "reasonLabel": "請告訴我們願景板應用程式的優點與可改進之處（選填）",
+      "reasonPlaceholder": "若有覺得好的地方或想改進的地方，歡迎填寫。",
+      "submit": "送出",
+      "submitting": "送出中…",
+      "selectRatingAlert": "請選擇滿意度。",
+      "submitFailed": "回覆送出失敗。\n原因：{{message}}",
+      "options": {
+        "verySatisfied": "非常滿意",
+        "satisfied": "滿意",
+        "neutral": "普通",
+        "unsatisfied": "略不滿意",
+        "veryUnsatisfied": "不滿意"
+      }
+    },
+    "createAgain": "再製作一張願景板"
   },
   "language": {
     "title": "選擇語言",
@@ -217,11 +370,21 @@
     "subtitle": "邁出描繪人生的第一步吧",
     "what": {
       "q": "（思考什麼？）",
-      "body": "把你獨有的價值觀、喜歡的事、理想的未來用語言表達出來"
+      "body": "把你獨有的價值觀、喜歡的事、理想的未來用語言表達出來",
+      "items": [
+        "專屬於你的價值觀",
+        "喜歡的事物",
+        "理想的未來"
+      ]
     },
     "why": {
       "q": "（為什麼思考？）",
-      "body": "當你看清自己的喜歡與珍視，人生的選擇會變得更容易"
+      "body": "當你看清自己的喜歡與珍視，人生的選擇會變得更容易",
+      "items": [
+        "發現自己能認同的生活方式",
+        "更容易做出人生的選擇",
+        "重新審視自己的人生"
+      ]
     },
     "outcome": {
       "q": "（能獲得什麼）",

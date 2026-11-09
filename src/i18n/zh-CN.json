@@ -63,7 +63,25 @@
       "hairAppearance": "发型 / 外观",
       "hairAppearancePlaceholder": "例如：黑色长发、卷发、身高较高",
       "charmPoints": "魅力点",
-      "charmPointsPlaceholder": "例如：笑容、酒窝、大眼睛"
+      "charmPointsPlaceholder": "例如：笑容、酒窝、大眼睛",
+      "profileTitle": "你的个人资料",
+      "profileNote": "随意填写，展现真实的你。",
+      "personality": "性格",
+      "personalityPlaceholder": "例：开朗、随性、不服输",
+      "praisedFor": "常被人称赞的地方",
+      "praisedForPlaceholder": "例：体贴、专注力、嗓音",
+      "photo": "喜欢的照片",
+      "photoNote": "请选择只有你一人、面向正前方且脸部清晰的照片。我们会用它来制作你的愿景板。",
+      "photoSelect": "选择照片",
+      "photoChange": "更换照片",
+      "photoRemove": "删除",
+      "photoError": "照片加载失败，请尝试其他图片。",
+      "favoriteFood": "喜欢的食物",
+      "favoriteFoodPlaceholder": "例：拉面、草莓、巧克力",
+      "mostWanted": "现在最想要的东西",
+      "mostWantedPlaceholder": "例：自由的时间、新电脑、勇气",
+      "mbti": "MBTI",
+      "mbtiSelect": "请选择"
     },
     "step3": {
       "stepLabel": "第3步 / 共5步",
@@ -86,11 +104,84 @@
         "happyMoment": "最近开心的事情",
         "strengths": "你的优势",
         "happyMomentPlaceholder": "例：和朋友去旅行、开始了新的事物",
-        "strengthsPlaceholder": "例：持续力、同理心、创意"
+        "strengthsPlaceholder": "例：持续力、同理心、创意",
+        "helper": "只有当你想让它更有你的风格时再填写。"
       },
       "nextAction": {
         "action": "下一步行动・这个月内能做的一小步是什么？",
-        "actionPlaceholder": "例：规划新的路线、开始收集信息"
+        "actionPlaceholder": "例：规划新的路线、开始收集信息",
+        "title": "下一步行动",
+        "helper": "写下这个月能迈出的一小步，更容易付诸行动。"
+      },
+      "learn": {
+        "title": "学习",
+        "helper": "可以梳理你想学的东西以及如何运用。",
+        "want": "想学什么？",
+        "wantPlaceholder": "例：英语、编程、设计、心理学",
+        "reason": "想一直坚持的是什么？",
+        "reasonPlaceholder": "例：喜欢的事、兴趣、运动、动手创作",
+        "whenWhere": "想如何运用学到的东西？",
+        "whenWherePlaceholder": "例：用在工作上、教别人、创作作品、实现梦想"
+      },
+      "work": {
+        "title": "工作",
+        "helper": "可以具体描绘理想的工作与工作方式。",
+        "style": "想做什么样的工作、什么样的工作方式？",
+        "stylePlaceholder": "例：创业、自由职业、公司职员",
+        "values": "工作中你最看重什么？",
+        "valuesPlaceholder": "例：成就感、收入、自由",
+        "incomePlace": "理想的年收入与工作地点？",
+        "incomePlacePlaceholder": "例：年收入1000万日元、远程、海外"
+      },
+      "residence": {
+        "title": "生活",
+        "helper": "可以梳理想在哪里、在什么样的环境中生活。",
+        "place": "想住在哪里？",
+        "placePlaceholder": "例：城市、乡村、海外",
+        "environment": "想在什么样的房子和环境中生活？",
+        "environmentPlaceholder": "例：宽敞的家、靠近自然、交通便利"
+      },
+      "marriage": {
+        "title": "婚姻",
+        "helper": "可以具体描绘理想的伴侣关系以及两人想共同经营的人生。",
+        "idealRelation": "想和什么样的伴侣共度人生？",
+        "idealRelationPlaceholder": "例：价值观、性格、值得尊敬之处、在一起时的安心感",
+        "thoughts": "想建立什么样的关系？",
+        "thoughtsPlaceholder": "例：像挚友一样、彼此尊重、无话不谈、共同成长",
+        "daily": "想和伴侣过怎样的日常？",
+        "dailyPlaceholder": "例：一起吃饭、享受旅行、分享兴趣、也珍惜各自的时间",
+        "values": "婚姻生活中想珍视的价值观？",
+        "valuesPlaceholder": "例：信任、爱、自由、平等、家庭、挑战",
+        "roles": "想如何分担金钱、工作、家务与育儿？",
+        "rolesPlaceholder": "例：双职工、理财方式、家务分担、是否要孩子、支持彼此的事业",
+        "future": "两人想共同实现怎样的未来？",
+        "futurePlaceholder": "例：想住的地方、理想的生活、想挑战的事、家庭的样子、十年后的两人"
+      },
+      "child": {
+        "title": "育儿·生育",
+        "helper": "可以梳理你对孩子与育儿的想法。",
+        "thoughts": "你怎么看待要孩子这件事？",
+        "thoughtsPlaceholder": "例：想要孩子、还未决定、顺其自然",
+        "values": "育儿中想珍视的是什么？",
+        "valuesPlaceholder": "例：个性、善良、自由"
+      },
+      "oldAge": {
+        "title": "晚年",
+        "helper": "可以思考理想的晚年以及从现在开始的准备。",
+        "ideal": "理想的晚年·老年生活是？",
+        "idealPlaceholder": "例：平静的生活、旅行、与家人共度的时光",
+        "preparation": "为晚年想从现在开始准备什么？",
+        "preparationPlaceholder": "例：储蓄、健康习惯、人与人的联系"
+      },
+      "care": {
+        "title": "照护",
+        "helper": "可以梳理你对照护的想法以及今后的准备。",
+        "style": "想要什么样的照护？",
+        "stylePlaceholder": "例：居家照护、机构照护、家人支持",
+        "values": "照护中想珍视的是什么？",
+        "valuesPlaceholder": "例：本人意愿、尊严、有自我的生活、与家人的时光",
+        "environment": "理想的照护环境与支持体系？",
+        "environmentPlaceholder": "例：家人协作、专业支持、经济宽裕、与工作兼顾"
       }
     },
     "step5": {
@@ -135,8 +226,28 @@
         "childValues": "育儿中重视的事",
         "oldAgeIdeal": "理想的晚年生活",
         "oldAgePreparation": "为晚年做的准备",
-        "nextAction": "下一步行动"
+        "nextAction": "下一步行动",
+        "personality": "性格",
+        "praisedFor": "常被人称赞的地方",
+        "photo": "喜欢的照片",
+        "favoriteFood": "喜欢的食物",
+        "mostWanted": "现在最想要的东西",
+        "mbti": "MBTI",
+        "marriageDaily": "想过的日常",
+        "marriageValues": "想珍视的价值观",
+        "marriageRoles": "金钱·工作·家务·育儿的分担",
+        "marriageFuture": "两人想实现的未来",
+        "careStyle": "想要的照护",
+        "careValues": "照护中看重的事",
+        "careEnvironment": "理想的照护环境"
       }
+    },
+    "nextActionStep": {
+      "stepLabel": "STEP 5 / 6",
+      "title": "下一步行动",
+      "description": "为了实现理想的未来，想一想现在能迈出的一小步吧。",
+      "question": "这周能迈出的一小步是什么？",
+      "placeholder": "例：规划一条新路线、开始收集信息"
     }
   },
   "loadingPage": {
@@ -147,7 +258,11 @@
       "即将完成..."
     ],
     "errors": {
-      "sessionExpired": "登录已过期，请重新输入通行码。"
+      "sessionExpired": "登录已过期，请重新输入通行码。",
+      "missingData": "未找到输入数据。",
+      "imageGenerationFailed": "图像生成失败。",
+      "dbSaveFailed": "保存到数据库失败：{{message}}",
+      "generationFailed": "生成失败，请重试。"
     },
     "retry": "再试一次",
     "generatingTitle": "正在生成图像",
@@ -174,7 +289,10 @@
     "actions": {
       "save": "保存图片",
       "other": "更多",
-      "line": "LINE"
+      "line": "LINE",
+      "link": "链接",
+      "x": "X",
+      "instagram": "Instagram"
     },
     "post": {
       "header": "推荐文案（复制即用）",
@@ -206,7 +324,39 @@
     },
     "lineCta": "添加官方 LINE",
     "instaCta": "关注官方 Instagram",
-    "xCta": "关注官方 X"
+    "xCta": "关注官方 X",
+    "subtitle": "以愿景板为起点，想一想你的当下与未来吧！",
+    "generatedImageAlt": "生成的愿景板图像",
+    "expandedImageAlt": "放大的愿景板图像",
+    "closeModal": "关闭图像",
+    "noImage": "未找到生成的图像。",
+    "share": {
+      "text": "我用 AI 制作了一张愿景板！",
+      "hashtags": "AI愿景板,ikigAI",
+      "linkCopied": "链接已复制！",
+      "linkCopiedForInstagram": "链接已复制。正在打开 Instagram。",
+      "copyFailed": "复制失败。",
+      "downloadFailed": "图像保存失败。"
+    },
+    "feedback": {
+      "thankYou": "感谢你的反馈",
+      "saved": "已保存你的问卷回答。",
+      "satisfaction": "这次的愿景板怎么样？",
+      "reasonLabel": "请告诉我们愿景板应用的优点与改进之处（选填）",
+      "reasonPlaceholder": "如有觉得好的地方或想改进的地方，欢迎填写。",
+      "submit": "提交",
+      "submitting": "提交中…",
+      "selectRatingAlert": "请选择满意度。",
+      "submitFailed": "回答提交失败。\n原因：{{message}}",
+      "options": {
+        "verySatisfied": "非常满意",
+        "satisfied": "满意",
+        "neutral": "一般",
+        "unsatisfied": "略不满意",
+        "veryUnsatisfied": "不满意"
+      }
+    },
+    "createAgain": "再做一张愿景板"
   },
   "language": {
     "title": "选择语言",
@@ -220,11 +370,21 @@
     "subtitle": "迈出描绘人生的第一步吧",
     "what": {
       "q": "（思考什么？）",
-      "body": "把你独有的价值观、喜欢的事、理想的未来用语言表达出来"
+      "body": "把你独有的价值观、喜欢的事、理想的未来用语言表达出来",
+      "items": [
+        "专属于你的价值观",
+        "喜欢的事物",
+        "理想的未来"
+      ]
     },
     "why": {
       "q": "（为什么思考？）",
-      "body": "当你看清自己的喜欢与珍视，人生的选择会变得更容易"
+      "body": "当你看清自己的喜欢与珍视，人生的选择会变得更容易",
+      "items": [
+        "发现自己能认同的生活方式",
+        "更容易做出人生的选择",
+        "重新审视自己的人生"
+      ]
     },
     "outcome": {
       "q": "（能获得什么）",
