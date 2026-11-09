@@ -12,6 +12,7 @@ import FormStep5Page from "./pages/FormStep5Page";
 import FormStep6Page from "./pages/FormStep6Page";
 import LoadingPage from "./pages/LoadingPage";
 import ResultPage from "./pages/ResultPage";
+import SiteFooter from "./components/SiteFooter";
 
 // 画面遷移のたびにページ先頭へスクロール（前の位置が残らないように）
 const ScrollToTop: React.FC = () => {
@@ -51,6 +52,7 @@ const App: React.FC = () => {
         <Route path="/loading" element={<LoadingPage />} />
         <Route path="/result" element={<ResultPage />} />
       </Routes>
+      <SiteFooter />
     </Router>
   );
 };
