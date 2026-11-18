@@ -10,6 +10,8 @@ import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import RequiredBadge from "../components/RequiredBadge";
 import StepNavigation from "../components/StepNavigation";
+import StepHint from "../components/StepHint";
+import FieldHint from "../components/FieldHint";
 import { theme } from "../theme";
 
 const STORAGE_KEY = "visionBoardFormData";
@@ -120,10 +122,13 @@ const FormStep5Page: React.FC = () => {
           <div style={{ width: "83%", height: "100%", background: "linear-gradient(135deg, #6EB6E8 0%, #47D3B1 100%)" }} />
         </div>
 
+        <StepHint text={t("hints.steps.step5")} />
+
         <form onSubmit={handleNext}>
           <label style={labelStyle}>
             {t("form.nextActionStep.question")}
             <RequiredBadge />
+            <FieldHint text={t("hints.fields.nextAction")} />
           </label>
           <textarea
             name="nextAction"

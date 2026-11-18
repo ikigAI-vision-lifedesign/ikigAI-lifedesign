@@ -8,6 +8,8 @@ import ScrollingBanner from "../components/ScrollingBanner";
 import bottomBanner from "../assets/footer.png";
 import RequiredBadge from "../components/RequiredBadge";
 import StepNavigation from "../components/StepNavigation";
+import StepHint from "../components/StepHint";
+import FieldHint from "../components/FieldHint";
 import { theme } from "../theme";
 
 const STORAGE_KEY = "visionBoardFormData";
@@ -233,11 +235,14 @@ const FormStep3Page: React.FC = () => {
           />
         </div>
 
+        <StepHint text={t("hints.steps.step3")} />
+
         <form onSubmit={handleNext}>
           {/* 1. あなたらしさ */}
           <label style={labelStyle}>
             {t("form.step3.selfExpression")}
             <RequiredBadge />
+            <FieldHint text={t("hints.fields.selfExpression")} />
           </label>
 
           <p style={helperTextStyle}>
@@ -256,6 +261,7 @@ const FormStep3Page: React.FC = () => {
           <label style={labelStyle}>
             {t("form.step4.identity.strengths")}
             <RequiredBadge />
+            <FieldHint text={t("hints.fields.strengths")} />
           </label>
           <textarea
             name="strengths"
@@ -269,6 +275,7 @@ const FormStep3Page: React.FC = () => {
           <label style={labelStyle}>
             {t("form.step4.identity.happyMoment")}
             <RequiredBadge />
+            <FieldHint text={t("hints.fields.happyMoment")} />
           </label>
           <textarea
             name="happyMoment"
@@ -282,6 +289,7 @@ const FormStep3Page: React.FC = () => {
           <label style={labelStyle}>
             {t("form.step3.idealVision")}
             <RequiredBadge />
+            <FieldHint text={t("hints.fields.idealVision")} />
           </label>
           <textarea
             name="idealVision"
