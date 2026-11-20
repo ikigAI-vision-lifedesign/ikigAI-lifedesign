@@ -1,9 +1,9 @@
 // src/pages/HomePage.tsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import topBanner from "../assets/header.png";
+import topBanner from "../assets/header.webp";
 import ScrollingBanner from "../components/ScrollingBanner";
-import bottomBanner from "../assets/footer.png";
+import bottomBanner from "../assets/footer.webp";
 import ikigaiLogo from "../assets/ikigai-logo.png";
 import { theme } from "../theme";
 

@@ -3,9 +3,9 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../i18n/configs";
 import "../styles.css";
-import topBanner from "../assets/header.png";
+import topBanner from "../assets/header.webp";
 import ScrollingBanner from "../components/ScrollingBanner";
-import bottomBanner from "../assets/footer.png";
+import bottomBanner from "../assets/footer.webp";
 import LoadingExperience from "../components/LoadingExperience";
 import { postToGas, clearToken, getGenId } from "../config";
 
