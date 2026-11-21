@@ -539,9 +539,10 @@ function handleFeedback(data) {
   var lock = LockService.getScriptLock();
   try {
     lock.waitLock(30000);
+    // 列: 日時 / 満足度 / 良かった点(Keep) / 言語 / メール / 画像URL / 気になった点(Problem+Try)
     sheet.appendRow([
-      new Date(), data.rating || "", data.reason || "", data.lang || "",
-      data.email || "", data.imageUrl || data.drivePageUrl || ""
+      new Date(), data.rating || "", data.keep || data.reason || "", data.lang || "",
+      data.email || "", data.imageUrl || data.drivePageUrl || "", data.improve || ""
     ]);
   } finally { try { lock.releaseLock(); } catch (e) {} }
   return createJsonResponse({ status: "success" });

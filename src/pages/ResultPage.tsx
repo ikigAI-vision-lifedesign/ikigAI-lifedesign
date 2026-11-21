@@ -118,7 +118,8 @@ const ResultPage: React.FC = () => {
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [hoveredRating, setHoveredRating] = useState<number | null>(null);
-  const [satisfactionReason, setSatisfactionReason] = useState("");
+  const [keepText, setKeepText] = useState("");
+  const [improveText, setImproveText] = useState("");
   const [generatedImageUrl, setGeneratedImageUrl] = useState("");
   const [drivePageUrl, setDrivePageUrl] = useState("");
   const [formData, setFormData] = useState<StoredFormData>({});
@@ -218,7 +219,10 @@ const ResultPage: React.FC = () => {
       const data = await postToGas({
         action: "feedback",
         rating: Number(selectedRating),
-        reason: satisfactionReason.trim(),
+        keep: keepText.trim(),
+        improve: improveText.trim(),
+        // 後方互換：旧バックエンド用に2欄を結合したものも送る
+        reason: [keepText.trim(), improveText.trim()].filter(Boolean).join("\n---\n"),
         lang: localStorage.getItem("selectedLanguage") || "ja",
         email: formData.email ?? "",
         drivePageUrl: drivePageUrl || generatedImageUrl || "",
@@ -683,16 +687,46 @@ const ResultPage: React.FC = () => {
                         marginBottom: "8px",
                       }}
                     >
-                      {t("result.feedback.reasonLabel")}
+                      {t("result.feedback.keepLabel")}
                     </label>
 
                     <textarea
-                      value={satisfactionReason}
-                      onChange={(e) => setSatisfactionReason(e.target.value)}
-                      placeholder={t("result.feedback.reasonPlaceholder")}
+                      value={keepText}
+                      onChange={(e) => setKeepText(e.target.value)}
+                      placeholder={t("result.feedback.keepPlaceholder")}
                       style={{
                         width: "100%",
-                        minHeight: "120px",
+                        minHeight: "96px",
+                        boxSizing: "border-box",
+                        borderRadius: "16px",
+                        border: `1.5px solid ${theme.border}`,
+                        padding: "14px 16px",
+                        fontSize: "1rem",
+                        lineHeight: 1.7,
+                        resize: "vertical",
+                        outlineColor: theme.primary,
+                      }}
+                    />
+
+                    <label
+                      style={{
+                        display: "block",
+                        textAlign: "left",
+                        color: theme.text,
+                        fontWeight: 800,
+                        margin: "18px 0 8px",
+                      }}
+                    >
+                      {t("result.feedback.improveLabel")}
+                    </label>
+
+                    <textarea
+                      value={improveText}
+                      onChange={(e) => setImproveText(e.target.value)}
+                      placeholder={t("result.feedback.improvePlaceholder")}
+                      style={{
+                        width: "100%",
+                        minHeight: "96px",
                         boxSizing: "border-box",
                         borderRadius: "16px",
                         border: `1.5px solid ${theme.border}`,
