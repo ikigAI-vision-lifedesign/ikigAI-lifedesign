@@ -404,5 +404,20 @@
       ]
     },
     "button": "Loslegen"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Erzähl uns von deinem Aussehen und dem, was dich *dich* macht. Es muss nicht perfekt sein – denk an deine übliche Frisur, Haarfarbe, Kleidung, Brille oder Accessoires. Keine Idee? Was Freunde über dich sagen oder dein erster Eindruck helfen auch.",
+      "step3": "Stell dir frei vor, wer du sein willst und welche Zukunft du dir wünschst. Keine Idee? Erinnere dich, wobei du die Zeit vergisst oder was du schon immer magst. Denk an 1 und 10 Jahre voraus. Kleine Dinge zählen.",
+      "step4": "Nur die Themen, die dich interessieren – du musst nicht alles ausfüllen. Stell dir vor, „worauf du im Zweifel nie verzichten würdest“ oder „welchen Tag du gern erleben würdest“, und schreib dein „schön wäre, wenn …“."
+    },
+    "fields": {
+      "selfExpression": "Deine Vorlieben, dein Charakter und was dir wichtig ist – ganz frei. Keine Idee? Erinnere dich, was dich zuletzt gefesselt hat oder wonach du unbewusst suchst.\nz. B.: mag die Natur, neugierig, schätze Freiheit",
+      "idealVision": "Stell dir deine Traumzukunft frei vor. Denk an 1 oder 10 Jahre, wie du freie Tage verbringst, wo du leben willst. Es muss kein klarer Traum sein.\nz. B.: mein Hobby zum Beruf machen, im Ausland leben, einen eigenen Laden haben",
+      "charmPoints": "Etwas, worauf du ein bisschen stolz bist. Auch Äußeres wie Frisur, Lächeln oder Brille zählt.\nz. B.: Lächeln, Grübchen, große Augen",
+      "strengths": "Etwas, das du etwas besser kannst oder worum man dich oft bittet. Was man oft über dich sagt, ist auch ein Hinweis. Kleines zählt.\nz. B.: zuhören, nicht aufgeben, genaue Arbeit",
+      "happyMoment": "Erinnere dich an einen schönen Moment kürzlich. Welcher Moment gefällt dir am besten?\nz. B.: mit Freunden gelacht, Lieblingsmusik gehört, etwas Leckeres gegessen",
+      "praisedFor": "Wofür man dich oft lobt oder was man über dich sagt. Schreib es ohne Scheu.\nz. B.: Rücksicht, Konzentration, Stimme"
+    }
   }
 }

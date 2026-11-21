@@ -403,5 +403,20 @@
       ]
     },
     "button": "Commencer"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Parlez-nous de votre allure et de ce qui fait *vous*. Pas besoin d'être parfait : pensez à votre coiffure, couleur de cheveux, tenue, lunettes ou accessoires habituels. Bloqué ? Ce que disent vos amis ou votre première impression sont aussi des pistes.",
+      "step3": "Imaginez librement qui vous voulez être et l'avenir souhaité. Bloqué ? Rappelez-vous ce qui vous fait perdre la notion du temps ou ce que vous avez toujours aimé. Imaginez à 1 an et 10 ans. Les petites choses comptent.",
+      "step4": "Seulement les thèmes qui vous parlent ; pas besoin de tout remplir. Imaginez « ce à quoi vous ne renonceriez jamais dans le doute » ou « la journée que vous adoreriez vivre » et écrivez votre « ce serait bien si... »."
+    },
+    "fields": {
+      "selfExpression": "Vos goûts, votre caractère et ce qui compte pour vous, librement. Bloqué ? Rappelez-vous ce qui vous a absorbé récemment ou ce que vous cherchez sans y penser.\nEx. : j'aime le plein air, curieux(se), j'attache de la valeur à la liberté",
+      "idealVision": "Imaginez librement votre futur idéal. Pensez à 1 ou 10 ans, à vos jours de repos, à l'endroit où vivre. Ce n'est pas obligé d'être un rêve précis.\nEx. : faire de ma passion un métier, vivre à l'étranger, avoir ma boutique",
+      "charmPoints": "Un petit truc dont vous êtes un peu fier/fière. Votre allure compte aussi : coiffure, sourire ou lunettes.\nEx. : sourire, fossettes, grands yeux",
+      "strengths": "Ce que vous faites un peu mieux, ou pour quoi on vous sollicite. Ce qu'on dit souvent de vous est aussi une piste. Les petites choses comptent.\nEx. : écouter, ne pas abandonner, travail minutieux",
+      "happyMoment": "Rappelez-vous un moment agréable récent. Quel moment préférez-vous ?\nEx. : rire avec des amis, écouter sa musique, manger un bon plat",
+      "praisedFor": "Ce qu'on vous complimente ou dit souvent. Écrivez-le sans gêne.\nEx. : attention aux autres, concentration, voix"
+    }
   }
 }

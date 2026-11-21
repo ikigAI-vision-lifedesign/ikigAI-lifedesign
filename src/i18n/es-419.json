@@ -410,5 +410,20 @@
       ]
     },
     "button": "Comenzar"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Cuéntanos tu aspecto y lo que te hace *tú*. No hace falta escribirlo perfecto: piensa en tu peinado, color de pelo, ropa, lentes o accesorios de siempre. ¿Atascado? Lo que dicen tus amigos o tu primera impresión también ayudan.",
+      "step3": "Imagina libremente quién quieres ser y el futuro que deseas. ¿Atascado? Recuerda qué te hace perder la noción del tiempo o qué te ha gustado siempre. Imagina dentro de 1 y 10 años. Las cosas pequeñas valen.",
+      "step4": "Solo los temas que te interesen; no hace falta llenar todo. Imagina «lo que nunca dejarías al dudar» o «el día que te encantaría vivir» y escribe tu «estaría genial si...»."
+    },
+    "fields": {
+      "selfExpression": "Tus gustos, tu personalidad y lo que te importa, con libertad. ¿Atascado? Recuerda qué te ha absorbido últimamente o qué buscas sin darte cuenta.\nEj.: me gusta el aire libre, curioso/a, valoro la libertad",
+      "idealVision": "Imagina tu futuro ideal con libertad. Piensa en 1 o 10 años, cómo pasarías los días libres, dónde vivirías. No tiene que ser un sueño definido.\nEj.: convertir lo que amo en trabajo, vivir en el extranjero, tener mi tienda",
+      "charmPoints": "Algo de lo que estás un poco orgulloso/a. También vale tu aspecto: peinado, sonrisa o lentes.\nEj.: sonrisa, hoyuelos, ojos grandes",
+      "strengths": "Algo que se te da un poco mejor o para lo que te buscan. Lo que suelen decir de ti también es pista. Lo pequeño vale.\nEj.: escuchar, no rendirse, trabajo detallista",
+      "happyMoment": "Recuerda un momento que se sintió bien hace poco. ¿Qué momento te gusta más?\nEj.: reír con amigos, escuchar tu música, comer algo rico",
+      "praisedFor": "Lo que la gente suele elogiar o decir de ti. Escríbelo sin pena.\nEj.: atención a los demás, concentración, voz"
+    }
   }
 }

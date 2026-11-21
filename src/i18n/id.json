@@ -406,5 +406,20 @@
       ]
     },
     "button": "Mulai"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Ceritakan penampilan dan hal yang membuatmu *kamu*. Tak perlu sempurna—pikirkan gaya rambut, warna rambut, pakaian, kacamata, atau aksesori sehari-hari. Bingung? Apa kata teman tentangmu atau kesan pertama juga bisa jadi petunjuk.",
+      "step3": "Bayangkan dengan bebas ingin jadi diri yang seperti apa dan masa depan yang kamu mau. Bingung? Ingat hal yang membuatmu lupa waktu atau yang selalu kamu suka. Bayangkan 1 dan 10 tahun ke depan. Hal kecil pun tak apa.",
+      "step4": "Cukup tema yang kamu minati; tak perlu mengisi semua. Bayangkan «hal yang tak akan kamu lepas saat ragu» atau «hari yang ingin kamu jalani», lalu tulis «andai begini pasti bagus»."
+    },
+    "fields": {
+      "selfExpression": "Kesukaan, sifat, dan hal yang kamu hargai, bebas saja. Bingung? Ingat apa yang membuatmu asyik belakangan ini atau yang tanpa sadar kamu cari.\nMis.: suka kegiatan luar, penasaran tinggi, menghargai kebebasan",
+      "idealVision": "Bayangkan masa depan impianmu dengan bebas. Pikirkan 1 atau 10 tahun lagi, cara menghabiskan hari libur, tempat tinggal. Tak harus mimpi yang jelas.\nMis.: menjadikan hobi sebagai pekerjaan, tinggal di luar negeri, punya toko sendiri",
+      "charmPoints": "Sesuatu yang sedikit kamu banggakan. Ciri penampilan seperti gaya rambut, senyum, atau kacamata juga boleh.\nMis.: senyum, lesung pipi, mata besar",
+      "strengths": "Hal yang sedikit lebih kamu kuasai, atau sering diandalkan. Apa yang sering dikatakan orang tentangmu juga petunjuk. Hal kecil pun boleh.\nMis.: mendengarkan, tak menyerah, pekerjaan teliti",
+      "happyMoment": "Ingat momen yang terasa menyenangkan belakangan ini. Momen mana yang paling kamu suka?\nMis.: tertawa bersama teman, mendengar musik favorit, makan yang enak",
+      "praisedFor": "Hal yang sering dipuji atau dikatakan orang tentangmu. Tulis tanpa malu.\nMis.: perhatian, fokus, suara"
+    }
   }
 }

@@ -407,5 +407,20 @@
       ]
     },
     "button": "Inizia"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Raccontaci il tuo aspetto e ciò che ti rende *te*. Non serve scrivere perfetto: pensa a pettinatura, colore dei capelli, abbigliamento, occhiali o accessori di sempre. Bloccato? Ciò che dicono gli amici o la prima impressione sono spunti.",
+      "step3": "Immagina liberamente chi vuoi essere e il futuro che desideri. Bloccato? Ricorda cosa ti fa perdere la cognizione del tempo o cosa ti è sempre piaciuto. Immagina tra 1 e 10 anni. Vanno bene anche cose piccole.",
+      "step4": "Solo i temi che ti interessano; non devi riempire tutto. Immagina «ciò a cui non rinunceresti mai nel dubbio» o «la giornata che adoreresti vivere» e scrivi il tuo «sarebbe bello se...»."
+    },
+    "fields": {
+      "selfExpression": "I tuoi gusti, il carattere e ciò che conta per te, liberamente. Bloccato? Ricorda cosa ti ha assorbito di recente o cosa cerchi senza accorgertene.\nEs.: amo l'aria aperta, curioso/a, tengo alla libertà",
+      "idealVision": "Immagina liberamente il tuo futuro ideale. Pensa a 1 o 10 anni, a come passeresti i giorni liberi, a dove vivere. Non deve essere un sogno preciso.\nEs.: trasformare ciò che amo in lavoro, vivere all'estero, avere il mio negozio",
+      "charmPoints": "Qualcosa di cui vai un po' fiero/a. Va bene anche l'aspetto: pettinatura, sorriso o occhiali.\nEs.: sorriso, fossette, occhi grandi",
+      "strengths": "Qualcosa in cui sei un po' più bravo/a, o per cui ti cercano. Anche ciò che dicono di te è uno spunto. Vanno bene cose piccole.\nEs.: ascoltare, non arrendersi, lavoro di precisione",
+      "happyMoment": "Ricorda un momento piacevole di recente. Quale momento ti piace di più?\nEs.: ridere con gli amici, ascoltare la tua musica, mangiare qualcosa di buono",
+      "praisedFor": "Ciò per cui ti lodano o che dicono spesso di te. Scrivilo senza imbarazzo.\nEs.: premura, concentrazione, voce"
+    }
   }
 }

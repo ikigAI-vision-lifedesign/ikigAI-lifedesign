@@ -401,5 +401,20 @@
       ]
     },
     "button": "Get started"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Tell us about your look and what makes you *you*. No need to write it perfectly—think of your usual hairstyle, hair color, clothes, glasses, or accessories. Stuck? What friends say about you or your first impression can be hints.",
+      "step3": "Freely picture the kind of person you want to be and the future you want. Stuck? Recall what you lose track of time doing, or what you've always loved. Try imagining 1 year and 10 years ahead. Small things are fine.",
+      "step4": "Only the themes you care about—no need to fill everything in. Imagine 'what you'd never give up when in doubt' or 'the kind of day you'd love to spend,' and write your 'wouldn't it be nice if...'."
+    },
+    "fields": {
+      "selfExpression": "Your likes, personality, and what matters to you—freely. Stuck? Recall what you've been absorbed in lately or what you catch yourself searching for.\nE.g.: love the outdoors, curious, value freedom",
+      "idealVision": "Picture your dream future freely. Imagine 1 or 10 years ahead, how you'd spend days off, where you'd live. It doesn't have to be a clear dream.\nE.g.: turn what I love into work, live abroad, own my shop",
+      "charmPoints": "A little something you're proud of. Looks like your hairstyle, smile, or glasses are fine too.\nE.g.: smile, dimples, big eyes",
+      "strengths": "Something you're a bit better at, or often relied on for. What people often say about you is a hint too. Small things are fine.\nE.g.: listening, not giving up, detailed work",
+      "happyMoment": "Recall a moment that felt good recently. Which moment do you like best?\nE.g.: laughed with friends, listened to favorite music, ate something tasty",
+      "praisedFor": "What people often praise or say about you. Write it without being shy.\nE.g.: thoughtfulness, focus, voice"
+    }
   }
 }

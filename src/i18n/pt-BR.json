@@ -409,5 +409,20 @@
       ]
     },
     "button": "Começar"
+  },
+  "hints": {
+    "steps": {
+      "step2": "Conte sobre sua aparência e o que faz você ser *você*. Não precisa escrever perfeito: pense no seu cabelo, cor do cabelo, roupas, óculos ou acessórios de sempre. Travou? O que os amigos dizem de você ou sua primeira impressão também ajudam.",
+      "step3": "Imagine livremente quem você quer ser e o futuro que deseja. Travou? Lembre do que faz você perder a noção do tempo ou do que sempre gostou. Imagine daqui a 1 e 10 anos. Coisas pequenas valem.",
+      "step4": "Só os temas que te interessam; não precisa preencher tudo. Imagine «o que você nunca abriria mão na dúvida» ou «o dia que adoraria viver» e escreva seu «seria ótimo se...»."
+    },
+    "fields": {
+      "selfExpression": "Seus gostos, personalidade e o que importa para você, à vontade. Travou? Lembre do que te absorveu ultimamente ou do que você pesquisa sem perceber.\nEx.: gosto de atividades ao ar livre, curioso(a), valorizo a liberdade",
+      "idealVision": "Imagine seu futuro ideal à vontade. Pense em 1 ou 10 anos, como passaria as folgas, onde moraria. Não precisa ser um sonho definido.\nEx.: transformar o que amo em trabalho, morar fora, ter minha loja",
+      "charmPoints": "Algo de que você tem um pouco de orgulho. Vale também a aparência: cabelo, sorriso ou óculos.\nEx.: sorriso, covinhas, olhos grandes",
+      "strengths": "Algo em que você é um pouco melhor, ou para o que te procuram. O que costumam dizer de você também é dica. Coisas pequenas valem.\nEx.: ouvir, não desistir, trabalho detalhista",
+      "happyMoment": "Lembre de um momento que foi bom recentemente. Qual momento você mais gosta?\nEx.: rir com amigos, ouvir sua música, comer algo gostoso",
+      "praisedFor": "O que costumam elogiar ou dizer de você. Escreva sem vergonha.\nEx.: cuidado com os outros, concentração, voz"
+    }
   }
 }
